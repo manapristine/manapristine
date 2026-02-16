@@ -1,16 +1,37 @@
-## Hi there 👋
+# Mana Pristine
 
-<!--
-**manapristine/manapristine** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Management tools and data for Mana Pristine community.
 
-Here are some ideas to get you started:
+## 🛠️ Tools
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### 📊 Google Sheets Manager
+
+A web-based application to browse, search, and update Google Sheets data. Perfect for managing community data with a beautiful, user-friendly interface.
+
+**Features:**
+- Browse spreadsheet data in a responsive table
+- Real-time search and filtering
+- Edit cells directly from the UI
+- Support for multiple sheets
+- Secure OAuth2 authentication
+- Works entirely in the browser (no backend required)
+
+**🔗 Access**: [sheets-manager/](./sheets-manager/)  
+**📚 Documentation**: [Setup Guide](./sheets-manager/SETUP_GUIDE.md)
+
+## 📁 Repository Structure
+
+```
+manapristine/
+├── db/                    # Database files and exports
+├── sheets-manager/        # Google Sheets management tool
+└── README.md             # This file
+```
+
+## 🚀 Getting Started
+
+Each tool has its own documentation. Navigate to the respective folder to get started.
+
+## 📝 License
+
+MIT License

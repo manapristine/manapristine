@@ -1,0 +1,14 @@
+# Keep credentials private (though they're meant to be public for client-side apps)
+config.js
+
+# Development
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+
+# Temporary files
+*~
+*.swp
+*.swo
