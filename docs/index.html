@@ -37,6 +37,7 @@
     }
     .masthead,
     .controls,
+    .defaulters,
     .card,
     .table-wrap,
     .empty {
@@ -191,6 +192,48 @@
     }
     .btn:hover {
       filter: brightness(1.03);
+    }
+    .defaulters {
+      padding: 12px 14px;
+    }
+    .defaulters-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    .defaulters-head h2 {
+      margin: 0;
+      font-size: 0.98rem;
+    }
+    .defaulters-head p {
+      margin: 2px 0 0;
+      color: var(--muted);
+      font-size: 0.76rem;
+    }
+    .pending-total {
+      text-align: right;
+    }
+    .pending-total .label {
+      display: block;
+      color: var(--muted);
+      font-size: 0.58rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 3px;
+    }
+    .pending-total .value {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--danger);
+    }
+    .defaulters-table-wrap {
+      overflow-x: auto;
+    }
+    .defaulters-table td:last-child {
+      color: var(--danger);
+      font-weight: 700;
     }
     .metrics {
       display: grid;
@@ -363,6 +406,32 @@
         </div>
       </section>
 
+      <section class="defaulters">
+        <div class="defaulters-head">
+          <div>
+            <h2>Defaulters</h2>
+            <p>Flats with outstanding dues as per the latest generated dataset.</p>
+          </div>
+          <div class="pending-total">
+            <span class="label">Total Amount Pending</span>
+            <span class="value" id="total-pending">₹0.00</span>
+          </div>
+        </div>
+        <div class="defaulters-table-wrap">
+          <table class="defaulters-table">
+            <thead>
+              <tr>
+                <th>Flat</th>
+                <th>Owner</th>
+                <th>Occupant</th>
+                <th>Pending Amount</th>
+              </tr>
+            </thead>
+            <tbody id="defaulters-body"></tbody>
+          </table>
+        </div>
+      </section>
+
       <section id="statement" class="hidden">
         <section class="metrics">
           <article class="card positive">
@@ -422,6 +491,8 @@
     const statement = document.getElementById("statement");
     const emptyState = document.getElementById("empty-state");
     const metaCurrentMonth = document.getElementById("meta-current-month");
+    const defaultersBody = document.getElementById("defaulters-body");
+    const totalPending = document.getElementById("total-pending");
     let reports = [];
 
     function formatAmount(value) {
@@ -440,6 +511,39 @@
       const amount = Number(value || 0);
       if (amount > 0) element.classList.add("positive");
       if (amount < 0) element.classList.add("negative");
+    }
+
+    function renderDefaulters(items) {
+      const defaulters = items
+        .filter((report) => Number(report.totals?.closing_balance || 0) < 0)
+        .sort((a, b) => Number(a.totals.closing_balance) - Number(b.totals.closing_balance));
+
+      const pendingAmount = defaulters.reduce(
+        (sum, report) => sum + Math.abs(Number(report.totals.closing_balance || 0)),
+        0
+      );
+
+      totalPending.textContent = formatAmount(pendingAmount);
+      defaultersBody.innerHTML = "";
+
+      if (defaulters.length === 0) {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `<td colspan="4">No defaulters in the current dataset.</td>`;
+        defaultersBody.appendChild(tr);
+        return;
+      }
+
+      for (const report of defaulters) {
+        const tr = document.createElement("tr");
+        tr.classList.add("negative");
+        tr.innerHTML = `
+          <td>${report.flat}</td>
+          <td>${report.owner_name || "Not provided"}</td>
+          <td>${report.occupant || "Not available"}</td>
+          <td>${formatAmount(Math.abs(Number(report.totals.closing_balance || 0)))}</td>
+        `;
+        defaultersBody.appendChild(tr);
+      }
     }
 
     function renderReport(report) {
@@ -484,6 +588,7 @@
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const payload = await response.json();
         reports = (payload.reports || []).slice().sort((a, b) => a.flat.localeCompare(b.flat, undefined, { numeric: true }));
+        renderDefaulters(reports);
         const generatedMonth = payload.generated_at
           ? new Date(payload.generated_at).toLocaleDateString("en-IN", { month: "long", year: "numeric" })
           : "";
