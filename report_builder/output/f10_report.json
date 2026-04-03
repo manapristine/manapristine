@@ -1,0 +1,101 @@
+{
+  "flat": "F10",
+  "owner_name": "Aby Thomas",
+  "email": "abythomas99@gmail.com",
+  "sheet_email": null,
+  "occupant": "Aby Thomas",
+  "collection_carry_over_mar2013_mar2022": 0,
+  "monthly": [
+    {
+      "month": "Apr 2025",
+      "collection": 5314,
+      "expense": 6639.141717330718,
+      "late_fee": 0,
+      "net_collection_minus_expense": -1325.1417173307182
+    },
+    {
+      "month": "May 2025",
+      "collection": 5600,
+      "expense": 4263.090257098511,
+      "late_fee": 0,
+      "net_collection_minus_expense": 1336.9097429014892
+    },
+    {
+      "month": "Jun 2025",
+      "collection": 4246,
+      "expense": 4536.43683135515,
+      "late_fee": 0,
+      "net_collection_minus_expense": -290.4368313551504
+    },
+    {
+      "month": "Jul 2025",
+      "collection": 4536,
+      "expense": 5398.33154273097,
+      "late_fee": 0,
+      "net_collection_minus_expense": -862.3315427309699
+    },
+    {
+      "month": "Aug 2025",
+      "collection": 1057,
+      "expense": 5793.818743792476,
+      "late_fee": 0,
+      "net_collection_minus_expense": -4736.818743792476
+    },
+    {
+      "month": "Sep 2025",
+      "collection": 0,
+      "expense": 5053.96203735472,
+      "late_fee": 0,
+      "net_collection_minus_expense": -5053.96203735472
+    },
+    {
+      "month": "Oct 2025",
+      "collection": 5794,
+      "expense": 6328.3275677506035,
+      "late_fee": 0,
+      "net_collection_minus_expense": -534.3275677506035
+    },
+    {
+      "month": "Nov 2025",
+      "collection": 5794,
+      "expense": 6735.578760476578,
+      "late_fee": 0,
+      "net_collection_minus_expense": -941.5787604765783
+    },
+    {
+      "month": "Dec 2025",
+      "collection": 0,
+      "expense": 5048.572207865952,
+      "late_fee": 0,
+      "net_collection_minus_expense": -5048.572207865952
+    },
+    {
+      "month": "Jan 2026",
+      "collection": 6114,
+      "expense": 5596.442253652703,
+      "late_fee": 0,
+      "net_collection_minus_expense": 517.5577463472973
+    },
+    {
+      "month": "Feb 2026",
+      "collection": 0,
+      "expense": 5596.551265170667,
+      "late_fee": 0,
+      "net_collection_minus_expense": -5596.551265170667
+    },
+    {
+      "month": "Mar 2026",
+      "collection": 5614,
+      "expense": 0,
+      "late_fee": 0,
+      "net_collection_minus_expense": 5614
+    }
+  ],
+  "totals": {
+    "collection": 44069,
+    "expense": 60990.25318457905,
+    "late_fee": 0,
+    "net_collection_minus_expense": -16921.25318457905,
+    "closing_balance": -16921.25318457905
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "flat": "G13",
+  "owner_name": "Ajai.B",
+  "email": "ajai.abc@gmail.com",
+  "sheet_email": null,
+  "occupant": "Ajai.B",
+  "collection_carry_over_mar2013_mar2022": 0,
+  "monthly": [
+    {
+      "month": "Apr 2025",
+      "collection": 0,
+      "expense": 6399.185362362055,
+      "late_fee": 0,
+      "net_collection_minus_expense": -6399.185362362055
+    },
+    {
+      "month": "May 2025",
+      "collection": 6379,
+      "expense": 4704.571266621957,
+      "late_fee": 500,
+      "net_collection_minus_expense": 1174.428733378043
+    },
+    {
+      "month": "Jun 2025",
+      "collection": 0,
+      "expense": 4724.938776188876,
+      "late_fee": 0,
+      "net_collection_minus_expense": -4724.938776188876
+    },
+    {
+      "month": "Jul 2025",
+      "collection": 13339,
+      "expense": 5925.006855087807,
+      "late_fee": 0,
+      "net_collection_minus_expense": 7413.993144912193
+    },
+    {
+      "month": "Aug 2025",
+      "collection": 0,
+      "expense": 6282.747737149313,
+      "late_fee": 0,
+      "net_collection_minus_expense": -6282.747737149313
+    },
+    {
+      "month": "Sep 2025",
+      "collection": 12208,
+      "expense": 5187.0215055437975,
+      "late_fee": 0,
+      "net_collection_minus_expense": 7020.9784944562025
+    },
+    {
+      "month": "Oct 2025",
+      "collection": 0,
+      "expense": 6825.963018506705,
+      "late_fee": 0,
+      "net_collection_minus_expense": -6825.963018506705
+    },
+    {
+      "month": "Nov 2025",
+      "collection": 0,
+      "expense": 7750.700461168438,
+      "late_fee": 0,
+      "net_collection_minus_expense": -7750.700461168438
+    },
+    {
+      "month": "Dec 2025",
+      "collection": 0,
+      "expense": 5575.222887764927,
+      "late_fee": 0,
+      "net_collection_minus_expense": -5575.222887764927
+    },
+    {
+      "month": "Jan 2026",
+      "collection": 22000,
+      "expense": 5381.923296583578,
+      "late_fee": 0,
+      "net_collection_minus_expense": 16618.076703416424
+    },
+    {
+      "month": "Feb 2026",
+      "collection": 0,
+      "expense": 5345.132324319535,
+      "late_fee": 0,
+      "net_collection_minus_expense": -5345.132324319535
+    },
+    {
+      "month": "Mar 2026",
+      "collection": 0,
+      "expense": 0,
+      "late_fee": 0,
+      "net_collection_minus_expense": 0
+    }
+  ],
+  "totals": {
+    "collection": 53926,
+    "expense": 64102.41349129698,
+    "late_fee": 500,
+    "net_collection_minus_expense": -10676.413491296982,
+    "closing_balance": -10676.413491296982
+  }
+}

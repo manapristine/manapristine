@@ -1,0 +1,101 @@
+{
+  "flat": "F4",
+  "owner_name": "Renu R",
+  "email": "renu.sabapathy@gmail.com",
+  "sheet_email": null,
+  "occupant": "Renu R",
+  "collection_carry_over_mar2013_mar2022": 0,
+  "monthly": [
+    {
+      "month": "Apr 2025",
+      "collection": 5000,
+      "expense": 5749.602761960617,
+      "late_fee": 0,
+      "net_collection_minus_expense": -749.6027619606166
+    },
+    {
+      "month": "May 2025",
+      "collection": 5710,
+      "expense": 4456.764957565042,
+      "late_fee": 0,
+      "net_collection_minus_expense": 1253.235042434958
+    },
+    {
+      "month": "Jun 2025",
+      "collection": 4434,
+      "expense": 4663.612549507578,
+      "late_fee": 0,
+      "net_collection_minus_expense": -229.61254950757757
+    },
+    {
+      "month": "Jul 2025",
+      "collection": 0,
+      "expense": 5553.566760650927,
+      "late_fee": 0,
+      "net_collection_minus_expense": -5553.566760650927
+    },
+    {
+      "month": "Aug 2025",
+      "collection": 5554,
+      "expense": 6049.982233491592,
+      "late_fee": 0,
+      "net_collection_minus_expense": -495.9822334915916
+    },
+    {
+      "month": "Sep 2025",
+      "collection": 5554,
+      "expense": 5147.582081775668,
+      "late_fee": 0,
+      "net_collection_minus_expense": 406.4179182243324
+    },
+    {
+      "month": "Oct 2025",
+      "collection": 5148,
+      "expense": 6692.7138830018375,
+      "late_fee": 0,
+      "net_collection_minus_expense": -1544.7138830018375
+    },
+    {
+      "month": "Nov 2025",
+      "collection": 6231,
+      "expense": 6982.283109471384,
+      "late_fee": 0,
+      "net_collection_minus_expense": -751.2831094713838
+    },
+    {
+      "month": "Dec 2025",
+      "collection": 7064,
+      "expense": 5286.88031379142,
+      "late_fee": 0,
+      "net_collection_minus_expense": 1777.1196862085799
+    },
+    {
+      "month": "Jan 2026",
+      "collection": 5264,
+      "expense": 5176.155937248394,
+      "late_fee": 0,
+      "net_collection_minus_expense": 87.84406275160563
+    },
+    {
+      "month": "Feb 2026",
+      "collection": 5176,
+      "expense": 4924.668293363691,
+      "late_fee": 0,
+      "net_collection_minus_expense": 251.3317066363088
+    },
+    {
+      "month": "Mar 2026",
+      "collection": 0,
+      "expense": 0,
+      "late_fee": 0,
+      "net_collection_minus_expense": 0
+    }
+  ],
+  "totals": {
+    "collection": 55135,
+    "expense": 60683.812881828155,
+    "late_fee": 0,
+    "net_collection_minus_expense": -5548.812881828155,
+    "closing_balance": -5548.812881828155
+  }
+}

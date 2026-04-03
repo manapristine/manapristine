@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mana Pristine Maintenance Statements</title>
+  <style>
+    :root {
+      --bg: #f4efe5;
+      --panel: rgba(255, 252, 247, 0.94);
+      --line: #d8d0c2;
+      --ink: #1f2933;
+      --muted: #62707b;
+      --accent: #0f766e;
+      --accent-soft: #d9f1ed;
+      --danger: #b42318;
+      --danger-soft: #fde7e3;
+      --shadow: 0 16px 40px rgba(54, 43, 27, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Google Sans", "Google Sans Text", "Product Sans", "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(15, 118, 110, 0.12), transparent 28%),
+        linear-gradient(180deg, #f7f3ea 0%, #efe5d6 100%);
+    }
+    .page {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 10px 12px 12px;
+    }
+    .shell {
+      display: grid;
+      gap: 8px;
+    }
+    .masthead,
+    .controls,
+    .card,
+    .table-wrap,
+    .empty {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+    .masthead {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 16px;
+      padding: 10px 12px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .badge {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      color: var(--accent);
+      border: 1px solid rgba(15, 118, 110, 0.18);
+      background: linear-gradient(135deg, rgba(15, 118, 110, 0.16), rgba(15, 118, 110, 0.04));
+    }
+    .brand small {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.62rem;
+    }
+    .brand strong {
+      display: block;
+      font-size: 1.12rem;
+      line-height: 1;
+    }
+    .brand span,
+    .meta {
+      color: var(--muted);
+      font-size: 0.76rem;
+    }
+    .meta {
+      text-align: right;
+      line-height: 1.25;
+      display: grid;
+      gap: 3px;
+    }
+    .meta .label {
+      display: block;
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+    }
+    .meta .value {
+      display: block;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .controls {
+      display: grid;
+      grid-template-columns: minmax(240px, 320px) 1fr auto;
+      gap: 10px;
+      align-items: start;
+      padding: 12px 14px;
+    }
+    .control-stack {
+      display: grid;
+      gap: 8px;
+    }
+    .selected-flat {
+      display: block;
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--ink);
+    }
+    .field label {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--muted);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .field select {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 8px 10px;
+      font: inherit;
+      font-size: 0.9rem;
+      color: var(--ink);
+      background: white;
+    }
+    .flat-details {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      min-width: 0;
+      align-self: stretch;
+    }
+    .mini-card {
+      padding: 9px 10px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: white;
+      min-width: 0;
+    }
+    .mini-card .label {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--muted);
+      font-size: 0.58rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .mini-card .value {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      word-break: break-word;
+    }
+    .actions {
+      display: flex;
+      justify-content: flex-end;
+      align-items: start;
+      gap: 10px;
+      padding-top: 22px;
+    }
+    .btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 13px 18px;
+      min-height: 46px;
+      font: inherit;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: #ffffff;
+      background: linear-gradient(135deg, #0f766e, #14b8a6);
+      box-shadow: var(--shadow);
+    }
+    .btn:hover {
+      filter: brightness(1.03);
+    }
+    .metrics {
+      display: grid;
+      gap: 6px;
+      margin-top: 6px;
+    }
+    .metrics {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+    .card {
+      padding: 7px 9px;
+    }
+    .card .label {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--muted);
+      font-size: 0.56rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .card .value {
+      font-size: 0.78rem;
+      font-weight: 600;
+      word-break: break-word;
+    }
+    .card.positive {
+      background: var(--accent-soft);
+    }
+    .card.negative {
+      background: var(--danger-soft);
+    }
+    .negative-text {
+      color: var(--danger);
+    }
+    .positive-text {
+      color: var(--accent);
+    }
+    .table-wrap {
+      margin-top: 8px;
+      padding: 10px;
+    }
+    .table-wrap h2 {
+      margin: 0 0 4px;
+      font-size: 0.88rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+    th, td {
+      padding: 6px 5px;
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+      white-space: nowrap;
+      font-size: 0.72rem;
+    }
+    th {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-size: 0.56rem;
+    }
+    tbody tr:last-child td {
+      border-bottom: 0;
+    }
+    tbody tr.positive td {
+      background: rgba(217, 241, 237, 0.5);
+    }
+    tbody tr.negative td {
+      background: rgba(253, 231, 227, 0.55);
+    }
+    .empty {
+      padding: 24px;
+      text-align: center;
+      color: var(--muted);
+    }
+    .hidden {
+      display: none;
+    }
+    @media (max-width: 960px) {
+      .controls,
+      .metrics {
+        grid-template-columns: 1fr 1fr;
+      }
+      .flat-details {
+        grid-template-columns: 1fr 1fr;
+      }
+      .actions {
+        padding-top: 0;
+      }
+      .masthead {
+        flex-direction: column;
+        align-items: start;
+      }
+      .meta {
+        text-align: left;
+      }
+    }
+    @media (max-width: 640px) {
+      .controls,
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+      .flat-details {
+        grid-template-columns: 1fr;
+      }
+      .page {
+        padding: 10px 8px 12px;
+      }
+      .table-wrap {
+        overflow-x: auto;
+      }
+      table {
+        min-width: 620px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="shell">
+      <section class="masthead">
+        <div class="brand">
+          <div class="badge">MP</div>
+          <div>
+            <small>Maintenance Statement</small>
+            <strong>Mana Pristine</strong>
+            <span>Financial Year 2025-26</span>
+          </div>
+        </div>
+        <div class="meta" id="meta">
+          <div>
+            <span class="label">Financial Year</span>
+            <span class="value" id="meta-financial-year">2025-26</span>
+          </div>
+          <div>
+            <span class="label">Current Month</span>
+            <span class="value" id="meta-current-month">Loading...</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="controls">
+        <div class="control-stack">
+          <span class="selected-flat" id="selected-flat-label">Select a flat</span>
+          <div class="field">
+            <label for="flat-select">Select Flat</label>
+            <select id="flat-select">
+              <option value="">Choose a flat</option>
+            </select>
+          </div>
+        </div>
+        <div class="flat-details">
+          <article class="mini-card">
+            <span class="label">Owner</span>
+            <span class="value" id="owner-name-top"></span>
+          </article>
+          <article class="mini-card">
+            <span class="label">Occupant</span>
+            <span class="value" id="occupant-name-top"></span>
+          </article>
+          <article class="mini-card">
+            <span class="label">Closing Status</span>
+            <span class="value" id="closing-status-top"></span>
+          </article>
+        </div>
+        <div class="actions">
+          <button id="export-pdf" class="btn" type="button">Export PDF</button>
+        </div>
+      </section>
+
+      <section id="statement" class="hidden">
+        <section class="metrics">
+          <article class="card positive">
+            <span class="label">Total Collection</span>
+            <span class="value" id="total-collection"></span>
+          </article>
+          <article class="card">
+            <span class="label">Total Expense</span>
+            <span class="value" id="total-expense"></span>
+          </article>
+          <article class="card">
+            <span class="label">Total Late Fee</span>
+            <span class="value" id="total-late-fee"></span>
+          </article>
+          <article class="card" id="net-card">
+            <span class="label">Net Collection Minus Expense</span>
+            <span class="value" id="total-net"></span>
+          </article>
+          <article class="card" id="balance-card">
+            <span class="label">Closing Balance</span>
+            <span class="value" id="closing-balance"></span>
+          </article>
+        </section>
+
+        <section class="table-wrap">
+          <h2>Month-by-Month Breakdown</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Month</th>
+                <th>Collection</th>
+                <th>Expense</th>
+                <th>Late Fee</th>
+                <th>Net</th>
+              </tr>
+            </thead>
+            <tbody id="monthly-body"></tbody>
+          </table>
+        </section>
+      </section>
+
+      <section id="empty-state" class="empty">
+        Select a flat to view its maintenance statement.
+      </section>
+    </section>
+  </main>
+
+  <script>
+    const currency = new Intl.NumberFormat("en-IN", {
+      style: "currency",
+      currency: "INR",
+      maximumFractionDigits: 2
+    });
+
+    const flatSelect = document.getElementById("flat-select");
+    const exportButton = document.getElementById("export-pdf");
+    const statement = document.getElementById("statement");
+    const emptyState = document.getElementById("empty-state");
+    const metaCurrentMonth = document.getElementById("meta-current-month");
+    let reports = [];
+
+    function formatAmount(value) {
+      return currency.format(Number(value || 0));
+    }
+
+    function statusText(balance) {
+      const amount = Number(balance || 0);
+      if (amount > 0) return `Credit balance: ${formatAmount(amount)}`;
+      if (amount < 0) return `Outstanding dues: ${formatAmount(Math.abs(amount))}`;
+      return "No outstanding balance";
+    }
+
+    function setCardTone(element, value) {
+      element.classList.remove("positive", "negative");
+      const amount = Number(value || 0);
+      if (amount > 0) element.classList.add("positive");
+      if (amount < 0) element.classList.add("negative");
+    }
+
+    function renderReport(report) {
+      const balance = Number(report.totals.closing_balance || 0);
+      const net = Number(report.totals.net_collection_minus_expense || 0);
+      document.getElementById("selected-flat-label").textContent = `Flat ${report.flat}`;
+      document.getElementById("owner-name-top").textContent = report.owner_name || "Not provided";
+      document.getElementById("occupant-name-top").textContent = report.occupant || "Not available";
+      document.getElementById("closing-status-top").textContent = statusText(balance);
+      document.getElementById("total-collection").textContent = formatAmount(report.totals.collection);
+      document.getElementById("total-expense").textContent = formatAmount(report.totals.expense);
+      document.getElementById("total-late-fee").textContent = formatAmount(report.totals.late_fee);
+      document.getElementById("total-net").textContent = formatAmount(report.totals.net_collection_minus_expense);
+      document.getElementById("closing-balance").textContent = formatAmount(report.totals.closing_balance);
+      setCardTone(document.getElementById("net-card"), net);
+      setCardTone(document.getElementById("balance-card"), balance);
+
+      const body = document.getElementById("monthly-body");
+      body.innerHTML = "";
+      for (const month of report.monthly) {
+        const tr = document.createElement("tr");
+        const netValue = Number(month.net_collection_minus_expense || 0);
+        if (netValue > 0) tr.classList.add("positive");
+        if (netValue < 0) tr.classList.add("negative");
+        tr.innerHTML = `
+          <td>${month.month}</td>
+          <td>${formatAmount(month.collection)}</td>
+          <td>${formatAmount(month.expense)}</td>
+          <td>${formatAmount(month.late_fee)}</td>
+          <td class="${netValue < 0 ? "negative-text" : netValue > 0 ? "positive-text" : ""}">${formatAmount(month.net_collection_minus_expense)}</td>
+        `;
+        body.appendChild(tr);
+      }
+
+      emptyState.classList.add("hidden");
+      statement.classList.remove("hidden");
+    }
+
+    async function boot() {
+      try {
+        const response = await fetch("./report-data.json", { cache: "no-store" });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const payload = await response.json();
+        reports = (payload.reports || []).slice().sort((a, b) => a.flat.localeCompare(b.flat, undefined, { numeric: true }));
+        const generatedMonth = payload.generated_at
+          ? new Date(payload.generated_at).toLocaleDateString("en-IN", { month: "long", year: "numeric" })
+          : "";
+        metaCurrentMonth.textContent = generatedMonth || "Not available";
+
+        for (const report of reports) {
+          const option = document.createElement("option");
+          option.value = report.flat;
+          option.textContent = `${report.flat} - ${report.owner_name || "Owner not set"}`;
+          flatSelect.appendChild(option);
+        }
+
+        if (reports.length > 0) {
+          flatSelect.value = reports[0].flat;
+          renderReport(reports[0]);
+        } else {
+          emptyState.textContent = "No report data found in report-data.json.";
+        }
+      } catch (error) {
+        console.error(error);
+        metaCurrentMonth.textContent = "Unavailable";
+        emptyState.textContent = "Could not load report data. Generate docs/report-data.json and make sure it is committed with this page.";
+      }
+    }
+
+    flatSelect.addEventListener("change", (event) => {
+      const report = reports.find((item) => item.flat === event.target.value);
+      if (report) renderReport(report);
+    });
+
+    exportButton.addEventListener("click", () => {
+      if (!flatSelect.value) return;
+      window.print();
+    });
+
+    boot();
+  </script>
+</body>
+</html>
