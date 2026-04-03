@@ -36,32 +36,13 @@ class SheetLayout:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Generate flat-wise income and expense reports from the annual workbook."
+        description="Generate the combined maintenance statement dataset from the latest workbook and members CSV."
     )
     parser.add_argument("--workbook", type=Path, default=DEFAULT_WORKBOOK)
     parser.add_argument("--sheet", default=DEFAULT_SHEET)
     parser.add_argument("--flats-json", type=Path, default=DEFAULT_FLATS_JSON)
     parser.add_argument("--members-csv", type=Path, default=DEFAULT_MEMBERS_CSV)
     parser.add_argument("--output-json", type=Path, default=DEFAULT_OUTPUT_JSON)
-    parser.add_argument(
-        "-f",
-        "--flat",
-        action="append",
-        dest="flat_filters",
-        default=[],
-        help="Optional flat filter. Can be passed multiple times.",
-    )
-    parser.add_argument(
-        "--refresh-flats-json",
-        action="store_true",
-        help="Rebuild the flats JSON from members.csv before generating reports.",
-    )
-    parser.add_argument(
-        "-a",
-        "--all-flats",
-        action="store_true",
-        help="Generate JSON data for all flats in the flats JSON file.",
-    )
     return parser.parse_args()
 
 
@@ -258,13 +239,8 @@ def generate_reports(
 def main() -> int:
     args = parse_args()
 
-    if args.refresh_flats_json or not args.flats_json.exists():
-        write_flats_json_from_csv(args.members_csv, args.flats_json)
-
+    write_flats_json_from_csv(args.members_csv, args.flats_json)
     flat_requests = load_flat_requests(args.flats_json)
-    if not args.all_flats and args.flat_filters:
-        wanted = {normalize_flat(flat) for flat in args.flat_filters}
-        flat_requests = [entry for entry in flat_requests if entry["flat"] in wanted]
 
     reports, missing_flats = generate_reports(
         workbook_path=args.workbook,
