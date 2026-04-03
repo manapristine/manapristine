@@ -215,6 +215,11 @@
     .pending-total {
       text-align: right;
     }
+    .defaulters-actions {
+      display: flex;
+      align-items: end;
+      gap: 10px;
+    }
     .pending-total .label {
       display: block;
       color: var(--muted);
@@ -234,6 +239,50 @@
     .defaulters-table td:last-child {
       color: var(--danger);
       font-weight: 700;
+    }
+    @media print {
+      body {
+        background: #ffffff;
+      }
+      .masthead,
+      .controls,
+      .metrics,
+      .empty,
+      .actions,
+      .btn {
+        box-shadow: none;
+      }
+      body.print-flat .defaulters,
+      body.print-flat .controls,
+      body.print-flat .masthead {
+        display: none;
+      }
+      body.print-defaulters .controls,
+      body.print-defaulters .masthead,
+      body.print-defaulters #statement {
+        display: none;
+      }
+      body.print-defaulters .defaulters,
+      body.print-flat #statement {
+        display: block;
+      }
+      .btn {
+        display: none !important;
+      }
+      .page {
+        max-width: none;
+        padding: 0;
+      }
+      .shell {
+        gap: 0;
+      }
+      .defaulters,
+      .table-wrap,
+      .card {
+        border: 1px solid #d8d0c2;
+        box-shadow: none;
+        background: #ffffff;
+      }
     }
     .metrics {
       display: grid;
@@ -402,7 +451,7 @@
           </article>
         </div>
         <div class="actions">
-          <button id="export-pdf" class="btn" type="button">Export PDF</button>
+          <button id="export-pdf" class="btn" type="button">Export Flat PDF</button>
         </div>
       </section>
 
@@ -453,9 +502,12 @@
             <h2>Defaulters</h2>
             <p>Flats with outstanding dues as per the latest generated dataset.</p>
           </div>
-          <div class="pending-total">
-            <span class="label">Total Amount Pending</span>
-            <span class="value" id="total-pending">₹0.00</span>
+          <div class="defaulters-actions">
+            <div class="pending-total">
+              <span class="label">Total Amount Pending</span>
+              <span class="value" id="total-pending">₹0.00</span>
+            </div>
+            <button id="export-defaulters-pdf" class="btn" type="button">Export Defaulters PDF</button>
           </div>
         </div>
         <div class="defaulters-table-wrap">
@@ -488,6 +540,7 @@
 
     const flatSelect = document.getElementById("flat-select");
     const exportButton = document.getElementById("export-pdf");
+    const exportDefaultersButton = document.getElementById("export-defaulters-pdf");
     const statement = document.getElementById("statement");
     const emptyState = document.getElementById("empty-state");
     const metaCurrentMonth = document.getElementById("meta-current-month");
@@ -621,7 +674,19 @@
 
     exportButton.addEventListener("click", () => {
       if (!flatSelect.value) return;
+      document.body.classList.remove("print-defaulters");
+      document.body.classList.add("print-flat");
       window.print();
+    });
+
+    exportDefaultersButton.addEventListener("click", () => {
+      document.body.classList.remove("print-flat");
+      document.body.classList.add("print-defaulters");
+      window.print();
+    });
+
+    window.addEventListener("afterprint", () => {
+      document.body.classList.remove("print-flat", "print-defaulters");
     });
 
     boot();
