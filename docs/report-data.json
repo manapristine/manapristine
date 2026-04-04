@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-04T13:55:03",
+  "generated_at": "2026-04-05T05:15:00",
   "sheet": "INCOME-EXPENSE-CYCLES",
   "report_count": 64,
   "reports": [
@@ -8,7 +8,7 @@
       "owner_name": "Digvijay Verma",
       "email": "jyothij1979@gmail.com",
       "sheet_email": "jyothij1979@gmail.com",
-      "occupant": "Venkataramanan C",
+      "occupant": "Digvijay Verma",
       "collection_carry_over_mar2013_mar2022": 0,
       "monthly": [
         {
@@ -1015,8 +1015,8 @@
     },
     {
       "flat": "G11",
-      "owner_name": "Ketan Verlekar",
-      "email": "ketan.verlekar@gmail.com",
+      "owner_name": "Prashant Jaitley",
+      "email": "prashantjaitly656@gmail.com",
       "sheet_email": null,
       "occupant": "Ketan Verlekar",
       "collection_carry_over_mar2013_mar2022": 0,
@@ -3543,7 +3543,7 @@
       "owner_name": "Swaminathan",
       "email": "swami2007@gmail.com",
       "sheet_email": null,
-      "occupant": "Swaminathan ",
+      "occupant": "Ankit Rakshit",
       "collection_carry_over_mar2013_mar2022": 0,
       "monthly": [
         {
@@ -3785,10 +3785,10 @@
         },
         {
           "month": "Sep 2025",
-          "collection": 0,
+          "collection": 15000,
           "expense": 4758.146659081876,
           "late_fee": 0,
-          "net_collection_minus_expense": -4758.146659081876
+          "net_collection_minus_expense": 10241.853340918124
         },
         {
           "month": "Oct 2025",
@@ -3834,11 +3834,11 @@
         }
       ],
       "totals": {
-        "collection": 5320,
+        "collection": 20320,
         "expense": 56198.59287645798,
         "late_fee": 0,
-        "net_collection_minus_expense": -50878.59287645798,
-        "closing_balance": -50878.59287645798
+        "net_collection_minus_expense": -35878.59287645798,
+        "closing_balance": -35878.59287645798
       }
     },
     {
