@@ -9,7 +9,6 @@ from typing import Any
 from openpyxl import load_workbook
 
 
-DEFAULT_WORKBOOK = Path(r"C:\github\manapristine\db\2025-2026-INCOME-EXPENDITURE-ACCOUNT.xlsx")
 DEFAULT_SHEET = "INCOME-EXPENSE-CYCLES"
 DEFAULT_FLATS_JSON = Path(r"C:\github\manapristine\db\report_flats.json")
 DEFAULT_MEMBERS_CSV = Path(r"C:\github\manapristine\db\members.csv")
@@ -38,7 +37,14 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Generate the combined maintenance statement dataset from the latest workbook and members CSV."
     )
-    parser.add_argument("--workbook", type=Path, default=DEFAULT_WORKBOOK)
+    parser.add_argument(
+        "-f",
+        "--file",
+        dest="workbook",
+        type=Path,
+        required=True,
+        help="Path to the income/expense workbook (.xlsx)",
+    )
     parser.add_argument("--sheet", default=DEFAULT_SHEET)
     parser.add_argument("--flats-json", type=Path, default=DEFAULT_FLATS_JSON)
     parser.add_argument("--members-csv", type=Path, default=DEFAULT_MEMBERS_CSV)
