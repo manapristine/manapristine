@@ -8,6 +8,7 @@
     :root {
       --bg: #f4efe5;
       --panel: rgba(255, 252, 247, 0.94);
+      --card-bg: #ffffff;
       --line: #d8d0c2;
       --ink: #1f2933;
       --muted: #62707b;
@@ -16,6 +17,45 @@
       --danger: #b42318;
       --danger-soft: #fde7e3;
       --shadow: 0 16px 40px rgba(54, 43, 27, 0.08);
+      --body-bg: linear-gradient(180deg, #f7f3ea 0%, #efe5d6 100%);
+      --body-overlay: radial-gradient(circle at top left, rgba(15, 118, 110, 0.12), transparent 28%);
+      --positive-row: rgba(217, 241, 237, 0.5);
+      --negative-row: rgba(253, 231, 227, 0.55);
+      --chart-grid: #e0ddd6;
+      --chart-label: #62707b;
+      --chart-text: #1f2933;
+      --chart-bar-accent: #0f766e;
+      --chart-bar-danger: #b42318;
+      --chart-bar-danger-end: #ef4444;
+      --chart-amount-on-bar: #ffffff;
+      --select-bg: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1a1a2e;
+        --panel: rgba(30, 30, 50, 0.94);
+        --card-bg: #252540;
+        --line: #3a3a55;
+        --ink: #e0e0ec;
+        --muted: #9a9ab0;
+        --accent: #2dd4bf;
+        --accent-soft: rgba(45, 212, 191, 0.15);
+        --danger: #f87171;
+        --danger-soft: rgba(248, 113, 113, 0.15);
+        --shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+        --body-bg: linear-gradient(180deg, #1a1a2e 0%, #16162a 100%);
+        --body-overlay: radial-gradient(circle at top left, rgba(45, 212, 191, 0.08), transparent 28%);
+        --positive-row: rgba(45, 212, 191, 0.1);
+        --negative-row: rgba(248, 113, 113, 0.1);
+        --chart-grid: #3a3a55;
+        --chart-label: #9a9ab0;
+        --chart-text: #e0e0ec;
+        --chart-bar-accent: #2dd4bf;
+        --chart-bar-danger: #f87171;
+        --chart-bar-danger-end: #fca5a5;
+        --chart-amount-on-bar: #1a1a2e;
+        --select-bg: #252540;
+      }
     }
     * { box-sizing: border-box; }
     body {
@@ -23,8 +63,8 @@
       font-family: "Google Sans", "Google Sans Text", "Product Sans", "Segoe UI", Arial, sans-serif;
       color: var(--ink);
       background:
-        radial-gradient(circle at top left, rgba(15, 118, 110, 0.12), transparent 28%),
-        linear-gradient(180deg, #f7f3ea 0%, #efe5d6 100%);
+        var(--body-overlay),
+        var(--body-bg);
       min-width: 320px;
     }
     .page {
@@ -71,8 +111,8 @@
       place-items: center;
       font-weight: 700;
       color: var(--accent);
-      border: 1px solid rgba(15, 118, 110, 0.18);
-      background: linear-gradient(135deg, rgba(15, 118, 110, 0.16), rgba(15, 118, 110, 0.04));
+      border: 1px solid var(--accent-soft);
+      background: var(--accent-soft);
     }
     .brand small {
       display: block;
@@ -137,7 +177,7 @@
       font: inherit;
       font-size: 0.82rem;
       color: var(--ink);
-      background: white;
+      background: var(--select-bg);
     }
     .flat-details {
       display: flex;
@@ -150,7 +190,7 @@
       padding: 4px 10px;
       border-radius: 6px;
       border: 1px solid var(--line);
-      background: white;
+      background: var(--card-bg);
       min-width: 0;
       white-space: nowrap;
     }
@@ -185,8 +225,8 @@
       font-size: 0.78rem;
       font-weight: 600;
       cursor: pointer;
-      color: #ffffff;
-      background: linear-gradient(135deg, #0f766e, #14b8a6);
+      color: var(--card-bg);
+      background: var(--accent);
       box-shadow: var(--shadow);
       white-space: nowrap;
     }
@@ -365,10 +405,10 @@
       border-bottom: 0;
     }
     tbody tr.positive td {
-      background: rgba(217, 241, 237, 0.5);
+      background: var(--positive-row);
     }
     tbody tr.negative td {
-      background: rgba(253, 231, 227, 0.55);
+      background: var(--negative-row);
     }
     .empty {
       padding: 24px;
@@ -535,8 +575,8 @@
       margin-right: 5px;
       vertical-align: middle;
     }
-    .chart-legend .leg-collection::before { background: #0f766e; }
-    .chart-legend .leg-expense::before { background: #b42318; }
+    .chart-legend .leg-collection::before { background: var(--chart-bar-accent); }
+    .chart-legend .leg-expense::before { background: var(--chart-bar-danger); }
   </style>
 </head>
 <body>
@@ -742,6 +782,10 @@
     const totalPending = document.getElementById("total-pending");
     let reports = [];
 
+    function cssVar(name) {
+      return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+    }
+
     function formatAmount(value) {
       return currency.format(Number(value || 0));
     }
@@ -821,8 +865,15 @@
       const totalBarsH = n * barH + (n - 1) * gap;
       const offsetY = pad.top + (plotH - totalBarsH) / 2;
 
+      const cGrid = cssVar("--chart-grid");
+      const cLabel = cssVar("--chart-label");
+      const cText = cssVar("--chart-text");
+      const cDanger = cssVar("--chart-bar-danger");
+      const cDangerEnd = cssVar("--chart-bar-danger-end");
+      const cOnBar = cssVar("--chart-amount-on-bar");
+
       // Grid lines
-      ctx.strokeStyle = "#e0ddd6";
+      ctx.strokeStyle = cGrid;
       ctx.lineWidth = 0.5;
       const gridSteps = 4;
       for (let i = 0; i <= gridSteps; i++) {
@@ -831,7 +882,7 @@
         ctx.moveTo(x, pad.top);
         ctx.lineTo(x, H - pad.bottom);
         ctx.stroke();
-        ctx.fillStyle = "#62707b";
+        ctx.fillStyle = cLabel;
         ctx.font = "9px sans-serif";
         ctx.textAlign = "center";
         ctx.fillText(formatAmount((maxVal / gridSteps) * i), x, H - 1);
@@ -846,22 +897,22 @@
 
         // Gradient bar
         const grad = ctx.createLinearGradient(pad.left, 0, pad.left + w, 0);
-        grad.addColorStop(0, "#b42318");
-        grad.addColorStop(1, "#ef4444");
+        grad.addColorStop(0, cDanger);
+        grad.addColorStop(1, cDangerEnd);
         ctx.fillStyle = grad;
         ctx.beginPath();
         ctx.roundRect(pad.left, y, w, barH, [0, 4, 4, 0]);
         ctx.fill();
 
         // Amount on bar
-        ctx.fillStyle = w > 80 ? "#fff" : "#b42318";
+        ctx.fillStyle = w > 80 ? cOnBar : cDanger;
         ctx.font = "bold 9px sans-serif";
         ctx.textAlign = w > 80 ? "right" : "left";
         ctx.textBaseline = "middle";
         ctx.fillText(formatAmount(amt), w > 80 ? pad.left + w - 6 : pad.left + w + 4, y + barH / 2);
 
         // Label
-        ctx.fillStyle = "#1f2933";
+        ctx.fillStyle = cText;
         ctx.font = "bold 10px sans-serif";
         ctx.textAlign = "right";
         ctx.textBaseline = "middle";
@@ -1015,8 +1066,13 @@
       const barW = barGroupW * 0.32;
       const gap = barGroupW * 0.06;
 
+      const cGrid = cssVar("--chart-grid");
+      const cLabel = cssVar("--chart-label");
+      const cAccent = cssVar("--chart-bar-accent");
+      const cDanger = cssVar("--chart-bar-danger");
+
       // Grid lines
-      ctx.strokeStyle = "#e0ddd6";
+      ctx.strokeStyle = cGrid;
       ctx.lineWidth = 0.5;
       const gridSteps = 5;
       for (let i = 0; i <= gridSteps; i++) {
@@ -1025,7 +1081,7 @@
         ctx.moveTo(pad.left, y);
         ctx.lineTo(W - pad.right, y);
         ctx.stroke();
-        ctx.fillStyle = "#62707b";
+        ctx.fillStyle = cLabel;
         ctx.font = "10px sans-serif";
         ctx.textAlign = "right";
         ctx.fillText(formatAmount((maxVal / gridSteps) * i), pad.left - 6, y + 3);
@@ -1039,18 +1095,18 @@
         const hC = (m.collection / maxVal) * plotH;
         const hE = (m.expense / maxVal) * plotH;
 
-        ctx.fillStyle = "#0f766e";
+        ctx.fillStyle = cAccent;
         ctx.beginPath();
         ctx.roundRect(x, pad.top + plotH - hC, barW, hC, [3, 3, 0, 0]);
         ctx.fill();
 
-        ctx.fillStyle = "#b42318";
+        ctx.fillStyle = cDanger;
         ctx.beginPath();
         ctx.roundRect(x + barW + gap, pad.top + plotH - hE, barW, hE, [3, 3, 0, 0]);
         ctx.fill();
 
         // Month label
-        ctx.fillStyle = "#62707b";
+        ctx.fillStyle = cLabel;
         ctx.font = "9px sans-serif";
         ctx.textAlign = "center";
         const label = m.month.replace("20", "'");
