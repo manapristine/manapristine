@@ -112,86 +112,77 @@
       color: var(--ink);
     }
     .controls {
-      display: grid;
-      grid-template-columns: minmax(240px, 320px) 1fr auto;
+      display: flex;
+      align-items: center;
       gap: 10px;
-      align-items: start;
-      padding: 12px 14px;
+      padding: 8px 14px;
       overflow: hidden;
+      flex-wrap: wrap;
     }
     .control-stack {
-      display: grid;
+      display: flex;
+      align-items: center;
       gap: 8px;
     }
     .selected-flat {
-      display: block;
-      font-size: 1.15rem;
-      font-weight: 700;
-      line-height: 1;
-      color: var(--ink);
+      display: none;
     }
     .field label {
-      display: block;
-      margin-bottom: 6px;
-      color: var(--muted);
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+      display: none;
     }
     .field select {
-      width: 100%;
       border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 8px 10px;
+      border-radius: 8px;
+      padding: 6px 10px;
       font: inherit;
-      font-size: 0.9rem;
+      font-size: 0.82rem;
       color: var(--ink);
       background: white;
     }
     .flat-details {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      display: flex;
+      align-items: center;
       gap: 8px;
       min-width: 0;
-      align-self: stretch;
+      flex: 1;
     }
     .mini-card {
-      padding: 9px 10px;
-      border-radius: 12px;
+      padding: 4px 10px;
+      border-radius: 6px;
       border: 1px solid var(--line);
       background: white;
       min-width: 0;
+      white-space: nowrap;
     }
     .mini-card .label {
-      display: block;
-      margin-bottom: 3px;
+      display: inline;
       color: var(--muted);
-      font-size: 0.58rem;
+      font-size: 0.56rem;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.06em;
+      margin-right: 4px;
     }
     .mini-card .value {
-      display: block;
-      font-size: 0.78rem;
+      display: inline;
+      font-size: 0.72rem;
       font-weight: 600;
       word-break: break-word;
+      line-height: 1;
     }
     .actions {
       display: flex;
-      justify-content: flex-end;
-      align-items: start;
+      align-items: center;
       gap: 10px;
-      padding-top: 22px;
-      flex-wrap: wrap;
+      margin-left: auto;
     }
     .btn {
       border: 0;
       border-radius: 999px;
-      padding: 13px 18px;
-      min-height: 46px;
+      padding: 7px 16px;
+      min-height: 0;
       min-width: 0;
       font: inherit;
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       font-weight: 600;
       cursor: pointer;
       color: #ffffff;
@@ -271,8 +262,18 @@
       }
       body.print-defaulters .controls,
       body.print-defaulters .masthead,
-      body.print-defaulters #statement {
+      body.print-defaulters #statement,
+      body.print-defaulters #aggregates {
         display: none;
+      }
+      body.print-aggregates .controls,
+      body.print-aggregates .masthead,
+      body.print-aggregates .defaulters,
+      body.print-aggregates #statement {
+        display: none;
+      }
+      body.print-aggregates #aggregates {
+        display: block;
       }
       body.print-defaulters .defaulters,
       body.print-flat #statement {
@@ -381,21 +382,11 @@
       .page {
         padding: 12px 10px 16px;
       }
-      .controls {
-        grid-template-columns: minmax(0, 1fr);
+      .flat-details {
+        flex-wrap: wrap;
       }
       .metrics {
         grid-template-columns: 1fr 1fr;
-      }
-      .flat-details {
-        grid-template-columns: 1fr 1fr;
-      }
-      .actions {
-        padding-top: 0;
-        justify-content: stretch;
-      }
-      .actions .btn {
-        width: 100%;
       }
       .masthead {
         flex-direction: column;
@@ -425,14 +416,35 @@
         padding-left: 12px;
         padding-right: 12px;
       }
-      .metrics {
-        grid-template-columns: 1fr;
+      .controls {
+        flex-direction: column;
+        align-items: stretch;
       }
-      .controls,
-      .metrics {
-        grid-template-columns: 1fr;
+      .control-stack {
+        width: 100%;
+      }
+      .control-stack .field {
+        flex: 1;
+        min-width: 0;
+      }
+      .control-stack .field select {
+        width: 100%;
       }
       .flat-details {
+        flex-direction: column;
+        width: 100%;
+      }
+      .mini-card {
+        white-space: normal;
+      }
+      .actions {
+        margin-left: 0;
+        width: 100%;
+      }
+      .actions .btn {
+        width: 100%;
+      }
+      .metrics {
         grid-template-columns: 1fr;
       }
       .page {
@@ -449,14 +461,11 @@
         grid-template-columns: 1fr;
         gap: 8px;
       }
-      .selected-flat {
-        font-size: 1rem;
-      }
       .card,
       .mini-card,
       .table-wrap,
       .empty {
-        border-radius: 14px;
+        border-radius: 10px;
       }
       .card {
         padding: 10px 12px;
@@ -506,9 +515,28 @@
         gap: 10px;
       }
       .field select {
-        padding: 10px;
+        padding: 8px 10px;
       }
     }
+    .chart-legend {
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      margin-top: 8px;
+      font-size: 0.74rem;
+      color: var(--muted);
+    }
+    .chart-legend span::before {
+      content: "";
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 3px;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+    .chart-legend .leg-collection::before { background: #0f766e; }
+    .chart-legend .leg-expense::before { background: #b42318; }
   </style>
 </head>
 <body>
@@ -539,13 +567,21 @@
         <div class="control-stack">
           <span class="selected-flat" id="selected-flat-label">Select a flat</span>
           <div class="field">
+            <label for="view-select">View</label>
+            <select id="view-select">
+              <option value="flat">Flat Statement</option>
+              <option value="aggregates">Aggregates</option>
+              <option value="defaulters">Defaulters</option>
+            </select>
+          </div>
+          <div class="field" id="flat-select-field">
             <label for="flat-select">Select Flat</label>
             <select id="flat-select">
               <option value="">Choose a flat</option>
             </select>
           </div>
         </div>
-        <div class="flat-details">
+        <div class="flat-details" id="flat-details">
           <article class="mini-card">
             <span class="label">Owner</span>
             <span class="value" id="owner-name-top"></span>
@@ -605,6 +641,45 @@
         </section>
       </section>
 
+      <section id="aggregates" class="hidden">
+        <section class="metrics">
+          <article class="card positive">
+            <span class="label">Total Collection (All Flats)</span>
+            <span class="value" id="agg-total-collection"></span>
+          </article>
+          <article class="card">
+            <span class="label">Total Expense (All Flats)</span>
+            <span class="value" id="agg-total-expense"></span>
+          </article>
+          <article class="card" id="agg-net-card">
+            <span class="label">Net (Collection - Expense)</span>
+            <span class="value" id="agg-total-net"></span>
+          </article>
+        </section>
+
+        <section class="table-wrap" style="margin-top:8px">
+          <h2>Month-wise Aggregate (FY 2025-26)</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Month</th>
+                <th>Total Collection</th>
+                <th>Total Expense</th>
+                <th>Net</th>
+              </tr>
+            </thead>
+            <tbody id="agg-monthly-body"></tbody>
+          </table>
+        </section>
+
+        <section class="table-wrap" style="margin-top:8px">
+          <h2>Collection vs Expense Trend</h2>
+          <div style="width:100%;overflow-x:auto">
+            <canvas id="agg-chart" height="260" style="width:100%;max-width:900px"></canvas>
+          </div>
+        </section>
+      </section>
+
       <section class="defaulters">
         <div class="defaulters-head">
           <div>
@@ -617,6 +692,12 @@
               <span class="value" id="total-pending">₹0.00</span>
             </div>
             <button id="export-defaulters-pdf" class="btn" type="button">Export Defaulters PDF</button>
+          </div>
+        </div>
+        <div class="defaulters-chart-wrap" style="margin-bottom:10px">
+          <h3 style="margin:0 0 6px;font-size:0.88rem">Top 10 Defaulters</h3>
+          <div style="width:100%;overflow-x:auto">
+            <canvas id="defaulters-chart" height="280" style="width:100%;max-width:900px"></canvas>
           </div>
         </div>
         <div class="defaulters-table-wrap">
@@ -648,9 +729,13 @@
     });
 
     const flatSelect = document.getElementById("flat-select");
+    const viewSelect = document.getElementById("view-select");
+    const flatSelectField = document.getElementById("flat-select-field");
     const exportButton = document.getElementById("export-pdf");
     const exportDefaultersButton = document.getElementById("export-defaulters-pdf");
     const statement = document.getElementById("statement");
+    const aggregatesSection = document.getElementById("aggregates");
+    const defaultersSection = document.querySelector(".defaulters");
     const emptyState = document.getElementById("empty-state");
     const metaCurrentMonth = document.getElementById("meta-current-month");
     const defaultersBody = document.getElementById("defaulters-body");
@@ -706,6 +791,83 @@
         `;
         defaultersBody.appendChild(tr);
       }
+
+      drawDefaultersChart(defaulters.slice(0, 10));
+    }
+
+    function drawDefaultersChart(top10) {
+      const canvas = document.getElementById("defaulters-chart");
+      if (!canvas || top10.length === 0) return;
+      const ctx = canvas.getContext("2d");
+      const dpr = window.devicePixelRatio || 1;
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = rect.width * dpr;
+      canvas.height = 280 * dpr;
+      ctx.scale(dpr, dpr);
+
+      const W = rect.width;
+      const H = 280;
+      const pad = { top: 20, right: 20, bottom: 12, left: 180 };
+      const plotW = W - pad.left - pad.right;
+      const plotH = H - pad.top - pad.bottom;
+
+      ctx.clearRect(0, 0, W, H);
+
+      const amounts = top10.map((r) => Math.abs(Number(r.totals.closing_balance || 0)));
+      const maxVal = Math.max(...amounts, 1);
+      const n = top10.length;
+      const barH = Math.min(22, (plotH - (n - 1) * 4) / n);
+      const gap = 4;
+      const totalBarsH = n * barH + (n - 1) * gap;
+      const offsetY = pad.top + (plotH - totalBarsH) / 2;
+
+      // Grid lines
+      ctx.strokeStyle = "#e0ddd6";
+      ctx.lineWidth = 0.5;
+      const gridSteps = 4;
+      for (let i = 0; i <= gridSteps; i++) {
+        const x = pad.left + (plotW / gridSteps) * i;
+        ctx.beginPath();
+        ctx.moveTo(x, pad.top);
+        ctx.lineTo(x, H - pad.bottom);
+        ctx.stroke();
+        ctx.fillStyle = "#62707b";
+        ctx.font = "9px sans-serif";
+        ctx.textAlign = "center";
+        ctx.fillText(formatAmount((maxVal / gridSteps) * i), x, H - 1);
+      }
+
+      // Bars
+      for (let i = 0; i < n; i++) {
+        const r = top10[i];
+        const amt = amounts[i];
+        const y = offsetY + i * (barH + gap);
+        const w = (amt / maxVal) * plotW;
+
+        // Gradient bar
+        const grad = ctx.createLinearGradient(pad.left, 0, pad.left + w, 0);
+        grad.addColorStop(0, "#b42318");
+        grad.addColorStop(1, "#ef4444");
+        ctx.fillStyle = grad;
+        ctx.beginPath();
+        ctx.roundRect(pad.left, y, w, barH, [0, 4, 4, 0]);
+        ctx.fill();
+
+        // Amount on bar
+        ctx.fillStyle = w > 80 ? "#fff" : "#b42318";
+        ctx.font = "bold 9px sans-serif";
+        ctx.textAlign = w > 80 ? "right" : "left";
+        ctx.textBaseline = "middle";
+        ctx.fillText(formatAmount(amt), w > 80 ? pad.left + w - 6 : pad.left + w + 4, y + barH / 2);
+
+        // Label
+        ctx.fillStyle = "#1f2933";
+        ctx.font = "bold 10px sans-serif";
+        ctx.textAlign = "right";
+        ctx.textBaseline = "middle";
+        const ownerShort = (r.owner_name || "").length > 16 ? (r.owner_name || "").slice(0, 15) + "…" : (r.owner_name || "N/A");
+        ctx.fillText(`${r.flat} — ${ownerShort}`, pad.left - 6, y + barH / 2);
+      }
     }
 
     function renderReport(report) {
@@ -744,6 +906,170 @@
       statement.classList.remove("hidden");
     }
 
+    function switchView(view) {
+      statement.classList.add("hidden");
+      aggregatesSection.classList.add("hidden");
+      defaultersSection.classList.add("hidden");
+      emptyState.classList.add("hidden");
+
+      const label = document.getElementById("selected-flat-label");
+
+      const flatDetails = document.getElementById("flat-details");
+
+      if (view === "flat") {
+        flatSelectField.classList.remove("hidden");
+        flatDetails.classList.remove("hidden");
+        exportButton.textContent = "Export Flat PDF";
+        const report = reports.find((r) => r.flat === flatSelect.value);
+        if (report) {
+          renderReport(report);
+          label.textContent = `Flat ${report.flat}`;
+        } else {
+          emptyState.classList.remove("hidden");
+          emptyState.textContent = "Select a flat to view its maintenance statement.";
+          label.textContent = "Select a flat";
+        }
+      } else if (view === "aggregates") {
+        flatSelectField.classList.add("hidden");
+        flatDetails.classList.add("hidden");
+        exportButton.textContent = "Export Aggregates PDF";
+        label.textContent = "Aggregates — FY 2025-26";
+        aggregatesSection.classList.remove("hidden");
+        renderAggregates();
+      } else if (view === "defaulters") {
+        flatSelectField.classList.add("hidden");
+        flatDetails.classList.add("hidden");
+        exportButton.textContent = "Export Defaulters PDF";
+        label.textContent = "Defaulters — FY 2025-26";
+        defaultersSection.classList.remove("hidden");
+      }
+    }
+
+    function renderAggregates() {
+      if (reports.length === 0) return;
+
+      const monthMap = new Map();
+      for (const report of reports) {
+        for (const m of report.monthly) {
+          const key = m.month;
+          if (!monthMap.has(key)) {
+            monthMap.set(key, { month: key, collection: 0, expense: 0 });
+          }
+          const agg = monthMap.get(key);
+          agg.collection += Number(m.collection || 0);
+          agg.expense += Number(m.expense || 0);
+        }
+      }
+
+      const months = Array.from(monthMap.values());
+      let grandCollection = 0, grandExpense = 0;
+      for (const m of months) { grandCollection += m.collection; grandExpense += m.expense; }
+      const grandNet = grandCollection - grandExpense;
+
+      document.getElementById("agg-total-collection").textContent = formatAmount(grandCollection);
+      document.getElementById("agg-total-expense").textContent = formatAmount(grandExpense);
+      document.getElementById("agg-total-net").textContent = formatAmount(grandNet);
+      setCardTone(document.getElementById("agg-net-card"), grandNet);
+
+      const tbody = document.getElementById("agg-monthly-body");
+      tbody.innerHTML = "";
+      for (const m of months) {
+        const net = m.collection - m.expense;
+        const tr = document.createElement("tr");
+        if (net > 0) tr.classList.add("positive");
+        if (net < 0) tr.classList.add("negative");
+        tr.innerHTML = `
+          <td>${m.month}</td>
+          <td>${formatAmount(m.collection)}</td>
+          <td>${formatAmount(m.expense)}</td>
+          <td class="${net < 0 ? "negative-text" : net > 0 ? "positive-text" : ""}">${formatAmount(net)}</td>
+        `;
+        tbody.appendChild(tr);
+      }
+
+      drawChart(months);
+    }
+
+    function drawChart(months) {
+      const canvas = document.getElementById("agg-chart");
+      const ctx = canvas.getContext("2d");
+      const dpr = window.devicePixelRatio || 1;
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = rect.width * dpr;
+      canvas.height = 260 * dpr;
+      ctx.scale(dpr, dpr);
+
+      const W = rect.width;
+      const H = 260;
+      const pad = { top: 30, right: 20, bottom: 50, left: 70 };
+      const plotW = W - pad.left - pad.right;
+      const plotH = H - pad.top - pad.bottom;
+
+      ctx.clearRect(0, 0, W, H);
+
+      const allValues = months.flatMap((m) => [m.collection, m.expense]);
+      const maxVal = Math.max(...allValues, 1);
+
+      const n = months.length;
+      const barGroupW = plotW / n;
+      const barW = barGroupW * 0.32;
+      const gap = barGroupW * 0.06;
+
+      // Grid lines
+      ctx.strokeStyle = "#e0ddd6";
+      ctx.lineWidth = 0.5;
+      const gridSteps = 5;
+      for (let i = 0; i <= gridSteps; i++) {
+        const y = pad.top + plotH - (plotH / gridSteps) * i;
+        ctx.beginPath();
+        ctx.moveTo(pad.left, y);
+        ctx.lineTo(W - pad.right, y);
+        ctx.stroke();
+        ctx.fillStyle = "#62707b";
+        ctx.font = "10px sans-serif";
+        ctx.textAlign = "right";
+        ctx.fillText(formatAmount((maxVal / gridSteps) * i), pad.left - 6, y + 3);
+      }
+
+      // Bars
+      for (let i = 0; i < n; i++) {
+        const m = months[i];
+        const x = pad.left + barGroupW * i + barGroupW * 0.15;
+
+        const hC = (m.collection / maxVal) * plotH;
+        const hE = (m.expense / maxVal) * plotH;
+
+        ctx.fillStyle = "#0f766e";
+        ctx.beginPath();
+        ctx.roundRect(x, pad.top + plotH - hC, barW, hC, [3, 3, 0, 0]);
+        ctx.fill();
+
+        ctx.fillStyle = "#b42318";
+        ctx.beginPath();
+        ctx.roundRect(x + barW + gap, pad.top + plotH - hE, barW, hE, [3, 3, 0, 0]);
+        ctx.fill();
+
+        // Month label
+        ctx.fillStyle = "#62707b";
+        ctx.font = "9px sans-serif";
+        ctx.textAlign = "center";
+        const label = m.month.replace("20", "'");
+        ctx.save();
+        ctx.translate(x + barW + gap / 2, pad.top + plotH + 12);
+        ctx.rotate(-0.45);
+        ctx.fillText(label, 0, 0);
+        ctx.restore();
+      }
+
+      // Legend
+      const existingLegend = canvas.parentElement.querySelector(".chart-legend");
+      if (existingLegend) existingLegend.remove();
+      const legend = document.createElement("div");
+      legend.className = "chart-legend";
+      legend.innerHTML = '<span class="leg-collection">Collection</span><span class="leg-expense">Expense</span>';
+      canvas.parentElement.appendChild(legend);
+    }
+
     async function boot() {
       try {
         const response = await fetch("./report-data.json", { cache: "no-store" });
@@ -765,7 +1091,7 @@
 
         if (reports.length > 0) {
           flatSelect.value = reports[0].flat;
-          renderReport(reports[0]);
+          switchView("flat");
         } else {
           emptyState.textContent = "No report data found in report-data.json.";
         }
@@ -781,21 +1107,32 @@
       if (report) renderReport(report);
     });
 
+    viewSelect.addEventListener("change", (event) => {
+      switchView(event.target.value);
+    });
+
     exportButton.addEventListener("click", () => {
-      if (!flatSelect.value) return;
-      document.body.classList.remove("print-defaulters");
-      document.body.classList.add("print-flat");
+      const view = viewSelect.value;
+      document.body.classList.remove("print-defaulters", "print-flat", "print-aggregates");
+      if (view === "aggregates") {
+        document.body.classList.add("print-aggregates");
+      } else if (view === "defaulters") {
+        document.body.classList.add("print-defaulters");
+      } else {
+        if (!flatSelect.value) return;
+        document.body.classList.add("print-flat");
+      }
       window.print();
     });
 
     exportDefaultersButton.addEventListener("click", () => {
-      document.body.classList.remove("print-flat");
+      document.body.classList.remove("print-flat", "print-aggregates");
       document.body.classList.add("print-defaulters");
       window.print();
     });
 
     window.addEventListener("afterprint", () => {
-      document.body.classList.remove("print-flat", "print-defaulters");
+      document.body.classList.remove("print-flat", "print-defaulters", "print-aggregates");
     });
 
     boot();
