@@ -283,7 +283,33 @@
       color: var(--danger);
       font-weight: 700;
     }
+    .print-header {
+      display: none;
+    }
     @media print {
+      .print-header {
+        display: block;
+        padding: 14px 0 10px;
+        border-bottom: 2px solid #1f2933;
+        margin-bottom: 10px;
+      }
+      .print-page-break {
+        break-before: page;
+      }
+      .print-header-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+      .print-header-details {
+        display: flex;
+        gap: 20px;
+        font-size: 0.82rem;
+        flex-wrap: wrap;
+      }
+      .print-header-details strong {
+        color: #62707b;
+      }
       body {
         background: #ffffff;
       }
@@ -641,6 +667,15 @@
       </section>
 
       <section id="statement" class="hidden">
+        <div class="print-header" id="print-header">
+          <div class="print-header-title">Mana Pristine — Maintenance Statement</div>
+          <div class="print-header-details">
+            <span><strong>Flat:</strong> <span id="print-flat"></span></span>
+            <span><strong>Owner:</strong> <span id="print-owner"></span></span>
+            <span><strong>Occupant:</strong> <span id="print-occupant"></span></span>
+            <span><strong>FY:</strong> 2025-26</span>
+          </div>
+        </div>
         <section class="metrics">
           <article class="card positive">
             <span class="label">Total Collection</span>
@@ -682,6 +717,13 @@
       </section>
 
       <section id="aggregates" class="hidden">
+        <div class="print-header">
+          <div class="print-header-title">Mana Pristine — Aggregate Report</div>
+          <div class="print-header-details">
+            <span><strong>FY:</strong> 2025-26</span>
+            <span><strong>Report:</strong> Month-wise Collection &amp; Expense Summary</span>
+          </div>
+        </div>
         <section class="metrics">
           <article class="card positive">
             <span class="label">Total Collection (All Flats)</span>
@@ -698,6 +740,13 @@
         </section>
 
         <section class="table-wrap" style="margin-top:8px">
+          <h2>Collection vs Expense Trend</h2>
+          <div style="width:100%;overflow-x:auto">
+            <canvas id="agg-chart" height="260" style="width:100%;max-width:900px"></canvas>
+          </div>
+        </section>
+
+        <section class="table-wrap print-page-break" style="margin-top:8px">
           <h2>Month-wise Aggregate (FY 2025-26)</h2>
           <table>
             <thead>
@@ -711,16 +760,16 @@
             <tbody id="agg-monthly-body"></tbody>
           </table>
         </section>
-
-        <section class="table-wrap" style="margin-top:8px">
-          <h2>Collection vs Expense Trend</h2>
-          <div style="width:100%;overflow-x:auto">
-            <canvas id="agg-chart" height="260" style="width:100%;max-width:900px"></canvas>
-          </div>
-        </section>
       </section>
 
       <section class="defaulters">
+        <div class="print-header">
+          <div class="print-header-title">Mana Pristine — Defaulters Report</div>
+          <div class="print-header-details">
+            <span><strong>FY:</strong> 2025-26</span>
+            <span><strong>Report:</strong> Flats with Outstanding Dues</span>
+          </div>
+        </div>
         <div class="defaulters-head">
           <div>
             <h2>Defaulters</h2>
@@ -928,6 +977,9 @@
       document.getElementById("owner-name-top").textContent = report.owner_name || "Not provided";
       document.getElementById("occupant-name-top").textContent = report.occupant || "Not available";
       document.getElementById("closing-status-top").textContent = statusText(balance);
+      document.getElementById("print-flat").textContent = report.flat;
+      document.getElementById("print-owner").textContent = report.owner_name || "Not provided";
+      document.getElementById("print-occupant").textContent = report.occupant || "Not available";
       document.getElementById("total-collection").textContent = formatAmount(report.totals.collection);
       document.getElementById("total-expense").textContent = formatAmount(report.totals.expense);
       document.getElementById("total-late-fee").textContent = formatAmount(report.totals.late_fee);
