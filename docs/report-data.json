@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-04T01:47:58",
+  "generated_at": "2026-04-04T13:55:03",
   "sheet": "INCOME-EXPENSE-CYCLES",
   "report_count": 64,
   "reports": [
@@ -48,10 +48,10 @@
         },
         {
           "month": "Sep 2025",
-          "collection": 0,
+          "collection": 6533,
           "expense": 5603.434768493916,
           "late_fee": 0,
-          "net_collection_minus_expense": -5603.434768493916
+          "net_collection_minus_expense": 929.5652315060843
         },
         {
           "month": "Oct 2025",
@@ -62,10 +62,10 @@
         },
         {
           "month": "Nov 2025",
-          "collection": 5603,
+          "collection": 0,
           "expense": 7153.923178791799,
           "late_fee": 0,
-          "net_collection_minus_expense": -1550.9231787917988
+          "net_collection_minus_expense": -7153.923178791799
         },
         {
           "month": "Dec 2025",
@@ -97,11 +97,11 @@
         }
       ],
       "totals": {
-        "collection": 57272,
+        "collection": 58202,
         "expense": 65515.034998508825,
         "late_fee": 0,
-        "net_collection_minus_expense": -8243.034998508825,
-        "closing_balance": -8243.034998508825
+        "net_collection_minus_expense": -7313.034998508825,
+        "closing_balance": -7313.034998508825
       }
     },
     {
@@ -654,10 +654,10 @@
         },
         {
           "month": "Sep 2025",
-          "collection": 0,
+          "collection": 5635,
           "expense": 5263.806563817316,
           "late_fee": 0,
-          "net_collection_minus_expense": -5263.806563817316
+          "net_collection_minus_expense": 371.1934361826843
         },
         {
           "month": "Oct 2025",
@@ -668,10 +668,10 @@
         },
         {
           "month": "Nov 2025",
-          "collection": 5264,
+          "collection": 6114,
           "expense": 6756.060205956594,
           "late_fee": 0,
-          "net_collection_minus_expense": -1492.0602059565936
+          "net_collection_minus_expense": -642.0602059565936
         },
         {
           "month": "Dec 2025",
@@ -703,11 +703,11 @@
         }
       ],
       "totals": {
-        "collection": 42215,
+        "collection": 48700,
         "expense": 60139.71391628,
         "late_fee": 0,
-        "net_collection_minus_expense": -17924.71391628,
-        "closing_balance": -17924.71391628
+        "net_collection_minus_expense": -11439.713916280001,
+        "closing_balance": -11439.713916280001
       }
     },
     {
@@ -715,7 +715,7 @@
       "owner_name": "Ranjithkumar R",
       "email": "foreverran@gmail.com",
       "sheet_email": null,
-      "occupant": "Ranjithkumar R ",
+      "occupant": "Ranjithkumar ",
       "collection_carry_over_mar2013_mar2022": 0,
       "monthly": [
         {
@@ -1058,10 +1058,10 @@
         },
         {
           "month": "Sep 2025",
-          "collection": 0,
+          "collection": 5377,
           "expense": 4934.619365432977,
           "late_fee": 0,
-          "net_collection_minus_expense": -4934.619365432977
+          "net_collection_minus_expense": 442.38063456702275
         },
         {
           "month": "Oct 2025",
@@ -1072,10 +1072,10 @@
         },
         {
           "month": "Nov 2025",
-          "collection": 4935,
+          "collection": 6114,
           "expense": 6627.6517108903945,
           "late_fee": 0,
-          "net_collection_minus_expense": -1692.6517108903945
+          "net_collection_minus_expense": -513.6517108903945
         },
         {
           "month": "Dec 2025",
@@ -1107,11 +1107,11 @@
         }
       ],
       "totals": {
-        "collection": 34475,
+        "collection": 41031,
         "expense": 57678.94613427648,
         "late_fee": 0,
-        "net_collection_minus_expense": -23203.946134276477,
-        "closing_balance": -23203.946134276477
+        "net_collection_minus_expense": -16647.946134276477,
+        "closing_balance": -16647.946134276477
       }
     },
     {
@@ -1361,10 +1361,10 @@
         },
         {
           "month": "Sep 2025",
-          "collection": 0,
+          "collection": 5790,
           "expense": 5303.566775779689,
           "late_fee": 0,
-          "net_collection_minus_expense": -5303.566775779689
+          "net_collection_minus_expense": 486.4332242203109
         },
         {
           "month": "Oct 2025",
@@ -1375,10 +1375,10 @@
         },
         {
           "month": "Nov 2025",
-          "collection": 5304,
+          "collection": 6231,
           "expense": 7284.517583906986,
           "late_fee": 0,
-          "net_collection_minus_expense": -1980.5175839069861
+          "net_collection_minus_expense": -1053.5175839069861
         },
         {
           "month": "Dec 2025",
@@ -1410,11 +1410,11 @@
         }
       ],
       "totals": {
-        "collection": 56578.97,
+        "collection": 63295.97,
         "expense": 64926.60133183483,
         "late_fee": 0,
-        "net_collection_minus_expense": -8347.631331834826,
-        "closing_balance": -8347.631331834826
+        "net_collection_minus_expense": -1630.6313318348257,
+        "closing_balance": -1630.6313318348257
       }
     },
     {
@@ -1462,10 +1462,10 @@
         },
         {
           "month": "Sep 2025",
-          "collection": 0,
+          "collection": 5226,
           "expense": 5011.218599596351,
           "late_fee": 0,
-          "net_collection_minus_expense": -5011.218599596351
+          "net_collection_minus_expense": 214.78140040364906
         },
         {
           "month": "Oct 2025",
@@ -1511,11 +1511,11 @@
         }
       ],
       "totals": {
-        "collection": 41237.17,
+        "collection": 46463.17,
         "expense": 60878.76815827055,
         "late_fee": 0,
-        "net_collection_minus_expense": -19641.59815827055,
-        "closing_balance": -19641.59815827055
+        "net_collection_minus_expense": -14415.59815827055,
+        "closing_balance": -14415.59815827055
       }
     },
     {
@@ -2183,10 +2183,10 @@
         },
         {
           "month": "Nov 2025",
-          "collection": 5135,
+          "collection": 0,
           "expense": 6993.218881987606,
           "late_fee": 0,
-          "net_collection_minus_expense": -1858.2188819876064
+          "net_collection_minus_expense": -6993.218881987606
         },
         {
           "month": "Dec 2025",
@@ -2218,11 +2218,11 @@
         }
       ],
       "totals": {
-        "collection": 59674.81,
+        "collection": 54539.81,
         "expense": 60270.746197992674,
         "late_fee": 0,
-        "net_collection_minus_expense": -595.9361979926762,
-        "closing_balance": -595.9361979926762
+        "net_collection_minus_expense": -5730.936197992676,
+        "closing_balance": -5730.936197992676
       }
     },
     {
@@ -2331,7 +2331,7 @@
       "owner_name": "Sreejith Menon",
       "email": "sreejithmenon@gmail.com",
       "sheet_email": null,
-      "occupant": "Sreejith Menon",
+      "occupant": "Sujeet Kumar",
       "collection_carry_over_mar2013_mar2022": 0,
       "monthly": [
         {
@@ -2371,10 +2371,10 @@
         },
         {
           "month": "Sep 2025",
-          "collection": 0,
+          "collection": 5121,
           "expense": 4769.099865682815,
           "late_fee": 0,
-          "net_collection_minus_expense": -4769.099865682815
+          "net_collection_minus_expense": 351.9001343171849
         },
         {
           "month": "Oct 2025",
@@ -2385,10 +2385,10 @@
         },
         {
           "month": "Nov 2025",
-          "collection": 4769,
+          "collection": 6114,
           "expense": 7447.39372501964,
           "late_fee": 0,
-          "net_collection_minus_expense": -2678.3937250196404
+          "net_collection_minus_expense": -1333.3937250196404
         },
         {
           "month": "Dec 2025",
@@ -2420,11 +2420,11 @@
         }
       ],
       "totals": {
-        "collection": 53528,
+        "collection": 59994,
         "expense": 61984.3917566902,
         "late_fee": 0,
-        "net_collection_minus_expense": -8456.391756690202,
-        "closing_balance": -8456.391756690202
+        "net_collection_minus_expense": -1990.3917566902019,
+        "closing_balance": -1990.3917566902019
       }
     },
     {
@@ -2472,10 +2472,10 @@
         },
         {
           "month": "Sep 2025",
-          "collection": 0,
+          "collection": 5434,
           "expense": 5031.076211563521,
           "late_fee": 0,
-          "net_collection_minus_expense": -5031.076211563521
+          "net_collection_minus_expense": 402.9237884364793
         },
         {
           "month": "Oct 2025",
@@ -2486,10 +2486,10 @@
         },
         {
           "month": "Nov 2025",
-          "collection": 5031,
+          "collection": 6231,
           "expense": 6751.757903962267,
           "late_fee": 0,
-          "net_collection_minus_expense": -1720.757903962267
+          "net_collection_minus_expense": -520.7579039622669
         },
         {
           "month": "Dec 2025",
@@ -2521,11 +2521,11 @@
         }
       ],
       "totals": {
-        "collection": 51846,
+        "collection": 58480,
         "expense": 59033.9930023339,
         "late_fee": 0,
-        "net_collection_minus_expense": -7187.993002333897,
-        "closing_balance": -7187.993002333897
+        "net_collection_minus_expense": -553.9930023338966,
+        "closing_balance": -553.9930023338966
       }
     },
     {
@@ -2587,10 +2587,10 @@
         },
         {
           "month": "Nov 2025",
-          "collection": 5794,
+          "collection": 0,
           "expense": 6735.578760476578,
           "late_fee": 0,
-          "net_collection_minus_expense": -941.5787604765783
+          "net_collection_minus_expense": -6735.578760476578
         },
         {
           "month": "Dec 2025",
@@ -2622,11 +2622,11 @@
         }
       ],
       "totals": {
-        "collection": 44069,
+        "collection": 38275,
         "expense": 60990.25318457905,
         "late_fee": 0,
-        "net_collection_minus_expense": -16921.25318457905,
-        "closing_balance": -16921.25318457905
+        "net_collection_minus_expense": -22715.25318457905,
+        "closing_balance": -22715.25318457905
       }
     },
     {
@@ -2634,7 +2634,7 @@
       "owner_name": "Renu R",
       "email": "",
       "sheet_email": null,
-      "occupant": "Renu R",
+      "occupant": "Niwin Anto",
       "collection_carry_over_mar2013_mar2022": 0,
       "monthly": [
         {
@@ -2735,7 +2735,7 @@
       "owner_name": "Kavita",
       "email": "ameet.talwadker@gmail.com",
       "sheet_email": null,
-      "occupant": "Kavita",
+      "occupant": "Anirudh Singh",
       "collection_carry_over_mar2013_mar2022": 0,
       "monthly": [
         {
@@ -2977,10 +2977,10 @@
         },
         {
           "month": "Sep 2025",
-          "collection": 0,
+          "collection": 5439,
           "expense": 4974.852377680283,
           "late_fee": 0,
-          "net_collection_minus_expense": -4974.852377680283
+          "net_collection_minus_expense": 464.1476223197169
         },
         {
           "month": "Oct 2025",
@@ -2991,10 +2991,10 @@
         },
         {
           "month": "Nov 2025",
-          "collection": 4975,
+          "collection": 6231,
           "expense": 7102.460290751288,
           "late_fee": 0,
-          "net_collection_minus_expense": -2127.460290751288
+          "net_collection_minus_expense": -871.4602907512881
         },
         {
           "month": "Dec 2025",
@@ -3026,11 +3026,11 @@
         }
       ],
       "totals": {
-        "collection": 48462,
+        "collection": 55157,
         "expense": 62725.81079698319,
         "late_fee": 0,
-        "net_collection_minus_expense": -14263.81079698319,
-        "closing_balance": -14263.81079698319
+        "net_collection_minus_expense": -7568.810796983191,
+        "closing_balance": -7568.810796983191
       }
     },
     {
@@ -3078,10 +3078,10 @@
         },
         {
           "month": "Sep 2025",
-          "collection": 0,
+          "collection": 6487,
           "expense": 5910.584089611315,
           "late_fee": 0,
-          "net_collection_minus_expense": -5910.584089611315
+          "net_collection_minus_expense": 576.415910388685
         },
         {
           "month": "Oct 2025",
@@ -3092,10 +3092,10 @@
         },
         {
           "month": "Nov 2025",
-          "collection": 5911,
+          "collection": 6981,
           "expense": 7556.714028359,
           "late_fee": 0,
-          "net_collection_minus_expense": -1645.7140283589997
+          "net_collection_minus_expense": -575.7140283589997
         },
         {
           "month": "Dec 2025",
@@ -3127,11 +3127,11 @@
         }
       ],
       "totals": {
-        "collection": 61231.43,
+        "collection": 68788.43,
         "expense": 68966.67975430697,
         "late_fee": 0,
-        "net_collection_minus_expense": -7735.249754306969,
-        "closing_balance": -7735.249754306969
+        "net_collection_minus_expense": -178.24975430697668,
+        "closing_balance": -178.24975430697668
       }
     },
     {
@@ -3482,10 +3482,10 @@
         },
         {
           "month": "Sep 2025",
-          "collection": 0,
+          "collection": 5457,
           "expense": 4996.719390858417,
           "late_fee": 0,
-          "net_collection_minus_expense": -4996.719390858417
+          "net_collection_minus_expense": 460.2806091415832
         },
         {
           "month": "Oct 2025",
@@ -3496,10 +3496,10 @@
         },
         {
           "month": "Nov 2025",
-          "collection": 4997,
+          "collection": 6231,
           "expense": 6763.184904277358,
           "late_fee": 0,
-          "net_collection_minus_expense": -1766.1849042773583
+          "net_collection_minus_expense": -532.1849042773583
         },
         {
           "month": "Dec 2025",
@@ -3531,11 +3531,11 @@
         }
       ],
       "totals": {
-        "collection": 92176.54000000001,
+        "collection": 98867.54000000001,
         "expense": 59139.85793227339,
         "late_fee": 0,
-        "net_collection_minus_expense": 33036.682067726615,
-        "closing_balance": 33036.682067726615
+        "net_collection_minus_expense": 39727.682067726615,
+        "closing_balance": 39727.682067726615
       }
     },
     {
@@ -3583,10 +3583,10 @@
         },
         {
           "month": "Sep 2025",
-          "collection": 0,
+          "collection": 5290,
           "expense": 5637.200588842854,
           "late_fee": 0,
-          "net_collection_minus_expense": -5637.200588842854
+          "net_collection_minus_expense": -347.2005888428539
         },
         {
           "month": "Oct 2025",
@@ -3632,11 +3632,11 @@
         }
       ],
       "totals": {
-        "collection": 38075,
+        "collection": 43365,
         "expense": 66541.9197847419,
         "late_fee": 0,
-        "net_collection_minus_expense": -28466.9197847419,
-        "closing_balance": -28466.9197847419
+        "net_collection_minus_expense": -23176.9197847419,
+        "closing_balance": -23176.9197847419
       }
     },
     {
@@ -3698,10 +3698,10 @@
         },
         {
           "month": "Nov 2025",
-          "collection": 4935,
+          "collection": 0,
           "expense": 6546.452221363239,
           "late_fee": 0,
-          "net_collection_minus_expense": -1611.452221363239
+          "net_collection_minus_expense": -6546.452221363239
         },
         {
           "month": "Dec 2025",
@@ -3733,11 +3733,11 @@
         }
       ],
       "totals": {
-        "collection": 32190,
+        "collection": 27255,
         "expense": 60604.737440409815,
         "late_fee": 0,
-        "net_collection_minus_expense": -28414.737440409815,
-        "closing_balance": -28414.737440409815
+        "net_collection_minus_expense": -33349.737440409815,
+        "closing_balance": -33349.737440409815
       }
     },
     {
@@ -3886,10 +3886,10 @@
         },
         {
           "month": "Sep 2025",
-          "collection": 0,
+          "collection": 5168,
           "expense": 4740.613648515625,
           "late_fee": 0,
-          "net_collection_minus_expense": -4740.613648515625
+          "net_collection_minus_expense": 427.38635148437515
         },
         {
           "month": "Oct 2025",
@@ -3900,10 +3900,10 @@
         },
         {
           "month": "Nov 2025",
-          "collection": 4741,
+          "collection": 6114,
           "expense": 6464.13908350029,
           "late_fee": 0,
-          "net_collection_minus_expense": -1723.1390835002903
+          "net_collection_minus_expense": -350.1390835002903
         },
         {
           "month": "Dec 2025",
@@ -3935,11 +3935,11 @@
         }
       ],
       "totals": {
-        "collection": 49785.13,
+        "collection": 56326.13,
         "expense": 56918.222815166264,
         "late_fee": 0,
-        "net_collection_minus_expense": -7133.0928151662665,
-        "closing_balance": -7133.0928151662665
+        "net_collection_minus_expense": -592.0928151662665,
+        "closing_balance": -592.0928151662665
       }
     },
     {
@@ -4290,10 +4290,10 @@
         },
         {
           "month": "Sep 2025",
-          "collection": 0,
+          "collection": 37546,
           "expense": 5150.964895813397,
           "late_fee": 0,
-          "net_collection_minus_expense": -5150.964895813397
+          "net_collection_minus_expense": 32395.0351041866
         },
         {
           "month": "Oct 2025",
@@ -4304,10 +4304,10 @@
         },
         {
           "month": "Nov 2025",
-          "collection": 5151,
+          "collection": 6114,
           "expense": 7191.3998662658705,
           "late_fee": 0,
-          "net_collection_minus_expense": -2040.3998662658705
+          "net_collection_minus_expense": -1077.3998662658705
         },
         {
           "month": "Dec 2025",
@@ -4339,11 +4339,11 @@
         }
       ],
       "totals": {
-        "collection": 52510,
+        "collection": 91019,
         "expense": 61490.98089659397,
         "late_fee": 500,
-        "net_collection_minus_expense": -9480.980896593966,
-        "closing_balance": -9480.980896593966
+        "net_collection_minus_expense": 29028.019103406034,
+        "closing_balance": 29028.019103406034
       }
     },
     {
@@ -4391,10 +4391,10 @@
         },
         {
           "month": "Sep 2025",
-          "collection": 0,
+          "collection": 5905,
           "expense": 5234.7687463177035,
           "late_fee": 0,
-          "net_collection_minus_expense": -5234.7687463177035
+          "net_collection_minus_expense": 670.2312536822965
         },
         {
           "month": "Oct 2025",
@@ -4440,11 +4440,11 @@
         }
       ],
       "totals": {
-        "collection": 51490.09,
+        "collection": 57395.09,
         "expense": 63844.978751719136,
         "late_fee": 0,
-        "net_collection_minus_expense": -12354.88875171914,
-        "closing_balance": -12354.88875171914
+        "net_collection_minus_expense": -6449.88875171914,
+        "closing_balance": -6449.88875171914
       }
     },
     {
@@ -4694,10 +4694,10 @@
         },
         {
           "month": "Sep 2025",
-          "collection": 0,
+          "collection": 6788,
           "expense": 6032.15201486086,
           "late_fee": 0,
-          "net_collection_minus_expense": -6032.15201486086
+          "net_collection_minus_expense": 755.8479851391403
         },
         {
           "month": "Oct 2025",
@@ -4708,10 +4708,10 @@
         },
         {
           "month": "Nov 2025",
-          "collection": 6032,
+          "collection": 0,
           "expense": 7991.539018656853,
           "late_fee": 0,
-          "net_collection_minus_expense": -1959.539018656853
+          "net_collection_minus_expense": -7991.539018656853
         },
         {
           "month": "Dec 2025",
@@ -4743,11 +4743,11 @@
         }
       ],
       "totals": {
-        "collection": 54020,
+        "collection": 54776,
         "expense": 70917.25009401525,
         "late_fee": 500,
-        "net_collection_minus_expense": -17397.250094015253,
-        "closing_balance": -17397.250094015253
+        "net_collection_minus_expense": -16641.250094015253,
+        "closing_balance": -16641.250094015253
       }
     },
     {
@@ -5011,10 +5011,10 @@
         },
         {
           "month": "Nov 2025",
-          "collection": 5775,
+          "collection": 0,
           "expense": 7835.531412660135,
           "late_fee": 0,
-          "net_collection_minus_expense": -2060.531412660135
+          "net_collection_minus_expense": -7835.531412660135
         },
         {
           "month": "Dec 2025",
@@ -5046,11 +5046,11 @@
         }
       ],
       "totals": {
-        "collection": 111313,
+        "collection": 105538,
         "expense": 70345.74663029356,
         "late_fee": 1000,
-        "net_collection_minus_expense": 39967.253369706435,
-        "closing_balance": 39967.253369706435
+        "net_collection_minus_expense": 34192.253369706435,
+        "closing_balance": 34192.253369706435
       }
     },
     {
@@ -5112,10 +5112,10 @@
         },
         {
           "month": "Nov 2025",
-          "collection": 5605,
+          "collection": 6231,
           "expense": 6769.479438349231,
           "late_fee": 0,
-          "net_collection_minus_expense": -1164.4794383492308
+          "net_collection_minus_expense": -538.4794383492308
         },
         {
           "month": "Dec 2025",
@@ -5147,11 +5147,11 @@
         }
       ],
       "totals": {
-        "collection": 67934.57,
+        "collection": 68560.57,
         "expense": 63843.93557432158,
         "late_fee": 500,
-        "net_collection_minus_expense": 3590.6344256784287,
-        "closing_balance": 3590.6344256784287
+        "net_collection_minus_expense": 4216.634425678429,
+        "closing_balance": 4216.634425678429
       }
     },
     {
@@ -5415,10 +5415,10 @@
         },
         {
           "month": "Nov 2025",
-          "collection": 11930,
+          "collection": 5634,
           "expense": 7632.888802168438,
           "late_fee": 0,
-          "net_collection_minus_expense": 4297.111197831562
+          "net_collection_minus_expense": -1998.888802168438
         },
         {
           "month": "Dec 2025",
@@ -5450,11 +5450,11 @@
         }
       ],
       "totals": {
-        "collection": 60974.61,
+        "collection": 54678.61,
         "expense": 68432.06318553901,
         "late_fee": 0,
-        "net_collection_minus_expense": -7457.453185539009,
-        "closing_balance": -7457.453185539009
+        "net_collection_minus_expense": -13753.453185539009,
+        "closing_balance": -13753.453185539009
       }
     },
     {
@@ -5617,10 +5617,10 @@
         },
         {
           "month": "Nov 2025",
-          "collection": 4881,
+          "collection": 6114,
           "expense": 6607.267104396099,
           "late_fee": 0,
-          "net_collection_minus_expense": -1726.267104396099
+          "net_collection_minus_expense": -493.26710439609906
         },
         {
           "month": "Dec 2025",
@@ -5652,11 +5652,11 @@
         }
       ],
       "totals": {
-        "collection": 50949.42,
+        "collection": 52182.42,
         "expense": 58777.491759007724,
         "late_fee": 0,
-        "net_collection_minus_expense": -7828.071759007726,
-        "closing_balance": -7828.071759007726
+        "net_collection_minus_expense": -6595.071759007726,
+        "closing_balance": -6595.071759007726
       }
     },
     {
@@ -5704,10 +5704,10 @@
         },
         {
           "month": "Sep 2025",
-          "collection": 0,
+          "collection": 5840,
           "expense": 5244.860740400554,
           "late_fee": 0,
-          "net_collection_minus_expense": -5244.860740400554
+          "net_collection_minus_expense": 595.1392595994457
         },
         {
           "month": "Oct 2025",
@@ -5718,10 +5718,10 @@
         },
         {
           "month": "Nov 2025",
-          "collection": 5245,
+          "collection": 6231,
           "expense": 7005.572885537312,
           "late_fee": 0,
-          "net_collection_minus_expense": -1760.5728855373118
+          "net_collection_minus_expense": -774.5728855373118
         },
         {
           "month": "Dec 2025",
@@ -5753,11 +5753,11 @@
         }
       ],
       "totals": {
-        "collection": 56367.69,
+        "collection": 63193.69,
         "expense": 63348.98879811915,
         "late_fee": 0,
-        "net_collection_minus_expense": -6981.298798119147,
-        "closing_balance": -6981.298798119147
+        "net_collection_minus_expense": -155.29879811914725,
+        "closing_balance": -155.29879811914725
       }
     },
     {
@@ -5920,10 +5920,10 @@
         },
         {
           "month": "Nov 2025",
-          "collection": 10010,
+          "collection": 4834,
           "expense": 6978.402517172276,
           "late_fee": 0,
-          "net_collection_minus_expense": 3031.597482827724
+          "net_collection_minus_expense": -2144.402517172276
         },
         {
           "month": "Dec 2025",
@@ -5955,11 +5955,11 @@
         }
       ],
       "totals": {
-        "collection": 58796.119999999995,
+        "collection": 53620.119999999995,
         "expense": 59469.00585186004,
         "late_fee": 500,
-        "net_collection_minus_expense": -1172.8858518600464,
-        "closing_balance": -1172.8858518600464
+        "net_collection_minus_expense": -6348.885851860046,
+        "closing_balance": -6348.885851860046
       }
     },
     {
