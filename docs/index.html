@@ -671,13 +671,13 @@
           <div>
             <small>Maintenance Statement</small>
             <strong>Mana Pristine</strong>
-            <span>Financial Year 2025-26</span>
+            <span id="fy-subtitle"></span>
           </div>
         </div>
         <div class="meta" id="meta">
           <div>
             <span class="label">Financial Year</span>
-            <span class="value" id="meta-financial-year">2025-26</span>
+            <span class="value" id="meta-financial-year">Loading...</span>
           </div>
           <div>
             <span class="label">Current Month</span>
@@ -730,7 +730,7 @@
             <span><strong>Flat:</strong> <span id="print-flat"></span></span>
             <span><strong>Owner:</strong> <span id="print-owner"></span></span>
             <span><strong>Occupant:</strong> <span id="print-occupant"></span></span>
-            <span><strong>FY:</strong> 2025-26</span>
+            <span><strong>FY:</strong> <span id="print-flat-fy"></span></span>
           </div>
         </div>
         <section class="table-wrap" style="margin-bottom:8px">
@@ -808,7 +808,7 @@
         <div class="print-header">
           <div class="print-header-title">Mana Pristine — Aggregate Report</div>
           <div class="print-header-details">
-            <span><strong>FY:</strong> 2025-26</span>
+            <span><strong>FY:</strong> <span id="print-agg-fy"></span></span>
             <span><strong>Report:</strong> Month-wise Collection &amp; Expense Summary</span>
           </div>
         </div>
@@ -843,7 +843,7 @@
         </section>
 
         <section class="table-wrap print-page-break" style="margin-top:8px">
-          <h2>Month-wise Aggregate (FY 2025-26)</h2>
+          <h2 id="agg-monthly-title">Month-wise Aggregate</h2>
           <table>
             <thead>
               <tr>
@@ -860,7 +860,7 @@
         </section>
 
         <section class="table-wrap print-page-break" style="margin-top:8px">
-          <h2>Breakdown of Annual Fixed Expenses (FY 2025-26)</h2>
+          <h2 id="agg-expense-title">Breakdown of Annual Fixed Expenses</h2>
           <table id="annual-expense-table">
             <thead id="annual-expense-head"></thead>
             <tbody id="annual-expense-body"></tbody>
@@ -872,7 +872,7 @@
         <div class="print-header">
           <div class="print-header-title">Mana Pristine — Defaulters Report</div>
           <div class="print-header-details">
-            <span><strong>FY:</strong> 2025-26</span>
+            <span><strong>FY:</strong> <span id="print-def-fy"></span></span>
             <span><strong>Report:</strong> Flats with Outstanding Dues</span>
           </div>
         </div>
@@ -936,6 +936,7 @@
     const defaultersBody = document.getElementById("defaulters-body");
     const totalPending = document.getElementById("total-pending");
     let reports = [];
+    let financialYear = "";
 
     function cssVar(name) {
       return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
@@ -1307,14 +1308,14 @@
         flatSelectField.classList.add("hidden");
         flatDetails.classList.add("hidden");
         exportButton.textContent = "Export Aggregates PDF";
-        label.textContent = "Aggregates — FY 2025-26";
+        label.textContent = `Aggregates — FY ${financialYear}`;
         aggregatesSection.classList.remove("hidden");
         renderAggregates();
       } else if (view === "defaulters") {
         flatSelectField.classList.add("hidden");
         flatDetails.classList.add("hidden");
         exportButton.textContent = "Export Defaulters PDF";
-        label.textContent = "Defaulters — FY 2025-26";
+        label.textContent = `Defaulters — FY ${financialYear}`;
         defaultersSection.classList.remove("hidden");
       }
     }
@@ -1533,6 +1534,14 @@
         const payload = await response.json();
         reports = (payload.reports || []).slice().sort((a, b) => a.flat.localeCompare(b.flat, undefined, { numeric: true }));
         window._annualExpenseDetails = payload.annual_expense_details || [];
+        financialYear = payload.financial_year || "";
+        document.getElementById("fy-subtitle").textContent = financialYear ? `Financial Year ${financialYear}` : "";
+        document.getElementById("meta-financial-year").textContent = financialYear || "N/A";
+        document.getElementById("print-flat-fy").textContent = financialYear;
+        document.getElementById("print-agg-fy").textContent = financialYear;
+        document.getElementById("print-def-fy").textContent = financialYear;
+        document.getElementById("agg-monthly-title").textContent = `Month-wise Aggregate (FY ${financialYear})`;
+        document.getElementById("agg-expense-title").textContent = `Breakdown of Annual Fixed Expenses (FY ${financialYear})`;
         renderDefaulters(reports);
         const generatedMonth = payload.generated_at
           ? new Date(payload.generated_at).toLocaleDateString("en-IN", { month: "long", year: "numeric" })

@@ -10,8 +10,8 @@ from openpyxl import load_workbook
 
 
 DEFAULT_SHEET = "INCOME-EXPENSE-CYCLES"
-DEFAULT_FLATS_JSON = Path(r"C:\github\manapristine\db\report_flats.json")
 DEFAULT_MEMBERS_CSV = Path(r"C:\github\manapristine\db\members.csv")
+DEFAULT_OCCUPANTS_CSV = Path(r"C:\github\manapristine\db\occupants.csv")
 DEFAULT_OUTPUT_JSON = Path(r"C:\github\manapristine\docs\report-data.json")
 
 
@@ -46,8 +46,8 @@ def parse_args() -> argparse.Namespace:
         help="Path to the income/expense workbook (.xlsx)",
     )
     parser.add_argument("--sheet", default=DEFAULT_SHEET)
-    parser.add_argument("--flats-json", type=Path, default=DEFAULT_FLATS_JSON)
     parser.add_argument("--members-csv", type=Path, default=DEFAULT_MEMBERS_CSV)
+    parser.add_argument("--occupants-csv", type=Path, default=DEFAULT_OCCUPANTS_CSV)
     parser.add_argument("--output-json", type=Path, default=DEFAULT_OUTPUT_JSON)
     return parser.parse_args()
 
@@ -68,9 +68,56 @@ def month_label(value: Any) -> str:
     return str(value).strip()
 
 
-def write_report_dataset(reports: list[dict[str, Any]], output_json: Path, annual_expense_details: list[dict[str, Any]] | None = None) -> None:
+def derive_financial_year(monthly_blocks: list[MonthlyBlock]) -> str:
+    """Derive financial year string like '2025-26' from monthly block headers."""
+    if not monthly_blocks:
+        return "Unknown"
+    first = monthly_blocks[0].month_label   # e.g., "Apr 2025"
+    last = monthly_blocks[-1].month_label   # e.g., "Mar 2026"
+    start_year = first.split()[-1]
+    end_year = last.split()[-1]
+    if start_year == end_year:
+        return start_year
+    return f"{start_year}-{end_year[-2:]}"
+
+
+def build_expense_sheet_map(
+    monthly_blocks: list[MonthlyBlock], available_sheets: list[str]
+) -> dict[str, str]:
+    """Build month_label -> sheet_name map by matching available workbook sheets."""
+    sheet_set = set(available_sheets)
+    full_month = {
+        "Jan": "January", "Feb": "February", "Mar": "March",
+        "Apr": "April", "May": "May", "Jun": "June",
+        "Jul": "July", "Aug": "August", "Sep": "September",
+        "Oct": "October", "Nov": "November", "Dec": "December",
+    }
+    result: dict[str, str] = {}
+    for block in monthly_blocks:
+        parts = block.month_label.split()
+        if len(parts) != 2:
+            continue
+        abbrev, year = parts
+        candidates = [f"{abbrev}{year}-EXPENSE"]
+        full = full_month.get(abbrev, "")
+        if full and full != abbrev:
+            candidates.append(f"{full}{year}-EXPENSE")
+        for candidate in candidates:
+            if candidate in sheet_set:
+                result[block.month_label] = candidate
+                break
+    return result
+
+
+def write_report_dataset(
+    reports: list[dict[str, Any]],
+    output_json: Path,
+    financial_year: str,
+    annual_expense_details: list[dict[str, Any]] | None = None,
+) -> None:
     payload = {
         "generated_at": datetime.now().isoformat(timespec="seconds"),
+        "financial_year": financial_year,
         "sheet": DEFAULT_SHEET,
         "report_count": len(reports),
         "reports": reports,
@@ -81,47 +128,35 @@ def write_report_dataset(reports: list[dict[str, Any]], output_json: Path, annua
     output_json.write_text(json.dumps(payload, indent=2, default=str), encoding="utf-8")
 
 
-def write_flats_json_from_csv(members_csv: Path, flats_json: Path) -> list[dict[str, str]]:
-    flats: list[dict[str, str]] = []
+def load_flat_requests(members_csv: Path) -> list[dict[str, str]]:
+    """Load the list of flats and owner info directly from members.csv."""
+    flat_requests: list[dict[str, str]] = []
     with members_csv.open("r", encoding="utf-8-sig", newline="") as handle:
         reader = csv.DictReader(handle)
         for row in reader:
             flat = normalize_flat(row.get("flat", ""))
             if not flat:
                 continue
-            flats.append(
+            flat_requests.append(
                 {
                     "flat": flat,
                     "owner_name": (row.get("name") or "").strip(),
                     "email": (row.get("email") or "").strip(),
                 }
             )
-
-    flats_json.parent.mkdir(parents=True, exist_ok=True)
-    flats_json.write_text(json.dumps(flats, indent=2), encoding="utf-8")
-    return flats
-
-
-def load_flat_requests(flats_json: Path) -> list[dict[str, str]]:
-    payload = json.loads(flats_json.read_text(encoding="utf-8"))
-    if not isinstance(payload, list):
-        raise ValueError(f"{flats_json} must contain a JSON array.")
-
-    flat_requests: list[dict[str, str]] = []
-    for item in payload:
-        if not isinstance(item, dict):
-            raise ValueError("Every flats JSON entry must be an object.")
-        flat = normalize_flat(item.get("flat", ""))
-        if not flat:
-            continue
-        flat_requests.append(
-            {
-                "flat": flat,
-                "owner_name": (item.get("owner_name") or item.get("name") or "").strip(),
-                "email": (item.get("email") or "").strip(),
-            }
-        )
     return flat_requests
+
+
+def load_occupants(occupants_csv: Path) -> dict[str, str]:
+    """Return a mapping of normalized flat -> occupant name from occupants.csv."""
+    lookup: dict[str, str] = {}
+    with occupants_csv.open("r", encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        for row in reader:
+            flat = normalize_flat(row.get("flat", ""))
+            if flat:
+                lookup[flat] = (row.get("name") or "").strip()
+    return lookup
 
 
 def extract_monthly_blocks(header_row_1: tuple[Any, ...], header_row_2: tuple[Any, ...]) -> list[MonthlyBlock]:
@@ -162,9 +197,10 @@ def extract_sheet_layout(header_row_1: tuple[Any, ...]) -> SheetLayout:
     )
 
 
-def load_sheet_rows(workbook_path: Path, sheet_name: str) -> tuple[list[MonthlyBlock], SheetLayout, dict[str, tuple[Any, ...]]]:
+def load_sheet_rows(workbook_path: Path, sheet_name: str) -> tuple[list[MonthlyBlock], SheetLayout, dict[str, tuple[Any, ...]], list[str]]:
     workbook = load_workbook(workbook_path, data_only=True, read_only=True)
     try:
+        available_sheets = workbook.sheetnames
         sheet = workbook[sheet_name]
         header_row_1 = next(sheet.iter_rows(min_row=1, max_row=1, values_only=True))
         header_row_2 = next(sheet.iter_rows(min_row=2, max_row=2, values_only=True))
@@ -176,28 +212,12 @@ def load_sheet_rows(workbook_path: Path, sheet_name: str) -> tuple[list[MonthlyB
             flat = normalize_flat(row[0] if row else "")
             if flat:
                 row_lookup[flat] = row
-        return monthly_blocks, sheet_layout, row_lookup
+        return monthly_blocks, sheet_layout, row_lookup, available_sheets
     finally:
         workbook.close()
 
 
-EXPENSE_SHEET_MAP = {
-    "Apr 2025": "Apr2025-EXPENSE",
-    "May 2025": "May2025-EXPENSE",
-    "Jun 2025": "June2025-EXPENSE",
-    "Jul 2025": "July2025-EXPENSE",
-    "Aug 2025": "Aug2025-EXPENSE",
-    "Sep 2025": "Sep2025-EXPENSE",
-    "Oct 2025": "Oct2025-EXPENSE",
-    "Nov 2025": "Nov2025-EXPENSE",
-    "Dec 2025": "Dec2025-EXPENSE",
-    "Jan 2026": "Jan2026-EXPENSE",
-    "Feb 2026": "Feb2026-EXPENSE",
-    "Mar 2026": "Mar2026-EXPENSE",
-}
-
-
-def load_expense_details(workbook_path: Path) -> dict[str, dict[str, dict[str, float]]]:
+def load_expense_details(workbook_path: Path, expense_sheet_map: dict[str, str]) -> dict[str, dict[str, dict[str, float]]]:
     """Load per-flat, per-month expense breakdown from individual EXPENSE sheets.
 
     Returns: { flat: { month_label: { field: value, ... } } }
@@ -205,7 +225,7 @@ def load_expense_details(workbook_path: Path) -> dict[str, dict[str, dict[str, f
     workbook = load_workbook(workbook_path, data_only=True, read_only=True)
     result: dict[str, dict[str, dict[str, float]]] = {}
     try:
-        for month_label, sheet_name in EXPENSE_SHEET_MAP.items():
+        for month_label, sheet_name in expense_sheet_map.items():
             if sheet_name not in workbook.sheetnames:
                 continue
             ws = workbook[sheet_name]
@@ -239,6 +259,7 @@ def build_report(
     monthly_blocks: list[MonthlyBlock],
     sheet_layout: SheetLayout,
     expense_details: dict[str, dict[str, float]] | None = None,
+    occupant_name: str | None = None,
 ) -> dict[str, Any]:
     carry_over = safe_number(sheet_row[sheet_layout.carry_over_idx] if sheet_layout.carry_over_idx is not None and len(sheet_row) > sheet_layout.carry_over_idx else 0)
     total_collection = safe_number(sheet_row[sheet_layout.total_collection_idx] if sheet_layout.total_collection_idx is not None and len(sheet_row) > sheet_layout.total_collection_idx else 0)
@@ -252,7 +273,7 @@ def build_report(
         "owner_name": flat_request["owner_name"],
         "email": flat_request["email"],
         "sheet_email": (sheet_row[1] or "").strip() if len(sheet_row) > 1 and isinstance(sheet_row[1], str) else sheet_row[1],
-        "occupant": sheet_row[2] if len(sheet_row) > 2 else None,
+        "occupant": occupant_name or None,
         "collection_carry_over_mar2013_mar2022": carry_over,
         "monthly": [],
         "totals": {
@@ -288,9 +309,13 @@ def generate_reports(
     workbook_path: Path,
     sheet_name: str,
     flat_requests: list[dict[str, str]],
- ) -> tuple[list[dict[str, Any]], list[str]]:
-    monthly_blocks, sheet_layout, row_lookup = load_sheet_rows(workbook_path, sheet_name)
-    all_expense_details = load_expense_details(workbook_path)
+    occupants: dict[str, str] | None = None,
+ ) -> tuple[list[dict[str, Any]], list[str], str]:
+    monthly_blocks, sheet_layout, row_lookup, available_sheets = load_sheet_rows(workbook_path, sheet_name)
+    financial_year = derive_financial_year(monthly_blocks)
+    expense_sheet_map = build_expense_sheet_map(monthly_blocks, available_sheets)
+    all_expense_details = load_expense_details(workbook_path, expense_sheet_map)
+    occupants = occupants or {}
     reports: list[dict[str, Any]] = []
     missing_flats: list[str] = []
 
@@ -301,9 +326,10 @@ def generate_reports(
             missing_flats.append(flat)
             continue
         flat_expenses = all_expense_details.get(flat)
-        report = build_report(flat_request, sheet_row, monthly_blocks, sheet_layout, flat_expenses)
+        occupant = occupants.get(flat, "")
+        report = build_report(flat_request, sheet_row, monthly_blocks, sheet_layout, flat_expenses, occupant)
         reports.append(report)
-    return reports, missing_flats
+    return reports, missing_flats, financial_year
 
 
 def load_annual_expense_details(workbook_path: Path) -> list[dict[str, Any]]:
@@ -356,16 +382,17 @@ def load_annual_expense_details(workbook_path: Path) -> list[dict[str, Any]]:
 def main() -> int:
     args = parse_args()
 
-    write_flats_json_from_csv(args.members_csv, args.flats_json)
-    flat_requests = load_flat_requests(args.flats_json)
+    flat_requests = load_flat_requests(args.members_csv)
+    occupants = load_occupants(args.occupants_csv)
 
-    reports, missing_flats = generate_reports(
+    reports, missing_flats, financial_year = generate_reports(
         workbook_path=args.workbook,
         sheet_name=args.sheet,
         flat_requests=flat_requests,
+        occupants=occupants,
     )
     annual_expense_details = load_annual_expense_details(args.workbook)
-    write_report_dataset(reports, args.output_json, annual_expense_details)
+    write_report_dataset(reports, args.output_json, financial_year, annual_expense_details)
 
     print(f"Generated JSON for {len(reports)} report(s) at {args.output_json}")
     if missing_flats:
