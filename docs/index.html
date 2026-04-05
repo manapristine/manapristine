@@ -283,6 +283,10 @@
       color: var(--danger);
       font-weight: 700;
     }
+    .total-row td {
+      font-weight: 700;
+      border-top: 2px solid var(--ink);
+    }
     #annual-expense-table {
       table-layout: auto;
       width: auto;
@@ -917,6 +921,12 @@
       return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
     }
 
+    function esc(str) {
+      const d = document.createElement("div");
+      d.textContent = str;
+      return d.innerHTML;
+    }
+
     function formatAmount(value) {
       return currency.format(Number(value || 0));
     }
@@ -959,9 +969,9 @@
         const tr = document.createElement("tr");
         tr.classList.add("negative");
         tr.innerHTML = `
-          <td>${report.flat}</td>
-          <td>${report.owner_name || "Not provided"}</td>
-          <td>${report.occupant || "Not available"}</td>
+          <td>${esc(report.flat)}</td>
+          <td>${esc(report.owner_name || "Not provided")}</td>
+          <td>${esc(report.occupant || "Not available")}</td>
           <td>${formatAmount(Math.abs(Number(report.totals.closing_balance || 0)))}</td>
         `;
         defaultersBody.appendChild(tr);
@@ -1084,7 +1094,7 @@
         if (netValue > 0) tr.classList.add("positive");
         if (netValue < 0) tr.classList.add("negative");
         tr.innerHTML = `
-          <td>${month.month}</td>
+          <td>${esc(month.month)}</td>
           <td>${formatAmount(month.collection)}</td>
           <td>${formatAmount(month.expense)}</td>
           <td>${formatAmount(month.late_fee)}</td>
@@ -1093,8 +1103,7 @@
         body.appendChild(tr);
       }
       const totalRow1 = document.createElement("tr");
-      totalRow1.style.fontWeight = "700";
-      totalRow1.style.borderTop = "2px solid var(--ink)";
+      totalRow1.classList.add("total-row");
       totalRow1.innerHTML = `
         <td>Total</td>
         <td>${formatAmount(sumColl)}</td>
@@ -1111,7 +1120,7 @@
       let tWater = 0, tCommon = 0, tFresh = 0, tMeterRent = 0, tWaterExp = 0;
       let tFixed = 0, tParking = 0, tClub = 0, tShift = 0, tGym = 0, tTotal = 0;
       for (const b of breakdown) {
-        if (!b.total_expense && b.total_expense !== 0) continue;
+        if (b.total_expense === undefined || b.total_expense === null) continue;
         tWater += Number(b.water_used_litres || 0);
         tCommon += Number(b.common_area_water_litres || 0);
         tFresh += Number(b.total_fresh_water_consumed_litres || 0);
@@ -1125,7 +1134,7 @@
         tTotal += Number(b.total_expense || 0);
         const tr = document.createElement("tr");
         tr.innerHTML = `
-          <td>${b.month}</td>
+          <td>${esc(b.month)}</td>
           <td>${Number(b.water_used_litres || 0).toLocaleString("en-IN")}</td>
           <td>${Number(b.common_area_water_litres || 0).toLocaleString("en-IN")}</td>
           <td>${Number(b.total_fresh_water_consumed_litres || 0).toLocaleString("en-IN")}</td>
@@ -1142,8 +1151,7 @@
         breakdownBody.appendChild(tr);
       }
       const totalRow2 = document.createElement("tr");
-      totalRow2.style.fontWeight = "700";
-      totalRow2.style.borderTop = "2px solid var(--ink)";
+      totalRow2.classList.add("total-row");
       totalRow2.innerHTML = `
         <td>Total</td>
         <td>${tWater.toLocaleString("en-IN")}</td>
@@ -1338,7 +1346,7 @@
         if (net > 0) tr.classList.add("positive");
         if (net < 0) tr.classList.add("negative");
         tr.innerHTML = `
-          <td>${m.month}</td>
+          <td>${esc(m.month)}</td>
           <td>${formatAmount(m.collection)}</td>
           <td>${formatAmount(m.fixed)}</td>
           <td>${formatAmount(m.variable)}</td>
@@ -1348,8 +1356,7 @@
         tbody.appendChild(tr);
       }
       const totalRow = document.createElement("tr");
-      totalRow.style.fontWeight = "700";
-      totalRow.style.borderTop = "2px solid var(--ink)";
+      totalRow.classList.add("total-row");
       totalRow.innerHTML = `
         <td>Total</td>
         <td>${formatAmount(grandCollection)}</td>
@@ -1396,10 +1403,9 @@
       for (const row of data) {
         const tr = document.createElement("tr");
         if (row.month === "TOTAL") {
-          tr.style.fontWeight = "700";
-          tr.style.borderTop = "2px solid var(--ink)";
+          tr.classList.add("total-row");
         }
-        let html = `<td>${row.month}</td>`;
+        let html = `<td>${esc(row.month)}</td>`;
         for (const key of lineItemKeys) {
           const val = (row.line_items || {})[key] || 0;
           html += `<td>${val ? formatAmount(val) : ""}</td>`;
@@ -1416,6 +1422,7 @@
 
     function drawChart(months) {
       const canvas = document.getElementById("agg-chart");
+      if (!canvas || months.length === 0) return;
       const ctx = canvas.getContext("2d");
       const dpr = window.devicePixelRatio || 1;
       const rect = canvas.getBoundingClientRect();
