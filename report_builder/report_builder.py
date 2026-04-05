@@ -68,13 +68,15 @@ def month_label(value: Any) -> str:
     return str(value).strip()
 
 
-def write_report_dataset(reports: list[dict[str, Any]], output_json: Path) -> None:
+def write_report_dataset(reports: list[dict[str, Any]], output_json: Path, annual_expense_details: list[dict[str, Any]] | None = None) -> None:
     payload = {
         "generated_at": datetime.now().isoformat(timespec="seconds"),
         "sheet": DEFAULT_SHEET,
         "report_count": len(reports),
         "reports": reports,
     }
+    if annual_expense_details is not None:
+        payload["annual_expense_details"] = annual_expense_details
     output_json.parent.mkdir(parents=True, exist_ok=True)
     output_json.write_text(json.dumps(payload, indent=2, default=str), encoding="utf-8")
 
@@ -304,6 +306,53 @@ def generate_reports(
     return reports, missing_flats
 
 
+def load_annual_expense_details(workbook_path: Path) -> list[dict[str, Any]]:
+    """Load the ANNUAL-EXPENSE-DETAILS sheet: per-month rows with individual expense line items and summary columns."""
+    workbook = load_workbook(workbook_path, data_only=True, read_only=True)
+    try:
+        sheet_name = "ANNUAL-EXPENSE-DETAILS"
+        if sheet_name not in workbook.sheetnames:
+            return []
+        ws = workbook[sheet_name]
+        header_row_2 = list(ws.iter_rows(min_row=2, max_row=2, values_only=True))[0]
+
+        # Build column name map from row 2 (line-item headers) for C1..C54
+        col_names: list[str] = []
+        for ci in range(len(header_row_2)):
+            val = header_row_2[ci]
+            if val and ci >= 1 and ci <= 54:
+                name = str(val).strip().replace("\n", " ")
+                col_names.append((ci, name))
+
+        rows: list[dict[str, Any]] = []
+        for row in ws.iter_rows(min_row=3, values_only=True):
+            month_name = row[0] if row[0] else None
+            if not month_name:
+                continue
+            month_str = str(month_name).strip()
+            entry: dict[str, Any] = {"month": month_str}
+
+            # Individual line items (only include non-zero)
+            line_items: dict[str, float] = {}
+            for ci, name in col_names:
+                val = safe_number(row[ci] if len(row) > ci else 0)
+                if val:
+                    line_items[name] = val
+            entry["line_items"] = line_items
+
+            # Summary columns
+            entry["gross_expense"] = safe_number(row[55] if len(row) > 55 else 0)
+            entry["gross_variable_expense"] = safe_number(row[56] if len(row) > 56 else 0)
+            entry["gross_fixed_expense"] = safe_number(row[57] if len(row) > 57 else 0)
+            entry["water_meter_rent"] = safe_number(row[58] if len(row) > 58 else 0)
+            entry["total_expense"] = safe_number(row[59] if len(row) > 59 else 0)
+
+            rows.append(entry)
+        return rows
+    finally:
+        workbook.close()
+
+
 def main() -> int:
     args = parse_args()
 
@@ -315,7 +364,8 @@ def main() -> int:
         sheet_name=args.sheet,
         flat_requests=flat_requests,
     )
-    write_report_dataset(reports, args.output_json)
+    annual_expense_details = load_annual_expense_details(args.workbook)
+    write_report_dataset(reports, args.output_json, annual_expense_details)
 
     print(f"Generated JSON for {len(reports)} report(s) at {args.output_json}")
     if missing_flats:

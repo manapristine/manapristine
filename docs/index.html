@@ -283,6 +283,39 @@
       color: var(--danger);
       font-weight: 700;
     }
+    #annual-expense-table {
+      table-layout: auto;
+      width: auto;
+      min-width: 100%;
+    }
+    #annual-expense-table th {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      white-space: nowrap;
+      vertical-align: bottom;
+      padding: 8px 3px 6px;
+      height: 140px;
+      font-size: 0.5rem;
+      letter-spacing: 0;
+      min-width: 32px;
+    }
+    #annual-expense-table th:first-child {
+      writing-mode: horizontal-tb;
+      transform: none;
+      height: auto;
+      min-width: 80px;
+    }
+    #annual-expense-table td {
+      text-align: right;
+      font-size: 0.62rem;
+      padding: 4px 3px;
+      white-space: nowrap;
+    }
+    #annual-expense-table td:first-child {
+      text-align: left;
+      font-weight: 600;
+      white-space: nowrap;
+    }
     .print-header {
       display: none;
     }
@@ -799,6 +832,14 @@
               </tr>
             </thead>
             <tbody id="agg-monthly-body"></tbody>
+          </table>
+        </section>
+
+        <section class="table-wrap print-page-break" style="margin-top:8px">
+          <h2>Annual Expense Details (FY 2025-26)</h2>
+          <table id="annual-expense-table">
+            <thead id="annual-expense-head"></thead>
+            <tbody id="annual-expense-body"></tbody>
           </table>
         </section>
       </section>
@@ -1320,6 +1361,57 @@
       tbody.appendChild(totalRow);
 
       drawChart(months);
+      renderAnnualExpenseDetails();
+    }
+
+    function renderAnnualExpenseDetails() {
+      const data = window._annualExpenseDetails || [];
+      const thead = document.getElementById("annual-expense-head");
+      const tbody = document.getElementById("annual-expense-body");
+      thead.innerHTML = "";
+      tbody.innerHTML = "";
+      if (data.length === 0) return;
+
+      // Collect all unique line-item keys across all months
+      const allKeys = new Set();
+      for (const row of data) {
+        for (const key of Object.keys(row.line_items || {})) {
+          allKeys.add(key);
+        }
+      }
+      const lineItemKeys = Array.from(allKeys);
+
+      // Header row
+      const headerTr = document.createElement("tr");
+      headerTr.innerHTML = "<th>Month</th>";
+      for (const key of lineItemKeys) {
+        const th = document.createElement("th");
+        th.textContent = key;
+        headerTr.appendChild(th);
+      }
+      headerTr.innerHTML += "<th>Gross Expense</th><th>Variable Expense</th><th>Fixed Expense</th><th>Meter Rent</th><th>Total Expense</th>";
+      thead.appendChild(headerTr);
+
+      // Data rows
+      for (const row of data) {
+        const tr = document.createElement("tr");
+        if (row.month === "TOTAL") {
+          tr.style.fontWeight = "700";
+          tr.style.borderTop = "2px solid var(--ink)";
+        }
+        let html = `<td>${row.month}</td>`;
+        for (const key of lineItemKeys) {
+          const val = (row.line_items || {})[key] || 0;
+          html += `<td>${val ? formatAmount(val) : ""}</td>`;
+        }
+        html += `<td>${formatAmount(row.gross_expense)}</td>`;
+        html += `<td>${formatAmount(row.gross_variable_expense)}</td>`;
+        html += `<td>${formatAmount(row.gross_fixed_expense)}</td>`;
+        html += `<td>${formatAmount(row.water_meter_rent)}</td>`;
+        html += `<td><strong>${formatAmount(row.total_expense)}</strong></td>`;
+        tr.innerHTML = html;
+        tbody.appendChild(tr);
+      }
     }
 
     function drawChart(months) {
@@ -1413,6 +1505,7 @@
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const payload = await response.json();
         reports = (payload.reports || []).slice().sort((a, b) => a.flat.localeCompare(b.flat, undefined, { numeric: true }));
+        window._annualExpenseDetails = payload.annual_expense_details || [];
         renderDefaulters(reports);
         const generatedMonth = payload.generated_at
           ? new Date(payload.generated_at).toLocaleDateString("en-IN", { month: "long", year: "numeric" })
