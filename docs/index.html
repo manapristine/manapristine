@@ -399,6 +399,26 @@
         box-shadow: none;
         background: #ffffff;
       }
+      .negative-text {
+        color: #b42318 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .card.negative .value {
+        color: #b42318 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      tbody tr.negative td:last-child {
+        color: #b42318 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .defaulters-table td:last-child {
+        color: #b42318 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
     }
     .metrics {
       display: grid;
@@ -1548,24 +1568,38 @@
       switchView(event.target.value);
     });
 
+    function printWithTitle(title) {
+      const original = document.title;
+      document.title = title;
+      window.print();
+      document.title = original;
+    }
+
+    function todayStr() {
+      const d = new Date();
+      return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+    }
+
     exportButton.addEventListener("click", () => {
       const view = viewSelect.value;
       document.body.classList.remove("print-defaulters", "print-flat", "print-aggregates");
       if (view === "aggregates") {
         document.body.classList.add("print-aggregates");
+        printWithTitle(`Aggregates-Report-${todayStr()}`);
       } else if (view === "defaulters") {
         document.body.classList.add("print-defaulters");
+        printWithTitle(`Defaulters-Report-${todayStr()}`);
       } else {
         if (!flatSelect.value) return;
         document.body.classList.add("print-flat");
+        printWithTitle(`${flatSelect.value}-Maintenance-Statement-${todayStr()}`);
       }
-      window.print();
     });
 
     exportDefaultersButton.addEventListener("click", () => {
       document.body.classList.remove("print-flat", "print-aggregates");
       document.body.classList.add("print-defaulters");
-      window.print();
+      printWithTitle(`Defaulters-Report-${todayStr()}`);
     });
 
     window.addEventListener("afterprint", () => {
