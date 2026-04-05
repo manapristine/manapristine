@@ -676,6 +676,13 @@
             <span><strong>FY:</strong> 2025-26</span>
           </div>
         </div>
+        <section class="table-wrap" style="margin-bottom:8px">
+          <h2>Expense Trend</h2>
+          <div style="width:100%;overflow-x:auto">
+            <canvas id="flat-expense-chart" height="260" style="width:100%;max-width:900px"></canvas>
+          </div>
+        </section>
+
         <section class="metrics">
           <article class="card positive">
             <span class="label">Total Collection</span>
@@ -699,7 +706,7 @@
           </article>
         </section>
 
-        <section class="table-wrap">
+        <section class="table-wrap print-page-break">
           <h2>Month-by-Month Breakdown</h2>
           <table>
             <thead>
@@ -712,6 +719,30 @@
               </tr>
             </thead>
             <tbody id="monthly-body"></tbody>
+          </table>
+        </section>
+
+        <section class="table-wrap print-page-break" style="margin-top:8px">
+          <h2>Detailed Expense Breakdown</h2>
+          <table id="breakdown-table" style="min-width:900px">
+            <thead>
+              <tr>
+                <th>Month</th>
+                <th>Water (L)</th>
+                <th>Common Water (L)</th>
+                <th>Total Water (L)</th>
+                <th>Meters</th>
+                <th>Meter Rent</th>
+                <th>Total Water Exp</th>
+                <th>Fixed Expense</th>
+                <th>Parking</th>
+                <th>Club House</th>
+                <th>Shifting</th>
+                <th>Gym</th>
+                <th>Total Expense</th>
+              </tr>
+            </thead>
+            <tbody id="breakdown-body"></tbody>
           </table>
         </section>
       </section>
@@ -728,6 +759,14 @@
           <article class="card positive">
             <span class="label">Total Collection (All Flats)</span>
             <span class="value" id="agg-total-collection"></span>
+          </article>
+          <article class="card">
+            <span class="label">Fixed Expense (All Flats)</span>
+            <span class="value" id="agg-total-fixed"></span>
+          </article>
+          <article class="card">
+            <span class="label">Variable Expense (All Flats)</span>
+            <span class="value" id="agg-total-variable"></span>
           </article>
           <article class="card">
             <span class="label">Total Expense (All Flats)</span>
@@ -753,6 +792,8 @@
               <tr>
                 <th>Month</th>
                 <th>Total Collection</th>
+                <th>Fixed Expense</th>
+                <th>Variable Expense</th>
                 <th>Total Expense</th>
                 <th>Net</th>
               </tr>
@@ -988,11 +1029,17 @@
       setCardTone(document.getElementById("net-card"), net);
       setCardTone(document.getElementById("balance-card"), balance);
 
+      // Monthly summary table with totals
       const body = document.getElementById("monthly-body");
       body.innerHTML = "";
+      let sumColl = 0, sumExp = 0, sumLate = 0, sumNet = 0;
       for (const month of report.monthly) {
         const tr = document.createElement("tr");
         const netValue = Number(month.net_collection_minus_expense || 0);
+        sumColl += Number(month.collection || 0);
+        sumExp += Number(month.expense || 0);
+        sumLate += Number(month.late_fee || 0);
+        sumNet += netValue;
         if (netValue > 0) tr.classList.add("positive");
         if (netValue < 0) tr.classList.add("negative");
         tr.innerHTML = `
@@ -1004,9 +1051,164 @@
         `;
         body.appendChild(tr);
       }
+      const totalRow1 = document.createElement("tr");
+      totalRow1.style.fontWeight = "700";
+      totalRow1.style.borderTop = "2px solid var(--ink)";
+      totalRow1.innerHTML = `
+        <td>Total</td>
+        <td>${formatAmount(sumColl)}</td>
+        <td>${formatAmount(sumExp)}</td>
+        <td>${formatAmount(sumLate)}</td>
+        <td class="${sumNet < 0 ? "negative-text" : sumNet > 0 ? "positive-text" : ""}">${formatAmount(sumNet)}</td>
+      `;
+      body.appendChild(totalRow1);
+
+      // Detailed breakdown table with totals
+      const breakdownBody = document.getElementById("breakdown-body");
+      breakdownBody.innerHTML = "";
+      const breakdown = report.expense_breakdown || [];
+      let tWater = 0, tCommon = 0, tFresh = 0, tMeterRent = 0, tWaterExp = 0;
+      let tFixed = 0, tParking = 0, tClub = 0, tShift = 0, tGym = 0, tTotal = 0;
+      for (const b of breakdown) {
+        if (!b.total_expense && b.total_expense !== 0) continue;
+        tWater += Number(b.water_used_litres || 0);
+        tCommon += Number(b.common_area_water_litres || 0);
+        tFresh += Number(b.total_fresh_water_consumed_litres || 0);
+        tMeterRent += Number(b.meter_rent || 0);
+        tWaterExp += Number(b.total_water_expense || 0);
+        tFixed += Number(b.fixed_expense || 0);
+        tParking += Number(b.parking_fee || 0);
+        tClub += Number(b.club_house_fee || 0);
+        tShift += Number(b.shifting_fee || 0);
+        tGym += Number(b.gym_usage_fee || 0);
+        tTotal += Number(b.total_expense || 0);
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${b.month}</td>
+          <td>${Number(b.water_used_litres || 0).toLocaleString("en-IN")}</td>
+          <td>${Number(b.common_area_water_litres || 0).toLocaleString("en-IN")}</td>
+          <td>${Number(b.total_fresh_water_consumed_litres || 0).toLocaleString("en-IN")}</td>
+          <td>${Number(b.num_meters || 0)}</td>
+          <td>${formatAmount(b.meter_rent)}</td>
+          <td>${formatAmount(b.total_water_expense)}</td>
+          <td>${formatAmount(b.fixed_expense)}</td>
+          <td>${formatAmount(b.parking_fee)}</td>
+          <td>${formatAmount(b.club_house_fee)}</td>
+          <td>${formatAmount(b.shifting_fee)}</td>
+          <td>${formatAmount(b.gym_usage_fee)}</td>
+          <td><strong>${formatAmount(b.total_expense)}</strong></td>
+        `;
+        breakdownBody.appendChild(tr);
+      }
+      const totalRow2 = document.createElement("tr");
+      totalRow2.style.fontWeight = "700";
+      totalRow2.style.borderTop = "2px solid var(--ink)";
+      totalRow2.innerHTML = `
+        <td>Total</td>
+        <td>${tWater.toLocaleString("en-IN")}</td>
+        <td>${tCommon.toLocaleString("en-IN")}</td>
+        <td>${tFresh.toLocaleString("en-IN")}</td>
+        <td></td>
+        <td>${formatAmount(tMeterRent)}</td>
+        <td>${formatAmount(tWaterExp)}</td>
+        <td>${formatAmount(tFixed)}</td>
+        <td>${formatAmount(tParking)}</td>
+        <td>${formatAmount(tClub)}</td>
+        <td>${formatAmount(tShift)}</td>
+        <td>${formatAmount(tGym)}</td>
+        <td><strong>${formatAmount(tTotal)}</strong></td>
+      `;
+      breakdownBody.appendChild(totalRow2);
 
       emptyState.classList.add("hidden");
       statement.classList.remove("hidden");
+
+      // Draw after section is visible so canvas has dimensions
+      drawFlatExpenseChart(report.monthly);
+    }
+
+    function drawFlatExpenseChart(monthly) {
+      const canvas = document.getElementById("flat-expense-chart");
+      if (!canvas || monthly.length === 0) return;
+      const ctx = canvas.getContext("2d");
+      const dpr = window.devicePixelRatio || 1;
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = rect.width * dpr;
+      canvas.height = 260 * dpr;
+      ctx.scale(dpr, dpr);
+
+      const W = rect.width;
+      const H = 260;
+      const pad = { top: 30, right: 20, bottom: 50, left: 70 };
+      const plotW = W - pad.left - pad.right;
+      const plotH = H - pad.top - pad.bottom;
+
+      ctx.clearRect(0, 0, W, H);
+
+      const cGrid = cssVar("--chart-grid");
+      const cLabel = cssVar("--chart-label");
+      const cAccent = cssVar("--chart-bar-accent");
+      const cDanger = cssVar("--chart-bar-danger");
+
+      const collections = monthly.map((m) => Number(m.collection || 0));
+      const expenses = monthly.map((m) => Number(m.expense || 0));
+      const maxVal = Math.max(...collections, ...expenses, 1);
+      const n = monthly.length;
+      const barGroupW = plotW / n;
+      const barW = barGroupW * 0.32;
+      const gap = barGroupW * 0.06;
+
+      // Grid
+      ctx.strokeStyle = cGrid;
+      ctx.lineWidth = 0.5;
+      const gridSteps = 5;
+      for (let i = 0; i <= gridSteps; i++) {
+        const y = pad.top + plotH - (plotH / gridSteps) * i;
+        ctx.beginPath();
+        ctx.moveTo(pad.left, y);
+        ctx.lineTo(W - pad.right, y);
+        ctx.stroke();
+        ctx.fillStyle = cLabel;
+        ctx.font = "10px sans-serif";
+        ctx.textAlign = "right";
+        ctx.fillText(formatAmount((maxVal / gridSteps) * i), pad.left - 6, y + 3);
+      }
+
+      // Bars
+      for (let i = 0; i < n; i++) {
+        const x = pad.left + barGroupW * i + barGroupW * 0.15;
+        const hC = (collections[i] / maxVal) * plotH;
+        const hE = (expenses[i] / maxVal) * plotH;
+
+        ctx.fillStyle = cAccent;
+        ctx.beginPath();
+        ctx.roundRect(x, pad.top + plotH - hC, barW, hC, [3, 3, 0, 0]);
+        ctx.fill();
+
+        ctx.fillStyle = cDanger;
+        ctx.beginPath();
+        ctx.roundRect(x + barW + gap, pad.top + plotH - hE, barW, hE, [3, 3, 0, 0]);
+        ctx.fill();
+
+        // Month label
+        ctx.fillStyle = cLabel;
+        ctx.font = "9px sans-serif";
+        ctx.textAlign = "center";
+        const label = monthly[i].month.replace("20", "'");
+        ctx.save();
+        ctx.translate(x + barW + gap / 2, pad.top + plotH + 12);
+        ctx.rotate(-0.45);
+        ctx.fillText(label, 0, 0);
+        ctx.restore();
+      }
+
+      // Legend
+      const existingLegend = canvas.parentElement.querySelector(".chart-legend");
+      if (existingLegend) existingLegend.remove();
+      const legend = document.createElement("div");
+      legend.className = "chart-legend";
+      legend.innerHTML = '<span class="leg-collection">Collection</span><span class="leg-expense">Expense</span>';
+      canvas.parentElement.appendChild(legend);
     }
 
     function switchView(view) {
@@ -1053,23 +1255,36 @@
 
       const monthMap = new Map();
       for (const report of reports) {
-        for (const m of report.monthly) {
+        const breakdowns = report.expense_breakdown || [];
+        for (let i = 0; i < report.monthly.length; i++) {
+          const m = report.monthly[i];
+          const b = breakdowns[i] || {};
           const key = m.month;
           if (!monthMap.has(key)) {
-            monthMap.set(key, { month: key, collection: 0, expense: 0 });
+            monthMap.set(key, { month: key, collection: 0, expense: 0, fixed: 0, variable: 0 });
           }
           const agg = monthMap.get(key);
           agg.collection += Number(m.collection || 0);
           agg.expense += Number(m.expense || 0);
+          agg.fixed += Number(b.fixed_expense || 0);
+          agg.variable += Number(b.total_water_expense || 0) + Number(b.parking_fee || 0)
+            + Number(b.club_house_fee || 0) + Number(b.shifting_fee || 0) + Number(b.gym_usage_fee || 0);
         }
       }
 
       const months = Array.from(monthMap.values());
-      let grandCollection = 0, grandExpense = 0;
-      for (const m of months) { grandCollection += m.collection; grandExpense += m.expense; }
+      let grandCollection = 0, grandExpense = 0, grandFixed = 0, grandVariable = 0;
+      for (const m of months) {
+        grandCollection += m.collection;
+        grandExpense += m.expense;
+        grandFixed += m.fixed;
+        grandVariable += m.variable;
+      }
       const grandNet = grandCollection - grandExpense;
 
       document.getElementById("agg-total-collection").textContent = formatAmount(grandCollection);
+      document.getElementById("agg-total-fixed").textContent = formatAmount(grandFixed);
+      document.getElementById("agg-total-variable").textContent = formatAmount(grandVariable);
       document.getElementById("agg-total-expense").textContent = formatAmount(grandExpense);
       document.getElementById("agg-total-net").textContent = formatAmount(grandNet);
       setCardTone(document.getElementById("agg-net-card"), grandNet);
@@ -1084,11 +1299,25 @@
         tr.innerHTML = `
           <td>${m.month}</td>
           <td>${formatAmount(m.collection)}</td>
+          <td>${formatAmount(m.fixed)}</td>
+          <td>${formatAmount(m.variable)}</td>
           <td>${formatAmount(m.expense)}</td>
           <td class="${net < 0 ? "negative-text" : net > 0 ? "positive-text" : ""}">${formatAmount(net)}</td>
         `;
         tbody.appendChild(tr);
       }
+      const totalRow = document.createElement("tr");
+      totalRow.style.fontWeight = "700";
+      totalRow.style.borderTop = "2px solid var(--ink)";
+      totalRow.innerHTML = `
+        <td>Total</td>
+        <td>${formatAmount(grandCollection)}</td>
+        <td>${formatAmount(grandFixed)}</td>
+        <td>${formatAmount(grandVariable)}</td>
+        <td>${formatAmount(grandExpense)}</td>
+        <td class="${grandNet < 0 ? "negative-text" : grandNet > 0 ? "positive-text" : ""}">${formatAmount(grandNet)}</td>
+      `;
+      tbody.appendChild(totalRow);
 
       drawChart(months);
     }

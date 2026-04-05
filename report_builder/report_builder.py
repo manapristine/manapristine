@@ -179,11 +179,64 @@ def load_sheet_rows(workbook_path: Path, sheet_name: str) -> tuple[list[MonthlyB
         workbook.close()
 
 
+EXPENSE_SHEET_MAP = {
+    "Apr 2025": "Apr2025-EXPENSE",
+    "May 2025": "May2025-EXPENSE",
+    "Jun 2025": "June2025-EXPENSE",
+    "Jul 2025": "July2025-EXPENSE",
+    "Aug 2025": "Aug2025-EXPENSE",
+    "Sep 2025": "Sep2025-EXPENSE",
+    "Oct 2025": "Oct2025-EXPENSE",
+    "Nov 2025": "Nov2025-EXPENSE",
+    "Dec 2025": "Dec2025-EXPENSE",
+    "Jan 2026": "Jan2026-EXPENSE",
+    "Feb 2026": "Feb2026-EXPENSE",
+    "Mar 2026": "Mar2026-EXPENSE",
+}
+
+
+def load_expense_details(workbook_path: Path) -> dict[str, dict[str, dict[str, float]]]:
+    """Load per-flat, per-month expense breakdown from individual EXPENSE sheets.
+
+    Returns: { flat: { month_label: { field: value, ... } } }
+    """
+    workbook = load_workbook(workbook_path, data_only=True, read_only=True)
+    result: dict[str, dict[str, dict[str, float]]] = {}
+    try:
+        for month_label, sheet_name in EXPENSE_SHEET_MAP.items():
+            if sheet_name not in workbook.sheetnames:
+                continue
+            ws = workbook[sheet_name]
+            for row in ws.iter_rows(min_row=3, values_only=True):
+                flat = normalize_flat(row[0] if row else "")
+                if not flat:
+                    continue
+                result.setdefault(flat, {})[month_label] = {
+                    "water_used_litres": safe_number(row[2] if len(row) > 2 else 0),
+                    "common_area_water_litres": safe_number(row[3] if len(row) > 3 else 0),
+                    "total_fresh_water_consumed_litres": safe_number(row[4] if len(row) > 4 else 0),
+                    "water_expense": safe_number(row[6] if len(row) > 6 else 0),
+                    "num_meters": safe_number(row[7] if len(row) > 7 else 0),
+                    "meter_rent": safe_number(row[8] if len(row) > 8 else 0),
+                    "total_water_expense": safe_number(row[9] if len(row) > 9 else 0),
+                    "fixed_expense": safe_number(row[10] if len(row) > 10 else 0),
+                    "parking_fee": safe_number(row[11] if len(row) > 11 else 0),
+                    "club_house_fee": safe_number(row[12] if len(row) > 12 else 0),
+                    "shifting_fee": safe_number(row[13] if len(row) > 13 else 0),
+                    "gym_usage_fee": safe_number(row[14] if len(row) > 14 else 0),
+                    "total_expense": safe_number(row[17] if len(row) > 17 else 0),
+                }
+        return result
+    finally:
+        workbook.close()
+
+
 def build_report(
     flat_request: dict[str, str],
     sheet_row: tuple[Any, ...],
     monthly_blocks: list[MonthlyBlock],
     sheet_layout: SheetLayout,
+    expense_details: dict[str, dict[str, float]] | None = None,
 ) -> dict[str, Any]:
     carry_over = safe_number(sheet_row[sheet_layout.carry_over_idx] if sheet_layout.carry_over_idx is not None and len(sheet_row) > sheet_layout.carry_over_idx else 0)
     total_collection = safe_number(sheet_row[sheet_layout.total_collection_idx] if sheet_layout.total_collection_idx is not None and len(sheet_row) > sheet_layout.total_collection_idx else 0)
@@ -209,6 +262,7 @@ def build_report(
         },
     }
 
+    expense_breakdown: list[dict[str, Any]] = []
     for block in monthly_blocks:
         report["monthly"].append(
             {
@@ -219,6 +273,12 @@ def build_report(
                 "net_collection_minus_expense": safe_number(sheet_row[block.net_idx] if len(sheet_row) > block.net_idx else 0),
             }
         )
+        if expense_details and block.month_label in expense_details:
+            expense_breakdown.append({"month": block.month_label, **expense_details[block.month_label]})
+        else:
+            expense_breakdown.append({"month": block.month_label})
+
+    report["expense_breakdown"] = expense_breakdown
     return report
 
 
@@ -228,6 +288,7 @@ def generate_reports(
     flat_requests: list[dict[str, str]],
  ) -> tuple[list[dict[str, Any]], list[str]]:
     monthly_blocks, sheet_layout, row_lookup = load_sheet_rows(workbook_path, sheet_name)
+    all_expense_details = load_expense_details(workbook_path)
     reports: list[dict[str, Any]] = []
     missing_flats: list[str] = []
 
@@ -237,7 +298,8 @@ def generate_reports(
         if sheet_row is None:
             missing_flats.append(flat)
             continue
-        report = build_report(flat_request, sheet_row, monthly_blocks, sheet_layout)
+        flat_expenses = all_expense_details.get(flat)
+        report = build_report(flat_request, sheet_row, monthly_blocks, sheet_layout, flat_expenses)
         reports.append(report)
     return reports, missing_flats
 
