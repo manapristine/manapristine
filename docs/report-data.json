@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-19T12:37:18",
+  "generated_at": "2026-04-19T13:42:09",
   "financial_year": "2025-26",
   "sheet": "INCOME-EXPENSE-CYCLES",
   "report_count": 64,
@@ -10,7 +10,7 @@
       "email": "jyothij1979@gmail.com",
       "sheet_email": "jyothij1979@gmail.com",
       "occupant": "Digvijay Verma",
-      "collection_carry_over_mar2013_mar2022": 19317.67,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -102,7 +102,7 @@
         "expense": 72849.22628880719,
         "late_fee": 0,
         "net_collection_minus_expense": -1773.2262888071855,
-        "closing_balance": 17544.443711192813
+        "closing_balance": -1773.2262888071855
       },
       "expense_breakdown": [
         {
@@ -305,7 +305,7 @@
       "email": "",
       "sheet_email": null,
       "occupant": "Kaushik Kasibhatla",
-      "collection_carry_over_mar2013_mar2022": -8827.18,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -397,7 +397,7 @@
         "expense": 76664.43740134202,
         "late_fee": 0,
         "net_collection_minus_expense": -11.717401342015364,
-        "closing_balance": -8838.897401342016
+        "closing_balance": -11.717401342015364
       },
       "expense_breakdown": [
         {
@@ -600,7 +600,7 @@
       "email": "balakrishnan.k@gmail.com",
       "sheet_email": null,
       "occupant": "Balakrishnan",
-      "collection_carry_over_mar2013_mar2022": 10325.59,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -692,7 +692,7 @@
         "expense": 73917.44207707119,
         "late_fee": 0,
         "net_collection_minus_expense": -1839.4420770711877,
-        "closing_balance": 8486.147922928812
+        "closing_balance": -1839.4420770711877
       },
       "expense_breakdown": [
         {
@@ -895,7 +895,7 @@
       "email": "ashwinpandith@gmail.com",
       "sheet_email": null,
       "occupant": "Ashwin Pandith",
-      "collection_carry_over_mar2013_mar2022": -16432.39,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -987,7 +987,7 @@
         "expense": 77997.19203059314,
         "late_fee": 0,
         "net_collection_minus_expense": -9508.192030593142,
-        "closing_balance": -25940.58203059314
+        "closing_balance": -9508.192030593142
       },
       "expense_breakdown": [
         {
@@ -1190,7 +1190,7 @@
       "email": "",
       "sheet_email": null,
       "occupant": "Mayank Phophaliya",
-      "collection_carry_over_mar2013_mar2022": 55071.25,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -1282,7 +1282,7 @@
         "expense": 66852.28481490024,
         "late_fee": 0,
         "net_collection_minus_expense": -10635.874814900235,
-        "closing_balance": 44435.375185099765
+        "closing_balance": -10635.874814900235
       },
       "expense_breakdown": [
         {
@@ -1485,7 +1485,7 @@
       "email": "",
       "sheet_email": null,
       "occupant": "Mohit Daga",
-      "collection_carry_over_mar2013_mar2022": -36141.31,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -1577,7 +1577,7 @@
         "expense": 68566.92834925538,
         "late_fee": 500,
         "net_collection_minus_expense": 70539.07165074462,
-        "closing_balance": 34397.76165074462
+        "closing_balance": 70539.07165074462
       },
       "expense_breakdown": [
         {
@@ -1780,7 +1780,7 @@
       "email": "princerichfield@gmail.com",
       "sheet_email": null,
       "occupant": "Prince Richfield",
-      "collection_carry_over_mar2013_mar2022": 29214.74,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -1872,7 +1872,7 @@
         "expense": 64956.707172954615,
         "late_fee": 0,
         "net_collection_minus_expense": -16256.707172954615,
-        "closing_balance": 12958.032827045387
+        "closing_balance": -16256.707172954615
       },
       "expense_breakdown": [
         {
@@ -2075,7 +2075,7 @@
       "email": "foreverran@gmail.com",
       "sheet_email": null,
       "occupant": "Ranjithkumar R",
-      "collection_carry_over_mar2013_mar2022": 48086.36,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -2167,7 +2167,7 @@
         "expense": 69599.83166532326,
         "late_fee": 0,
         "net_collection_minus_expense": 181.1683346767386,
-        "closing_balance": 48267.52833467674
+        "closing_balance": 181.1683346767386
       },
       "expense_breakdown": [
         {
@@ -2370,7 +2370,7 @@
       "email": "chandra.gumma@gmail.com",
       "sheet_email": null,
       "occupant": "Chandramouli",
-      "collection_carry_over_mar2013_mar2022": 17364.92,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -2462,7 +2462,7 @@
         "expense": 69641.0987471036,
         "late_fee": 0,
         "net_collection_minus_expense": -1212.098747103606,
-        "closing_balance": 16152.821252896392
+        "closing_balance": -1212.098747103606
       },
       "expense_breakdown": [
         {
@@ -2665,7 +2665,7 @@
       "email": "cijo.p.jacob@gmail.com",
       "sheet_email": null,
       "occupant": "Cijo Jacob",
-      "collection_carry_over_mar2013_mar2022": 47007.83,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -2757,7 +2757,7 @@
         "expense": 67966.20877610886,
         "late_fee": 0,
         "net_collection_minus_expense": 454.0612238911417,
-        "closing_balance": 47461.89122389114
+        "closing_balance": 454.0612238911417
       },
       "expense_breakdown": [
         {
@@ -2960,7 +2960,7 @@
       "email": "prashantjaitly656@gmail.com",
       "sheet_email": null,
       "occupant": "Prashant Jaitley",
-      "collection_carry_over_mar2013_mar2022": 22741.79,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -3052,7 +3052,7 @@
         "expense": 62607.00002702866,
         "late_fee": 0,
         "net_collection_minus_expense": -21576.000027028662,
-        "closing_balance": 1165.789972971339
+        "closing_balance": -21576.000027028662
       },
       "expense_breakdown": [
         {
@@ -3255,7 +3255,7 @@
       "email": "g12.shyam@gmail.com",
       "sheet_email": null,
       "occupant": "Shyam Nair",
-      "collection_carry_over_mar2013_mar2022": 18683.66,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -3347,7 +3347,7 @@
         "expense": 70265.30364131423,
         "late_fee": 0,
         "net_collection_minus_expense": -4486.303641314225,
-        "closing_balance": 14197.356358685774
+        "closing_balance": -4486.303641314225
       },
       "expense_breakdown": [
         {
@@ -3550,7 +3550,7 @@
       "email": "ajai.abc@gmail.com",
       "sheet_email": null,
       "occupant": "Ajai.B",
-      "collection_carry_over_mar2013_mar2022": 20723.71,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -3642,7 +3642,7 @@
         "expense": 69039.11862266349,
         "late_fee": 500,
         "net_collection_minus_expense": -15613.118622663489,
-        "closing_balance": 5110.59137733651
+        "closing_balance": -15613.118622663489
       },
       "expense_breakdown": [
         {
@@ -3845,7 +3845,7 @@
       "email": "surajit.borah@gmail.com",
       "sheet_email": null,
       "occupant": "Aradhana",
-      "collection_carry_over_mar2013_mar2022": 1082.01,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -3937,7 +3937,7 @@
         "expense": 70896.5994062695,
         "late_fee": 0,
         "net_collection_minus_expense": -2407.629406269494,
-        "closing_balance": -1325.6194062694942
+        "closing_balance": -2407.629406269494
       },
       "expense_breakdown": [
         {
@@ -4140,7 +4140,7 @@
       "email": "suresh.nallusamy@gmail.com",
       "sheet_email": null,
       "occupant": "Suresh Nallusamy",
-      "collection_carry_over_mar2013_mar2022": 4478.43,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -4232,7 +4232,7 @@
         "expense": 65746.69619322104,
         "late_fee": 0,
         "net_collection_minus_expense": -19283.52619322104,
-        "closing_balance": -14805.096193221041
+        "closing_balance": -19283.52619322104
       },
       "expense_breakdown": [
         {
@@ -4435,7 +4435,7 @@
       "email": "praveengb@gmail.com",
       "sheet_email": null,
       "occupant": "Praveen Ganesan",
-      "collection_carry_over_mar2013_mar2022": -43941.66,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -4527,7 +4527,7 @@
         "expense": 64279.66548342151,
         "late_fee": 500,
         "net_collection_minus_expense": 4963.424516578489,
-        "closing_balance": -38978.235483421515
+        "closing_balance": 4963.424516578489
       },
       "expense_breakdown": [
         {
@@ -4730,7 +4730,7 @@
       "email": "shailesh.srivastav@gmail.com",
       "sheet_email": null,
       "occupant": "Shailesh Srivastava",
-      "collection_carry_over_mar2013_mar2022": 18760.24,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -4822,7 +4822,7 @@
         "expense": 63784.70623740711,
         "late_fee": 0,
         "net_collection_minus_expense": -9442.70623740711,
-        "closing_balance": 9317.533762592891
+        "closing_balance": -9442.70623740711
       },
       "expense_breakdown": [
         {
@@ -5025,7 +5025,7 @@
       "email": "ramazen1@gmail.com",
       "sheet_email": "ramazen1@gmail.com",
       "occupant": "Shanthanu",
-      "collection_carry_over_mar2013_mar2022": -14948.14,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -5117,7 +5117,7 @@
         "expense": 74429.48202972923,
         "late_fee": 1000,
         "net_collection_minus_expense": 27611.51797027077,
-        "closing_balance": 12663.377970270769
+        "closing_balance": 27611.51797027077
       },
       "expense_breakdown": [
         {
@@ -5320,7 +5320,7 @@
       "email": "samratk@gmail.com",
       "sheet_email": null,
       "occupant": "Samrat Kar",
-      "collection_carry_over_mar2013_mar2022": 21737.21,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -5412,7 +5412,7 @@
         "expense": 84954.25882101551,
         "late_fee": 0,
         "net_collection_minus_expense": -6637.258821015508,
-        "closing_balance": 15099.951178984491
+        "closing_balance": -6637.258821015508
       },
       "expense_breakdown": [
         {
@@ -5615,7 +5615,7 @@
       "email": "renu.sabapathy@gmail.com",
       "sheet_email": null,
       "occupant": "Renu R",
-      "collection_carry_over_mar2013_mar2022": 59073.67,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -5707,7 +5707,7 @@
         "expense": 65695.22188190633,
         "late_fee": 0,
         "net_collection_minus_expense": -5635.221881906327,
-        "closing_balance": 53438.44811809367
+        "closing_balance": -5635.221881906327
       },
       "expense_breakdown": [
         {
@@ -5910,7 +5910,7 @@
       "email": "",
       "sheet_email": null,
       "occupant": "Vamsidhar Bethanabatla",
-      "collection_carry_over_mar2013_mar2022": 3061.33,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -6002,7 +6002,7 @@
         "expense": 64883.854157709284,
         "late_fee": 0,
         "net_collection_minus_expense": 4087.5458422907104,
-        "closing_balance": 7148.87584229071
+        "closing_balance": 4087.5458422907104
       },
       "expense_breakdown": [
         {
@@ -6205,7 +6205,7 @@
       "email": "viralshah79@gmail.com",
       "sheet_email": null,
       "occupant": "Vviral Shah",
-      "collection_carry_over_mar2013_mar2022": -6419.98,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -6297,7 +6297,7 @@
         "expense": 65133.82674371262,
         "late_fee": 0,
         "net_collection_minus_expense": -10594.016743712622,
-        "closing_balance": -17013.99674371262
+        "closing_balance": -10594.016743712622
       },
       "expense_breakdown": [
         {
@@ -6500,7 +6500,7 @@
       "email": "nkvimal@gmail.com",
       "sheet_email": null,
       "occupant": "Vimal NK",
-      "collection_carry_over_mar2013_mar2022": 32308.66,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -6592,7 +6592,7 @@
         "expense": 69581.37509358693,
         "late_fee": 0,
         "net_collection_minus_expense": -7173.755093586937,
-        "closing_balance": 25134.904906413063
+        "closing_balance": -7173.755093586937
       },
       "expense_breakdown": [
         {
@@ -6795,7 +6795,7 @@
       "email": "sreejithmenon@gmail.com",
       "sheet_email": null,
       "occupant": "Sreejith Menon",
-      "collection_carry_over_mar2013_mar2022": 34719.38,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -6887,7 +6887,7 @@
         "expense": 68054.49928710025,
         "late_fee": 0,
         "net_collection_minus_expense": -1965.4992871002469,
-        "closing_balance": 32753.88071289975
+        "closing_balance": -1965.4992871002469
       },
       "expense_breakdown": [
         {
@@ -7090,7 +7090,7 @@
       "email": "vijay.suswaram@gmail.com",
       "sheet_email": null,
       "occupant": "Vijay Suswaram",
-      "collection_carry_over_mar2013_mar2022": 23795.88,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -7182,7 +7182,7 @@
         "expense": 63901.257592624424,
         "late_fee": 0,
         "net_collection_minus_expense": -597.2575926244244,
-        "closing_balance": 23198.622407375577
+        "closing_balance": -597.2575926244244
       },
       "expense_breakdown": [
         {
@@ -7385,7 +7385,7 @@
       "email": "abythomas99@gmail.com",
       "sheet_email": null,
       "occupant": "Aby Thomas",
-      "collection_carry_over_mar2013_mar2022": 7567.28,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -7477,7 +7477,7 @@
         "expense": 66097.52559480886,
         "late_fee": 0,
         "net_collection_minus_expense": -27822.52559480886,
-        "closing_balance": -20255.24559480886
+        "closing_balance": -27822.52559480886
       },
       "expense_breakdown": [
         {
@@ -7680,7 +7680,7 @@
       "email": "",
       "sheet_email": null,
       "occupant": "Renu R",
-      "collection_carry_over_mar2013_mar2022": -8157.15,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -7772,7 +7772,7 @@
         "expense": 61562.967459958476,
         "late_fee": 0,
         "net_collection_minus_expense": -559.967459958476,
-        "closing_balance": -8717.117459958476
+        "closing_balance": -559.967459958476
       },
       "expense_breakdown": [
         {
@@ -7975,7 +7975,7 @@
       "email": "ameet.talwadker@gmail.com",
       "sheet_email": null,
       "occupant": "Kavita",
-      "collection_carry_over_mar2013_mar2022": 27748.65,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -8067,7 +8067,7 @@
         "expense": 62432.39177292661,
         "late_fee": 0,
         "net_collection_minus_expense": -1356.3917729266104,
-        "closing_balance": 26392.25822707339
+        "closing_balance": -1356.3917729266104
       },
       "expense_breakdown": [
         {
@@ -8270,7 +8270,7 @@
       "email": "",
       "sheet_email": null,
       "occupant": "Sanchay Saxena",
-      "collection_carry_over_mar2013_mar2022": -4883.33,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -8362,7 +8362,7 @@
         "expense": 68357.85085714245,
         "late_fee": 500,
         "net_collection_minus_expense": -846.2808571424539,
-        "closing_balance": -5729.610857142454
+        "closing_balance": -846.2808571424539
       },
       "expense_breakdown": [
         {
@@ -8565,7 +8565,7 @@
       "email": "hemant.patel.ec@gmail.com",
       "sheet_email": null,
       "occupant": "Hemant Patel",
-      "collection_carry_over_mar2013_mar2022": -31252.22,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -8657,7 +8657,7 @@
         "expense": 68031.25847035635,
         "late_fee": 0,
         "net_collection_minus_expense": -12874.258470356348,
-        "closing_balance": -44126.47847035635
+        "closing_balance": -12874.258470356348
       },
       "expense_breakdown": [
         {
@@ -8860,7 +8860,7 @@
       "email": "senthil.web@gmail.com",
       "sheet_email": null,
       "occupant": "Senthil.Vijayaragavan",
-      "collection_carry_over_mar2013_mar2022": 9544.05,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -8952,7 +8952,7 @@
         "expense": 74730.83099231299,
         "late_fee": 0,
         "net_collection_minus_expense": -422.40099231299246,
-        "closing_balance": 9121.649007687007
+        "closing_balance": -422.40099231299246
       },
       "expense_breakdown": [
         {
@@ -9155,7 +9155,7 @@
       "email": "sudharma.sreeja@gmail.com",
       "sheet_email": null,
       "occupant": "Sreeja Sudharma",
-      "collection_carry_over_mar2013_mar2022": 23774.75,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -9247,7 +9247,7 @@
         "expense": 76666.80767075554,
         "late_fee": 0,
         "net_collection_minus_expense": -56105.777670755546,
-        "closing_balance": -32331.027670755546
+        "closing_balance": -56105.777670755546
       },
       "expense_breakdown": [
         {
@@ -9450,7 +9450,7 @@
       "email": "snbeheras1@gmail.com",
       "sheet_email": null,
       "occupant": "S.N.Behera",
-      "collection_carry_over_mar2013_mar2022": -14777.27,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -9542,7 +9542,7 @@
         "expense": 62358.88557015961,
         "late_fee": 500,
         "net_collection_minus_expense": -984.975570159615,
-        "closing_balance": -15762.245570159615
+        "closing_balance": -984.975570159615
       },
       "expense_breakdown": [
         {
@@ -9745,7 +9745,7 @@
       "email": "sonal.singhal86@gmail.com",
       "sheet_email": null,
       "occupant": "Sonal Singh",
-      "collection_carry_over_mar2013_mar2022": -86620.5,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -9837,7 +9837,7 @@
         "expense": 90046.16228778938,
         "late_fee": 1000,
         "net_collection_minus_expense": 40865.08771221062,
-        "closing_balance": -45755.41228778938
+        "closing_balance": 40865.08771221062
       },
       "expense_breakdown": [
         {
@@ -10040,7 +10040,7 @@
       "email": "",
       "sheet_email": "manikandan.nj@gmail.com",
       "occupant": "Koteswararao",
-      "collection_carry_over_mar2013_mar2022": -48759.94,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -10132,7 +10132,7 @@
         "expense": 64232.03026229089,
         "late_fee": 0,
         "net_collection_minus_expense": 34635.509737709115,
-        "closing_balance": -14124.430262290887
+        "closing_balance": 34635.509737709115
       },
       "expense_breakdown": [
         {
@@ -10335,7 +10335,7 @@
       "email": "swami2007@gmail.com",
       "sheet_email": null,
       "occupant": "Swami",
-      "collection_carry_over_mar2013_mar2022": -8330.82,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -10427,7 +10427,7 @@
         "expense": 72321.74816159676,
         "late_fee": 0,
         "net_collection_minus_expense": -23595.748161596755,
-        "closing_balance": -31926.568161596755
+        "closing_balance": -23595.748161596755
       },
       "expense_breakdown": [
         {
@@ -10630,7 +10630,7 @@
       "email": "abhishek.harekrishna@gmail.com",
       "sheet_email": null,
       "occupant": "Abhishek Gopalakrishnan",
-      "collection_carry_over_mar2013_mar2022": 37108.99,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -10722,7 +10722,7 @@
         "expense": 65934.52918959073,
         "late_fee": 0,
         "net_collection_minus_expense": -34060.52918959073,
-        "closing_balance": 3048.4608104092695
+        "closing_balance": -34060.52918959073
       },
       "expense_breakdown": [
         {
@@ -10925,7 +10925,7 @@
       "email": "vivek.dhingra@gmail.com",
       "sheet_email": null,
       "occupant": "Vivek Dhingra",
-      "collection_carry_over_mar2013_mar2022": 30080.35,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -11017,7 +11017,7 @@
         "expense": 61102.055087147586,
         "late_fee": 0,
         "net_collection_minus_expense": -40782.055087147586,
-        "closing_balance": -10701.705087147588
+        "closing_balance": -40782.055087147586
       },
       "expense_breakdown": [
         {
@@ -11220,7 +11220,7 @@
       "email": "harishb80@gmail.com",
       "sheet_email": null,
       "occupant": "Harish B",
-      "collection_carry_over_mar2013_mar2022": 30955.51,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -11312,7 +11312,7 @@
         "expense": 61854.50342170197,
         "late_fee": 0,
         "net_collection_minus_expense": -653.3734217019737,
-        "closing_balance": 30302.136578298025
+        "closing_balance": -653.3734217019737
       },
       "expense_breakdown": [
         {
@@ -11515,7 +11515,7 @@
       "email": "a.alwin@gmail.com",
       "sheet_email": null,
       "occupant": "Irudayaraj Alwin",
-      "collection_carry_over_mar2013_mar2022": 42482.7,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -11607,7 +11607,7 @@
         "expense": 76383.7044377408,
         "late_fee": 0,
         "net_collection_minus_expense": -3028.674437740803,
-        "closing_balance": 39454.025562259194
+        "closing_balance": -3028.674437740803
       },
       "expense_breakdown": [
         {
@@ -11810,7 +11810,7 @@
       "email": "pawangs@gmail.com",
       "sheet_email": null,
       "occupant": "Pawan GS",
-      "collection_carry_over_mar2013_mar2022": -12683.27,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -11902,7 +11902,7 @@
         "expense": 68691.78517665574,
         "late_fee": 0,
         "net_collection_minus_expense": 5912.214823344257,
-        "closing_balance": -6771.055176655744
+        "closing_balance": 5912.214823344257
       },
       "expense_breakdown": [
         {
@@ -12105,7 +12105,7 @@
       "email": "",
       "sheet_email": "esky2524@gmail.com",
       "occupant": "Mayfy",
-      "collection_carry_over_mar2013_mar2022": 31615.92,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -12197,7 +12197,7 @@
         "expense": 60862.504287912656,
         "late_fee": 1000,
         "net_collection_minus_expense": -61862.504287912656,
-        "closing_balance": -30246.584287912658
+        "closing_balance": -61862.504287912656
       },
       "expense_breakdown": [
         {
@@ -12400,7 +12400,7 @@
       "email": "gourish.patnaik@gmail.com",
       "sheet_email": null,
       "occupant": "Keerthivasan Raju",
-      "collection_carry_over_mar2013_mar2022": -62427.69,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -12492,7 +12492,7 @@
         "expense": 66637.21962318552,
         "late_fee": 500,
         "net_collection_minus_expense": 28937.78037681448,
-        "closing_balance": -33489.90962318552
+        "closing_balance": 28937.78037681448
       },
       "expense_breakdown": [
         {
@@ -12695,7 +12695,7 @@
       "email": "saovikmondal@gmail.com",
       "sheet_email": null,
       "occupant": "Saovik Mondal",
-      "collection_carry_over_mar2013_mar2022": -6659.47,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -12787,7 +12787,7 @@
         "expense": 68696.64804928775,
         "late_fee": 0,
         "net_collection_minus_expense": -11301.558049287749,
-        "closing_balance": -17961.02804928775
+        "closing_balance": -11301.558049287749
       },
       "expense_breakdown": [
         {
@@ -12990,7 +12990,7 @@
       "email": "srinivasa.sambana@gmail.com",
       "sheet_email": null,
       "occupant": "Ramadevi S.",
-      "collection_carry_over_mar2013_mar2022": -17999.49,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -13082,7 +13082,7 @@
         "expense": 64159.53359795369,
         "late_fee": 500,
         "net_collection_minus_expense": -715.4835979536947,
-        "closing_balance": -18714.973597953696
+        "closing_balance": -715.4835979536947
       },
       "expense_breakdown": [
         {
@@ -13285,7 +13285,7 @@
       "email": "nishantupadhyayster@gmail.com",
       "sheet_email": null,
       "occupant": "Nishant Upadhyay",
-      "collection_carry_over_mar2013_mar2022": 21692.9,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -13377,7 +13377,7 @@
         "expense": 64898.4863152418,
         "late_fee": 1000,
         "net_collection_minus_expense": -2900.4863152417965,
-        "closing_balance": 18792.413684758205
+        "closing_balance": -2900.4863152417965
       },
       "expense_breakdown": [
         {
@@ -13580,7 +13580,7 @@
       "email": "",
       "sheet_email": null,
       "occupant": "Manas Dasgupta",
-      "collection_carry_over_mar2013_mar2022": -28051.73,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -13672,7 +13672,7 @@
         "expense": 77014.05455779057,
         "late_fee": 500,
         "net_collection_minus_expense": -22738.054557790572,
-        "closing_balance": -50789.78455779057
+        "closing_balance": -22738.054557790572
       },
       "expense_breakdown": [
         {
@@ -13875,7 +13875,7 @@
       "email": "devendrasinghrawat@gmail.com",
       "sheet_email": null,
       "occupant": "Devendra Singh Rawat",
-      "collection_carry_over_mar2013_mar2022": -10704.71,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -13967,7 +13967,7 @@
         "expense": 64891.21932851484,
         "late_fee": 0,
         "net_collection_minus_expense": 5182.780671485161,
-        "closing_balance": -5521.929328514838
+        "closing_balance": 5182.780671485161
       },
       "expense_breakdown": [
         {
@@ -14170,7 +14170,7 @@
       "email": "fossil.rvce@gmail.com",
       "sheet_email": null,
       "occupant": "Prashant Sikdar",
-      "collection_carry_over_mar2013_mar2022": 14185.9,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -14262,7 +14262,7 @@
         "expense": 76604.27772993565,
         "late_fee": 0,
         "net_collection_minus_expense": -1934.277729935653,
-        "closing_balance": 12251.622270064347
+        "closing_balance": -1934.277729935653
       },
       "expense_breakdown": [
         {
@@ -14465,7 +14465,7 @@
       "email": "ryanmcbeal@gmail.com",
       "sheet_email": null,
       "occupant": "Kunal Mehta",
-      "collection_carry_over_mar2013_mar2022": -95754.96,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -14557,7 +14557,7 @@
         "expense": 76450.7778078524,
         "late_fee": 1000,
         "net_collection_minus_expense": 28087.2221921476,
-        "closing_balance": -67667.7378078524
+        "closing_balance": 28087.2221921476
       },
       "expense_breakdown": [
         {
@@ -14760,7 +14760,7 @@
       "email": "kapil.garg82@gmail.com",
       "sheet_email": null,
       "occupant": "Kapil Garg",
-      "collection_carry_over_mar2013_mar2022": 5261.88,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -14852,7 +14852,7 @@
         "expense": 69274.68582913947,
         "late_fee": 500,
         "net_collection_minus_expense": 4061.8841708605323,
-        "closing_balance": 9323.764170860533
+        "closing_balance": 4061.8841708605323
       },
       "expense_breakdown": [
         {
@@ -15055,7 +15055,7 @@
       "email": "vijetalva@gmail.com",
       "sheet_email": null,
       "occupant": "Vijet Alva",
-      "collection_carry_over_mar2013_mar2022": -16511.91,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -15147,7 +15147,7 @@
         "expense": 69097.19587780692,
         "late_fee": 0,
         "net_collection_minus_expense": -36051.195877806924,
-        "closing_balance": -52563.10587780693
+        "closing_balance": -36051.195877806924
       },
       "expense_breakdown": [
         {
@@ -15350,7 +15350,7 @@
       "email": "giyer.ops@gmail.com",
       "sheet_email": null,
       "occupant": "Ganesh Iyer",
-      "collection_carry_over_mar2013_mar2022": -1440.38,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -15442,7 +15442,7 @@
         "expense": 62857.00619916573,
         "late_fee": 0,
         "net_collection_minus_expense": -26326.006199165728,
-        "closing_balance": -27766.38619916573
+        "closing_balance": -26326.006199165728
       },
       "expense_breakdown": [
         {
@@ -15645,7 +15645,7 @@
       "email": "myth.rmsh@gmail.com",
       "sheet_email": null,
       "occupant": "Mythili Ramesh",
-      "collection_carry_over_mar2013_mar2022": 30052.14,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -15737,7 +15737,7 @@
         "expense": 74677.98355083886,
         "late_fee": 0,
         "net_collection_minus_expense": -19999.373550838864,
-        "closing_balance": 10052.766449161136
+        "closing_balance": -19999.373550838864
       },
       "expense_breakdown": [
         {
@@ -15940,7 +15940,7 @@
       "email": "vinyasr@gmail.com",
       "sheet_email": null,
       "occupant": "Vinyas Ramachandra",
-      "collection_carry_over_mar2013_mar2022": 11655.8,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -16032,7 +16032,7 @@
         "expense": 61996.37322233546,
         "late_fee": 0,
         "net_collection_minus_expense": -18487.04322233546,
-        "closing_balance": -6831.243222335459
+        "closing_balance": -18487.04322233546
       },
       "expense_breakdown": [
         {
@@ -16235,7 +16235,7 @@
       "email": "lalitsharma21@gmail.com",
       "sheet_email": null,
       "occupant": "Lalit Kumar Sharma",
-      "collection_carry_over_mar2013_mar2022": 52886.24,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -16327,7 +16327,7 @@
         "expense": 63695.15168542051,
         "late_fee": 0,
         "net_collection_minus_expense": -6736.731685420513,
-        "closing_balance": 46149.508314579485
+        "closing_balance": -6736.731685420513
       },
       "expense_breakdown": [
         {
@@ -16530,7 +16530,7 @@
       "email": "nishsahu@gmail.com",
       "sheet_email": null,
       "occupant": "Anmol Verma",
-      "collection_carry_over_mar2013_mar2022": 29774.18,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -16622,7 +16622,7 @@
         "expense": 68134.07470986244,
         "late_fee": 0,
         "net_collection_minus_expense": -282.3847098624392,
-        "closing_balance": 29491.79529013756
+        "closing_balance": -282.3847098624392
       },
       "expense_breakdown": [
         {
@@ -16825,7 +16825,7 @@
       "email": "b.vamsidhar@gmail.com",
       "sheet_email": null,
       "occupant": "Vamsidhar Bethanabatla",
-      "collection_carry_over_mar2013_mar2022": -9084.31,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -16917,7 +16917,7 @@
         "expense": 73489.22658768123,
         "late_fee": 0,
         "net_collection_minus_expense": -3695.2265876812307,
-        "closing_balance": -12779.53658768123
+        "closing_balance": -3695.2265876812307
       },
       "expense_breakdown": [
         {
@@ -17120,7 +17120,7 @@
       "email": "suthapallivaishnavi@gmail.com",
       "sheet_email": null,
       "occupant": "Ajay Chauhan",
-      "collection_carry_over_mar2013_mar2022": 18172.14,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -17212,7 +17212,7 @@
         "expense": 64407.98446667959,
         "late_fee": 500,
         "net_collection_minus_expense": -11287.864466679595,
-        "closing_balance": 6884.275533320404
+        "closing_balance": -11287.864466679595
       },
       "expense_breakdown": [
         {
@@ -17415,7 +17415,7 @@
       "email": "shumonchaks@gmail.com",
       "sheet_email": null,
       "occupant": "Prasenjit",
-      "collection_carry_over_mar2013_mar2022": -4201.69,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -17507,7 +17507,7 @@
         "expense": 62365.5510591761,
         "late_fee": 500,
         "net_collection_minus_expense": 11909.328940823907,
-        "closing_balance": 7707.638940823907
+        "closing_balance": 11909.328940823907
       },
       "expense_breakdown": [
         {
@@ -17710,7 +17710,7 @@
       "email": "",
       "sheet_email": null,
       "occupant": "Rahul Kumar",
-      "collection_carry_over_mar2013_mar2022": -21644.38,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -17802,7 +17802,7 @@
         "expense": 66641.9408849839,
         "late_fee": 500,
         "net_collection_minus_expense": 4858.059115016105,
-        "closing_balance": -16786.320884983896
+        "closing_balance": 4858.059115016105
       },
       "expense_breakdown": [
         {
@@ -18005,7 +18005,7 @@
       "email": "jayajeganathan@gmail.com",
       "sheet_email": null,
       "occupant": "Jeya",
-      "collection_carry_over_mar2013_mar2022": -3401.65,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -18097,7 +18097,7 @@
         "expense": 67090.90186082244,
         "late_fee": 0,
         "net_collection_minus_expense": -4476.901860822443,
-        "closing_balance": -7878.551860822443
+        "closing_balance": -4476.901860822443
       },
       "expense_breakdown": [
         {
@@ -18300,7 +18300,7 @@
       "email": "",
       "sheet_email": null,
       "occupant": "Trevor",
-      "collection_carry_over_mar2013_mar2022": 4456.14,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -18392,7 +18392,7 @@
         "expense": 78592.82628691479,
         "late_fee": 0,
         "net_collection_minus_expense": -32318.826286914787,
-        "closing_balance": -27862.686286914788
+        "closing_balance": -32318.826286914787
       },
       "expense_breakdown": [
         {
@@ -18595,7 +18595,7 @@
       "email": "madhusoodan.pr@gmail.com",
       "sheet_email": null,
       "occupant": "Madhusoodanan P.R.",
-      "collection_carry_over_mar2013_mar2022": 20295.53,
+      "balance_from_last_fy": 0,
       "monthly": [
         {
           "month": "Apr 2025",
@@ -18687,7 +18687,7 @@
         "expense": 67187.2071393933,
         "late_fee": 0,
         "net_collection_minus_expense": -9350.2071393933,
-        "closing_balance": 10945.322860606699
+        "closing_balance": -9350.2071393933
       },
       "expense_breakdown": [
         {

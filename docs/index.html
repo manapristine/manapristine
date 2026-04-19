@@ -968,11 +968,11 @@
 
     function renderDefaulters(items) {
       const defaulters = items
-        .filter((report) => Number(report.totals?.closing_balance || 0) < 0)
-        .sort((a, b) => Number(a.totals.closing_balance) - Number(b.totals.closing_balance));
+        .filter((report) => Number(report.totals?.net_collection_minus_expense || 0) < 0)
+        .sort((a, b) => Number(a.totals.net_collection_minus_expense) - Number(b.totals.net_collection_minus_expense));
 
       const pendingAmount = defaulters.reduce(
-        (sum, report) => sum + Math.abs(Number(report.totals.closing_balance || 0)),
+        (sum, report) => sum + Math.abs(Number(report.totals.net_collection_minus_expense || 0)),
         0
       );
 
@@ -993,7 +993,7 @@
           <td>${esc(report.flat)}</td>
           <td>${esc(report.owner_name || "Not provided")}</td>
           <td>${esc(report.occupant || "Not available")}</td>
-          <td>${formatAmount(Math.abs(Number(report.totals.closing_balance || 0)))}</td>
+          <td>${formatAmount(Math.abs(Number(report.totals.net_collection_minus_expense || 0)))}</td>
         `;
         defaultersBody.appendChild(tr);
       }
@@ -1019,7 +1019,7 @@
 
       ctx.clearRect(0, 0, W, H);
 
-      const amounts = top10.map((r) => Math.abs(Number(r.totals.closing_balance || 0)));
+      const amounts = top10.map((r) => Math.abs(Number(r.totals.net_collection_minus_expense || 0)));
       const maxVal = Math.max(...amounts, 1);
       const n = top10.length;
       const barH = Math.min(22, (plotH - (n - 1) * 4) / n);
