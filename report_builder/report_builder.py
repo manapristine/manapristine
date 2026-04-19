@@ -97,10 +97,12 @@ def write_report_dataset(
     output_json: Path,
     financial_year: str,
     annual_expense_details: list[dict[str, Any]] | None = None,
+    cutoff_date: str | None = None,
 ) -> None:
     payload = {
         "generated_at": datetime.now().isoformat(timespec="seconds"),
         "financial_year": financial_year,
+        "cutoff_date": cutoff_date,
         "sheet": DEFAULT_SHEET,
         "report_count": len(reports),
         "reports": reports,
@@ -386,9 +388,10 @@ def main() -> int:
             occupants=occupants,
         )
         annual_expense_details = load_annual_expense_details(workbook_path)
+        cutoff_date = entry.get("cutoff-date-for-collection")
         fy_filename = f"report-data-{fy_key}.json"
         fy_output = OUTPUT_DIR / fy_filename
-        write_report_dataset(reports, fy_output, financial_year, annual_expense_details)
+        write_report_dataset(reports, fy_output, financial_year, annual_expense_details, cutoff_date)
         manifest_entries.append({"fy": fy_key, "file": fy_filename})
 
         print(f"FY {fy_key}: generated {len(reports)} report(s) at {fy_output}")

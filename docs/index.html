@@ -701,7 +701,7 @@
             <span class="value" id="meta-financial-year">Loading...</span>
           </div>
           <div>
-            <span class="label">Report Generated</span>
+            <span class="label">Collection Considered Till</span>
             <span class="value" id="meta-current-month">Loading...</span>
           </div>
         </div>
@@ -1735,10 +1735,10 @@
       document.getElementById("print-exc-fy").textContent = financialYear;
       document.getElementById("agg-monthly-title").textContent = `Month-wise Aggregate (FY ${financialYear})`;
       document.getElementById("agg-expense-title").textContent = `Breakdown of Annual Fixed Expenses (FY ${financialYear})`;
-      const generatedDate = payload.generated_at
-        ? new Date(payload.generated_at).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })
+      const cutoffDate = payload.cutoff_date
+        ? new Date(payload.cutoff_date + "T00:00:00").toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })
         : "";
-      metaCurrentMonth.textContent = generatedDate || "Not available";
+      metaCurrentMonth.textContent = cutoffDate || "Not available";
 
       flatSelect.innerHTML = '<option value="">Choose a flat</option>';
       for (const report of reports) {
