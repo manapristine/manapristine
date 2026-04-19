@@ -680,7 +680,7 @@
             <span class="value" id="meta-financial-year">Loading...</span>
           </div>
           <div>
-            <span class="label">Current Month</span>
+            <span class="label">Report Generated</span>
             <span class="value" id="meta-current-month">Loading...</span>
           </div>
         </div>
@@ -1543,10 +1543,10 @@
         document.getElementById("agg-monthly-title").textContent = `Month-wise Aggregate (FY ${financialYear})`;
         document.getElementById("agg-expense-title").textContent = `Breakdown of Annual Fixed Expenses (FY ${financialYear})`;
         renderDefaulters(reports);
-        const generatedMonth = payload.generated_at
-          ? new Date(payload.generated_at).toLocaleDateString("en-IN", { month: "long", year: "numeric" })
+        const generatedDate = payload.generated_at
+          ? new Date(payload.generated_at).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })
           : "";
-        metaCurrentMonth.textContent = generatedMonth || "Not available";
+        metaCurrentMonth.textContent = generatedDate || "Not available";
 
         for (const report of reports) {
           const option = document.createElement("option");
