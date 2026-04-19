@@ -183,7 +183,7 @@ def extract_monthly_blocks(header_row_1: tuple[Any, ...], header_row_2: tuple[An
 
 def extract_sheet_layout(header_row_1: tuple[Any, ...]) -> SheetLayout:
     normalized = [str(value).strip().replace("\n", " ") if value is not None else "" for value in header_row_1]
-    carry_over_idx = next((idx for idx, value in enumerate(normalized) if "COLLECTION CARRY OVER" in value), None)
+    carry_over_idx = next((idx for idx, value in enumerate(normalized) if "Balance from last FY year" in value), None)
     total_collection_idx = next((idx for idx, value in enumerate(normalized) if value.startswith("TOTAL COLLECTION")), None)
     total_expense_idx = next((idx for idx, value in enumerate(normalized) if value.startswith("TOTAL EXPENSE")), None)
     total_late_fee_idx = next((idx for idx, value in enumerate(normalized) if value.startswith("TOTAL LATE FEE")), None)
@@ -274,7 +274,7 @@ def build_report(
         "email": flat_request["email"],
         "sheet_email": (sheet_row[1] or "").strip() if len(sheet_row) > 1 and isinstance(sheet_row[1], str) else sheet_row[1],
         "occupant": occupant_name or None,
-        "collection_carry_over_mar2013_mar2022": carry_over,
+        "balance_from_last_fy": carry_over,
         "monthly": [],
         "totals": {
             "collection": total_collection,
