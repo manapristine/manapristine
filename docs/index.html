@@ -447,7 +447,7 @@
       margin-top: 6px;
     }
     .metrics {
-      grid-template-columns: repeat(5, minmax(0, 1fr));
+      grid-template-columns: repeat(6, minmax(0, 1fr));
     }
     .card {
       padding: 7px 9px;
@@ -784,6 +784,10 @@
           <article class="card" id="net-card">
             <span class="label">Net Collection Minus Expense</span>
             <span class="value" id="total-net"></span>
+          </article>
+          <article class="card" id="past-fy-card">
+            <span class="label">Dues From Past FY</span>
+            <span class="value" id="past-fy-dues"></span>
           </article>
           <article class="card" id="balance-card">
             <span class="label">Closing Balance</span>
@@ -1281,8 +1285,11 @@
       document.getElementById("total-expense").textContent = formatAmount(report.totals.expense);
       document.getElementById("total-late-fee").textContent = formatAmount(report.totals.late_fee);
       document.getElementById("total-net").textContent = formatAmount(report.totals.net_collection_minus_expense);
+      const pastFyDues = Number(report.balance_from_last_fy || 0);
+      document.getElementById("past-fy-dues").textContent = formatAmount(pastFyDues);
       document.getElementById("closing-balance").textContent = formatAmount(report.totals.closing_balance);
       setCardTone(document.getElementById("net-card"), net);
+      setCardTone(document.getElementById("past-fy-card"), pastFyDues);
       setCardTone(document.getElementById("balance-card"), balance);
 
       // Monthly summary table with totals
