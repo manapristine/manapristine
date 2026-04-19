@@ -283,6 +283,9 @@
       color: var(--danger);
       font-weight: 700;
     }
+    .excess-table td:last-child {
+      color: var(--accent);
+    }
     .total-row td {
       font-weight: 700;
       border-top: 2px solid var(--ink);
@@ -359,6 +362,7 @@
         box-shadow: none;
       }
       body.print-flat .defaulters,
+      body.print-flat .excess-section,
       body.print-flat .controls,
       body.print-flat .masthead {
         display: none;
@@ -366,19 +370,31 @@
       body.print-defaulters .controls,
       body.print-defaulters .masthead,
       body.print-defaulters #statement,
-      body.print-defaulters #aggregates {
+      body.print-defaulters #aggregates,
+      body.print-defaulters .excess-section {
         display: none;
       }
       body.print-aggregates .controls,
       body.print-aggregates .masthead,
       body.print-aggregates .defaulters,
+      body.print-aggregates .excess-section,
       body.print-aggregates #statement {
         display: none;
+      }
+      body.print-excess .controls,
+      body.print-excess .masthead,
+      body.print-excess #statement,
+      body.print-excess #aggregates,
+      body.print-excess .defaulters:not(.excess-section) {
+        display: none;
+      }
+      body.print-excess .excess-section {
+        display: block;
       }
       body.print-aggregates #aggregates {
         display: block;
       }
-      body.print-defaulters .defaulters,
+      body.print-defaulters .defaulters:not(.excess-section),
       body.print-flat #statement {
         display: block;
       }
@@ -416,6 +432,11 @@
       }
       .defaulters-table td:last-child {
         color: #b42318 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .excess-table td:last-child {
+        color: #0f766e !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
@@ -695,6 +716,7 @@
               <option value="flat">Flat Statement</option>
               <option value="aggregates">Aggregates</option>
               <option value="defaulters">Defaulters</option>
+              <option value="excess">Excess Payments</option>
             </select>
           </div>
           <div class="field" id="flat-select-field">
@@ -910,6 +932,48 @@
         </div>
       </section>
 
+      <section class="defaulters excess-section">
+        <div class="print-header">
+          <div class="print-header-title">Mana Pristine — Excess Payments Report</div>
+          <div class="print-header-details">
+            <span><strong>FY:</strong> <span id="print-exc-fy"></span></span>
+            <span><strong>Report:</strong> Flats with Excess Payments</span>
+          </div>
+        </div>
+        <div class="defaulters-head">
+          <div>
+            <h2>Excess Payments</h2>
+            <p>Flats that have paid more than their expenses for the current financial year.</p>
+          </div>
+          <div class="defaulters-actions">
+            <div class="pending-total">
+              <span class="label">Total Excess Amount</span>
+              <span class="value positive-text" id="total-excess">₹0.00</span>
+            </div>
+            <button id="export-excess-pdf" class="btn" type="button">Export Excess PDF</button>
+          </div>
+        </div>
+        <div class="defaulters-chart-wrap" style="margin-bottom:10px">
+          <h3 style="margin:0 0 6px;font-size:0.88rem">Top 10 Excess Payments</h3>
+          <div style="width:100%;overflow-x:auto">
+            <canvas id="excess-chart" height="280" style="width:100%;max-width:900px"></canvas>
+          </div>
+        </div>
+        <div class="defaulters-table-wrap">
+          <table class="defaulters-table excess-table">
+            <thead>
+              <tr>
+                <th>Flat</th>
+                <th>Owner</th>
+                <th>Occupant</th>
+                <th>Excess Amount</th>
+              </tr>
+            </thead>
+            <tbody id="excess-body"></tbody>
+          </table>
+        </div>
+      </section>
+
       <section id="empty-state" class="empty">
         Select a flat to view its maintenance statement.
       </section>
@@ -930,11 +994,15 @@
     const exportDefaultersButton = document.getElementById("export-defaulters-pdf");
     const statement = document.getElementById("statement");
     const aggregatesSection = document.getElementById("aggregates");
-    const defaultersSection = document.querySelector(".defaulters");
+    const defaultersSection = document.querySelector(".defaulters:not(.excess-section)");
+    const excessSection = document.querySelector(".excess-section");
     const emptyState = document.getElementById("empty-state");
     const metaCurrentMonth = document.getElementById("meta-current-month");
     const defaultersBody = document.getElementById("defaulters-body");
     const totalPending = document.getElementById("total-pending");
+    const excessBody = document.getElementById("excess-body");
+    const totalExcess = document.getElementById("total-excess");
+    const exportExcessButton = document.getElementById("export-excess-pdf");
     let reports = [];
     let financialYear = "";
 
@@ -1074,6 +1142,114 @@
         ctx.fillText(formatAmount(amt), w > 80 ? pad.left + w - 6 : pad.left + w + 4, y + barH / 2);
 
         // Label
+        ctx.fillStyle = cText;
+        ctx.font = "bold 10px sans-serif";
+        ctx.textAlign = "right";
+        ctx.textBaseline = "middle";
+        const ownerShort = (r.owner_name || "").length > 16 ? (r.owner_name || "").slice(0, 15) + "…" : (r.owner_name || "N/A");
+        ctx.fillText(`${r.flat} — ${ownerShort}`, pad.left - 6, y + barH / 2);
+      }
+    }
+
+    function renderExcess(items) {
+      const excess = items
+        .filter((report) => Number(report.totals?.net_collection_minus_expense || 0) > 0)
+        .sort((a, b) => Number(b.totals.net_collection_minus_expense) - Number(a.totals.net_collection_minus_expense));
+
+      const excessAmount = excess.reduce(
+        (sum, report) => sum + Number(report.totals.net_collection_minus_expense || 0),
+        0
+      );
+
+      totalExcess.textContent = formatAmount(excessAmount);
+      excessBody.innerHTML = "";
+
+      if (excess.length === 0) {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `<td colspan="4">No flats with excess payments in the current dataset.</td>`;
+        excessBody.appendChild(tr);
+        return;
+      }
+
+      for (const report of excess) {
+        const tr = document.createElement("tr");
+        tr.classList.add("positive");
+        tr.innerHTML = `
+          <td>${esc(report.flat)}</td>
+          <td>${esc(report.owner_name || "Not provided")}</td>
+          <td>${esc(report.occupant || "Not available")}</td>
+          <td>${formatAmount(Number(report.totals.net_collection_minus_expense || 0))}</td>
+        `;
+        excessBody.appendChild(tr);
+      }
+
+      drawExcessChart(excess.slice(0, 10));
+    }
+
+    function drawExcessChart(top10) {
+      const canvas = document.getElementById("excess-chart");
+      if (!canvas || top10.length === 0) return;
+      const ctx = canvas.getContext("2d");
+      const dpr = window.devicePixelRatio || 1;
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = rect.width * dpr;
+      canvas.height = 280 * dpr;
+      ctx.scale(dpr, dpr);
+
+      const W = rect.width;
+      const H = 280;
+      const pad = { top: 20, right: 20, bottom: 12, left: 180 };
+      const plotW = W - pad.left - pad.right;
+      const plotH = H - pad.top - pad.bottom;
+
+      ctx.clearRect(0, 0, W, H);
+
+      const amounts = top10.map((r) => Number(r.totals.net_collection_minus_expense || 0));
+      const maxVal = Math.max(...amounts, 1);
+      const n = top10.length;
+      const barH = Math.min(22, (plotH - (n - 1) * 4) / n);
+      const gap = 4;
+      const totalBarsH = n * barH + (n - 1) * gap;
+      const offsetY = pad.top + (plotH - totalBarsH) / 2;
+
+      const cGrid = cssVar("--chart-grid");
+      const cLabel = cssVar("--chart-label");
+      const cText = cssVar("--chart-text");
+      const cAccent = cssVar("--chart-bar-accent");
+      const cOnBar = cssVar("--chart-amount-on-bar");
+
+      ctx.strokeStyle = cGrid;
+      ctx.lineWidth = 0.5;
+      const gridSteps = 4;
+      for (let i = 0; i <= gridSteps; i++) {
+        const x = pad.left + (plotW / gridSteps) * i;
+        ctx.beginPath();
+        ctx.moveTo(x, pad.top);
+        ctx.lineTo(x, H - pad.bottom);
+        ctx.stroke();
+        ctx.fillStyle = cLabel;
+        ctx.font = "9px sans-serif";
+        ctx.textAlign = "center";
+        ctx.fillText(formatAmount((maxVal / gridSteps) * i), x, H - 1);
+      }
+
+      for (let i = 0; i < n; i++) {
+        const r = top10[i];
+        const amt = amounts[i];
+        const y = offsetY + i * (barH + gap);
+        const w = (amt / maxVal) * plotW;
+
+        ctx.fillStyle = cAccent;
+        ctx.beginPath();
+        ctx.roundRect(pad.left, y, w, barH, [0, 4, 4, 0]);
+        ctx.fill();
+
+        ctx.fillStyle = w > 80 ? cOnBar : cAccent;
+        ctx.font = "bold 9px sans-serif";
+        ctx.textAlign = w > 80 ? "right" : "left";
+        ctx.textBaseline = "middle";
+        ctx.fillText(formatAmount(amt), w > 80 ? pad.left + w - 6 : pad.left + w + 4, y + barH / 2);
+
         ctx.fillStyle = cText;
         ctx.font = "bold 10px sans-serif";
         ctx.textAlign = "right";
@@ -1285,6 +1461,7 @@
       statement.classList.add("hidden");
       aggregatesSection.classList.add("hidden");
       defaultersSection.classList.add("hidden");
+      excessSection.classList.add("hidden");
       emptyState.classList.add("hidden");
 
       const label = document.getElementById("selected-flat-label");
@@ -1317,6 +1494,12 @@
         exportButton.textContent = "Export Defaulters PDF";
         label.textContent = `Defaulters — FY ${financialYear}`;
         defaultersSection.classList.remove("hidden");
+      } else if (view === "excess") {
+        flatSelectField.classList.add("hidden");
+        flatDetails.classList.add("hidden");
+        exportButton.textContent = "Export Excess PDF";
+        label.textContent = `Excess Payments — FY ${financialYear}`;
+        excessSection.classList.remove("hidden");
       }
     }
 
@@ -1540,9 +1723,11 @@
         document.getElementById("print-flat-fy").textContent = financialYear;
         document.getElementById("print-agg-fy").textContent = financialYear;
         document.getElementById("print-def-fy").textContent = financialYear;
+        document.getElementById("print-exc-fy").textContent = financialYear;
         document.getElementById("agg-monthly-title").textContent = `Month-wise Aggregate (FY ${financialYear})`;
         document.getElementById("agg-expense-title").textContent = `Breakdown of Annual Fixed Expenses (FY ${financialYear})`;
         renderDefaulters(reports);
+        renderExcess(reports);
         const generatedDate = payload.generated_at
           ? new Date(payload.generated_at).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })
           : "";
@@ -1591,13 +1776,16 @@
 
     exportButton.addEventListener("click", () => {
       const view = viewSelect.value;
-      document.body.classList.remove("print-defaulters", "print-flat", "print-aggregates");
+      document.body.classList.remove("print-defaulters", "print-flat", "print-aggregates", "print-excess");
       if (view === "aggregates") {
         document.body.classList.add("print-aggregates");
         printWithTitle(`Aggregates-Report-${todayStr()}`);
       } else if (view === "defaulters") {
         document.body.classList.add("print-defaulters");
         printWithTitle(`Defaulters-Report-${todayStr()}`);
+      } else if (view === "excess") {
+        document.body.classList.add("print-excess");
+        printWithTitle(`Excess-Payments-Report-${todayStr()}`);
       } else {
         if (!flatSelect.value) return;
         document.body.classList.add("print-flat");
@@ -1606,13 +1794,19 @@
     });
 
     exportDefaultersButton.addEventListener("click", () => {
-      document.body.classList.remove("print-flat", "print-aggregates");
+      document.body.classList.remove("print-flat", "print-aggregates", "print-excess");
       document.body.classList.add("print-defaulters");
       printWithTitle(`Defaulters-Report-${todayStr()}`);
     });
 
+    exportExcessButton.addEventListener("click", () => {
+      document.body.classList.remove("print-flat", "print-aggregates", "print-defaulters");
+      document.body.classList.add("print-excess");
+      printWithTitle(`Excess-Payments-Report-${todayStr()}`);
+    });
+
     window.addEventListener("afterprint", () => {
-      document.body.classList.remove("print-flat", "print-defaulters", "print-aggregates");
+      document.body.classList.remove("print-flat", "print-defaulters", "print-aggregates", "print-excess");
     });
 
     boot();
