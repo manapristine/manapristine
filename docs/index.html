@@ -711,6 +711,12 @@
         <div class="control-stack">
           <span class="selected-flat" id="selected-flat-label">Select a flat</span>
           <div class="field">
+            <label for="fy-select">Financial Year</label>
+            <select id="fy-select">
+              <option value="">Loading...</option>
+            </select>
+          </div>
+          <div class="field">
             <label for="view-select">View</label>
             <select id="view-select">
               <option value="flat">Flat Statement</option>
@@ -987,6 +993,7 @@
       maximumFractionDigits: 2
     });
 
+    const fySelect = document.getElementById("fy-select");
     const flatSelect = document.getElementById("flat-select");
     const viewSelect = document.getElementById("view-select");
     const flatSelectField = document.getElementById("flat-select-field");
@@ -1005,6 +1012,7 @@
     const exportExcessButton = document.getElementById("export-excess-pdf");
     let reports = [];
     let financialYear = "";
+    let manifest = null;
 
     function cssVar(name) {
       return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
@@ -1036,11 +1044,11 @@
 
     function renderDefaulters(items) {
       const defaulters = items
-        .filter((report) => Number(report.totals?.net_collection_minus_expense || 0) < 0)
-        .sort((a, b) => Number(a.totals.net_collection_minus_expense) - Number(b.totals.net_collection_minus_expense));
+        .filter((report) => Number(report.totals?.closing_balance || 0) < 0)
+        .sort((a, b) => Number(a.totals.closing_balance) - Number(b.totals.closing_balance));
 
       const pendingAmount = defaulters.reduce(
-        (sum, report) => sum + Math.abs(Number(report.totals.net_collection_minus_expense || 0)),
+        (sum, report) => sum + Math.abs(Number(report.totals.closing_balance || 0)),
         0
       );
 
@@ -1061,7 +1069,7 @@
           <td>${esc(report.flat)}</td>
           <td>${esc(report.owner_name || "Not provided")}</td>
           <td>${esc(report.occupant || "Not available")}</td>
-          <td>${formatAmount(Math.abs(Number(report.totals.net_collection_minus_expense || 0)))}</td>
+          <td>${formatAmount(Math.abs(Number(report.totals.closing_balance || 0)))}</td>
         `;
         defaultersBody.appendChild(tr);
       }
@@ -1087,7 +1095,7 @@
 
       ctx.clearRect(0, 0, W, H);
 
-      const amounts = top10.map((r) => Math.abs(Number(r.totals.net_collection_minus_expense || 0)));
+      const amounts = top10.map((r) => Math.abs(Number(r.totals.closing_balance || 0)));
       const maxVal = Math.max(...amounts, 1);
       const n = top10.length;
       const barH = Math.min(22, (plotH - (n - 1) * 4) / n);
@@ -1153,11 +1161,11 @@
 
     function renderExcess(items) {
       const excess = items
-        .filter((report) => Number(report.totals?.net_collection_minus_expense || 0) > 0)
-        .sort((a, b) => Number(b.totals.net_collection_minus_expense) - Number(a.totals.net_collection_minus_expense));
+        .filter((report) => Number(report.totals?.closing_balance || 0) > 0)
+        .sort((a, b) => Number(b.totals.closing_balance) - Number(a.totals.closing_balance));
 
       const excessAmount = excess.reduce(
-        (sum, report) => sum + Number(report.totals.net_collection_minus_expense || 0),
+        (sum, report) => sum + Number(report.totals.closing_balance || 0),
         0
       );
 
@@ -1178,7 +1186,7 @@
           <td>${esc(report.flat)}</td>
           <td>${esc(report.owner_name || "Not provided")}</td>
           <td>${esc(report.occupant || "Not available")}</td>
-          <td>${formatAmount(Number(report.totals.net_collection_minus_expense || 0))}</td>
+          <td>${formatAmount(Number(report.totals.closing_balance || 0))}</td>
         `;
         excessBody.appendChild(tr);
       }
@@ -1204,7 +1212,7 @@
 
       ctx.clearRect(0, 0, W, H);
 
-      const amounts = top10.map((r) => Number(r.totals.net_collection_minus_expense || 0));
+      const amounts = top10.map((r) => Number(r.totals.closing_balance || 0));
       const maxVal = Math.max(...amounts, 1);
       const n = top10.length;
       const barH = Math.min(22, (plotH - (n - 1) * 4) / n);
@@ -1710,48 +1718,78 @@
       canvas.parentElement.appendChild(legend);
     }
 
+    async function loadFYData(dataFile) {
+      const response = await fetch(`./${dataFile}`, { cache: "no-store" });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const payload = await response.json();
+      reports = (payload.reports || []).slice().sort((a, b) => a.flat.localeCompare(b.flat, undefined, { numeric: true }));
+      window._annualExpenseDetails = payload.annual_expense_details || [];
+      financialYear = payload.financial_year || "";
+      document.getElementById("fy-subtitle").textContent = financialYear ? `Financial Year ${financialYear}` : "";
+      document.getElementById("meta-financial-year").textContent = financialYear || "N/A";
+      document.getElementById("print-flat-fy").textContent = financialYear;
+      document.getElementById("print-agg-fy").textContent = financialYear;
+      document.getElementById("print-def-fy").textContent = financialYear;
+      document.getElementById("print-exc-fy").textContent = financialYear;
+      document.getElementById("agg-monthly-title").textContent = `Month-wise Aggregate (FY ${financialYear})`;
+      document.getElementById("agg-expense-title").textContent = `Breakdown of Annual Fixed Expenses (FY ${financialYear})`;
+      renderDefaulters(reports);
+      renderExcess(reports);
+      const generatedDate = payload.generated_at
+        ? new Date(payload.generated_at).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })
+        : "";
+      metaCurrentMonth.textContent = generatedDate || "Not available";
+
+      flatSelect.innerHTML = '<option value="">Choose a flat</option>';
+      for (const report of reports) {
+        const option = document.createElement("option");
+        option.value = report.flat;
+        option.textContent = `${report.flat} - ${report.owner_name || "Owner not set"}`;
+        flatSelect.appendChild(option);
+      }
+
+      if (reports.length > 0) {
+        flatSelect.value = reports[0].flat;
+        switchView(viewSelect.value);
+      } else {
+        emptyState.textContent = "No report data found for this financial year.";
+        emptyState.classList.remove("hidden");
+      }
+    }
+
     async function boot() {
       try {
-        const response = await fetch("./report-data.json", { cache: "no-store" });
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        const payload = await response.json();
-        reports = (payload.reports || []).slice().sort((a, b) => a.flat.localeCompare(b.flat, undefined, { numeric: true }));
-        window._annualExpenseDetails = payload.annual_expense_details || [];
-        financialYear = payload.financial_year || "";
-        document.getElementById("fy-subtitle").textContent = financialYear ? `Financial Year ${financialYear}` : "";
-        document.getElementById("meta-financial-year").textContent = financialYear || "N/A";
-        document.getElementById("print-flat-fy").textContent = financialYear;
-        document.getElementById("print-agg-fy").textContent = financialYear;
-        document.getElementById("print-def-fy").textContent = financialYear;
-        document.getElementById("print-exc-fy").textContent = financialYear;
-        document.getElementById("agg-monthly-title").textContent = `Month-wise Aggregate (FY ${financialYear})`;
-        document.getElementById("agg-expense-title").textContent = `Breakdown of Annual Fixed Expenses (FY ${financialYear})`;
-        renderDefaulters(reports);
-        renderExcess(reports);
-        const generatedDate = payload.generated_at
-          ? new Date(payload.generated_at).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })
-          : "";
-        metaCurrentMonth.textContent = generatedDate || "Not available";
-
-        for (const report of reports) {
+        const manifestResp = await fetch("./report-manifest.json", { cache: "no-store" });
+        if (!manifestResp.ok) throw new Error(`HTTP ${manifestResp.status}`);
+        manifest = await manifestResp.json();
+        const fyList = manifest.financial_years || [];
+        fySelect.innerHTML = "";
+        for (const entry of fyList) {
           const option = document.createElement("option");
-          option.value = report.flat;
-          option.textContent = `${report.flat} - ${report.owner_name || "Owner not set"}`;
-          flatSelect.appendChild(option);
+          option.value = entry.file;
+          option.textContent = `FY ${entry.fy}`;
+          fySelect.appendChild(option);
         }
-
-        if (reports.length > 0) {
-          flatSelect.value = reports[0].flat;
-          switchView("flat");
-        } else {
-          emptyState.textContent = "No report data found in report-data.json.";
+        if (fyList.length > 0) {
+          fySelect.value = fyList[fyList.length - 1].file;
+          await loadFYData(fyList[fyList.length - 1].file);
         }
       } catch (error) {
         console.error(error);
         metaCurrentMonth.textContent = "Unavailable";
-        emptyState.textContent = "Could not load report data. Generate docs/report-data.json and make sure it is committed with this page.";
+        emptyState.textContent = "Could not load report-manifest.json. Run report_builder.py to generate it.";
       }
     }
+
+    fySelect.addEventListener("change", async (event) => {
+      try {
+        await loadFYData(event.target.value);
+      } catch (error) {
+        console.error(error);
+        emptyState.textContent = "Could not load data for the selected financial year.";
+        emptyState.classList.remove("hidden");
+      }
+    });
 
     flatSelect.addEventListener("change", (event) => {
       const report = reports.find((item) => item.flat === event.target.value);

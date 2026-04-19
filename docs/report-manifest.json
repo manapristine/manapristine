@@ -1,0 +1,12 @@
+{
+  "financial_years": [
+    {
+      "fy": "2025-26",
+      "file": "report-data-2025-26.json"
+    },
+    {
+      "fy": "2026-27",
+      "file": "report-data-2026-27.json"
+    }
+  ]
+}

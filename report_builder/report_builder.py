@@ -1,4 +1,3 @@
-import argparse
 import csv
 import json
 from dataclasses import dataclass
@@ -9,10 +8,12 @@ from typing import Any
 from openpyxl import load_workbook
 
 
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_SHEET = "INCOME-EXPENSE-CYCLES"
-DEFAULT_MEMBERS_CSV = Path(r"C:\github\manapristine\db\members.csv")
-DEFAULT_OCCUPANTS_CSV = Path(r"C:\github\manapristine\db\occupants.csv")
-DEFAULT_OUTPUT_JSON = Path(r"C:\github\manapristine\docs\report-data.json")
+WORKBOOKS_JSON = PROJECT_ROOT / "db" / "workbooks.json"
+MEMBERS_CSV = PROJECT_ROOT / "db" / "members.csv"
+OCCUPANTS_CSV = PROJECT_ROOT / "db" / "occupants.csv"
+OUTPUT_DIR = PROJECT_ROOT / "docs"
 
 
 @dataclass(frozen=True)
@@ -31,25 +32,7 @@ class SheetLayout:
     total_expense_idx: int | None
     total_late_fee_idx: int | None
     total_net_idx: int | None
-
-
-def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(
-        description="Generate the combined maintenance statement dataset from the latest workbook and members CSV."
-    )
-    parser.add_argument(
-        "-f",
-        "--file",
-        dest="workbook",
-        type=Path,
-        required=True,
-        help="Path to the income/expense workbook (.xlsx)",
-    )
-    parser.add_argument("--sheet", default=DEFAULT_SHEET)
-    parser.add_argument("--members-csv", type=Path, default=DEFAULT_MEMBERS_CSV)
-    parser.add_argument("--occupants-csv", type=Path, default=DEFAULT_OCCUPANTS_CSV)
-    parser.add_argument("--output-json", type=Path, default=DEFAULT_OUTPUT_JSON)
-    return parser.parse_args()
+    total_dues_idx: int | None
 
 
 def normalize_flat(flat: str) -> str:
@@ -188,12 +171,14 @@ def extract_sheet_layout(header_row_1: tuple[Any, ...]) -> SheetLayout:
     total_expense_idx = next((idx for idx, value in enumerate(normalized) if value.startswith("TOTAL EXPENSE")), None)
     total_late_fee_idx = next((idx for idx, value in enumerate(normalized) if value.startswith("TOTAL LATE FEE")), None)
     total_net_idx = next((idx for idx, value in enumerate(normalized) if value.startswith("TOTAL COLLECTION - EXPENSE")), None)
+    total_dues_idx = next((idx for idx, value in enumerate(normalized) if value.startswith("Total Dues")), None)
     return SheetLayout(
         carry_over_idx=carry_over_idx,
         total_collection_idx=total_collection_idx,
         total_expense_idx=total_expense_idx,
         total_late_fee_idx=total_late_fee_idx,
         total_net_idx=total_net_idx,
+        total_dues_idx=total_dues_idx,
     )
 
 
@@ -266,7 +251,8 @@ def build_report(
     total_expense = safe_number(sheet_row[sheet_layout.total_expense_idx] if sheet_layout.total_expense_idx is not None and len(sheet_row) > sheet_layout.total_expense_idx else 0)
     total_late_fee = safe_number(sheet_row[sheet_layout.total_late_fee_idx] if sheet_layout.total_late_fee_idx is not None and len(sheet_row) > sheet_layout.total_late_fee_idx else 0)
     total_net = safe_number(sheet_row[sheet_layout.total_net_idx] if sheet_layout.total_net_idx is not None and len(sheet_row) > sheet_layout.total_net_idx else 0)
-    closing_balance = float(carry_over) + float(total_net)
+    total_dues = safe_number(sheet_row[sheet_layout.total_dues_idx] if sheet_layout.total_dues_idx is not None and len(sheet_row) > sheet_layout.total_dues_idx else 0)
+    closing_balance = total_dues
 
     report = {
         "flat": flat_request["flat"],
@@ -380,23 +366,39 @@ def load_annual_expense_details(workbook_path: Path) -> list[dict[str, Any]]:
 
 
 def main() -> int:
-    args = parse_args()
+    workbooks_config: dict[str, dict[str, str]] = json.loads(WORKBOOKS_JSON.read_text(encoding="utf-8"))
+    flat_requests = load_flat_requests(MEMBERS_CSV)
+    occupants = load_occupants(OCCUPANTS_CSV)
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    flat_requests = load_flat_requests(args.members_csv)
-    occupants = load_occupants(args.occupants_csv)
+    manifest_entries: list[dict[str, str]] = []
+    for fy_key in sorted(workbooks_config.keys()):
+        entry = workbooks_config[fy_key]
+        workbook_path = PROJECT_ROOT / entry["workbook"]
+        if not workbook_path.exists():
+            print(f"Warning: workbook not found for FY {fy_key}: {workbook_path}")
+            continue
 
-    reports, missing_flats, financial_year = generate_reports(
-        workbook_path=args.workbook,
-        sheet_name=args.sheet,
-        flat_requests=flat_requests,
-        occupants=occupants,
-    )
-    annual_expense_details = load_annual_expense_details(args.workbook)
-    write_report_dataset(reports, args.output_json, financial_year, annual_expense_details)
+        reports, missing_flats, financial_year = generate_reports(
+            workbook_path=workbook_path,
+            sheet_name=DEFAULT_SHEET,
+            flat_requests=flat_requests,
+            occupants=occupants,
+        )
+        annual_expense_details = load_annual_expense_details(workbook_path)
+        fy_filename = f"report-data-{fy_key}.json"
+        fy_output = OUTPUT_DIR / fy_filename
+        write_report_dataset(reports, fy_output, financial_year, annual_expense_details)
+        manifest_entries.append({"fy": fy_key, "file": fy_filename})
 
-    print(f"Generated JSON for {len(reports)} report(s) at {args.output_json}")
-    if missing_flats:
-        print("Missing flats in workbook:", ", ".join(sorted(missing_flats)))
+        print(f"FY {fy_key}: generated {len(reports)} report(s) at {fy_output}")
+        if missing_flats:
+            print(f"  Missing flats: {', '.join(sorted(missing_flats))}")
+
+    manifest = {"financial_years": manifest_entries}
+    manifest_path = OUTPUT_DIR / "report-manifest.json"
+    manifest_path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+    print(f"Manifest written to {manifest_path}")
     return 0
 
 
