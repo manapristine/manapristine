@@ -1502,12 +1502,14 @@
         exportButton.textContent = "Export Defaulters PDF";
         label.textContent = `Defaulters — FY ${financialYear}`;
         defaultersSection.classList.remove("hidden");
+        renderDefaulters(reports);
       } else if (view === "excess") {
         flatSelectField.classList.add("hidden");
         flatDetails.classList.add("hidden");
         exportButton.textContent = "Export Excess PDF";
         label.textContent = `Excess Payments — FY ${financialYear}`;
         excessSection.classList.remove("hidden");
+        renderExcess(reports);
       }
     }
 
@@ -1733,8 +1735,6 @@
       document.getElementById("print-exc-fy").textContent = financialYear;
       document.getElementById("agg-monthly-title").textContent = `Month-wise Aggregate (FY ${financialYear})`;
       document.getElementById("agg-expense-title").textContent = `Breakdown of Annual Fixed Expenses (FY ${financialYear})`;
-      renderDefaulters(reports);
-      renderExcess(reports);
       const generatedDate = payload.generated_at
         ? new Date(payload.generated_at).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })
         : "";
