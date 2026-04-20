@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-19T18:38:16",
+  "generated_at": "2026-04-20T19:13:08",
   "financial_year": "2025-26",
   "cutoff_date": "2026-03-31",
   "sheet": "INCOME-EXPENSE-CYCLES",
@@ -1813,10 +1813,10 @@
         },
         {
           "month": "Aug 2025",
-          "collection": 0,
+          "collection": 5635,
           "expense": 6103.342608037363,
           "late_fee": 0,
-          "net_collection_minus_expense": -6103.342608037363
+          "net_collection_minus_expense": -468.3426080373629
         },
         {
           "month": "Sep 2025",
@@ -1869,11 +1869,11 @@
         }
       ],
       "totals": {
-        "collection": 48700,
+        "collection": 54335,
         "expense": 64956.707172954615,
         "late_fee": 0,
-        "net_collection_minus_expense": -16256.707172954615,
-        "closing_balance": -16256.707172954615
+        "net_collection_minus_expense": -10621.707172954615,
+        "closing_balance": -10621.707172954615
       },
       "expense_breakdown": [
         {
