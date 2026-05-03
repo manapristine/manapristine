@@ -4,7 +4,7 @@
     "cutoff-date-for-collection": "2026-03-31"
   },
   "2026-27": {
-    "workbook": "db/accounts/2026-2027-INCOME-EXPENDITURE-ACCOUNT-4.19.26.xlsx",
-    "cutoff-date-for-collection": "2027-03-31"
+    "workbook": "db/accounts/2026-2027-INCOME-EXPENDITURE-ACCOUNT-5.03.26-gold.xlsx",
+    "cutoff-date-for-collection": "2026-04-30"
   }
 }
