@@ -196,7 +196,8 @@ def main():
         else: unmatched.append(txn)
 
     if matched: update_collection_sheet(workbook_path, month, year, matched)
-    report_path = args.statement_file.replace('.xls', '_processing_report.csv')
+    timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
+    report_path = args.statement_file.replace('.xls', f'_processing_report_{timestamp}.csv')
     pd.DataFrame(report_data).to_csv(report_path, index=False)
     print(f"\nProcessed {total_credits} credits. Matched: {len(matched)}, Unmatched: {len(unmatched)}")
     if unmatched:
