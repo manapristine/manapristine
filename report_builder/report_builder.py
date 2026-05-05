@@ -190,6 +190,180 @@ def extract_sheet_layout(header_row_1: tuple[Any, ...], header_row_2: tuple[Any,
     )
 
 
+def load_collection_totals(workbook_path: Path, sheet_name: str) -> dict[str, float]:
+    """Read a COLLECTION sheet and compute totals per flat (sum of amount columns)."""
+    workbook = load_workbook(workbook_path, read_only=True)
+    try:
+        if sheet_name not in workbook.sheetnames:
+            return {}
+        ws = workbook[sheet_name]
+        result: dict[str, float] = {}
+        for row in ws.iter_rows(min_row=2, values_only=True):
+            flat = normalize_flat(row[0] if row else "")
+            if not flat:
+                continue
+            total = 0.0
+            for col_idx in [2, 4, 6, 8]:
+                val = row[col_idx] if len(row) > col_idx else None
+                if isinstance(val, (int, float)):
+                    total += val
+            result[flat] = total
+        return result
+    finally:
+        workbook.close()
+
+
+def load_expense_totals(workbook_path: Path, sheet_name: str) -> dict[str, float]:
+    """Compute total expense per flat by evaluating the EXPENSE formula chain directly.
+
+    Formula chain: col 18 = (J+K+L+M+Q+N+O+P) * B2
+    Where J (col10) = water_expense + common_meter_rent + flat_meter_rent
+          K (col11) = T4/64 (fixed share)
+          L-Q (cols 12-17) = various fees (raw data)
+          T4 = ANNUAL-EXPENSE-DETAILS gross fixed expense
+          T5 = ANNUAL-EXPENSE-DETAILS gross variable expense (water)
+          T7 = meter rent per meter (constant in the sheet)
+    """
+    workbook = load_workbook(workbook_path, read_only=True)
+    try:
+        if sheet_name not in workbook.sheetnames:
+            return {}
+        ws = workbook[sheet_name]
+        rows = list(ws.iter_rows(values_only=True))
+        if len(rows) < 7:
+            return {}
+
+        multiplier = safe_number(rows[1][1] if len(rows[1]) > 1 else 1) or 1
+
+        # T-column parameters (col 20, 0-indexed=19)
+        t4_raw = rows[3][19] if len(rows) > 3 and len(rows[3]) > 19 else 0
+        t5_raw = rows[4][19] if len(rows) > 4 and len(rows[4]) > 19 else 0
+        t7_raw = rows[6][19] if len(rows) > 6 and len(rows[6]) > 19 else 0
+
+        # T4 and T5 reference ANNUAL-EXPENSE-DETAILS — resolve them
+        t4 = _resolve_annual_expense_ref(workbook, t4_raw)
+        t5 = _resolve_annual_expense_ref(workbook, t5_raw)
+        t7 = float(t7_raw) if isinstance(t7_raw, (int, float)) else 0.0
+        t9 = (t7 * 3) / 64  # common area meter rent per flat
+
+        # Compute common area water (C3+C4+C5 in Excel = rows[2]+rows[3]+rows[4] col index 2)
+        common_area_water = 0.0
+        for r in range(2, min(5, len(rows))):  # rows 3-5 in Excel
+            v = rows[r][2] if len(rows[r]) > 2 else 0
+            if isinstance(v, (int, float)):
+                common_area_water += v
+        common_water_per_flat = common_area_water / 64
+
+        # Compute total water in the sheet (sum of col C for all rows, = C70 in Excel)
+        total_water = 0.0
+        for r in range(2, len(rows)):  # rows[2] onwards (row 3 in Excel)
+            v = rows[r][2] if len(rows[r]) > 2 else 0
+            if isinstance(v, (int, float)):
+                total_water += v
+
+        result: dict[str, float] = {}
+        for r in range(2, len(rows)):
+            row = rows[r]
+            flat = normalize_flat(row[0] if row else "")
+            if not flat or flat in ("CH", "GYM", "BSMT", "MPFOWA", "TOTAL"):
+                continue
+
+            water_used = row[2] if len(row) > 2 else 0
+            water_used = float(water_used) if isinstance(water_used, (int, float)) else 0.0
+            total_consumed = water_used + common_water_per_flat  # E = C + D
+            water_pct = (total_consumed / total_water) if total_water > 0 else 0
+            water_expense = water_pct * t5
+
+            num_meters_raw = row[7] if len(row) > 7 else 0
+            num_meters = float(num_meters_raw) if isinstance(num_meters_raw, (int, float)) else 0.0
+            meter_rent = t7 * num_meters
+
+            total_variable = water_expense + t9 + meter_rent  # J
+            fixed_share = t4 / 64 if t4 else 0  # K
+
+            def _raw_num(val):
+                return float(val) if isinstance(val, (int, float)) else 0.0
+
+            parking = _raw_num(row[11] if len(row) > 11 else 0)
+            club_house = _raw_num(row[12] if len(row) > 12 else 0)
+            shifting = _raw_num(row[13] if len(row) > 13 else 0)
+            gym = _raw_num(row[14] if len(row) > 14 else 0)
+            covid_garbage = _raw_num(row[15] if len(row) > 15 else 0)
+            membership = _raw_num(row[16] if len(row) > 16 else 0)
+
+            total_expense = (total_variable + fixed_share + parking + club_house
+                           + shifting + gym + membership + covid_garbage) * multiplier
+            result[flat] = total_expense
+        return result
+    finally:
+        workbook.close()
+
+
+def _eval_simple_formula(formula: str) -> float | None:
+    """Evaluate simple arithmetic formulas like '=3290+4300' or '=25000'."""
+    if not isinstance(formula, str) or not formula.startswith("="):
+        return None
+    expr = formula[1:]
+    import re
+    if re.match(r'^[\d\s+\-*/.()]+$', expr):
+        try:
+            return float(eval(expr))  # noqa: S307 — only numeric expressions
+        except (SyntaxError, ZeroDivisionError):
+            return None
+    return None
+
+
+def _resolve_annual_expense_ref(workbook, cell_value) -> float:
+    """Resolve a T4/T5 cell that references ANNUAL-EXPENSE-DETAILS.
+
+    T4 = 'ANNUAL-EXPENSE-DETAILS'!BF{row} = SUM(B:BC) - SUM(B:C) for that row
+    T5 = 'ANNUAL-EXPENSE-DETAILS'!BE{row} = SUM(B:C) for that row
+    """
+    if isinstance(cell_value, (int, float)):
+        return float(cell_value)
+    if not isinstance(cell_value, str) or not cell_value.startswith("="):
+        return 0.0
+
+    import re
+    match = re.match(r"='?ANNUAL-EXPENSE-DETAILS'?!(B[EF])(\d+)", cell_value)
+    if not match:
+        return 0.0
+
+    col_ref = match.group(1)  # BE or BF
+    row_num = int(match.group(2))
+
+    sheet_name = "ANNUAL-EXPENSE-DETAILS"
+    if sheet_name not in workbook.sheetnames:
+        return 0.0
+    ws = workbook[sheet_name]
+    aed_rows = list(ws.iter_rows(min_row=row_num, max_row=row_num, values_only=True))
+    if not aed_rows:
+        return 0.0
+    aed_row = aed_rows[0]
+
+    def _cell_num(val) -> float:
+        if isinstance(val, (int, float)):
+            return float(val)
+        result = _eval_simple_formula(val)
+        return result if result is not None else 0.0
+
+    # Sum cols B and C (indices 1,2) for BE (gross variable)
+    b_val = _cell_num(aed_row[1] if len(aed_row) > 1 else 0)
+    c_val = _cell_num(aed_row[2] if len(aed_row) > 2 else 0)
+    be_value = b_val + c_val
+
+    if col_ref == "BE":
+        return float(be_value)
+
+    # BF = BD - BE = SUM(B:BC) - SUM(B:C)
+    # BD = SUM of all line item columns (B through BC, indices 1-54)
+    bd_value = 0.0
+    max_col = min(len(aed_row), 55)  # BC = col 55, index 54
+    for i in range(1, max_col):
+        bd_value += _cell_num(aed_row[i])
+    return float(bd_value - be_value)
+
+
 def load_sheet_rows(workbook_path: Path, sheet_name: str) -> tuple[list[MonthlyBlock], SheetLayout, dict[str, tuple[Any, ...]], list[str]]:
     workbook = load_workbook(workbook_path, data_only=True, read_only=True)
     try:
@@ -210,36 +384,178 @@ def load_sheet_rows(workbook_path: Path, sheet_name: str) -> tuple[list[MonthlyB
         workbook.close()
 
 
+def has_cached_values(row_lookup: dict[str, tuple[Any, ...]], monthly_blocks: list[MonthlyBlock]) -> bool:
+    """Check if the INCOME-EXPENSE-CYCLES rows have cached formula values."""
+    if not row_lookup or not monthly_blocks:
+        return False
+    sample_row = next(iter(row_lookup.values()))
+    first_block = monthly_blocks[0]
+    coll_val = sample_row[first_block.collection_idx] if len(sample_row) > first_block.collection_idx else None
+    exp_val = sample_row[first_block.expense_idx] if len(sample_row) > first_block.expense_idx else None
+    return coll_val is not None or exp_val is not None
+
+
+def fill_from_source_sheets(
+    workbook_path: Path,
+    monthly_blocks: list[MonthlyBlock],
+    sheet_layout: SheetLayout,
+    row_lookup: dict[str, tuple[Any, ...]],
+    available_sheets: list[str],
+) -> dict[str, tuple[Any, ...]]:
+    """When INCOME-EXPENSE-CYCLES has no cached values, read source sheets directly."""
+    expense_sheet_map = build_expense_sheet_map(monthly_blocks, available_sheets)
+    collection_sheet_map: dict[str, str] = {}
+    for block in monthly_blocks:
+        parts = block.month_label.split()
+        if len(parts) != 2:
+            continue
+        abbrev, year = parts
+        full_month = {
+            "Jan": "January", "Feb": "February", "Mar": "March",
+            "Apr": "April", "May": "May", "Jun": "June",
+            "Jul": "July", "Aug": "August", "Sep": "September",
+            "Oct": "October", "Nov": "November", "Dec": "December",
+        }
+        candidates = [f"{abbrev}{year}-COLLECTION"]
+        full = full_month.get(abbrev, "")
+        if full and full != abbrev:
+            candidates.append(f"{full}{year}-COLLECTION")
+        for candidate in candidates:
+            if candidate in available_sheets:
+                collection_sheet_map[block.month_label] = candidate
+                break
+
+    monthly_collections: dict[str, dict[str, float]] = {}
+    for month_label, coll_sheet in collection_sheet_map.items():
+        monthly_collections[month_label] = load_collection_totals(workbook_path, coll_sheet)
+
+    monthly_expenses: dict[str, dict[str, float]] = {}
+    for month_label, exp_sheet in expense_sheet_map.items():
+        monthly_expenses[month_label] = load_expense_totals(workbook_path, exp_sheet)
+
+    new_lookup: dict[str, tuple[Any, ...]] = {}
+    for flat, original_row in row_lookup.items():
+        row_list = list(original_row)
+        while len(row_list) <= max(
+            (sheet_layout.total_dues_idx or 0),
+            (monthly_blocks[-1].net_idx if monthly_blocks else 0),
+        ):
+            row_list.append(None)
+
+        for block in monthly_blocks:
+            coll = monthly_collections.get(block.month_label, {}).get(flat, 0)
+            exp = monthly_expenses.get(block.month_label, {}).get(flat, 0)
+            late_fee = safe_number(row_list[block.late_fee_idx] if len(row_list) > block.late_fee_idx else 0)
+            row_list[block.collection_idx] = coll
+            row_list[block.expense_idx] = exp
+            row_list[block.net_idx] = coll - (exp + late_fee)
+
+        total_coll = sum(safe_number(row_list[b.collection_idx]) for b in monthly_blocks)
+        total_exp = sum(safe_number(row_list[b.expense_idx]) for b in monthly_blocks)
+        total_late = sum(safe_number(row_list[b.late_fee_idx]) for b in monthly_blocks)
+        total_net = total_coll - (total_exp + total_late)
+        carry_over = safe_number(row_list[sheet_layout.carry_over_idx] if sheet_layout.carry_over_idx is not None and len(row_list) > sheet_layout.carry_over_idx else 0)
+
+        if sheet_layout.total_collection_idx is not None:
+            row_list[sheet_layout.total_collection_idx] = total_coll
+        if sheet_layout.total_expense_idx is not None:
+            row_list[sheet_layout.total_expense_idx] = total_exp
+        if sheet_layout.total_late_fee_idx is not None:
+            row_list[sheet_layout.total_late_fee_idx] = total_late
+        if sheet_layout.total_net_idx is not None:
+            row_list[sheet_layout.total_net_idx] = total_net
+        if sheet_layout.total_dues_idx is not None:
+            row_list[sheet_layout.total_dues_idx] = total_net + carry_over
+
+        new_lookup[flat] = tuple(row_list)
+
+    return new_lookup
+
+
 def load_expense_details(workbook_path: Path, expense_sheet_map: dict[str, str]) -> dict[str, dict[str, dict[str, float]]]:
-    """Load per-flat, per-month expense breakdown from individual EXPENSE sheets.
+    """Load per-flat, per-month expense breakdown by computing from raw data.
 
     Returns: { flat: { month_label: { field: value, ... } } }
     """
-    workbook = load_workbook(workbook_path, data_only=True, read_only=True)
+    workbook = load_workbook(workbook_path, read_only=True)
     result: dict[str, dict[str, dict[str, float]]] = {}
     try:
         for month_label, sheet_name in expense_sheet_map.items():
             if sheet_name not in workbook.sheetnames:
                 continue
             ws = workbook[sheet_name]
-            for row in ws.iter_rows(min_row=3, values_only=True):
+            rows = list(ws.iter_rows(values_only=True))
+            if len(rows) < 7:
+                continue
+
+            multiplier_raw = rows[1][1] if len(rows[1]) > 1 else 1
+            multiplier = float(multiplier_raw) if isinstance(multiplier_raw, (int, float)) else 1.0
+            multiplier = multiplier or 1.0
+
+            t4_raw = rows[3][19] if len(rows) > 3 and len(rows[3]) > 19 else 0
+            t5_raw = rows[4][19] if len(rows) > 4 and len(rows[4]) > 19 else 0
+            t7_raw = rows[6][19] if len(rows) > 6 and len(rows[6]) > 19 else 0
+            t4 = _resolve_annual_expense_ref(workbook, t4_raw)
+            t5 = _resolve_annual_expense_ref(workbook, t5_raw)
+            t7 = float(t7_raw) if isinstance(t7_raw, (int, float)) else 0.0
+            t9 = (t7 * 3) / 64
+
+            common_area_water = 0.0
+            for r in range(2, min(5, len(rows))):
+                v = rows[r][2] if len(rows[r]) > 2 else 0
+                if isinstance(v, (int, float)):
+                    common_area_water += v
+            common_water_per_flat = common_area_water / 64
+
+            total_water = 0.0
+            for r in range(2, len(rows)):
+                v = rows[r][2] if len(rows[r]) > 2 else 0
+                if isinstance(v, (int, float)):
+                    total_water += v
+
+            for r in range(2, len(rows)):
+                row = rows[r]
                 flat = normalize_flat(row[0] if row else "")
-                if not flat:
+                if not flat or flat in ("CH", "GYM", "BSMT", "MPFOWA", "TOTAL"):
                     continue
+
+                water_used = float(row[2]) if len(row) > 2 and isinstance(row[2], (int, float)) else 0.0
+                total_consumed = water_used + common_water_per_flat
+                water_pct = (total_consumed / total_water) if total_water > 0 else 0
+                water_expense = water_pct * t5
+
+                num_meters = float(row[7]) if len(row) > 7 and isinstance(row[7], (int, float)) else 0.0
+                meter_rent = t7 * num_meters
+                total_variable = water_expense + t9 + meter_rent
+                fixed_share = t4 / 64 if t4 else 0
+
+                def _rn(val):
+                    return float(val) if isinstance(val, (int, float)) else 0.0
+
+                parking = _rn(row[11] if len(row) > 11 else 0)
+                club_house = _rn(row[12] if len(row) > 12 else 0)
+                shifting = _rn(row[13] if len(row) > 13 else 0)
+                gym = _rn(row[14] if len(row) > 14 else 0)
+                covid_garbage = _rn(row[15] if len(row) > 15 else 0)
+                membership = _rn(row[16] if len(row) > 16 else 0)
+
+                total_expense = (total_variable + fixed_share + parking + club_house
+                               + shifting + gym + membership + covid_garbage) * multiplier
+
                 result.setdefault(flat, {})[month_label] = {
-                    "water_used_litres": safe_number(row[2] if len(row) > 2 else 0),
-                    "common_area_water_litres": safe_number(row[3] if len(row) > 3 else 0),
-                    "total_fresh_water_consumed_litres": safe_number(row[4] if len(row) > 4 else 0),
-                    "water_expense": safe_number(row[6] if len(row) > 6 else 0),
-                    "num_meters": safe_number(row[7] if len(row) > 7 else 0),
-                    "meter_rent": safe_number(row[8] if len(row) > 8 else 0),
-                    "total_water_expense": safe_number(row[9] if len(row) > 9 else 0),
-                    "fixed_expense": safe_number(row[10] if len(row) > 10 else 0),
-                    "parking_fee": safe_number(row[11] if len(row) > 11 else 0),
-                    "club_house_fee": safe_number(row[12] if len(row) > 12 else 0),
-                    "shifting_fee": safe_number(row[13] if len(row) > 13 else 0),
-                    "gym_usage_fee": safe_number(row[14] if len(row) > 14 else 0),
-                    "total_expense": safe_number(row[17] if len(row) > 17 else 0),
+                    "water_used_litres": water_used,
+                    "common_area_water_litres": common_water_per_flat,
+                    "total_fresh_water_consumed_litres": total_consumed,
+                    "water_expense": water_expense,
+                    "num_meters": num_meters,
+                    "meter_rent": meter_rent,
+                    "total_water_expense": total_variable,
+                    "fixed_expense": fixed_share,
+                    "parking_fee": parking,
+                    "club_house_fee": club_house,
+                    "shifting_fee": shifting,
+                    "gym_usage_fee": gym,
+                    "total_expense": total_expense,
                 }
         return result
     finally:
@@ -307,6 +623,12 @@ def generate_reports(
  ) -> tuple[list[dict[str, Any]], list[str], str]:
     monthly_blocks, sheet_layout, row_lookup, available_sheets = load_sheet_rows(workbook_path, sheet_name)
     financial_year = derive_financial_year(monthly_blocks)
+
+    if not has_cached_values(row_lookup, monthly_blocks):
+        row_lookup = fill_from_source_sheets(
+            workbook_path, monthly_blocks, sheet_layout, row_lookup, available_sheets
+        )
+
     expense_sheet_map = build_expense_sheet_map(monthly_blocks, available_sheets)
     all_expense_details = load_expense_details(workbook_path, expense_sheet_map)
     occupants = occupants or {}
