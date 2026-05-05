@@ -159,22 +159,14 @@ def update_collection_sheet(workbook_path, month, year, transactions):
         except PermissionError: return False
     return True
 
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('statement_file')
-    args = parser.parse_args()
-    if not os.path.exists(args.statement_file): return
-    month, year = parse_filename(args.statement_file)
-    fy = get_financial_year(month, year)
-    PROJECT_ROOT = Path(__file__).resolve().parent.parent
-    WORKBOOKS_JSON = PROJECT_ROOT / 'db' / 'workbooks.json'
-    with open(WORKBOOKS_JSON, 'r') as f: workbooks = json.load(f)
-    if fy not in workbooks: return
-    workbook_path = PROJECT_ROOT / workbooks[fy]['workbook']
+def create_report(statement_file):
+    month, year = parse_filename(statement_file)
     f_names, p_flats, f_parts, f_member, f_occupant = load_mappings()
     known_flats = set(f_names.keys())
-    df = parse_bank_statement(args.statement_file)
-    matched, unmatched, total_credits, report_data = [], [], 0, []
+    
+    df = parse_bank_statement(statement_file)
+    total_credits, report_data = 0, []
+    unmatched = []
 
     for _, row in df.iterrows():
         c_val = row.get('Credit')
@@ -182,9 +174,11 @@ def main():
         try: amount = float(str(c_val).replace(',', ''))
         except ValueError: continue
         if amount <= 0: continue
+        
         total_credits += 1
         desc, tx_dt = str(row.get('Description', '')), str(row.get('Txn Date', ''))
         flat = find_flat_in_description(desc, f_names, p_flats, f_parts, known_flats)
+        
         txn = {
             'date': tx_dt, 'amount': amount, 'flat': flat or 'NOT MATCHED', 
             'member_name': f_member.get(flat, '') if flat else '', 
@@ -192,17 +186,77 @@ def main():
             'description': desc
         }
         report_data.append(txn)
-        if flat: matched.append(txn)
-        else: unmatched.append(txn)
+        if not flat: unmatched.append(txn)
 
-    if matched: update_collection_sheet(workbook_path, month, year, matched)
     timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
-    report_path = args.statement_file.replace('.xls', f'_processing_report_{timestamp}.csv')
+    report_path = statement_file.replace('.xls', f'_processing_report_{timestamp}.csv')
     pd.DataFrame(report_data).to_csv(report_path, index=False)
-    print(f"\nProcessed {total_credits} credits. Matched: {len(matched)}, Unmatched: {len(unmatched)}")
+    
+    print(f"\nReport created: {report_path}")
+    print(f"Total credits: {total_credits}, Unmatched: {len(unmatched)}")
+    
     if unmatched:
-        print("\nUNMATCHED TRANSACTIONS:")
+        print("\nUNMATCHED TRANSACTIONS (Top 10):")
         for ut in unmatched[:10]:
             print(f"- {ut['date']}: {ut['amount']} | {ut['description'][:60]}...")
+        print("\nPlease review the CSV and fill in the 'flat' column for 'NOT MATCHED' rows before running Option 2.")
 
-if __name__ == "__main__": main()
+def update_from_report(statement_file):
+    import glob
+    pattern = statement_file.replace('.xls', '_processing_report_*.csv')
+    reports = glob.glob(pattern)
+    if not reports:
+        print(f"No processing reports found matching: {pattern}")
+        return
+    
+    latest_report = max(reports, key=os.path.getmtime)
+    print(f"Reading latest report: {latest_report}")
+    
+    df = pd.read_csv(latest_report)
+    transactions = df.to_dict('records')
+    
+    month, year = parse_filename(statement_file)
+    fy = get_financial_year(month, year)
+    PROJECT_ROOT = Path(__file__).resolve().parent.parent
+    WORKBOOKS_JSON = PROJECT_ROOT / 'db' / 'workbooks.json'
+    
+    with open(WORKBOOKS_JSON, 'r') as f:
+        workbooks = json.load(f)
+    
+    if fy not in workbooks:
+        print(f"Financial year {fy} not found in workbooks.json")
+        return
+        
+    workbook_path = PROJECT_ROOT / workbooks[fy]['workbook']
+    print(f"Updating workbook: {workbook_path.name}")
+    
+    success = update_collection_sheet(workbook_path, month, year, transactions)
+    if success is False:
+        print("Error: Could not save workbook. Is it open in Excel?")
+    else:
+        print("Successfully updated the collection sheet.")
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('statement_file', help="Path to the bank statement .xls file")
+    args = parser.parse_args()
+    
+    if not os.path.exists(args.statement_file):
+        print(f"File not found: {args.statement_file}")
+        return
+
+    print("\n=== COLLECTION UPDATE MENU ===")
+    print("1. Create processing report (generates CSV for review)")
+    print("2. Update Excel from latest processing report")
+    
+    choice = input("\nEnter choice (1 or 2): ").strip()
+    
+    if choice == '1':
+        create_report(args.statement_file)
+    elif choice == '2':
+        update_from_report(args.statement_file)
+    else:
+        print("Invalid choice. Exiting.")
+
+if __name__ == "__main__":
+    main()
