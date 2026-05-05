@@ -166,21 +166,27 @@ def extract_monthly_blocks(header_row_1: tuple[Any, ...], header_row_2: tuple[An
     return blocks
 
 
-def extract_sheet_layout(header_row_1: tuple[Any, ...]) -> SheetLayout:
-    normalized = [str(value).strip().replace("\n", " ") if value is not None else "" for value in header_row_1]
-    carry_over_idx = next((idx for idx, value in enumerate(normalized) if "Balance from last FY year" in value), None)
-    total_collection_idx = next((idx for idx, value in enumerate(normalized) if value.startswith("TOTAL COLLECTION")), None)
-    total_expense_idx = next((idx for idx, value in enumerate(normalized) if value.startswith("TOTAL EXPENSE")), None)
-    total_late_fee_idx = next((idx for idx, value in enumerate(normalized) if value.startswith("TOTAL LATE FEE")), None)
-    total_net_idx = next((idx for idx, value in enumerate(normalized) if value.startswith("TOTAL COLLECTION - EXPENSE")), None)
-    total_dues_idx = next((idx for idx, value in enumerate(normalized) if value.startswith("Total Dues")), None)
+def extract_sheet_layout(header_row_1: tuple[Any, ...], header_row_2: tuple[Any, ...]) -> SheetLayout:
+    def find_idx(patterns: list[str]) -> int | None:
+        # Search in Row 1
+        for idx, val in enumerate(header_row_1):
+            s = str(val or "").strip().replace("\n", " ")
+            if any(p in s for p in patterns):
+                return idx
+        # Search in Row 2
+        for idx, val in enumerate(header_row_2):
+            s = str(val or "").strip().replace("\n", " ")
+            if any(p in s for p in patterns):
+                return idx
+        return None
+
     return SheetLayout(
-        carry_over_idx=carry_over_idx,
-        total_collection_idx=total_collection_idx,
-        total_expense_idx=total_expense_idx,
-        total_late_fee_idx=total_late_fee_idx,
-        total_net_idx=total_net_idx,
-        total_dues_idx=total_dues_idx,
+        carry_over_idx=find_idx(["Balance from last FY year"]),
+        total_collection_idx=find_idx(["TOTAL COLLECTION"]),
+        total_expense_idx=find_idx(["TOTAL EXPENSE"]),
+        total_late_fee_idx=find_idx(["TOTAL LATE FEE"]),
+        total_net_idx=find_idx(["TOTAL COLLECTION - EXPENSE"]),
+        total_dues_idx=find_idx(["Total Dues"]),
     )
 
 
@@ -192,7 +198,7 @@ def load_sheet_rows(workbook_path: Path, sheet_name: str) -> tuple[list[MonthlyB
         header_row_1 = next(sheet.iter_rows(min_row=1, max_row=1, values_only=True))
         header_row_2 = next(sheet.iter_rows(min_row=2, max_row=2, values_only=True))
         monthly_blocks = extract_monthly_blocks(header_row_1, header_row_2)
-        sheet_layout = extract_sheet_layout(header_row_1)
+        sheet_layout = extract_sheet_layout(header_row_1, header_row_2)
 
         row_lookup: dict[str, tuple[Any, ...]] = {}
         for row in sheet.iter_rows(min_row=3, values_only=True):
@@ -330,13 +336,38 @@ def load_annual_expense_details(workbook_path: Path) -> list[dict[str, Any]]:
         ws = workbook[sheet_name]
         header_row_2 = list(ws.iter_rows(min_row=2, max_row=2, values_only=True))[0]
 
-        # Build column name map from row 2 (line-item headers) for C1..C54
-        col_names: list[str] = []
+        # Build column name map from row 2
+        col_names: list[tuple[int, str]] = []
+        summary_indices: dict[str, int] = {}
+        
+        # Summary column names to look for
+        summary_markers = {
+            "gross_expense": ["gross expense"],
+            "gross_variable_expense": ["gross variable"],
+            "gross_fixed_expense": ["gross fixed"],
+            "water_meter_rent": ["water meter rent", "meter rent"],
+            "total_expense": ["total expense"],
+        }
+
         for ci in range(len(header_row_2)):
             val = header_row_2[ci]
-            if val and ci >= 1 and ci <= 54:
-                name = str(val).strip().replace("\n", " ")
-                col_names.append((ci, name))
+            if not val:
+                continue
+            name = str(val).strip().lower().replace("\n", " ")
+            
+            # Check if it's a summary column
+            found_summary = False
+            for key, patterns in summary_markers.items():
+                if any(p in name for p in patterns):
+                    summary_indices[key] = ci
+                    found_summary = True
+                    break
+            
+            # If it's not a summary column and it's before the summary starts, treat as line item
+            # In 2025-26, line items were C1-C54. In 2026-27, they are C1-C20.
+            # We'll treat everything that's not a summary column and is not 'months' as a line item.
+            if not found_summary and name != "months":
+                col_names.append((ci, str(val).strip().replace("\n", " ")))
 
         rows: list[dict[str, Any]] = []
         for row in ws.iter_rows(min_row=3, values_only=True):
@@ -355,11 +386,11 @@ def load_annual_expense_details(workbook_path: Path) -> list[dict[str, Any]]:
             entry["line_items"] = line_items
 
             # Summary columns
-            entry["gross_expense"] = safe_number(row[55] if len(row) > 55 else 0)
-            entry["gross_variable_expense"] = safe_number(row[56] if len(row) > 56 else 0)
-            entry["gross_fixed_expense"] = safe_number(row[57] if len(row) > 57 else 0)
-            entry["water_meter_rent"] = safe_number(row[58] if len(row) > 58 else 0)
-            entry["total_expense"] = safe_number(row[59] if len(row) > 59 else 0)
+            entry["gross_expense"] = safe_number(row[summary_indices["gross_expense"]] if "gross_expense" in summary_indices and len(row) > summary_indices["gross_expense"] else 0)
+            entry["gross_variable_expense"] = safe_number(row[summary_indices["gross_variable_expense"]] if "gross_variable_expense" in summary_indices and len(row) > summary_indices["gross_variable_expense"] else 0)
+            entry["gross_fixed_expense"] = safe_number(row[summary_indices["gross_fixed_expense"]] if "gross_fixed_expense" in summary_indices and len(row) > summary_indices["gross_fixed_expense"] else 0)
+            entry["water_meter_rent"] = safe_number(row[summary_indices["water_meter_rent"]] if "water_meter_rent" in summary_indices and len(row) > summary_indices["water_meter_rent"] else 0)
+            entry["total_expense"] = safe_number(row[summary_indices["total_expense"]] if "total_expense" in summary_indices and len(row) > summary_indices["total_expense"] else 0)
 
             rows.append(entry)
         return rows
