@@ -845,19 +845,19 @@
           </div>
         </div>
         <section class="metrics">
-          <article class="card positive">
+          <article class="card" id="agg-collection-card">
             <span class="label">Total Collection (All Flats)</span>
             <span class="value" id="agg-total-collection"></span>
           </article>
-          <article class="card">
+          <article class="card" id="agg-fixed-card">
             <span class="label">Fixed Expense (All Flats)</span>
             <span class="value" id="agg-total-fixed"></span>
           </article>
-          <article class="card">
+          <article class="card" id="agg-variable-card">
             <span class="label">Variable Expense (All Flats)</span>
             <span class="value" id="agg-total-variable"></span>
           </article>
-          <article class="card">
+          <article class="card" id="agg-expense-card">
             <span class="label">Total Expense (All Flats)</span>
             <span class="value" id="agg-total-expense"></span>
           </article>
@@ -1302,7 +1302,7 @@
       if (pastFyValue < 0) carryRow.classList.add("negative");
       if (pastFyValue > 0) carryRow.classList.add("positive");
       carryRow.innerHTML = `
-        <td><strong>Carry over from last FY-YEAR</strong></td>
+        <td><strong>Carry over from last FY</strong></td>
         <td></td>
         <td></td>
         <td></td>
@@ -1575,6 +1575,11 @@
       document.getElementById("agg-total-variable").textContent = formatAmount(grandVariable);
       document.getElementById("agg-total-expense").textContent = formatAmount(grandExpense);
       document.getElementById("agg-total-net").textContent = formatAmount(grandNet);
+      
+      setCardTone(document.getElementById("agg-collection-card"), grandCollection);
+      setCardTone(document.getElementById("agg-fixed-card"), grandFixed);
+      setCardTone(document.getElementById("agg-variable-card"), grandVariable);
+      setCardTone(document.getElementById("agg-expense-card"), grandExpense);
       setCardTone(document.getElementById("agg-net-card"), grandNet);
 
       const tbody = document.getElementById("agg-monthly-body");
@@ -1586,10 +1591,10 @@
         if (net < 0) tr.classList.add("negative");
         tr.innerHTML = `
           <td>${esc(m.month)}</td>
-          <td>${formatAmount(m.collection)}</td>
-          <td>${formatAmount(m.fixed)}</td>
-          <td>${formatAmount(m.variable)}</td>
-          <td>${formatAmount(m.expense)}</td>
+          <td class="${m.collection < 0 ? "negative-text" : ""}">${formatAmount(m.collection)}</td>
+          <td class="${m.fixed < 0 ? "negative-text" : ""}">${formatAmount(m.fixed)}</td>
+          <td class="${m.variable < 0 ? "negative-text" : ""}">${formatAmount(m.variable)}</td>
+          <td class="${m.expense < 0 ? "negative-text" : ""}">${formatAmount(m.expense)}</td>
           <td class="${net < 0 ? "negative-text" : net > 0 ? "positive-text" : ""}">${formatAmount(net)}</td>
         `;
         tbody.appendChild(tr);
@@ -1598,10 +1603,10 @@
       totalRow.classList.add("total-row");
       totalRow.innerHTML = `
         <td>Total</td>
-        <td>${formatAmount(grandCollection)}</td>
-        <td>${formatAmount(grandFixed)}</td>
-        <td>${formatAmount(grandVariable)}</td>
-        <td>${formatAmount(grandExpense)}</td>
+        <td class="${grandCollection < 0 ? "negative-text" : ""}">${formatAmount(grandCollection)}</td>
+        <td class="${grandFixed < 0 ? "negative-text" : ""}">${formatAmount(grandFixed)}</td>
+        <td class="${grandVariable < 0 ? "negative-text" : ""}">${formatAmount(grandVariable)}</td>
+        <td class="${grandExpense < 0 ? "negative-text" : ""}">${formatAmount(grandExpense)}</td>
         <td class="${grandNet < 0 ? "negative-text" : grandNet > 0 ? "positive-text" : ""}">${formatAmount(grandNet)}</td>
       `;
       tbody.appendChild(totalRow);
@@ -1647,13 +1652,13 @@
         let html = `<td>${esc(row.month)}</td>`;
         for (const key of lineItemKeys) {
           const val = (row.line_items || {})[key] || 0;
-          html += `<td>${val ? formatAmount(val) : ""}</td>`;
+          html += `<td class="${val < 0 ? "negative-text" : ""}">${val ? formatAmount(val) : ""}</td>`;
         }
-        html += `<td>${formatAmount(row.gross_expense)}</td>`;
-        html += `<td>${formatAmount(row.gross_variable_expense)}</td>`;
-        html += `<td>${formatAmount(row.gross_fixed_expense)}</td>`;
-        html += `<td>${formatAmount(row.water_meter_rent)}</td>`;
-        html += `<td><strong>${formatAmount(row.total_expense)}</strong></td>`;
+        html += `<td class="${row.gross_expense < 0 ? "negative-text" : ""}">${formatAmount(row.gross_expense)}</td>`;
+        html += `<td class="${row.gross_variable_expense < 0 ? "negative-text" : ""}">${formatAmount(row.gross_variable_expense)}</td>`;
+        html += `<td class="${row.gross_fixed_expense < 0 ? "negative-text" : ""}">${formatAmount(row.gross_fixed_expense)}</td>`;
+        html += `<td class="${row.water_meter_rent < 0 ? "negative-text" : ""}">${formatAmount(row.water_meter_rent)}</td>`;
+        html += `<td class="${row.total_expense < 0 ? "negative-text" : ""}"><strong>${formatAmount(row.total_expense)}</strong></td>`;
         tr.innerHTML = html;
         tbody.appendChild(tr);
       }
