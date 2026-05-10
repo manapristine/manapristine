@@ -214,16 +214,7 @@ def load_collection_totals(workbook_path: Path, sheet_name: str) -> dict[str, fl
 
 
 def load_expense_totals(workbook_path: Path, sheet_name: str) -> dict[str, float]:
-    """Compute total expense per flat by evaluating the EXPENSE formula chain directly.
-
-    Formula chain: col 18 = (J+K+L+M+Q+N+O+P) * B2
-    Where J (col10) = water_expense + common_meter_rent + flat_meter_rent
-          K (col11) = T4/64 (fixed share)
-          L-Q (cols 12-17) = various fees (raw data)
-          T4 = ANNUAL-EXPENSE-DETAILS gross fixed expense
-          T5 = ANNUAL-EXPENSE-DETAILS gross variable expense (water)
-          T7 = meter rent per meter (constant in the sheet)
-    """
+    """Compute total expense per flat by evaluating the EXPENSE formula chain directly."""
     workbook = load_workbook(workbook_path, read_only=True)
     try:
         if sheet_name not in workbook.sheetnames:
@@ -246,17 +237,17 @@ def load_expense_totals(workbook_path: Path, sheet_name: str) -> dict[str, float
         t7 = float(t7_raw) if isinstance(t7_raw, (int, float)) else 0.0
         t9 = (t7 * 3) / 64  # common area meter rent per flat
 
-        # Compute common area water (C3+C4+C5 in Excel = rows[2]+rows[3]+rows[4] col index 2)
+        # Compute common area water
         common_area_water = 0.0
-        for r in range(2, min(5, len(rows))):  # rows 3-5 in Excel
+        for r in range(2, min(5, len(rows))):
             v = rows[r][2] if len(rows[r]) > 2 else 0
             if isinstance(v, (int, float)):
                 common_area_water += v
         common_water_per_flat = common_area_water / 64
 
-        # Compute total water in the sheet (sum of col C for all rows, = C70 in Excel)
+        # Compute total water in the sheet
         total_water = 0.0
-        for r in range(2, len(rows)):  # rows[2] onwards (row 3 in Excel)
+        for r in range(2, len(rows)):
             v = rows[r][2] if len(rows[r]) > 2 else 0
             if isinstance(v, (int, float)):
                 total_water += v
@@ -270,7 +261,7 @@ def load_expense_totals(workbook_path: Path, sheet_name: str) -> dict[str, float
 
             water_used = row[2] if len(row) > 2 else 0
             water_used = float(water_used) if isinstance(water_used, (int, float)) else 0.0
-            total_consumed = water_used + common_water_per_flat  # E = C + D
+            total_consumed = water_used + common_water_per_flat
             water_pct = (total_consumed / total_water) if total_water > 0 else 0
             water_expense = water_pct * t5
 
@@ -278,8 +269,8 @@ def load_expense_totals(workbook_path: Path, sheet_name: str) -> dict[str, float
             num_meters = float(num_meters_raw) if isinstance(num_meters_raw, (int, float)) else 0.0
             meter_rent = t7 * num_meters
 
-            total_variable = water_expense + t9 + meter_rent  # J
-            fixed_share = t4 / 64 if t4 else 0  # K
+            total_variable = water_expense + t9 + meter_rent
+            fixed_share = t4 / 64 if t4 else 0
 
             def _raw_num(val):
                 return float(val) if isinstance(val, (int, float)) else 0.0
@@ -313,29 +304,71 @@ def _eval_simple_formula(formula: str) -> float | None:
     return None
 
 
-def _resolve_annual_expense_ref(workbook, cell_value) -> float:
-    """Resolve a T4/T5 cell that references ANNUAL-EXPENSE-DETAILS.
+def get_aed_column_map(ws) -> tuple[dict[str, int], list[tuple[int, str]]]:
+    """Identify summary columns and line item columns from ANNUAL-EXPENSE-DETAILS headers."""
+    header_row_1 = list(ws.iter_rows(min_row=1, max_row=1, values_only=True))[0]
+    header_row_2 = list(ws.iter_rows(min_row=2, max_row=2, values_only=True))[0]
 
-    T4 = 'ANNUAL-EXPENSE-DETAILS'!BF{row} = SUM(B:BC) - SUM(B:C) for that row
-    T5 = 'ANNUAL-EXPENSE-DETAILS'!BE{row} = SUM(B:C) for that row
-    """
+    col_names: list[tuple[int, str]] = []
+    summary_indices: dict[str, int] = {}
+    
+    summary_markers = {
+        "gross_expense": ["gross expense"],
+        "gross_variable_expense": ["gross variable", "gross var"],
+        "gross_fixed_expense": ["gross fixed"],
+        "water_meter_rent": ["water meter rent", "meter rent"],
+        "total_expense": ["total expense"],
+    }
+
+    max_cols = max(len(header_row_1), len(header_row_2))
+    for ci in range(max_cols):
+        val1 = header_row_1[ci] if ci < len(header_row_1) else None
+        val2 = header_row_2[ci] if ci < len(header_row_2) else None
+        
+        name1 = str(val1).strip().lower().replace("\n", " ") if val1 else ""
+        name2 = str(val2).strip().lower().replace("\n", " ") if val2 else ""
+        
+        found_summary = False
+        for key, patterns in summary_markers.items():
+            if (val1 and any(p in name1 for p in patterns)) or (val2 and any(p in name2 for p in patterns)):
+                summary_indices[key] = ci
+                found_summary = True
+                break
+        
+        if found_summary:
+            continue
+
+        if val2 and name2 not in ("months", "month"):
+            col_names.append((ci, str(val2).strip().replace("\n", " ")))
+            
+    return summary_indices, col_names
+
+
+def _resolve_annual_expense_ref(workbook, cell_value) -> float:
+    """Resolve a T4/T5 cell that references ANNUAL-EXPENSE-DETAILS."""
     if isinstance(cell_value, (int, float)):
         return float(cell_value)
     if not isinstance(cell_value, str) or not cell_value.startswith("="):
         return 0.0
 
     import re
-    match = re.match(r"='?ANNUAL-EXPENSE-DETAILS'?!(B[EF])(\d+)", cell_value)
+    from openpyxl.utils import column_index_from_string
+    match = re.match(r"='?ANNUAL-EXPENSE-DETAILS'?!([A-Z]{1,2})(\d+)", cell_value)
     if not match:
         return 0.0
 
-    col_ref = match.group(1)  # BE or BF
+    target_col_letter = match.group(1)
+    target_col_idx = column_index_from_string(target_col_letter) - 1
     row_num = int(match.group(2))
 
     sheet_name = "ANNUAL-EXPENSE-DETAILS"
     if sheet_name not in workbook.sheetnames:
         return 0.0
     ws = workbook[sheet_name]
+    
+    # Identify what this column means dynamically
+    summary_indices, col_names = get_aed_column_map(ws)
+    
     aed_rows = list(ws.iter_rows(min_row=row_num, max_row=row_num, values_only=True))
     if not aed_rows:
         return 0.0
@@ -347,21 +380,27 @@ def _resolve_annual_expense_ref(workbook, cell_value) -> float:
         result = _eval_simple_formula(val)
         return result if result is not None else 0.0
 
-    # Sum cols B and C (indices 1,2) for BE (gross variable)
-    b_val = _cell_num(aed_row[1] if len(aed_row) > 1 else 0)
-    c_val = _cell_num(aed_row[2] if len(aed_row) > 2 else 0)
-    be_value = b_val + c_val
+    # Calculate Gross Variable: Sum of first two line items
+    be_value = 0.0
+    if len(col_names) >= 2:
+        be_value = _cell_num(aed_row[col_names[0][0]]) + _cell_num(aed_row[col_names[1][0]])
 
-    if col_ref == "BE":
-        return float(be_value)
+    # If target is Gross Variable
+    if target_col_idx == summary_indices.get("gross_variable_expense"):
+        return be_value
 
-    # BF = BD - BE = SUM(B:BC) - SUM(B:C)
-    # BD = SUM of all line item columns (B through BC, indices 1-54)
-    bd_value = 0.0
-    max_col = min(len(aed_row), 55)  # BC = col 55, index 54
-    for i in range(1, max_col):
-        bd_value += _cell_num(aed_row[i])
-    return float(bd_value - be_value)
+    # Calculate Total Gross
+    total_gross = sum(_cell_num(aed_row[ci]) for ci, name in col_names)
+
+    # If target is Gross Fixed
+    if target_col_idx == summary_indices.get("gross_fixed_expense"):
+        return total_gross - be_value
+
+    # If target is Gross Total
+    if target_col_idx == summary_indices.get("gross_expense"):
+        return total_gross
+        
+    return 0.0
 
 
 def load_sheet_rows(workbook_path: Path, sheet_name: str) -> tuple[list[MonthlyBlock], SheetLayout, dict[str, tuple[Any, ...]], list[str]]:
@@ -473,10 +512,7 @@ def fill_from_source_sheets(
 
 
 def load_expense_details(workbook_path: Path, expense_sheet_map: dict[str, str]) -> dict[str, dict[str, dict[str, float]]]:
-    """Load per-flat, per-month expense breakdown by computing from raw data.
-
-    Returns: { flat: { month_label: { field: value, ... } } }
-    """
+    """Load per-flat, per-month expense breakdown by computing from raw data."""
     workbook = load_workbook(workbook_path, read_only=True)
     result: dict[str, dict[str, dict[str, float]]] = {}
     try:
@@ -656,40 +692,8 @@ def load_annual_expense_details(workbook_path: Path) -> list[dict[str, Any]]:
         if sheet_name not in workbook.sheetnames:
             return []
         ws = workbook[sheet_name]
-        header_row_2 = list(ws.iter_rows(min_row=2, max_row=2, values_only=True))[0]
-
-        # Build column name map from row 2
-        col_names: list[tuple[int, str]] = []
-        summary_indices: dict[str, int] = {}
         
-        # Summary column names to look for
-        summary_markers = {
-            "gross_expense": ["gross expense"],
-            "gross_variable_expense": ["gross variable"],
-            "gross_fixed_expense": ["gross fixed"],
-            "water_meter_rent": ["water meter rent", "meter rent"],
-            "total_expense": ["total expense"],
-        }
-
-        for ci in range(len(header_row_2)):
-            val = header_row_2[ci]
-            if not val:
-                continue
-            name = str(val).strip().lower().replace("\n", " ")
-            
-            # Check if it's a summary column
-            found_summary = False
-            for key, patterns in summary_markers.items():
-                if any(p in name for p in patterns):
-                    summary_indices[key] = ci
-                    found_summary = True
-                    break
-            
-            # If it's not a summary column and it's before the summary starts, treat as line item
-            # In 2025-26, line items were C1-C54. In 2026-27, they are C1-C20.
-            # We'll treat everything that's not a summary column and is not 'months' as a line item.
-            if not found_summary and name != "months":
-                col_names.append((ci, str(val).strip().replace("\n", " ")))
+        summary_indices, col_names = get_aed_column_map(ws)
 
         rows: list[dict[str, Any]] = []
         for row in ws.iter_rows(min_row=3, values_only=True):
@@ -708,11 +712,9 @@ def load_annual_expense_details(workbook_path: Path) -> list[dict[str, Any]]:
             entry["line_items"] = line_items
 
             # Summary columns
-            entry["gross_expense"] = safe_number(row[summary_indices["gross_expense"]] if "gross_expense" in summary_indices and len(row) > summary_indices["gross_expense"] else 0)
-            entry["gross_variable_expense"] = safe_number(row[summary_indices["gross_variable_expense"]] if "gross_variable_expense" in summary_indices and len(row) > summary_indices["gross_variable_expense"] else 0)
-            entry["gross_fixed_expense"] = safe_number(row[summary_indices["gross_fixed_expense"]] if "gross_fixed_expense" in summary_indices and len(row) > summary_indices["gross_fixed_expense"] else 0)
-            entry["water_meter_rent"] = safe_number(row[summary_indices["water_meter_rent"]] if "water_meter_rent" in summary_indices and len(row) > summary_indices["water_meter_rent"] else 0)
-            entry["total_expense"] = safe_number(row[summary_indices["total_expense"]] if "total_expense" in summary_indices and len(row) > summary_indices["total_expense"] else 0)
+            for key in ["gross_expense", "gross_variable_expense", "gross_fixed_expense", "water_meter_rent", "total_expense"]:
+                idx = summary_indices.get(key)
+                entry[key] = safe_number(row[idx] if idx is not None and len(row) > idx else 0)
 
             rows.append(entry)
         return rows

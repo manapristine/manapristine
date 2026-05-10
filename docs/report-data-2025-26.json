@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-10T10:17:05",
+  "generated_at": "2026-05-10T10:34:30",
   "financial_year": "2025-26",
   "cutoff_date": "2026-03-31",
   "sheet": "INCOME-EXPENSE-CYCLES",
@@ -18909,11 +18909,11 @@
         "Pest Control": 7000,
         "NBH VMS": 11900
       },
-      "gross_expense": 0,
-      "gross_variable_expense": 0,
-      "gross_fixed_expense": 0,
-      "water_meter_rent": 0,
-      "total_expense": 0
+      "gross_expense": 327328,
+      "gross_variable_expense": 39800,
+      "gross_fixed_expense": 287528,
+      "water_meter_rent": 25022,
+      "total_expense": 352350
     },
     {
       "month": "MAY 2025",
@@ -18934,11 +18934,11 @@
         "ACCOUNTING": 10000,
         "Pest Control": 7000
       },
-      "gross_expense": 0,
-      "gross_variable_expense": 0,
-      "gross_fixed_expense": 0,
-      "water_meter_rent": 0,
-      "total_expense": 0
+      "gross_expense": 273538,
+      "gross_variable_expense": 38600,
+      "gross_fixed_expense": 234938,
+      "water_meter_rent": 26272,
+      "total_expense": 299810
     },
     {
       "month": "JUN 2025",
@@ -18960,11 +18960,11 @@
         "Pest Control": 7000,
         "HOUSE KEEPING MATERIALS": 3661
       },
-      "gross_expense": 0,
-      "gross_variable_expense": 0,
-      "gross_fixed_expense": 0,
-      "water_meter_rent": 0,
-      "total_expense": 0
+      "gross_expense": 286490,
+      "gross_variable_expense": 36000,
+      "gross_fixed_expense": 250490,
+      "water_meter_rent": 26272,
+      "total_expense": 312762
     },
     {
       "month": "JUL 2025",
@@ -18987,11 +18987,11 @@
         "Pest Control": 7000,
         "Speed Breaker near the gate": 6000
       },
-      "gross_expense": 0,
-      "gross_variable_expense": 0,
-      "gross_fixed_expense": 0,
-      "water_meter_rent": 0,
-      "total_expense": 0
+      "gross_expense": 343679,
+      "gross_variable_expense": 39800,
+      "gross_fixed_expense": 303879,
+      "water_meter_rent": 26272,
+      "total_expense": 369951
     },
     {
       "month": "AUG 2025",
@@ -19015,11 +19015,11 @@
         "NBH device replacement": 2500,
         "Gym Equipment Repairs": 30019
       },
-      "gross_expense": 0,
-      "gross_variable_expense": 0,
-      "gross_fixed_expense": 0,
-      "water_meter_rent": 0,
-      "total_expense": 0
+      "gross_expense": 372969,
+      "gross_variable_expense": 38700,
+      "gross_fixed_expense": 334269,
+      "water_meter_rent": 26272,
+      "total_expense": 399241
     },
     {
       "month": "SEP 2025",
@@ -19040,11 +19040,11 @@
         "DRIED LEAVES REMOVAL": 3300,
         "NBH VMS": 100
       },
-      "gross_expense": 0,
-      "gross_variable_expense": 0,
-      "gross_fixed_expense": 0,
-      "water_meter_rent": 0,
-      "total_expense": 0
+      "gross_expense": 310626,
+      "gross_variable_expense": 30200,
+      "gross_fixed_expense": 280426,
+      "water_meter_rent": 26272,
+      "total_expense": 336898
     },
     {
       "month": "OCT 2025",
@@ -19068,11 +19068,11 @@
         "REPAIRS": 6300,
         "HOUSE KEEPING MATERIALS": 8803
       },
-      "gross_expense": 0,
-      "gross_variable_expense": 0,
-      "gross_fixed_expense": 0,
-      "water_meter_rent": 0,
-      "total_expense": 0
+      "gross_expense": 403295,
+      "gross_variable_expense": 35000,
+      "gross_fixed_expense": 368295,
+      "water_meter_rent": 26272,
+      "total_expense": 429567
     },
     {
       "month": "NOV 2025",
@@ -19096,11 +19096,11 @@
         "Additional Waste Disposal": 10000,
         "Swimming Pool Cleaning": 4800
       },
-      "gross_expense": 0,
-      "gross_variable_expense": 0,
-      "gross_fixed_expense": 0,
-      "water_meter_rent": 0,
-      "total_expense": 0
+      "gross_expense": 429762,
+      "gross_variable_expense": 39800,
+      "gross_fixed_expense": 389962,
+      "water_meter_rent": 26272,
+      "total_expense": 456034
     },
     {
       "month": "DEC 2025",
@@ -19121,11 +19121,11 @@
         "DRIED LEAVES REMOVAL": 3300,
         "ACCOUNTING": 10000
       },
-      "gross_expense": 0,
-      "gross_variable_expense": 0,
-      "gross_fixed_expense": 0,
-      "water_meter_rent": 0,
-      "total_expense": 0
+      "gross_expense": 325124,
+      "gross_variable_expense": 39800,
+      "gross_fixed_expense": 285324,
+      "water_meter_rent": 26272,
+      "total_expense": 351396
     },
     {
       "month": "JAN 2026",
@@ -19146,11 +19146,11 @@
         "ACCOUNTING": 5000,
         "HOUSE KEEPING MATERIALS": 6325
       },
-      "gross_expense": 0,
-      "gross_variable_expense": 0,
-      "gross_fixed_expense": 0,
-      "water_meter_rent": 0,
-      "total_expense": 0
+      "gross_expense": 321032,
+      "gross_variable_expense": 41000,
+      "gross_fixed_expense": 280032,
+      "water_meter_rent": 26272,
+      "total_expense": 347304
     },
     {
       "month": "FEB 2026",
@@ -19170,11 +19170,11 @@
         "DRIED LEAVES REMOVAL": 3300,
         "ACCOUNTING": 5000
       },
-      "gross_expense": 0,
-      "gross_variable_expense": 0,
-      "gross_fixed_expense": 0,
-      "water_meter_rent": 0,
-      "total_expense": 0
+      "gross_expense": 300400,
+      "gross_variable_expense": 38700,
+      "gross_fixed_expense": 261700,
+      "water_meter_rent": 26272,
+      "total_expense": 326672
     },
     {
       "month": "MAR 2026",
@@ -19195,11 +19195,11 @@
         "ACCOUNTING": 5000,
         "HOUSE KEEPING MATERIALS": 7773
       },
-      "gross_expense": 0,
-      "gross_variable_expense": 0,
-      "gross_fixed_expense": 0,
-      "water_meter_rent": 0,
-      "total_expense": 0
+      "gross_expense": 311135,
+      "gross_variable_expense": 38400,
+      "gross_fixed_expense": 272735,
+      "water_meter_rent": 26272,
+      "total_expense": 337407
     },
     {
       "month": "TOTAL",
@@ -19224,11 +19224,11 @@
         "DRIED LEAVES REMOVAL": 43000,
         "HOUSE KEEPING MATERIALS": 26562
       },
-      "gross_expense": 0,
-      "gross_variable_expense": 0,
-      "gross_fixed_expense": 0,
-      "water_meter_rent": 0,
-      "total_expense": 0
+      "gross_expense": 3785909,
+      "gross_variable_expense": 455800,
+      "gross_fixed_expense": 3549578,
+      "water_meter_rent": 314014,
+      "total_expense": 4319392
     }
   ]
 }

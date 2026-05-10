@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-10T10:17:05",
+  "generated_at": "2026-05-10T10:34:31",
   "financial_year": "2026-27",
   "cutoff_date": "2026-04-30",
   "sheet": "INCOME-EXPENSE-CYCLES",
@@ -111,16 +111,16 @@
           "water_used_litres": 872.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 872.5,
-          "water_expense": 0.0,
+          "water_expense": 359.7968547985026,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 701.6866985485026,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 4916.717948548503
         },
         {
           "month": "May 2026",
@@ -406,16 +406,16 @@
           "water_used_litres": 1563.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 1563.5,
-          "water_expense": 0.0,
+          "water_expense": 644.7477163065431,
           "num_meters": 4.0,
           "meter_rent": 448.84,
-          "total_water_expense": 454.09984375,
-          "fixed_expense": 0,
+          "total_water_expense": 1098.847560056543,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 454.09984375
+          "total_expense": 5313.878810056543
         },
         {
           "month": "May 2026",
@@ -701,16 +701,16 @@
           "water_used_litres": 1846.0,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 1846.0,
-          "water_expense": 0.0,
+          "water_expense": 761.2435460837087,
           "num_meters": 4.0,
           "meter_rent": 448.84,
-          "total_water_expense": 454.09984375,
-          "fixed_expense": 0,
+          "total_water_expense": 1215.3433898337087,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 454.09984375
+          "total_expense": 5430.374639833709
         },
         {
           "month": "May 2026",
@@ -996,16 +996,16 @@
           "water_used_litres": 653.0,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 653.0,
-          "water_expense": 0.0,
+          "water_expense": 269.2806259981917,
           "num_meters": 4.0,
           "meter_rent": 448.84,
-          "total_water_expense": 454.09984375,
-          "fixed_expense": 0,
+          "total_water_expense": 723.3804697481917,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 454.09984375
+          "total_expense": 4938.411719748192
         },
         {
           "month": "May 2026",
@@ -1291,16 +1291,16 @@
           "water_used_litres": 328.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 328.5,
-          "water_expense": 0.0,
+          "water_expense": 135.46506223645628,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 477.3549059864563,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 4692.386155986456
         },
         {
           "month": "May 2026",
@@ -1586,16 +1586,16 @@
           "water_used_litres": 622.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 622.5,
-          "water_expense": 0.0,
+          "water_expense": 256.7032001284445,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 598.5930438784445,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 4813.624293878444
         },
         {
           "month": "May 2026",
@@ -1885,12 +1885,12 @@
           "num_meters": 3.0,
           "meter_rent": 336.63,
           "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 4556.92109375
         },
         {
           "month": "May 2026",
@@ -2180,12 +2180,12 @@
           "num_meters": 3.0,
           "meter_rent": 336.63,
           "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 4556.92109375
         },
         {
           "month": "May 2026",
@@ -2471,16 +2471,16 @@
           "water_used_litres": 120.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 120.5,
-          "water_expense": 0.0,
+          "water_expense": 49.69114155096798,
           "num_meters": 4.0,
           "meter_rent": 448.84,
-          "total_water_expense": 454.09984375,
-          "fixed_expense": 0,
+          "total_water_expense": 503.790985300968,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 454.09984375
+          "total_expense": 4718.822235300968
         },
         {
           "month": "May 2026",
@@ -2766,16 +2766,16 @@
           "water_used_litres": 1463.0,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 1463.0,
-          "water_expense": 0.0,
+          "water_expense": 603.3040671291797,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 945.1939108791796,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 5160.225160879179
         },
         {
           "month": "May 2026",
@@ -3065,12 +3065,12 @@
           "num_meters": 3.0,
           "meter_rent": 336.63,
           "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 4556.92109375
         },
         {
           "month": "May 2026",
@@ -3356,16 +3356,16 @@
           "water_used_litres": 755.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 755.5,
-          "water_expense": 0.0,
+          "water_expense": 311.5490244129154,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 653.4388681629155,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 4868.470118162915
         },
         {
           "month": "May 2026",
@@ -3651,16 +3651,16 @@
           "water_used_litres": 237.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 237.5,
-          "water_expense": 0.0,
+          "water_expense": 97.93897193655515,
           "num_meters": 4.0,
           "meter_rent": 448.84,
-          "total_water_expense": 454.09984375,
-          "fixed_expense": 0,
+          "total_water_expense": 552.0388156865552,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 454.09984375
+          "total_expense": 4767.070065686556
         },
         {
           "month": "May 2026",
@@ -3950,12 +3950,12 @@
           "num_meters": 4.0,
           "meter_rent": 448.84,
           "total_water_expense": 454.09984375,
-          "fixed_expense": 0,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 454.09984375
+          "total_expense": 4669.13109375
         },
         {
           "month": "May 2026",
@@ -4241,16 +4241,16 @@
           "water_used_litres": 663.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 663.5,
-          "water_expense": 0.0,
+          "water_expense": 273.6105594943341,
           "num_meters": 4.0,
           "meter_rent": 448.84,
-          "total_water_expense": 454.09984375,
-          "fixed_expense": 0,
+          "total_water_expense": 727.7104032443341,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 454.09984375
+          "total_expense": 4942.741653244334
         },
         {
           "month": "May 2026",
@@ -4536,16 +4536,16 @@
           "water_used_litres": 1613.0,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 1613.0,
-          "water_expense": 0.0,
+          "water_expense": 665.1602599312146,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 1007.0501036812145,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 5222.081353681215
         },
         {
           "month": "May 2026",
@@ -4831,16 +4831,16 @@
           "water_used_litres": 1391.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 1391.5,
-          "water_expense": 0.0,
+          "water_expense": 573.8192818935431,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 915.7091256435431,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 5130.740375643543
         },
         {
           "month": "May 2026",
@@ -5126,16 +5126,16 @@
           "water_used_litres": 3298.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 3298.5,
-          "water_expense": 0.0,
+          "water_expense": 1360.2176797167458,
           "num_meters": 4.0,
           "meter_rent": 448.84,
-          "total_water_expense": 454.09984375,
-          "fixed_expense": 0,
+          "total_water_expense": 1814.3175234667458,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 454.09984375
+          "total_expense": 6029.348773466746
         },
         {
           "month": "May 2026",
@@ -5421,16 +5421,16 @@
           "water_used_litres": 1715.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 1715.5,
-          "water_expense": 0.0,
+          "water_expense": 707.4286583459384,
           "num_meters": 4.0,
           "meter_rent": 448.84,
-          "total_water_expense": 454.09984375,
-          "fixed_expense": 0,
+          "total_water_expense": 1161.5285020959384,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 454.09984375
+          "total_expense": 5376.559752095938
         },
         {
           "month": "May 2026",
@@ -5716,16 +5716,16 @@
           "water_used_litres": 3659.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 3659.5,
-          "water_expense": 0.0,
+          "water_expense": 1509.0849170603099,
           "num_meters": 4.0,
           "meter_rent": 448.84,
-          "total_water_expense": 454.09984375,
-          "fixed_expense": 0,
+          "total_water_expense": 1963.1847608103099,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 454.09984375
+          "total_expense": 6178.21601081031
         },
         {
           "month": "May 2026",
@@ -6011,16 +6011,16 @@
           "water_used_litres": 1539.0,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 1539.0,
-          "water_expense": 0.0,
+          "water_expense": 634.6445381488774,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 976.5343818988773,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 5191.565631898878
         },
         {
           "month": "May 2026",
@@ -6310,12 +6310,12 @@
           "num_meters": 3.0,
           "meter_rent": 336.63,
           "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 4556.92109375
         },
         {
           "month": "May 2026",
@@ -6601,16 +6601,16 @@
           "water_used_litres": 219.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 219.5,
-          "water_expense": 0.0,
+          "water_expense": 90.51622880031097,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 432.40607255031097,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 4647.437322550311
         },
         {
           "month": "May 2026",
@@ -6900,12 +6900,12 @@
           "num_meters": 3.0,
           "meter_rent": 336.63,
           "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 4556.92109375
         },
         {
           "month": "May 2026",
@@ -7191,16 +7191,16 @@
           "water_used_litres": 1389.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 1389.5,
-          "water_expense": 0.0,
+          "water_expense": 572.9945326561826,
           "num_meters": 5.0,
           "meter_rent": 561.05,
-          "total_water_expense": 566.3098437499999,
-          "fixed_expense": 0,
+          "total_water_expense": 1139.3043764061827,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 566.3098437499999
+          "total_expense": 5354.335626406182
         },
         {
           "month": "May 2026",
@@ -7486,16 +7486,16 @@
           "water_used_litres": 399.0,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 399.0,
-          "water_expense": 0.0,
+          "water_expense": 164.53747285341265,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 506.42731660341263,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 4721.458566603413
         },
         {
           "month": "May 2026",
@@ -7781,16 +7781,16 @@
           "water_used_litres": 97.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 97.5,
-          "water_expense": 0.0,
+          "water_expense": 40.20652532132264,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 382.0963690713226,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 4597.127619071322
         },
         {
           "month": "May 2026",
@@ -8076,16 +8076,16 @@
           "water_used_litres": 2156.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 2156.5,
-          "water_expense": 0.0,
+          "water_expense": 889.2858651839207,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 1231.1757089339208,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 5446.206958933921
         },
         {
           "month": "May 2026",
@@ -8371,16 +8371,16 @@
           "water_used_litres": 872.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 872.5,
-          "water_expense": 0.0,
+          "water_expense": 359.7968547985026,
           "num_meters": 4.0,
           "meter_rent": 448.84,
-          "total_water_expense": 454.09984375,
-          "fixed_expense": 0,
+          "total_water_expense": 813.8966985485026,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 454.09984375
+          "total_expense": 5028.927948548502
         },
         {
           "month": "May 2026",
@@ -8666,16 +8666,16 @@
           "water_used_litres": 1634.0,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 1634.0,
-          "water_expense": 0.0,
+          "water_expense": 673.8201269234995,
           "num_meters": 4.0,
           "meter_rent": 448.84,
-          "total_water_expense": 454.09984375,
-          "fixed_expense": 0,
+          "total_water_expense": 1127.9199706734994,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 454.09984375
+          "total_expense": 5342.9512206735
         },
         {
           "month": "May 2026",
@@ -8961,16 +8961,16 @@
           "water_used_litres": 22.0,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 22.0,
-          "water_expense": 0.0,
+          "water_expense": 9.072241610965108,
           "num_meters": 4.0,
           "meter_rent": 448.84,
-          "total_water_expense": 454.09984375,
-          "fixed_expense": 0,
+          "total_water_expense": 463.17208536096507,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 454.09984375
+          "total_expense": 4678.203335360965
         },
         {
           "month": "May 2026",
@@ -9256,16 +9256,16 @@
           "water_used_litres": 669.0,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 669.0,
-          "water_expense": 0.0,
+          "water_expense": 275.87861989707534,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 617.7684636470754,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 4832.799713647075
         },
         {
           "month": "May 2026",
@@ -9555,12 +9555,12 @@
           "num_meters": 3.0,
           "meter_rent": 336.63,
           "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 4556.92109375
         },
         {
           "month": "May 2026",
@@ -9846,16 +9846,16 @@
           "water_used_litres": 5110.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 5110.5,
-          "water_expense": 0.0,
+          "water_expense": 2107.440488765327,
           "num_meters": 4.0,
           "meter_rent": 448.84,
-          "total_water_expense": 454.09984375,
-          "fixed_expense": 0,
+          "total_water_expense": 2561.540332515327,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 454.09984375
+          "total_expense": 6776.5715825153275
         },
         {
           "month": "May 2026",
@@ -10141,16 +10141,16 @@
           "water_used_litres": 311.0,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 311.0,
-          "water_expense": 0.0,
+          "water_expense": 128.24850640955222,
           "num_meters": 4.0,
           "meter_rent": 448.84,
-          "total_water_expense": 454.09984375,
-          "fixed_expense": 0,
+          "total_water_expense": 582.3483501595522,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 454.09984375
+          "total_expense": 4797.379600159552
         },
         {
           "month": "May 2026",
@@ -10436,16 +10436,16 @@
           "water_used_litres": 1245.0,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 1245.0,
-          "water_expense": 0.0,
+          "water_expense": 513.406400256889,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 855.296244006889,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 5070.327494006889
         },
         {
           "month": "May 2026",
@@ -10731,16 +10731,16 @@
           "water_used_litres": 116.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 116.5,
-          "water_expense": 0.0,
+          "water_expense": 48.041643076247055,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 389.93148682624707,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 4604.962736826247
         },
         {
           "month": "May 2026",
@@ -11026,16 +11026,16 @@
           "water_used_litres": 10.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 10.5,
-          "water_expense": 0.0,
+          "water_expense": 4.329933496142439,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 346.2197772461424,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 4561.251027246142
         },
         {
           "month": "May 2026",
@@ -11321,16 +11321,16 @@
           "water_used_litres": 756.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 756.5,
-          "water_expense": 0.0,
+          "water_expense": 311.9613990315957,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 653.8512427815957,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 4868.882492781596
         },
         {
           "month": "May 2026",
@@ -11616,16 +11616,16 @@
           "water_used_litres": 1237.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 1237.5,
-          "water_expense": 0.0,
+          "water_expense": 510.3135906167874,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 852.2034343667874,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 5067.234684366787
         },
         {
           "month": "May 2026",
@@ -11911,16 +11911,16 @@
           "water_used_litres": 629.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 629.5,
-          "water_expense": 0.0,
+          "water_expense": 259.5898224592062,
           "num_meters": 4.0,
           "meter_rent": 448.84,
-          "total_water_expense": 454.09984375,
-          "fixed_expense": 0,
+          "total_water_expense": 713.6896662092062,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 454.09984375
+          "total_expense": 4928.720916209206
         },
         {
           "month": "May 2026",
@@ -12206,16 +12206,16 @@
           "water_used_litres": 119.0,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 119.0,
-          "water_expense": 0.0,
+          "water_expense": 49.07257962294763,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 390.9624233729476,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 4605.993673372947
         },
         {
           "month": "May 2026",
@@ -12501,16 +12501,16 @@
           "water_used_litres": 990.0,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 990.0,
-          "water_expense": 0.0,
+          "water_expense": 408.2508724934299,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 750.1407162434299,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 4965.17196624343
         },
         {
           "month": "May 2026",
@@ -12796,16 +12796,16 @@
           "water_used_litres": 321.0,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 321.0,
-          "water_expense": 0.0,
+          "water_expense": 132.37225259635454,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 474.2620963463545,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 4689.293346346354
         },
         {
           "month": "May 2026",
@@ -13095,12 +13095,12 @@
           "num_meters": 4.0,
           "meter_rent": 448.84,
           "total_water_expense": 454.09984375,
-          "fixed_expense": 0,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 454.09984375
+          "total_expense": 4669.13109375
         },
         {
           "month": "May 2026",
@@ -13386,16 +13386,16 @@
           "water_used_litres": 0.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 0.5,
-          "water_expense": 0.0,
+          "water_expense": 0.20618730934011611,
           "num_meters": 4.0,
           "meter_rent": 448.84,
-          "total_water_expense": 454.09984375,
-          "fixed_expense": 0,
+          "total_water_expense": 454.3060310593401,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 454.09984375
+          "total_expense": 4669.33728105934
         },
         {
           "month": "May 2026",
@@ -13681,16 +13681,16 @@
           "water_used_litres": 1967.0,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 1967.0,
-          "water_expense": 0.0,
+          "water_expense": 811.1408749440168,
           "num_meters": 4.0,
           "meter_rent": 448.84,
-          "total_water_expense": 454.09984375,
-          "fixed_expense": 0,
+          "total_water_expense": 1265.2407186940168,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 454.09984375
+          "total_expense": 5480.271968694016
         },
         {
           "month": "May 2026",
@@ -13976,16 +13976,16 @@
           "water_used_litres": 319.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 319.5,
-          "water_expense": 0.0,
+          "water_expense": 131.7536906683342,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 473.6435344183342,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 4688.674784418334
         },
         {
           "month": "May 2026",
@@ -14271,16 +14271,16 @@
           "water_used_litres": 1641.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 1641.5,
-          "water_expense": 0.0,
+          "water_expense": 676.9129365636012,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 1018.8027803136011,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 5233.834030313601
         },
         {
           "month": "May 2026",
@@ -14566,16 +14566,16 @@
           "water_used_litres": 2751.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 2751.5,
-          "water_expense": 0.0,
+          "water_expense": 1134.6487632986589,
           "num_meters": 4.0,
           "meter_rent": 448.84,
-          "total_water_expense": 454.09984375,
-          "fixed_expense": 0,
+          "total_water_expense": 1588.7486070486589,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 454.09984375
+          "total_expense": 5803.779857048659
         },
         {
           "month": "May 2026",
@@ -14861,16 +14861,16 @@
           "water_used_litres": 1065.0,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 1065.0,
-          "water_expense": 0.0,
+          "water_expense": 439.17896889444734,
           "num_meters": 4.0,
           "meter_rent": 448.84,
-          "total_water_expense": 454.09984375,
-          "fixed_expense": 0,
+          "total_water_expense": 893.2788126444473,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 454.09984375
+          "total_expense": 5108.3100626444475
         },
         {
           "month": "May 2026",
@@ -15160,12 +15160,12 @@
           "num_meters": 4.0,
           "meter_rent": 448.84,
           "total_water_expense": 454.09984375,
-          "fixed_expense": 0,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 454.09984375
+          "total_expense": 4669.13109375
         },
         {
           "month": "May 2026",
@@ -15451,16 +15451,16 @@
           "water_used_litres": 364.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 364.5,
-          "water_expense": 0.0,
+          "water_expense": 150.31054850894466,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 492.20039225894465,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 4707.231642258945
         },
         {
           "month": "May 2026",
@@ -15746,16 +15746,16 @@
           "water_used_litres": 2301.0,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 2301.0,
-          "water_expense": 0.0,
+          "water_expense": 948.8739975832143,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 1290.7638413332143,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 5505.795091333214
         },
         {
           "month": "May 2026",
@@ -16041,16 +16041,16 @@
           "water_used_litres": 1253.0,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 1253.0,
-          "water_expense": 0.0,
+          "water_expense": 516.705397206331,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 858.5952409563309,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 5073.626490956331
         },
         {
           "month": "May 2026",
@@ -16336,16 +16336,16 @@
           "water_used_litres": 885.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 885.5,
-          "water_expense": 0.0,
+          "water_expense": 365.1577248413456,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 707.0475685913457,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 4922.078818591346
         },
         {
           "month": "May 2026",
@@ -16631,16 +16631,16 @@
           "water_used_litres": 117.0,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 117.0,
-          "water_expense": 0.0,
+          "water_expense": 48.247830385587164,
           "num_meters": 4.0,
           "meter_rent": 448.84,
-          "total_water_expense": 454.09984375,
-          "fixed_expense": 0,
+          "total_water_expense": 502.3476741355871,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 454.09984375
+          "total_expense": 4717.378924135587
         },
         {
           "month": "May 2026",
@@ -16930,12 +16930,12 @@
           "num_meters": 3.0,
           "meter_rent": 336.63,
           "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 4556.92109375
         },
         {
           "month": "May 2026",
@@ -17221,16 +17221,16 @@
           "water_used_litres": 818.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 818.5,
-          "water_expense": 0.0,
+          "water_expense": 337.52862538977007,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 679.4184691397701,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 4894.44971913977
         },
         {
           "month": "May 2026",
@@ -17516,16 +17516,16 @@
           "water_used_litres": 281.0,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 281.0,
-          "water_expense": 0.0,
+          "water_expense": 115.87726784914526,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 457.76711159914527,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 4672.798361599145
         },
         {
           "month": "May 2026",
@@ -17815,12 +17815,12 @@
           "num_meters": 4.0,
           "meter_rent": 448.84,
           "total_water_expense": 454.09984375,
-          "fixed_expense": 0,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 454.09984375
+          "total_expense": 4669.13109375
         },
         {
           "month": "May 2026",
@@ -18106,16 +18106,16 @@
           "water_used_litres": 1443.5,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 1443.5,
-          "water_expense": 0.0,
+          "water_expense": 595.2627620649153,
           "num_meters": 4.0,
           "meter_rent": 448.84,
-          "total_water_expense": 454.09984375,
-          "fixed_expense": 0,
+          "total_water_expense": 1049.3626058149152,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 454.09984375
+          "total_expense": 5264.393855814915
         },
         {
           "month": "May 2026",
@@ -18401,16 +18401,16 @@
           "water_used_litres": 1513.0,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 1513.0,
-          "water_expense": 0.0,
+          "water_expense": 623.9227980631914,
           "num_meters": 4.0,
           "meter_rent": 448.84,
-          "total_water_expense": 454.09984375,
-          "fixed_expense": 0,
+          "total_water_expense": 1078.0226418131913,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 454.09984375
+          "total_expense": 5293.0538918131915
         },
         {
           "month": "May 2026",
@@ -18696,16 +18696,16 @@
           "water_used_litres": 1798.0,
           "common_area_water_litres": 0.0,
           "total_fresh_water_consumed_litres": 1798.0,
-          "water_expense": 0.0,
+          "water_expense": 741.4495643870575,
           "num_meters": 3.0,
           "meter_rent": 336.63,
-          "total_water_expense": 341.88984375,
-          "fixed_expense": 0,
+          "total_water_expense": 1083.3394081370575,
+          "fixed_expense": 4215.03125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 341.88984375
+          "total_expense": 5298.370658137057
         },
         {
           "month": "May 2026",
@@ -18904,11 +18904,11 @@
         "manager wage": 10000,
         "dried leaves": 3300
       },
-      "gross_expense": 0,
-      "gross_variable_expense": 0,
-      "gross_fixed_expense": 0,
-      "water_meter_rent": 0,
-      "total_expense": 0
+      "gross_expense": 318562,
+      "gross_variable_expense": 48800,
+      "gross_fixed_expense": 269762,
+      "water_meter_rent": 26272,
+      "total_expense": 344834
     },
     {
       "month": "MAY 2026",
@@ -18916,8 +18916,8 @@
       "gross_expense": 0,
       "gross_variable_expense": 0,
       "gross_fixed_expense": 0,
-      "water_meter_rent": 0,
-      "total_expense": 0
+      "water_meter_rent": 26272,
+      "total_expense": 26272
     },
     {
       "month": "JUN 2026",
@@ -18925,8 +18925,8 @@
       "gross_expense": 0,
       "gross_variable_expense": 0,
       "gross_fixed_expense": 0,
-      "water_meter_rent": 0,
-      "total_expense": 0
+      "water_meter_rent": 26272,
+      "total_expense": 26272
     },
     {
       "month": "JUL 2026",
@@ -18934,8 +18934,8 @@
       "gross_expense": 0,
       "gross_variable_expense": 0,
       "gross_fixed_expense": 0,
-      "water_meter_rent": 0,
-      "total_expense": 0
+      "water_meter_rent": 26272,
+      "total_expense": 26272
     },
     {
       "month": "AUG 2026",
@@ -18943,8 +18943,8 @@
       "gross_expense": 0,
       "gross_variable_expense": 0,
       "gross_fixed_expense": 0,
-      "water_meter_rent": 0,
-      "total_expense": 0
+      "water_meter_rent": 26272,
+      "total_expense": 26272
     },
     {
       "month": "SEP 2026",
@@ -18952,8 +18952,8 @@
       "gross_expense": 0,
       "gross_variable_expense": 0,
       "gross_fixed_expense": 0,
-      "water_meter_rent": 0,
-      "total_expense": 0
+      "water_meter_rent": 26272,
+      "total_expense": 26272
     },
     {
       "month": "OCT 2026",
@@ -18961,8 +18961,8 @@
       "gross_expense": 0,
       "gross_variable_expense": 0,
       "gross_fixed_expense": 0,
-      "water_meter_rent": 0,
-      "total_expense": 0
+      "water_meter_rent": 26272,
+      "total_expense": 26272
     },
     {
       "month": "NOV 2026",
@@ -18970,8 +18970,8 @@
       "gross_expense": 0,
       "gross_variable_expense": 0,
       "gross_fixed_expense": 0,
-      "water_meter_rent": 0,
-      "total_expense": 0
+      "water_meter_rent": 26272,
+      "total_expense": 26272
     },
     {
       "month": "DEC 2026",
@@ -18979,8 +18979,8 @@
       "gross_expense": 0,
       "gross_variable_expense": 0,
       "gross_fixed_expense": 0,
-      "water_meter_rent": 0,
-      "total_expense": 0
+      "water_meter_rent": 26272,
+      "total_expense": 26272
     },
     {
       "month": "JAN 2027",
@@ -18988,8 +18988,8 @@
       "gross_expense": 0,
       "gross_variable_expense": 0,
       "gross_fixed_expense": 0,
-      "water_meter_rent": 0,
-      "total_expense": 0
+      "water_meter_rent": 26272,
+      "total_expense": 26272
     },
     {
       "month": "FEB 2027",
@@ -18997,8 +18997,8 @@
       "gross_expense": 0,
       "gross_variable_expense": 0,
       "gross_fixed_expense": 0,
-      "water_meter_rent": 0,
-      "total_expense": 0
+      "water_meter_rent": 26272,
+      "total_expense": 26272
     },
     {
       "month": "MAR 2027",
@@ -19006,8 +19006,8 @@
       "gross_expense": 0,
       "gross_variable_expense": 0,
       "gross_fixed_expense": 0,
-      "water_meter_rent": 0,
-      "total_expense": 0
+      "water_meter_rent": 26272,
+      "total_expense": 26272
     },
     {
       "month": "TOTAL",
@@ -19026,11 +19026,11 @@
         "manager wage": 10000,
         "dried leaves": 3300
       },
-      "gross_expense": 0,
-      "gross_variable_expense": 0,
-      "gross_fixed_expense": 0,
-      "water_meter_rent": 0,
-      "total_expense": 0
+      "gross_expense": 318562,
+      "gross_variable_expense": 48800,
+      "gross_fixed_expense": 269762,
+      "water_meter_rent": 315264,
+      "total_expense": 633826
     }
   ]
 }
