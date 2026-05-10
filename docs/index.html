@@ -742,7 +742,7 @@
             <span class="value" id="occupant-name-top"></span>
           </article>
           <article class="mini-card">
-            <span class="label">Closing Status</span>
+            <span class="label">Outstanding Status</span>
             <span class="value" id="closing-status-top"></span>
           </article>
         </div>
@@ -790,7 +790,7 @@
             <span class="value" id="past-fy-dues"></span>
           </article>
           <article class="card" id="balance-card">
-            <span class="label">Closing Balance</span>
+            <span class="label">Total Outstanding</span>
             <span class="value" id="closing-balance"></span>
           </article>
         </section>
@@ -1295,6 +1295,21 @@
       // Monthly summary table with totals
       const body = document.getElementById("monthly-body");
       body.innerHTML = "";
+
+      // Add Carry-over row
+      const carryRow = document.createElement("tr");
+      const pastFyValue = Number(report.balance_from_last_fy || 0);
+      if (pastFyValue < 0) carryRow.classList.add("negative");
+      if (pastFyValue > 0) carryRow.classList.add("positive");
+      carryRow.innerHTML = `
+        <td><strong>Carry over from last FY-YEAR</strong></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="${pastFyValue < 0 ? "negative-text" : pastFyValue > 0 ? "positive-text" : ""}"><strong>${formatAmount(pastFyValue)}</strong></td>
+      `;
+      body.appendChild(carryRow);
+
       let sumColl = 0, sumExp = 0, sumLate = 0, sumNet = 0;
       for (const month of report.monthly) {
         const tr = document.createElement("tr");
@@ -1307,21 +1322,24 @@
         if (netValue < 0) tr.classList.add("negative");
         tr.innerHTML = `
           <td>${esc(month.month)}</td>
-          <td>${formatAmount(month.collection)}</td>
-          <td>${formatAmount(month.expense)}</td>
-          <td>${formatAmount(month.late_fee)}</td>
+          <td class="${Number(month.collection) < 0 ? "negative-text" : ""}">${formatAmount(month.collection)}</td>
+          <td class="${Number(month.expense) < 0 ? "negative-text" : ""}">${formatAmount(month.expense)}</td>
+          <td class="${Number(month.late_fee) < 0 ? "negative-text" : ""}">${formatAmount(month.late_fee)}</td>
           <td class="${netValue < 0 ? "negative-text" : netValue > 0 ? "positive-text" : ""}">${formatAmount(month.net_collection_minus_expense)}</td>
         `;
         body.appendChild(tr);
       }
+      
+      const totalOutstanding = pastFyValue + sumNet;
+
       const totalRow1 = document.createElement("tr");
       totalRow1.classList.add("total-row");
       totalRow1.innerHTML = `
         <td>Total</td>
-        <td>${formatAmount(sumColl)}</td>
-        <td>${formatAmount(sumExp)}</td>
-        <td>${formatAmount(sumLate)}</td>
-        <td class="${sumNet < 0 ? "negative-text" : sumNet > 0 ? "positive-text" : ""}">${formatAmount(sumNet)}</td>
+        <td class="${sumColl < 0 ? "negative-text" : ""}">${formatAmount(sumColl)}</td>
+        <td class="${sumExp < 0 ? "negative-text" : ""}">${formatAmount(sumExp)}</td>
+        <td class="${sumLate < 0 ? "negative-text" : ""}">${formatAmount(sumLate)}</td>
+        <td class="${totalOutstanding < 0 ? "negative-text" : totalOutstanding > 0 ? "positive-text" : ""}">${formatAmount(totalOutstanding)}</td>
       `;
       body.appendChild(totalRow1);
 
