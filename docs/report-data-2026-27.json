@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-10T10:34:31",
+  "generated_at": "2026-05-10T17:40:18",
   "financial_year": "2026-27",
   "cutoff_date": "2026-04-30",
   "sheet": "INCOME-EXPENSE-CYCLES",
@@ -606,9 +606,9 @@
         {
           "month": "Apr 2026",
           "collection": 6000,
-          "expense": 6191.618185917418,
+          "expense": 6941.618185917418,
           "late_fee": 0,
-          "net_collection_minus_expense": -191.61818591741758
+          "net_collection_minus_expense": -941.6181859174176
         },
         {
           "month": "May 2026",
@@ -690,10 +690,10 @@
       ],
       "totals": {
         "collection": 6000,
-        "expense": 6191.618185917418,
+        "expense": 6941.618185917418,
         "late_fee": 0,
-        "net_collection_minus_expense": -191.61818591741758,
-        "closing_balance": -6828.877006932926
+        "net_collection_minus_expense": -941.6181859174176,
+        "closing_balance": -7578.877006932926
       },
       "expense_breakdown": [
         {
@@ -706,11 +706,11 @@
           "meter_rent": 448.84,
           "total_water_expense": 1215.3433898337087,
           "fixed_expense": 4215.03125,
-          "parking_fee": 0.0,
+          "parking_fee": 750.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 5430.374639833709
+          "total_expense": 6180.374639833709
         },
         {
           "month": "May 2026",
@@ -1786,9 +1786,9 @@
         {
           "month": "Apr 2026",
           "collection": 5384,
-          "expense": 4556.92109375,
+          "expense": 5306.92109375,
           "late_fee": 0,
-          "net_collection_minus_expense": 827.0789062499998
+          "net_collection_minus_expense": 77.07890624999982
         },
         {
           "month": "May 2026",
@@ -1870,10 +1870,10 @@
       ],
       "totals": {
         "collection": 5384,
-        "expense": 4556.92109375,
+        "expense": 5306.92109375,
         "late_fee": 0,
-        "net_collection_minus_expense": 827.0789062499998,
-        "closing_balance": -6346.676187336937
+        "net_collection_minus_expense": 77.07890624999982,
+        "closing_balance": -7096.676187336937
       },
       "expense_breakdown": [
         {
@@ -1886,11 +1886,11 @@
           "meter_rent": 336.63,
           "total_water_expense": 341.88984375,
           "fixed_expense": 4215.03125,
-          "parking_fee": 0.0,
+          "parking_fee": 750.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 4556.92109375
+          "total_expense": 5306.92109375
         },
         {
           "month": "May 2026",
@@ -4146,9 +4146,9 @@
         {
           "month": "Apr 2026",
           "collection": 5764,
-          "expense": 5216.352212738668,
+          "expense": 5966.352212738668,
           "late_fee": 0,
-          "net_collection_minus_expense": 547.6477872613323
+          "net_collection_minus_expense": -202.35221273866773
         },
         {
           "month": "May 2026",
@@ -4230,10 +4230,10 @@
       ],
       "totals": {
         "collection": 5764,
-        "expense": 5216.352212738668,
+        "expense": 5966.352212738668,
         "late_fee": 0,
-        "net_collection_minus_expense": 547.6477872613323,
-        "closing_balance": 125.24679494833981
+        "net_collection_minus_expense": -202.35221273866773,
+        "closing_balance": -624.7532050516602
       },
       "expense_breakdown": [
         {
@@ -4246,11 +4246,11 @@
           "meter_rent": 448.84,
           "total_water_expense": 727.7104032443341,
           "fixed_expense": 4215.03125,
-          "parking_fee": 0.0,
+          "parking_fee": 750.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 4942.741653244334
+          "total_expense": 5692.741653244334
         },
         {
           "month": "May 2026",
@@ -16831,9 +16831,9 @@
         {
           "month": "Apr 2026",
           "collection": 5920,
-          "expense": 4556.92109375,
+          "expense": 5306.92109375,
           "late_fee": 0,
-          "net_collection_minus_expense": 1363.0789062499998
+          "net_collection_minus_expense": 613.0789062499998
         },
         {
           "month": "May 2026",
@@ -16915,10 +16915,10 @@
       ],
       "totals": {
         "collection": 5920,
-        "expense": 4556.92109375,
+        "expense": 5306.92109375,
         "late_fee": 0,
-        "net_collection_minus_expense": 1363.0789062499998,
-        "closing_balance": -2332.147681431231
+        "net_collection_minus_expense": 613.0789062499998,
+        "closing_balance": -3082.147681431231
       },
       "expense_breakdown": [
         {
@@ -16931,11 +16931,11 @@
           "meter_rent": 336.63,
           "total_water_expense": 341.88984375,
           "fixed_expense": 4215.03125,
-          "parking_fee": 0.0,
+          "parking_fee": 750.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "total_expense": 4556.92109375
+          "total_expense": 5306.92109375
         },
         {
           "month": "May 2026",
