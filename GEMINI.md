@@ -60,3 +60,9 @@ pip install -r requirements.txt
 - **Workbook Naming:** Sheets follow specific patterns: `{Month}{Year}-EXPENSE`, `{Month}{Year}-COLLECTION`, `INCOME-EXPENSE-CYCLES`.
 - **JSON Output:** All generated data must be stored in the `docs/` directory to be accessible by the dashboard.
 - **No Build Step:** The frontend (`docs/index.html`) is designed to be served directly without any transpilation or bundling.
+
+## Security
+- **Portal Password:** Access to the dashboard is protected by a community password.
+    - The plain-text password is stored in `db/workbooks.json` as `portal_password`.
+    - `report_builder.py` hashes this password (SHA-256) and injects the hash into `docs/index.html` during the report generation process.
+    - Residents enter the password on a "Community Access" screen; the browser validates the hash and stores a session token in `sessionStorage`.

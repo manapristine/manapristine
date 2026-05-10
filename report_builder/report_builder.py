@@ -1,5 +1,7 @@
 import csv
+import hashlib
 import json
+import re
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
@@ -33,6 +35,29 @@ class SheetLayout:
     total_late_fee_idx: int | None
     total_net_idx: int | None
     total_dues_idx: int | None
+
+
+def update_portal_password(password: str):
+    """Hash the portal password and inject it into docs/index.html."""
+    if not password:
+        return
+    portal_hash = hashlib.sha256(password.encode()).hexdigest()
+    index_path = OUTPUT_DIR / "index.html"
+    if not index_path.exists():
+        print(f"Warning: index.html not found at {index_path}")
+        return
+    
+    content = index_path.read_text(encoding="utf-8")
+    new_content = re.sub(
+        r'const PORTAL_HASH = "[^"]*";', 
+        f'const PORTAL_HASH = "{portal_hash}";', 
+        content
+    )
+    if content != new_content:
+        index_path.write_text(new_content, encoding="utf-8")
+        print(f"Portal password updated in {index_path}")
+    else:
+        print("Portal password hash is already up to date.")
 
 
 def normalize_flat(flat: str) -> str:
@@ -723,13 +748,18 @@ def load_annual_expense_details(workbook_path: Path) -> list[dict[str, Any]]:
 
 
 def main() -> int:
-    workbooks_config: dict[str, dict[str, str]] = json.loads(WORKBOOKS_JSON.read_text(encoding="utf-8"))
+    workbooks_config: dict[str, Any] = json.loads(WORKBOOKS_JSON.read_text(encoding="utf-8"))
+    portal_password = workbooks_config.get("portal_password")
+    
     flat_requests = load_flat_requests(MEMBERS_CSV)
     occupants = load_occupants(OCCUPANTS_CSV)
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     manifest_entries: list[dict[str, str]] = []
     for fy_key in sorted(workbooks_config.keys()):
+        if fy_key == "portal_password":
+            continue
+            
         entry = workbooks_config[fy_key]
         workbook_path = PROJECT_ROOT / entry["workbook"]
         if not workbook_path.exists():
@@ -757,6 +787,10 @@ def main() -> int:
     manifest_path = OUTPUT_DIR / "report-manifest.json"
     manifest_path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     print(f"Manifest written to {manifest_path}")
+    
+    if portal_password:
+        update_portal_password(portal_password)
+        
     return 0
 
 

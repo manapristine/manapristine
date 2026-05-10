@@ -681,9 +681,60 @@
     }
     .chart-legend .leg-collection::before { background: var(--chart-bar-accent); }
     .chart-legend .leg-expense::before { background: var(--chart-bar-danger); }
+    
+    #password-gate {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      padding: 20px;
+    }
+    .gate-card {
+      background: var(--panel);
+      padding: 32px;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+    .gate-card h2 { margin: 0 0 12px; font-size: 1.4rem; }
+    .gate-card p { margin: 0 0 24px; color: var(--muted); font-size: 0.9rem; }
+    .gate-card input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: var(--select-bg);
+      color: var(--ink);
+      font-size: 1rem;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .gate-card .error {
+      color: var(--danger);
+      font-size: 0.8rem;
+      margin-top: -8px;
+      margin-bottom: 16px;
+      display: none;
+    }
   </style>
 </head>
 <body>
+  <div id="password-gate">
+    <div class="gate-card">
+      <div class="badge" style="margin: 0 auto 16px;">MP</div>
+      <h2>Community Access</h2>
+      <p>Please enter the community password to access the Mana Pristine portal.</p>
+      <input type="password" id="gate-password" placeholder="Enter password" autofocus>
+      <div id="gate-error" class="error">Incorrect password. Please try again.</div>
+      <button id="gate-submit" class="btn" style="width: 100%;">Access Portal</button>
+    </div>
+  </div>
   <main class="page">
     <section class="shell">
       <section class="masthead">
@@ -991,6 +1042,42 @@
   </main>
 
   <script>
+    const PORTAL_HASH = "67af48cb48003b00dea29f4b1c060018709645795df8a3fa35da09f57a3d9a6e";
+
+    async function sha256(message) {
+      const msgBuffer = new TextEncoder().encode(message);
+      const hashBuffer = await crypto.subtle.digest("SHA-256", msgBuffer);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      return hashArray.map(b => b.toString(16).padStart(2, "0")).join("");
+    }
+
+    async function checkAuth() {
+      if (sessionStorage.getItem("portal_auth") === "true") {
+        document.getElementById("password-gate").style.display = "none";
+        return;
+      }
+      
+      const gate = document.getElementById("password-gate");
+      const input = document.getElementById("gate-password");
+      const submit = document.getElementById("gate-submit");
+      const error = document.getElementById("gate-error");
+
+      const attemptLogin = async () => {
+        const hash = await sha256(input.value);
+        if (hash === PORTAL_HASH) {
+          sessionStorage.setItem("portal_auth", "true");
+          gate.style.display = "none";
+        } else {
+          error.style.display = "block";
+          input.value = "";
+          input.focus();
+        }
+      };
+
+      submit.onclick = attemptLogin;
+      input.onkeydown = (e) => { if (e.key === "Enter") attemptLogin(); };
+    }
+
     const currency = new Intl.NumberFormat("en-IN", {
       style: "currency",
       currency: "INR",
@@ -1788,6 +1875,7 @@
     }
 
     async function boot() {
+      await checkAuth();
       try {
         const manifestResp = await fetch("./report-manifest.json", { cache: "no-store" });
         if (!manifestResp.ok) throw new Error(`HTTP ${manifestResp.status}`);
