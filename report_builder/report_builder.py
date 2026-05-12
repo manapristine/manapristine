@@ -270,9 +270,12 @@ def load_expense_totals(workbook_path: Path, sheet_name: str) -> dict[str, float
                 common_area_water += v
         common_water_per_flat = common_area_water / 64
 
-        # Compute total water in the sheet
+        # Compute total water in the sheet (exclude non-flat rows to match workbook's $C$70)
         total_water = 0.0
         for r in range(2, len(rows)):
+            flat = normalize_flat(rows[r][0] if rows[r] else "")
+            if not flat or flat in ("CH", "GYM", "BSMT", "MPFOWA", "TOTAL"):
+                continue
             v = rows[r][2] if len(rows[r]) > 2 else 0
             if isinstance(v, (int, float)):
                 total_water += v
@@ -570,6 +573,9 @@ def load_expense_details(workbook_path: Path, expense_sheet_map: dict[str, str])
 
             total_water = 0.0
             for r in range(2, len(rows)):
+                flat_check = normalize_flat(rows[r][0] if rows[r] else "")
+                if not flat_check or flat_check in ("CH", "GYM", "BSMT", "MPFOWA", "TOTAL"):
+                    continue
                 v = rows[r][2] if len(rows[r]) > 2 else 0
                 if isinstance(v, (int, float)):
                     total_water += v

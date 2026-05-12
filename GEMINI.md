@@ -66,3 +66,7 @@ pip install -r requirements.txt
     - The plain-text password is stored in `db/workbooks.json` as `portal_password`.
     - `report_builder.py` hashes this password (SHA-256) and injects the hash into `docs/index.html` during the report generation process.
     - Residents enter the password on a "Community Access" screen; the browser validates the hash and stores a session token in `sessionStorage`.
+
+## Report Builder Internals
+
+**EXPENSE sheet water calculation:** When computing `total_water` (the divisor for water percentage), only sum column C for actual flat rows (F1-F16, G1-G16, S1-S16, T1-T16). Non-flat rows (CH, GYM, BSMT, MPFOWA, TOTAL) must be excluded — the TOTAL row contains a summary value that would double-count if included. This matches the workbook formula which uses a specific cell reference (`$C$70`) pointing to `=SUM(C6:C69)` (flat rows only).
