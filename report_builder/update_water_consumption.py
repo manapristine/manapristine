@@ -66,6 +66,8 @@ def load_wateron_data(filepath):
             apt = row[apt_idx]
             if apt:
                 flat_id = normalize_flat(apt)
+                if flat_id == "TOTAL":
+                    continue
                 total = row[total_idx]
                 if isinstance(total, (int, float)):
                     data[flat_id] = total
