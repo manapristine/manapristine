@@ -239,97 +239,22 @@ def load_collection_totals(workbook_path: Path, sheet_name: str) -> dict[str, fl
 
 
 def load_expense_totals(workbook_path: Path, sheet_name: str) -> dict[str, float]:
-    """Compute total expense per flat by evaluating the EXPENSE formula chain directly."""
-    workbook = load_workbook(workbook_path, read_only=True)
+    """Read total expense per flat directly from cached cell values (col 17)."""
+    workbook = load_workbook(workbook_path, data_only=True, read_only=True)
     try:
         if sheet_name not in workbook.sheetnames:
             return {}
         ws = workbook[sheet_name]
-        rows = list(ws.iter_rows(values_only=True))
-        if len(rows) < 7:
-            return {}
-
-        multiplier = safe_number(rows[1][1] if len(rows[1]) > 1 else 1) or 1
-
-        # T-column parameters (col 20, 0-indexed=19)
-        t4_raw = rows[3][19] if len(rows) > 3 and len(rows[3]) > 19 else 0
-        t5_raw = rows[4][19] if len(rows) > 4 and len(rows[4]) > 19 else 0
-        t7_raw = rows[6][19] if len(rows) > 6 and len(rows[6]) > 19 else 0
-
-        # T4 and T5 reference ANNUAL-EXPENSE-DETAILS — resolve them
-        t4 = _resolve_annual_expense_ref(workbook, t4_raw)
-        t5 = _resolve_annual_expense_ref(workbook, t5_raw)
-        t7 = float(t7_raw) if isinstance(t7_raw, (int, float)) else 0.0
-        t9 = (t7 * 3) / 64  # common area meter rent per flat
-
-        # Compute common area water
-        common_area_water = 0.0
-        for r in range(2, min(5, len(rows))):
-            v = rows[r][2] if len(rows[r]) > 2 else 0
-            if isinstance(v, (int, float)):
-                common_area_water += v
-        common_water_per_flat = common_area_water / 64
-
-        # Compute total water in the sheet (exclude non-flat rows to match workbook's $C$70)
-        total_water = 0.0
-        for r in range(2, len(rows)):
-            flat = normalize_flat(rows[r][0] if rows[r] else "")
-            if not flat or flat in ("CH", "GYM", "BSMT", "MPFOWA", "TOTAL"):
-                continue
-            v = rows[r][2] if len(rows[r]) > 2 else 0
-            if isinstance(v, (int, float)):
-                total_water += v
-
         result: dict[str, float] = {}
-        for r in range(2, len(rows)):
-            row = rows[r]
+        for row in ws.iter_rows(min_row=3, values_only=True):
             flat = normalize_flat(row[0] if row else "")
             if not flat or flat in ("CH", "GYM", "BSMT", "MPFOWA", "TOTAL"):
                 continue
-
-            water_used = row[2] if len(row) > 2 else 0
-            water_used = float(water_used) if isinstance(water_used, (int, float)) else 0.0
-            total_consumed = water_used + common_water_per_flat
-            water_pct = (total_consumed / total_water) if total_water > 0 else 0
-            water_expense = water_pct * t5
-
-            num_meters_raw = row[7] if len(row) > 7 else 0
-            num_meters = float(num_meters_raw) if isinstance(num_meters_raw, (int, float)) else 0.0
-            meter_rent = t7 * num_meters
-
-            total_variable = water_expense + t9 + meter_rent
-            fixed_share = t4 / 64 if t4 else 0
-
-            def _raw_num(val):
-                return float(val) if isinstance(val, (int, float)) else 0.0
-
-            parking = _raw_num(row[11] if len(row) > 11 else 0)
-            club_house = _raw_num(row[12] if len(row) > 12 else 0)
-            shifting = _raw_num(row[13] if len(row) > 13 else 0)
-            gym = _raw_num(row[14] if len(row) > 14 else 0)
-            covid_garbage = _raw_num(row[15] if len(row) > 15 else 0)
-            membership = _raw_num(row[16] if len(row) > 16 else 0)
-
-            total_expense = (total_variable + fixed_share + parking + club_house
-                           + shifting + gym + membership + covid_garbage) * multiplier
-            result[flat] = total_expense
+            total_expense = row[17] if len(row) > 17 else 0
+            result[flat] = float(total_expense) if isinstance(total_expense, (int, float)) else 0.0
         return result
     finally:
         workbook.close()
-
-
-def _eval_simple_formula(formula: str) -> float | None:
-    """Evaluate simple arithmetic formulas like '=3290+4300' or '=25000'."""
-    if not isinstance(formula, str) or not formula.startswith("="):
-        return None
-    expr = formula[1:]
-    import re
-    if re.match(r'^[\d\s+\-*/.()]+$', expr):
-        try:
-            return float(eval(expr))  # noqa: S307 — only numeric expressions
-        except (SyntaxError, ZeroDivisionError):
-            return None
-    return None
 
 
 def get_aed_column_map(ws) -> tuple[dict[str, int], list[tuple[int, str]]]:
@@ -339,7 +264,7 @@ def get_aed_column_map(ws) -> tuple[dict[str, int], list[tuple[int, str]]]:
 
     col_names: list[tuple[int, str]] = []
     summary_indices: dict[str, int] = {}
-    
+
     summary_markers = {
         "gross_expense": ["gross expense"],
         "gross_variable_expense": ["gross variable", "gross var"],
@@ -352,83 +277,24 @@ def get_aed_column_map(ws) -> tuple[dict[str, int], list[tuple[int, str]]]:
     for ci in range(max_cols):
         val1 = header_row_1[ci] if ci < len(header_row_1) else None
         val2 = header_row_2[ci] if ci < len(header_row_2) else None
-        
+
         name1 = str(val1).strip().lower().replace("\n", " ") if val1 else ""
         name2 = str(val2).strip().lower().replace("\n", " ") if val2 else ""
-        
+
         found_summary = False
         for key, patterns in summary_markers.items():
             if (val1 and any(p in name1 for p in patterns)) or (val2 and any(p in name2 for p in patterns)):
                 summary_indices[key] = ci
                 found_summary = True
                 break
-        
+
         if found_summary:
             continue
 
         if val2 and name2 not in ("months", "month"):
             col_names.append((ci, str(val2).strip().replace("\n", " ")))
-            
+
     return summary_indices, col_names
-
-
-def _resolve_annual_expense_ref(workbook, cell_value) -> float:
-    """Resolve a T4/T5 cell that references ANNUAL-EXPENSE-DETAILS."""
-    if isinstance(cell_value, (int, float)):
-        return float(cell_value)
-    if not isinstance(cell_value, str) or not cell_value.startswith("="):
-        return 0.0
-
-    import re
-    from openpyxl.utils import column_index_from_string
-    match = re.match(r"='?ANNUAL-EXPENSE-DETAILS'?!([A-Z]{1,2})(\d+)", cell_value)
-    if not match:
-        return 0.0
-
-    target_col_letter = match.group(1)
-    target_col_idx = column_index_from_string(target_col_letter) - 1
-    row_num = int(match.group(2))
-
-    sheet_name = "ANNUAL-EXPENSE-DETAILS"
-    if sheet_name not in workbook.sheetnames:
-        return 0.0
-    ws = workbook[sheet_name]
-    
-    # Identify what this column means dynamically
-    summary_indices, col_names = get_aed_column_map(ws)
-    
-    aed_rows = list(ws.iter_rows(min_row=row_num, max_row=row_num, values_only=True))
-    if not aed_rows:
-        return 0.0
-    aed_row = aed_rows[0]
-
-    def _cell_num(val) -> float:
-        if isinstance(val, (int, float)):
-            return float(val)
-        result = _eval_simple_formula(val)
-        return result if result is not None else 0.0
-
-    # Calculate Gross Variable: Sum of first two line items
-    be_value = 0.0
-    if len(col_names) >= 2:
-        be_value = _cell_num(aed_row[col_names[0][0]]) + _cell_num(aed_row[col_names[1][0]])
-
-    # If target is Gross Variable
-    if target_col_idx == summary_indices.get("gross_variable_expense"):
-        return be_value
-
-    # Calculate Total Gross
-    total_gross = sum(_cell_num(aed_row[ci]) for ci, name in col_names)
-
-    # If target is Gross Fixed
-    if target_col_idx == summary_indices.get("gross_fixed_expense"):
-        return total_gross - be_value
-
-    # If target is Gross Total
-    if target_col_idx == summary_indices.get("gross_expense"):
-        return total_gross
-        
-    return 0.0
 
 
 def load_sheet_rows(workbook_path: Path, sheet_name: str) -> tuple[list[MonthlyBlock], SheetLayout, dict[str, tuple[Any, ...]], list[str]]:
@@ -540,89 +406,38 @@ def fill_from_source_sheets(
 
 
 def load_expense_details(workbook_path: Path, expense_sheet_map: dict[str, str]) -> dict[str, dict[str, dict[str, float]]]:
-    """Load per-flat, per-month expense breakdown by computing from raw data."""
-    workbook = load_workbook(workbook_path, read_only=True)
+    """Read per-flat, per-month expense breakdown from cached cell values."""
+    workbook = load_workbook(workbook_path, data_only=True, read_only=True)
     result: dict[str, dict[str, dict[str, float]]] = {}
     try:
         for month_label, sheet_name in expense_sheet_map.items():
             if sheet_name not in workbook.sheetnames:
                 continue
             ws = workbook[sheet_name]
-            rows = list(ws.iter_rows(values_only=True))
-            if len(rows) < 7:
-                continue
 
-            multiplier_raw = rows[1][1] if len(rows[1]) > 1 else 1
-            multiplier = float(multiplier_raw) if isinstance(multiplier_raw, (int, float)) else 1.0
-            multiplier = multiplier or 1.0
-
-            t4_raw = rows[3][19] if len(rows) > 3 and len(rows[3]) > 19 else 0
-            t5_raw = rows[4][19] if len(rows) > 4 and len(rows[4]) > 19 else 0
-            t7_raw = rows[6][19] if len(rows) > 6 and len(rows[6]) > 19 else 0
-            t4 = _resolve_annual_expense_ref(workbook, t4_raw)
-            t5 = _resolve_annual_expense_ref(workbook, t5_raw)
-            t7 = float(t7_raw) if isinstance(t7_raw, (int, float)) else 0.0
-            t9 = (t7 * 3) / 64
-
-            common_area_water = 0.0
-            for r in range(2, min(5, len(rows))):
-                v = rows[r][2] if len(rows[r]) > 2 else 0
-                if isinstance(v, (int, float)):
-                    common_area_water += v
-            common_water_per_flat = common_area_water / 64
-
-            total_water = 0.0
-            for r in range(2, len(rows)):
-                flat_check = normalize_flat(rows[r][0] if rows[r] else "")
-                if not flat_check or flat_check in ("CH", "GYM", "BSMT", "MPFOWA", "TOTAL"):
-                    continue
-                v = rows[r][2] if len(rows[r]) > 2 else 0
-                if isinstance(v, (int, float)):
-                    total_water += v
-
-            for r in range(2, len(rows)):
-                row = rows[r]
+            for row in ws.iter_rows(min_row=3, values_only=True):
                 flat = normalize_flat(row[0] if row else "")
                 if not flat or flat in ("CH", "GYM", "BSMT", "MPFOWA", "TOTAL"):
                     continue
 
-                water_used = float(row[2]) if len(row) > 2 and isinstance(row[2], (int, float)) else 0.0
-                total_consumed = water_used + common_water_per_flat
-                water_pct = (total_consumed / total_water) if total_water > 0 else 0
-                water_expense = water_pct * t5
-
-                num_meters = float(row[7]) if len(row) > 7 and isinstance(row[7], (int, float)) else 0.0
-                meter_rent = t7 * num_meters
-                total_variable = water_expense + t9 + meter_rent
-                fixed_share = t4 / 64 if t4 else 0
-
-                def _rn(val):
-                    return float(val) if isinstance(val, (int, float)) else 0.0
-
-                parking = _rn(row[11] if len(row) > 11 else 0)
-                club_house = _rn(row[12] if len(row) > 12 else 0)
-                shifting = _rn(row[13] if len(row) > 13 else 0)
-                gym = _rn(row[14] if len(row) > 14 else 0)
-                covid_garbage = _rn(row[15] if len(row) > 15 else 0)
-                membership = _rn(row[16] if len(row) > 16 else 0)
-
-                total_expense = (total_variable + fixed_share + parking + club_house
-                               + shifting + gym + membership + covid_garbage) * multiplier
+                def _num(idx: int) -> float:
+                    v = row[idx] if len(row) > idx else 0
+                    return float(v) if isinstance(v, (int, float)) else 0.0
 
                 result.setdefault(flat, {})[month_label] = {
-                    "water_used_litres": water_used,
-                    "common_area_water_litres": common_water_per_flat,
-                    "total_fresh_water_consumed_litres": total_consumed,
-                    "water_expense": water_expense,
-                    "num_meters": num_meters,
-                    "meter_rent": meter_rent,
-                    "total_water_expense": total_variable,
-                    "fixed_expense": fixed_share,
-                    "parking_fee": parking,
-                    "club_house_fee": club_house,
-                    "shifting_fee": shifting,
-                    "gym_usage_fee": gym,
-                    "total_expense": total_expense,
+                    "water_used_litres": _num(2),
+                    "common_area_water_litres": _num(3),
+                    "total_fresh_water_consumed_litres": _num(4),
+                    "water_expense": _num(6),
+                    "num_meters": _num(7),
+                    "meter_rent": _num(8),
+                    "total_water_expense": _num(9),
+                    "fixed_expense": _num(10),
+                    "parking_fee": _num(11),
+                    "club_house_fee": _num(12),
+                    "shifting_fee": _num(13),
+                    "gym_usage_fee": _num(14),
+                    "total_expense": _num(17),
                 }
         return result
     finally:
