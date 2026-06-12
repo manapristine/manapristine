@@ -879,7 +879,7 @@
                 <th>Club House</th>
                 <th>Shifting</th>
                 <th>Gym</th>
-                <th>Annual Membership Fee</th>
+                <th>annual mem fee</th>
                 <th>Total Expense</th>
               </tr>
             </thead>
@@ -1449,7 +1449,7 @@
         tClub += Number(b.club_house_fee || 0);
         tShift += Number(b.shifting_fee || 0);
         tGym += Number(b.gym_usage_fee || 0);
-        tAnnual += Number(b.annual_membership_fee || 0);
+        tAnnual += Number(b.annual_mem_fee || 0);
         tTotal += Number(b.total_expense || 0);
         const tr = document.createElement("tr");
         tr.innerHTML = `
@@ -1465,7 +1465,7 @@
           <td>${formatAmount(b.club_house_fee)}</td>
           <td>${formatAmount(b.shifting_fee)}</td>
           <td>${formatAmount(b.gym_usage_fee)}</td>
-          <td>${formatAmount(b.annual_membership_fee)}</td>
+          <td>${formatAmount(b.annual_mem_fee)}</td>
           <td><strong>${formatAmount(b.total_expense)}</strong></td>
         `;
         breakdownBody.appendChild(tr);

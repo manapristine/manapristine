@@ -415,6 +415,18 @@ def load_expense_details(workbook_path: Path, expense_sheet_map: dict[str, str])
                 continue
             ws = workbook[sheet_name]
 
+            # Find ANNUAL MEMBERSHIP FEE column
+            headers = [str(cell.value).upper() if cell.value else "" for cell in ws[2]]
+            mem_fee_idx = -1
+            for i, h in enumerate(headers):
+                if "ANNUAL MEMBERSHIP" in h:
+                    mem_fee_idx = i
+                    break
+            
+            # Default to 16 if not found (legacy April format)
+            if mem_fee_idx == -1:
+                mem_fee_idx = 16
+
             for row in ws.iter_rows(min_row=3, values_only=True):
                 flat = normalize_flat(row[0] if row else "")
                 if not flat or flat in ("CH", "GYM", "BSMT", "MPFOWA", "TOTAL"):
@@ -437,7 +449,7 @@ def load_expense_details(workbook_path: Path, expense_sheet_map: dict[str, str])
                     "club_house_fee": _num(12),
                     "shifting_fee": _num(13),
                     "gym_usage_fee": _num(14),
-                    "annual_membership_fee": _num(16),
+                    "annual_mem_fee": _num(mem_fee_idx),
                     "total_expense": _num(17),
                 }
         return result
