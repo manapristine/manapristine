@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T12:36:53",
+  "generated_at": "2026-06-12T12:40:29",
   "financial_year": "2026-27",
   "cutoff_date": "2026-05-31",
   "sheet": "INCOME-EXPENSE-CYCLES",
@@ -120,6 +120,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5103.497235105779
         },
         {
@@ -136,6 +137,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5539.709538635806
         },
         {
@@ -152,6 +154,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -168,6 +171,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -184,6 +188,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -200,6 +205,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -216,6 +222,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -232,6 +239,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -248,6 +256,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -264,6 +273,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -280,6 +290,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -296,6 +307,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -415,6 +427,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5966.074286990471
         },
         {
@@ -431,6 +444,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6074.831998056307
         },
         {
@@ -447,6 +461,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -463,6 +478,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -479,6 +495,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -495,6 +512,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -511,6 +529,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -527,6 +546,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -543,6 +563,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -559,6 +580,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -575,6 +597,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -591,6 +614,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -710,6 +734,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6762.99058545273
         },
         {
@@ -726,6 +751,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6777.786858575646
         },
         {
@@ -742,6 +768,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -758,6 +785,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -774,6 +802,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -790,6 +819,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -806,6 +836,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -822,6 +853,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -838,6 +870,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -854,6 +887,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -870,6 +904,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -886,6 +921,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -1005,6 +1041,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5254.794031547106
         },
         {
@@ -1021,6 +1058,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5749.843286879757
         },
         {
@@ -1037,6 +1075,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1053,6 +1092,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1069,6 +1109,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1085,6 +1126,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1101,6 +1143,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1117,6 +1160,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1133,6 +1177,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1149,6 +1194,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1165,6 +1211,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1181,6 +1228,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -1300,6 +1348,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5032.332746117042
         },
         {
@@ -1316,6 +1365,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5554.984414898002
         },
         {
@@ -1332,6 +1382,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1348,6 +1399,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1364,6 +1416,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1380,6 +1433,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1396,6 +1450,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1412,6 +1467,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1428,6 +1484,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1444,6 +1501,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1460,6 +1518,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1476,6 +1535,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -1595,6 +1655,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5399.215769195613
         },
         {
@@ -1611,6 +1672,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5785.771891595587
         },
         {
@@ -1627,6 +1689,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1643,6 +1706,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1659,6 +1723,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1675,6 +1740,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1691,6 +1757,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1707,6 +1774,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1723,6 +1791,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1739,6 +1808,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1755,6 +1825,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1771,6 +1842,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -1890,6 +1962,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5331.158394065475
         },
         {
@@ -1906,6 +1979,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6017.942490755381
         },
         {
@@ -1922,6 +1996,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1938,6 +2013,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1954,6 +2030,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1970,6 +2047,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -1986,6 +2064,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2002,6 +2081,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2018,6 +2098,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2034,6 +2115,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2050,6 +2132,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2066,6 +2149,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -2185,6 +2269,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5025.404691680905
         },
         {
@@ -2201,6 +2286,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5333.221320302054
         },
         {
@@ -2217,6 +2303,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2233,6 +2320,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2249,6 +2337,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2265,6 +2354,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2281,6 +2371,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2297,6 +2388,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2313,6 +2405,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2329,6 +2422,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2345,6 +2439,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2361,6 +2456,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -2480,6 +2576,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 4941.086864886251
         },
         {
@@ -2496,6 +2593,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5537.881263008947
         },
         {
@@ -2512,6 +2610,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2528,6 +2627,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2544,6 +2644,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2560,6 +2661,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2576,6 +2678,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2592,6 +2695,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2608,6 +2712,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2624,6 +2729,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2640,6 +2746,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2656,6 +2763,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -2775,6 +2883,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5732.917057869528
         },
         {
@@ -2791,6 +2900,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6145.267768759131
         },
         {
@@ -2807,6 +2917,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2823,6 +2934,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2839,6 +2951,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2855,6 +2968,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2871,6 +2985,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2887,6 +3002,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2903,6 +3019,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2919,6 +3036,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2935,6 +3053,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -2951,6 +3070,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -3070,6 +3190,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 4680.217418020762
         },
         {
@@ -3086,6 +3207,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5336.106163760774
         },
         {
@@ -3102,6 +3224,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -3118,6 +3241,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -3134,6 +3258,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -3150,6 +3275,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -3166,6 +3292,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -3182,6 +3309,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -3198,6 +3326,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -3214,6 +3343,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -3230,6 +3360,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -3246,6 +3377,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -3365,6 +3497,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 4577.694366847407
         },
         {
@@ -3381,6 +3514,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5799.382435093136
         },
         {
@@ -3397,6 +3531,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -3413,6 +3548,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -3429,6 +3565,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -3445,6 +3582,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -3461,6 +3599,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -3477,6 +3616,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -3493,6 +3633,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -3509,6 +3650,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -3525,6 +3667,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -3541,6 +3684,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -3660,6 +3804,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 4991.406418159244
         },
         {
@@ -3676,6 +3821,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5523.346090197705
         },
         {
@@ -3692,6 +3838,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -3708,6 +3855,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -3724,6 +3872,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -3740,6 +3889,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -3756,6 +3906,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -3772,6 +3923,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -3788,6 +3940,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -3804,6 +3957,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -3820,6 +3974,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -3836,6 +3991,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -3955,6 +4111,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 4751.659271224515
         },
         {
@@ -3971,6 +4128,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5773.513797310278
         },
         {
@@ -3987,6 +4145,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4003,6 +4162,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4019,6 +4179,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4035,6 +4196,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4051,6 +4213,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4067,6 +4230,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4083,6 +4247,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4099,6 +4264,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4115,6 +4281,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4131,6 +4298,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -4250,6 +4418,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5906.95045573851
         },
         {
@@ -4266,6 +4435,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6510.790897953873
         },
         {
@@ -4282,6 +4452,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4298,6 +4469,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4314,6 +4486,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4330,6 +4503,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4346,6 +4520,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4362,6 +4537,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4378,6 +4554,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4394,6 +4571,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4410,6 +4588,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4426,6 +4605,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -4545,6 +4725,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6307.7024864395335
         },
         {
@@ -4561,6 +4742,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6384.339924107398
         },
         {
@@ -4577,6 +4759,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4593,6 +4776,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4609,6 +4793,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4625,6 +4810,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4641,6 +4827,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4657,6 +4844,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4673,6 +4861,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4689,6 +4878,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4705,6 +4895,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4721,6 +4912,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -4840,6 +5032,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6015.265662345765
         },
         {
@@ -4856,6 +5049,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5767.057394286456
         },
         {
@@ -4872,6 +5066,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4888,6 +5083,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4904,6 +5100,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4920,6 +5117,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4936,6 +5134,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4952,6 +5151,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4968,6 +5168,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -4984,6 +5185,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5000,6 +5202,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5016,6 +5219,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -5135,6 +5339,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6657.846599679451
         },
         {
@@ -5151,6 +5356,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6616.22095380939
         },
         {
@@ -5167,6 +5373,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5183,6 +5390,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5199,6 +5407,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5215,6 +5424,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5231,6 +5441,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5247,6 +5458,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5263,6 +5475,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5279,6 +5492,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5295,6 +5509,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5311,6 +5526,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -5430,6 +5646,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6034.44324524182
         },
         {
@@ -5446,6 +5663,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6284.353000538969
         },
         {
@@ -5462,6 +5680,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5478,6 +5697,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5494,6 +5714,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5510,6 +5731,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5526,6 +5748,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5542,6 +5765,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5558,6 +5782,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5574,6 +5799,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5590,6 +5816,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5606,6 +5833,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -5725,6 +5953,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 7010.144244997733
         },
         {
@@ -5741,6 +5970,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6952.009335369866
         },
         {
@@ -5757,6 +5987,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5773,6 +6004,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5789,6 +6021,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5805,6 +6038,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5821,6 +6055,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5837,6 +6072,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5853,6 +6089,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5869,6 +6106,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5885,6 +6123,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -5901,6 +6140,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -6020,6 +6260,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5754.552034880622
         },
         {
@@ -6036,6 +6277,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6079.951954039911
         },
         {
@@ -6052,6 +6294,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6068,6 +6311,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6084,6 +6328,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6100,6 +6345,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6116,6 +6362,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6132,6 +6379,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6148,6 +6396,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6164,6 +6413,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6180,6 +6430,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6196,6 +6447,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -6315,6 +6567,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5364.940131458936
         },
         {
@@ -6331,6 +6584,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5267.6466093750005
         },
         {
@@ -6347,6 +6601,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6363,6 +6618,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6379,6 +6635,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6395,6 +6652,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6411,6 +6669,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6427,6 +6686,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6443,6 +6703,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6459,6 +6720,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6475,6 +6737,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6491,6 +6754,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -6610,6 +6874,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 4784.685186228823
         },
         {
@@ -6626,6 +6891,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5777.7461091527375
         },
         {
@@ -6642,6 +6908,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6658,6 +6925,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6674,6 +6942,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6690,6 +6959,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6706,6 +6976,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6722,6 +6993,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6738,6 +7010,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6754,6 +7027,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6770,6 +7044,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6786,6 +7061,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -6905,6 +7181,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 4995.079260420974
         },
         {
@@ -6921,6 +7198,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5267.6466093750005
         },
         {
@@ -6937,6 +7215,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6953,6 +7232,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6969,6 +7249,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -6985,6 +7266,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7001,6 +7283,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7017,6 +7300,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7033,6 +7317,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7049,6 +7334,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7065,6 +7351,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7081,6 +7368,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -7200,6 +7488,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5791.144800860029
         },
         {
@@ -7216,6 +7505,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6263.588316567693
         },
         {
@@ -7232,6 +7522,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7248,6 +7539,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7264,6 +7556,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7280,6 +7573,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7296,6 +7590,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7312,6 +7607,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7328,6 +7624,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7344,6 +7641,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7360,6 +7658,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7376,6 +7675,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -7495,6 +7795,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 4892.252347210945
         },
         {
@@ -7511,6 +7812,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5454.236804878095
         },
         {
@@ -7527,6 +7829,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7543,6 +7846,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7559,6 +7863,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7575,6 +7880,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7591,6 +7897,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7607,6 +7914,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7623,6 +7931,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7639,6 +7948,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7655,6 +7965,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7671,6 +7982,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -7790,6 +8102,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 4716.741634828816
         },
         {
@@ -7806,6 +8119,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5389.660693609829
         },
         {
@@ -7822,6 +8136,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7838,6 +8153,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7854,6 +8170,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7870,6 +8187,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7886,6 +8204,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7902,6 +8221,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7918,6 +8238,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7934,6 +8255,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7950,6 +8272,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -7966,6 +8289,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -8085,6 +8409,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5931.642829853448
         },
         {
@@ -8101,6 +8426,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6092.711838568864
         },
         {
@@ -8117,6 +8443,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -8133,6 +8460,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -8149,6 +8477,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -8165,6 +8494,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -8181,6 +8511,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -8197,6 +8528,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -8213,6 +8545,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -8229,6 +8562,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -8245,6 +8579,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -8261,6 +8596,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -8380,6 +8716,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5181.684825523664
         },
         {
@@ -8396,6 +8733,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5931.99526167713
         },
         {
@@ -8412,6 +8750,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -8428,6 +8767,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -8444,6 +8784,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -8460,6 +8801,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -8476,6 +8818,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -8492,6 +8835,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -8508,6 +8852,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -8524,6 +8869,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -8540,6 +8886,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -8556,6 +8903,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -8675,6 +9023,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6116.5467675507725
         },
         {
@@ -8691,6 +9040,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6156.347318351416
         },
         {
@@ -8707,6 +9057,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -8723,6 +9074,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -8739,6 +9091,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -8755,6 +9108,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -8771,6 +9125,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -8787,6 +9142,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -8803,6 +9159,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -8819,6 +9176,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -8835,6 +9193,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -8851,6 +9210,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -8970,6 +9330,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 4694.776297959392
         },
         {
@@ -8986,6 +9347,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5929.480269943886
         },
         {
@@ -9002,6 +9364,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9018,6 +9381,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9034,6 +9398,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9050,6 +9415,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9066,6 +9432,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9082,6 +9449,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9098,6 +9466,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9114,6 +9483,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9130,6 +9500,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9146,6 +9517,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -9265,6 +9637,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5003.648169855142
         },
         {
@@ -9281,6 +9654,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 10775.071668278939
         },
         {
@@ -9297,6 +9671,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9313,6 +9688,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9329,6 +9705,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9345,6 +9722,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9361,6 +9739,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9377,6 +9756,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9393,6 +9773,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9409,6 +9790,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9425,6 +9807,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9441,6 +9824,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -9560,6 +9944,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 4573.98725
         },
         {
@@ -9576,6 +9961,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5453.127249701664
         },
         {
@@ -9592,6 +9978,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9608,6 +9995,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9624,6 +10012,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9640,6 +10029,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9656,6 +10046,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9672,6 +10063,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9688,6 +10080,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9704,6 +10097,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9720,6 +10114,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9736,6 +10131,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -9855,6 +10251,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 7522.881045679182
         },
         {
@@ -9871,6 +10268,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 7766.01599797197
         },
         {
@@ -9887,6 +10285,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9903,6 +10302,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9919,6 +10319,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9935,6 +10336,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9951,6 +10353,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9967,6 +10370,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9983,6 +10387,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -9999,6 +10404,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10015,6 +10421,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10031,6 +10438,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -10150,6 +10558,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5247.501342666962
         },
         {
@@ -10166,6 +10575,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6737.4953345932645
         },
         {
@@ -10182,6 +10592,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10198,6 +10609,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10214,6 +10626,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10230,6 +10643,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10246,6 +10660,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10262,6 +10677,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10278,6 +10694,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10294,6 +10711,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10310,6 +10728,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10326,6 +10745,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -10445,6 +10865,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6032.281936399434
         },
         {
@@ -10461,6 +10882,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5611.127906825395
         },
         {
@@ -10477,6 +10899,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10493,6 +10916,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10509,6 +10933,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10525,6 +10950,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10541,6 +10967,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10557,6 +10984,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10573,6 +11001,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10589,6 +11018,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10605,6 +11035,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10621,6 +11052,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -10740,6 +11172,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 4848.0708070787405
         },
         {
@@ -10756,6 +11189,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5327.562588902258
         },
         {
@@ -10772,6 +11206,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10788,6 +11223,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10804,6 +11240,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10820,6 +11257,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10836,6 +11274,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10852,6 +11291,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10868,6 +11308,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10884,6 +11325,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10900,6 +11342,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -10916,6 +11359,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -11035,6 +11479,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 4574.169567222004
         },
         {
@@ -11051,6 +11496,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5487.967282241588
         },
         {
@@ -11067,6 +11513,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11083,6 +11530,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11099,6 +11547,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11115,6 +11564,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11131,6 +11581,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11147,6 +11598,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11163,6 +11615,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11179,6 +11632,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11195,6 +11649,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11211,6 +11666,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -11330,6 +11786,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5067.70228718574
         },
         {
@@ -11346,6 +11803,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5596.296852633772
         },
         {
@@ -11362,6 +11820,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11378,6 +11837,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11394,6 +11854,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11410,6 +11871,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11426,6 +11888,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11442,6 +11905,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11458,6 +11922,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11474,6 +11939,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11490,6 +11956,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11506,6 +11973,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -11625,6 +12093,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5645.283246493133
         },
         {
@@ -11641,6 +12110,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6075.846599887118
         },
         {
@@ -11657,6 +12127,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11673,6 +12144,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11689,6 +12161,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11705,6 +12178,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11721,6 +12195,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11737,6 +12212,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11753,6 +12229,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11769,6 +12246,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11785,6 +12263,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11801,6 +12280,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -11920,6 +12400,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6319.465835640775
         },
         {
@@ -11936,6 +12417,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5476.892713477807
         },
         {
@@ -11952,6 +12434,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11968,6 +12451,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -11984,6 +12468,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12000,6 +12485,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12016,6 +12502,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12032,6 +12519,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12048,6 +12536,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12064,6 +12553,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12080,6 +12570,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12096,6 +12587,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -12215,6 +12707,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 4623.942168828986
         },
         {
@@ -12231,6 +12724,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5359.628733501105
         },
         {
@@ -12247,6 +12741,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12263,6 +12758,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12279,6 +12775,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12295,6 +12792,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12311,6 +12809,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12327,6 +12826,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12343,6 +12843,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12359,6 +12860,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12375,6 +12877,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12391,6 +12894,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -12510,6 +13014,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 4823.214892478916
         },
         {
@@ -12526,6 +13031,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5779.5583826075745
         },
         {
@@ -12542,6 +13048,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12558,6 +13065,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12574,6 +13082,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12590,6 +13099,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12606,6 +13116,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12622,6 +13133,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12638,6 +13150,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12654,6 +13167,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12670,6 +13184,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12686,6 +13201,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -12805,6 +13321,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 4837.253318573194
         },
         {
@@ -12821,6 +13338,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5387.663494292254
         },
         {
@@ -12837,6 +13355,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12853,6 +13372,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12869,6 +13389,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12885,6 +13406,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12901,6 +13423,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12917,6 +13440,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12933,6 +13457,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12949,6 +13474,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12965,6 +13491,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -12981,6 +13508,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -13100,6 +13628,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 4693.986256664043
         },
         {
@@ -13116,6 +13645,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5391.530935237738
         },
         {
@@ -13132,6 +13662,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -13148,6 +13679,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -13164,6 +13696,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -13180,6 +13713,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -13196,6 +13730,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -13212,6 +13747,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -13228,6 +13764,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -13244,6 +13781,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -13260,6 +13798,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -13276,6 +13815,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -13395,6 +13935,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5302.014192046037
         },
         {
@@ -13411,6 +13952,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6036.515359296901
         },
         {
@@ -13427,6 +13969,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -13443,6 +13986,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -13459,6 +14003,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -13475,6 +14020,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -13491,6 +14037,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -13507,6 +14054,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -13523,6 +14071,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -13539,6 +14088,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -13555,6 +14105,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -13571,6 +14122,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -13690,6 +14242,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6465.198068428983
         },
         {
@@ -13706,6 +14259,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6572.985287101141
         },
         {
@@ -13722,6 +14276,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -13738,6 +14293,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -13754,6 +14310,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -13770,6 +14327,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -13786,6 +14344,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -13802,6 +14361,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -13818,6 +14378,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -13834,6 +14395,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -13850,6 +14412,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -13866,6 +14429,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -13985,6 +14549,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 4934.367625493776
         },
         {
@@ -14001,6 +14566,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5484.712587057391
         },
         {
@@ -14017,6 +14583,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14033,6 +14600,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14049,6 +14617,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14065,6 +14634,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14081,6 +14651,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14097,6 +14668,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14113,6 +14685,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14129,6 +14702,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14145,6 +14719,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14161,6 +14736,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -14280,6 +14856,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6592.299669987148
         },
         {
@@ -14296,6 +14873,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6342.250797748127
         },
         {
@@ -14312,6 +14890,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14328,6 +14907,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14344,6 +14924,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14360,6 +14941,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14376,6 +14958,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14392,6 +14975,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14408,6 +14992,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14424,6 +15009,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14440,6 +15026,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14456,6 +15043,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -14575,6 +15163,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6223.4454320522145
         },
         {
@@ -14591,6 +15180,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6465.247479469721
         },
         {
@@ -14607,6 +15197,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14623,6 +15214,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14639,6 +15231,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14655,6 +15248,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14671,6 +15265,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14687,6 +15282,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14703,6 +15299,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14719,6 +15316,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14735,6 +15333,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14751,6 +15350,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -14870,6 +15470,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5572.694494314044
         },
         {
@@ -14886,6 +15487,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5972.49402561685
         },
         {
@@ -14902,6 +15504,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14918,6 +15521,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14934,6 +15538,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14950,6 +15555,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14966,6 +15572,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14982,6 +15589,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -14998,6 +15606,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15014,6 +15623,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15030,6 +15640,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15046,6 +15657,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -15165,6 +15777,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 4733.609866246158
         },
         {
@@ -15181,6 +15794,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5392.048727653406
         },
         {
@@ -15197,6 +15811,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15213,6 +15828,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15229,6 +15845,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15245,6 +15862,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15261,6 +15879,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15277,6 +15896,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15293,6 +15913,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15309,6 +15930,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15325,6 +15947,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15341,6 +15964,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -15460,6 +16084,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5007.172969480545
         },
         {
@@ -15476,6 +16101,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5622.667280660275
         },
         {
@@ -15492,6 +16118,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15508,6 +16135,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15524,6 +16152,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15540,6 +16169,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15556,6 +16186,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15572,6 +16203,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15588,6 +16220,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15604,6 +16237,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15620,6 +16254,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15636,6 +16271,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -15755,6 +16391,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6494.213004549213
         },
         {
@@ -15771,6 +16408,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6389.73975929936
         },
         {
@@ -15787,6 +16425,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15803,6 +16442,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15819,6 +16459,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15835,6 +16476,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15851,6 +16493,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15867,6 +16510,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15883,6 +16527,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15899,6 +16544,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15915,6 +16561,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -15931,6 +16578,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -16050,6 +16698,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6253.675816319135
         },
         {
@@ -16066,6 +16715,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6162.650799856545
         },
         {
@@ -16082,6 +16732,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16098,6 +16749,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16114,6 +16766,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16130,6 +16783,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16146,6 +16800,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16162,6 +16817,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16178,6 +16834,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16194,6 +16851,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16210,6 +16868,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16226,6 +16885,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -16345,6 +17005,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5187.545474449436
         },
         {
@@ -16361,6 +17022,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5793.2059112776715
         },
         {
@@ -16377,6 +17039,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16393,6 +17056,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16409,6 +17073,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16425,6 +17090,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16441,6 +17107,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16457,6 +17124,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16473,6 +17141,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16489,6 +17158,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16505,6 +17175,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16521,6 +17192,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -16640,6 +17312,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 4766.548511021475
         },
         {
@@ -16656,6 +17329,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5455.626239262885
         },
         {
@@ -16672,6 +17346,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16688,6 +17363,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16704,6 +17380,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16720,6 +17397,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16736,6 +17414,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16752,6 +17431,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16768,6 +17448,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16784,6 +17465,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16800,6 +17482,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16816,6 +17499,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -16935,6 +17619,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5334.318559246871
         },
         {
@@ -16951,6 +17636,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 8165.560505082085
         },
         {
@@ -16967,6 +17653,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16983,6 +17670,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -16999,6 +17687,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17015,6 +17704,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17031,6 +17721,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17047,6 +17738,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17063,6 +17755,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17079,6 +17772,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17095,6 +17789,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17111,6 +17806,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -17230,6 +17926,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5185.904619451405
         },
         {
@@ -17246,6 +17943,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5757.5522049416995
         },
         {
@@ -17262,6 +17960,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17278,6 +17977,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17294,6 +17994,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17310,6 +18011,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17326,6 +18028,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17342,6 +18045,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17358,6 +18062,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17374,6 +18079,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17390,6 +18096,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17406,6 +18113,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -17525,6 +18233,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 4799.8175156551215
         },
         {
@@ -17541,6 +18250,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5606.171893704005
         },
         {
@@ -17557,6 +18267,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17573,6 +18284,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17589,6 +18301,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17605,6 +18318,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17621,6 +18335,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17637,6 +18352,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17653,6 +18369,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17669,6 +18386,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17685,6 +18403,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17701,6 +18420,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -17820,6 +18540,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 4692.345401666011
         },
         {
@@ -17836,6 +18557,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 7008.2267976423545
         },
         {
@@ -17852,6 +18574,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17868,6 +18591,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17884,6 +18608,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17900,6 +18625,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17916,6 +18642,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17932,6 +18659,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17948,6 +18676,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17964,6 +18693,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17980,6 +18710,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -17996,6 +18727,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -18115,6 +18847,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5350.692890320997
         },
         {
@@ -18131,6 +18864,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6141.035456916672
         },
         {
@@ -18147,6 +18881,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -18163,6 +18898,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -18179,6 +18915,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -18195,6 +18932,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -18211,6 +18949,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -18227,6 +18966,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -18243,6 +18983,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -18259,6 +19000,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -18275,6 +19017,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -18291,6 +19034,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -18410,6 +19154,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5568.744287837299
         },
         {
@@ -18426,6 +19171,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5847.225246197824
         },
         {
@@ -18442,6 +19188,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -18458,6 +19205,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -18474,6 +19222,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -18490,6 +19239,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -18506,6 +19256,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -18522,6 +19273,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -18538,6 +19290,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -18554,6 +19307,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -18570,6 +19324,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -18586,6 +19341,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]
@@ -18705,6 +19461,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 5849.05312828582
         },
         {
@@ -18721,6 +19478,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 6175.891491628618
         },
         {
@@ -18737,6 +19495,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -18753,6 +19512,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -18769,6 +19529,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -18785,6 +19546,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -18801,6 +19563,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -18817,6 +19580,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -18833,6 +19597,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -18849,6 +19614,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -18865,6 +19631,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         },
         {
@@ -18881,6 +19648,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
+          "annual_membership_fee": 0.0,
           "total_expense": 0.0
         }
       ]

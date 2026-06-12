@@ -437,6 +437,7 @@ def load_expense_details(workbook_path: Path, expense_sheet_map: dict[str, str])
                     "club_house_fee": _num(12),
                     "shifting_fee": _num(13),
                     "gym_usage_fee": _num(14),
+                    "annual_membership_fee": _num(16),
                     "total_expense": _num(17),
                 }
         return result
