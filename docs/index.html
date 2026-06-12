@@ -879,6 +879,7 @@
                 <th>Club House</th>
                 <th>Shifting</th>
                 <th>Gym</th>
+                <th>Annual Membership Fee</th>
                 <th>Total Expense</th>
               </tr>
             </thead>
@@ -1435,7 +1436,7 @@
       breakdownBody.innerHTML = "";
       const breakdown = report.expense_breakdown || [];
       let tWater = 0, tCommon = 0, tFresh = 0, tMeterRent = 0, tWaterExp = 0;
-      let tFixed = 0, tParking = 0, tClub = 0, tShift = 0, tGym = 0, tTotal = 0;
+      let tFixed = 0, tParking = 0, tClub = 0, tShift = 0, tGym = 0, tAnnual = 0, tTotal = 0;
       for (const b of breakdown) {
         if (b.total_expense === undefined || b.total_expense === null) continue;
         tWater += Number(b.water_used_litres || 0);
@@ -1448,6 +1449,7 @@
         tClub += Number(b.club_house_fee || 0);
         tShift += Number(b.shifting_fee || 0);
         tGym += Number(b.gym_usage_fee || 0);
+        tAnnual += Number(b.annual_membership_fee || 0);
         tTotal += Number(b.total_expense || 0);
         const tr = document.createElement("tr");
         tr.innerHTML = `
@@ -1463,6 +1465,7 @@
           <td>${formatAmount(b.club_house_fee)}</td>
           <td>${formatAmount(b.shifting_fee)}</td>
           <td>${formatAmount(b.gym_usage_fee)}</td>
+          <td>${formatAmount(b.annual_membership_fee)}</td>
           <td><strong>${formatAmount(b.total_expense)}</strong></td>
         `;
         breakdownBody.appendChild(tr);
@@ -1482,6 +1485,7 @@
         <td>${formatAmount(tClub)}</td>
         <td>${formatAmount(tShift)}</td>
         <td>${formatAmount(tGym)}</td>
+        <td>${formatAmount(tAnnual)}</td>
         <td><strong>${formatAmount(tTotal)}</strong></td>
       `;
       breakdownBody.appendChild(totalRow2);
