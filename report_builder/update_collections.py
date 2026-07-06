@@ -138,8 +138,23 @@ def find_flat_in_description(description, flat_to_names, name_part_to_flats, fla
 
 def update_collection_sheet(workbook_path, month, year, transactions):
     wb = openpyxl.load_workbook(workbook_path)
-    sheet_name = f"{datetime(year, month, 1).strftime('%b')}{year}-COLLECTION"
-    if sheet_name not in wb.sheetnames: return
+    
+    # Generate candidate sheet names since June/July sheets use full names (e.g. "June2026-COLLECTION")
+    # while others use 3-letter abbreviations (e.g. "Apr2026-COLLECTION").
+    abbrev = datetime(year, month, 1).strftime('%b')
+    full = datetime(year, month, 1).strftime('%B')
+    candidates = [f"{abbrev}{year}-COLLECTION", f"{full}{year}-COLLECTION"]
+    
+    sheet_name = None
+    for cand in candidates:
+        if cand in wb.sheetnames:
+            sheet_name = cand
+            break
+            
+    if not sheet_name:
+        print(f"Error: Could not find collection sheet in workbook. Tried: {candidates}")
+        return False
+        
     sheet = wb[sheet_name]
     flat_to_row = {str(sheet.cell(r, 1).value).strip().lower(): r for r in range(1, sheet.max_row + 1) if sheet.cell(r, 1).value}
     updates = 0
@@ -155,8 +170,11 @@ def update_collection_sheet(workbook_path, month, year, transactions):
             elif float(str(a_cell.value).replace(',', '')) == amt and str(d_cell.value).strip() == str(dt).strip():
                 break
     if updates > 0:
-        try: wb.save(workbook_path)
-        except PermissionError: return False
+        try: 
+            wb.save(workbook_path)
+        except PermissionError: 
+            print(f"Error: Permission denied saving workbook to {workbook_path}. Is it open in Excel?")
+            return False
     return True
 
 def create_report(statement_file):
@@ -231,9 +249,7 @@ def update_from_report(statement_file):
     print(f"Updating workbook: {workbook_path.name}")
     
     success = update_collection_sheet(workbook_path, month, year, transactions)
-    if success is False:
-        print("Error: Could not save workbook. Is it open in Excel?")
-    else:
+    if success:
         print("Successfully updated the collection sheet.")
 
 def main():
