@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T13:33:05",
+  "generated_at": "2026-07-07T08:06:25",
   "financial_year": "2026-27",
   "cutoff_date": "2026-06-30",
   "sheet": "INCOME-EXPENSE-CYCLES",
@@ -2466,7 +2466,7 @@
       "owner_name": "Vijay Suswaram",
       "email": "vijay.suswaram@gmail.com",
       "sheet_email": "vijay.suswaram@gmail.com",
-      "occupant": "Vijay Suswaram",
+      "occupant": "Harsh Vardhan",
       "balance_from_last_fy": -597.2575926244244,
       "monthly": [
         {
@@ -2485,10 +2485,10 @@
         },
         {
           "month": "Jun 2026",
-          "collection": 0,
+          "collection": 5538,
           "expense": 5807.770140612889,
           "late_fee": 0,
-          "net_collection_minus_expense": -5807.770140612889
+          "net_collection_minus_expense": -269.770140612889
         },
         {
           "month": "Jul 2026",
@@ -2555,11 +2555,11 @@
         }
       ],
       "totals": {
-        "collection": 10233,
+        "collection": 15771,
         "expense": 16300.803088434277,
         "late_fee": 0,
-        "net_collection_minus_expense": -6067.803088434277,
-        "closing_balance": -6665.060681058701
+        "net_collection_minus_expense": -529.803088434277,
+        "closing_balance": -1127.0606810587014
       },
       "expense_breakdown": [
         {
@@ -15379,10 +15379,10 @@
         },
         {
           "month": "Jun 2026",
-          "collection": 11510,
+          "collection": 5972,
           "expense": 6472.381857234142,
           "late_fee": 0,
-          "net_collection_minus_expense": 5037.618142765858
+          "net_collection_minus_expense": -500.38185723414244
         },
         {
           "month": "Jul 2026",
@@ -15449,11 +15449,11 @@
         }
       ],
       "totals": {
-        "collection": 18452,
+        "collection": 12914,
         "expense": 18073.350416412948,
         "late_fee": 0,
-        "net_collection_minus_expense": 378.6495835870519,
-        "closing_balance": 4440.533754447584
+        "net_collection_minus_expense": -5159.350416412948,
+        "closing_balance": -1097.4662455524162
       },
       "expense_breakdown": [
         {
