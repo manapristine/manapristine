@@ -1,3 +1,79 @@
+"""
+Bank Statement Maintenance Collections Update Script
+
+Overview:
+---------
+This script parses raw bank statements (tab-separated Excel/CSV exports), matches
+credit transactions against flat owners/occupants using fuzzy matching rules, and automates
+the update of monthly maintenance collection sheets in the society financial workbook.
+
+Pre-conditions:
+---------------
+1. Bank Statement Filename Convention:
+   The bank statement filename MUST contain the month and year in the format '<Month>-<YYYY>.xls'
+   (e.g., 'March-2026.xls' or 'July-2026.xls').
+
+2. Bank Statement File Format:
+   The bank statement file MUST be a tab-separated text/CSV export containing header columns
+   'Txn Date', 'Description', and 'Credit'.
+
+3. Mapping Files Existence:
+   - 'db/members.csv' MUST exist with headers 'flat' and 'name' (flat owner mappings).
+   - 'db/occupants.csv' MUST exist with headers 'flat' and 'name' (resident/occupant mappings).
+
+4. Financial Year Configuration in workbooks.json:
+   - 'db/workbooks.json' MUST exist and contain an entry for the resolved Financial Year
+     (e.g., "2026-27": {"workbook": "db/accounts/2026-2027-INCOME-EXPENDITURE-ACCOUNT-8.10.26-gold.xlsx"}).
+
+5. Target Workbook & Collection Sheet Existence:
+   - The target financial workbook specified in 'db/workbooks.json' MUST exist.
+   - The workbook MUST contain a monthly collection sheet named '{MonthAbbr}{Year}-COLLECTION'
+     or '{MonthFull}{Year}-COLLECTION' (e.g. 'Jul2026-COLLECTION' or 'July2026-COLLECTION').
+
+6. Interactive Workflow Sequential Execution:
+   - Option 1 MUST be executed first to parse bank transactions and create the CSV report.
+   - The generated '*_processing_report_*.csv' file MUST be reviewed (and any 'NOT MATCHED'
+     rows manually updated) before selecting Option 2.
+
+7. File Lock / Write Access:
+   The target society financial workbook MUST NOT be open in Microsoft Excel or locked
+   by another application.
+
+Workflow:
+---------
+1. Run Option 1:
+   - Parses the bank statement credit entries.
+   - Matches transaction descriptions against flat numbers and member/occupant names.
+   - Outputs a CSV file (e.g., 'July-2026_processing_report_20260810-104500.csv') listing all
+     matched and unmatched transactions.
+   - User reviews the CSV and fills in flat numbers for any 'NOT MATCHED' rows.
+
+2. Run Option 2:
+   - Reads the latest CSV processing report.
+   - Resolves the Financial Year workbook path via 'db/workbooks.json'.
+   - Injects payment amounts and transaction dates into empty collection columns (C/D, E/F, G/H, I/J)
+     in the corresponding collection sheet.
+   - Saves the updated workbook.
+
+Usage:
+------
+python report_builder/update_collections.py <path_to_bank_statement_xls>
+
+Examples:
+---------
+1. Interactive execution for March 2026 bank statement:
+   python report_builder/update_collections.py db/bankstatements/2025-2026/March-2026.xls
+
+2. Interactive execution for July 2026 bank statement:
+   python report_builder/update_collections.py "C:\github\manapristine\db\bankstatements\2026-2027\July-2026.xls"
+
+Dependencies:
+-------------
+- pandas, openpyxl
+- db/members.csv, db/occupants.csv
+- db/workbooks.json
+"""
+
 import os
 import re
 import json
