@@ -853,9 +853,9 @@
               <tr>
                 <th>Month</th>
                 <th>Collection</th>
-                <th>Expense</th>
                 <th>Late Fee</th>
-                <th>Net</th>
+                <th>Total Expense</th>
+                <th>Collection - Total Expense</th>
               </tr>
             </thead>
             <tbody id="monthly-body"></tbody>
@@ -880,6 +880,7 @@
                 <th>Shifting</th>
                 <th>Gym</th>
                 <th>annual mem fee</th>
+                <th>Late Fee</th>
                 <th>Total Expense</th>
               </tr>
             </thead>
@@ -1411,8 +1412,8 @@
         tr.innerHTML = `
           <td>${esc(month.month)}</td>
           <td class="${Number(month.collection) < 0 ? "negative-text" : ""}">${formatAmount(month.collection)}</td>
-          <td class="${Number(month.expense) < 0 ? "negative-text" : ""}">${formatAmount(month.expense)}</td>
           <td class="${Number(month.late_fee) < 0 ? "negative-text" : ""}">${formatAmount(month.late_fee)}</td>
+          <td class="${Number(month.expense) < 0 ? "negative-text" : ""}">${formatAmount(month.expense)}</td>
           <td class="${netValue < 0 ? "negative-text" : netValue > 0 ? "positive-text" : ""}">${formatAmount(month.net_collection_minus_expense)}</td>
         `;
         body.appendChild(tr);
@@ -1425,8 +1426,8 @@
       totalRow1.innerHTML = `
         <td>Total</td>
         <td class="${sumColl < 0 ? "negative-text" : ""}">${formatAmount(sumColl)}</td>
-        <td class="${sumExp < 0 ? "negative-text" : ""}">${formatAmount(sumExp)}</td>
         <td class="${sumLate < 0 ? "negative-text" : ""}">${formatAmount(sumLate)}</td>
+        <td class="${sumExp < 0 ? "negative-text" : ""}">${formatAmount(sumExp)}</td>
         <td class="${totalOutstanding < 0 ? "negative-text" : totalOutstanding > 0 ? "positive-text" : ""}">${formatAmount(totalOutstanding)}</td>
       `;
       body.appendChild(totalRow1);
@@ -1436,7 +1437,7 @@
       breakdownBody.innerHTML = "";
       const breakdown = report.expense_breakdown || [];
       let tWater = 0, tCommon = 0, tFresh = 0, tMeterRent = 0, tWaterExp = 0;
-      let tFixed = 0, tParking = 0, tClub = 0, tShift = 0, tGym = 0, tAnnual = 0, tTotal = 0;
+      let tFixed = 0, tParking = 0, tClub = 0, tShift = 0, tGym = 0, tAnnual = 0, tLateFee = 0, tTotal = 0;
       for (const b of breakdown) {
         if (b.total_expense === undefined || b.total_expense === null) continue;
         tWater += Number(b.water_used_litres || 0);
@@ -1450,6 +1451,7 @@
         tShift += Number(b.shifting_fee || 0);
         tGym += Number(b.gym_usage_fee || 0);
         tAnnual += Number(b.annual_mem_fee || 0);
+        tLateFee += Number(b.late_fee || 0);
         tTotal += Number(b.total_expense || 0);
         const tr = document.createElement("tr");
         tr.innerHTML = `
@@ -1466,6 +1468,7 @@
           <td>${formatAmount(b.shifting_fee)}</td>
           <td>${formatAmount(b.gym_usage_fee)}</td>
           <td>${formatAmount(b.annual_mem_fee)}</td>
+          <td>${formatAmount(b.late_fee)}</td>
           <td><strong>${formatAmount(b.total_expense)}</strong></td>
         `;
         breakdownBody.appendChild(tr);
@@ -1486,6 +1489,7 @@
         <td>${formatAmount(tShift)}</td>
         <td>${formatAmount(tGym)}</td>
         <td>${formatAmount(tAnnual)}</td>
+        <td>${formatAmount(tLateFee)}</td>
         <td><strong>${formatAmount(tTotal)}</strong></td>
       `;
       breakdownBody.appendChild(totalRow2);
