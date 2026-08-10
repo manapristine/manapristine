@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T13:48:53",
+  "generated_at": "2026-08-10T13:55:26",
   "financial_year": "2026-27",
   "cutoff_date": "2026-08-08",
   "sheet": "INCOME-EXPENSE-CYCLES",
@@ -674,10 +674,10 @@
         },
         {
           "month": "Jul 2026",
-          "collection": 12000.0,
+          "collection": 6000.0,
           "expense": 6968.493134792356,
           "late_fee": 0.0,
-          "net_collection_minus_expense": 5031.506865207644
+          "net_collection_minus_expense": -968.4931347923557
         },
         {
           "month": "Aug 2026",
@@ -737,11 +737,11 @@
         }
       ],
       "totals": {
-        "collection": 30000.0,
+        "collection": 24000.0,
         "expense": 28020.533911765546,
         "late_fee": 7000.0,
-        "net_collection_minus_expense": -5020.533911765546,
-        "closing_balance": -11657.792732781054
+        "net_collection_minus_expense": -11020.533911765546,
+        "closing_balance": -17657.792732781054
       },
       "expense_breakdown": [
         {
@@ -4502,10 +4502,10 @@
         },
         {
           "month": "Jul 2026",
-          "collection": 13296.0,
+          "collection": 6511.0,
           "expense": 6964.159880232449,
           "late_fee": 1000.0,
-          "net_collection_minus_expense": 5331.840119767551
+          "net_collection_minus_expense": -1453.1598802324488
         },
         {
           "month": "Aug 2026",
@@ -4565,11 +4565,11 @@
         }
       ],
       "totals": {
-        "collection": 24967.0,
+        "collection": 18182.0,
         "expense": 26205.668554387794,
         "late_fee": 8000.0,
-        "net_collection_minus_expense": -9238.668554387797,
-        "closing_balance": -9661.06954670079
+        "net_collection_minus_expense": -16023.668554387797,
+        "closing_balance": -16446.06954670079
       },
       "expense_breakdown": [
         {
@@ -12477,10 +12477,10 @@
         },
         {
           "month": "Jul 2026",
-          "collection": 6625.89,
+          "collection": 0.0,
           "expense": 5822.315093426146,
           "late_fee": 0.0,
-          "net_collection_minus_expense": 803.5749065738546
+          "net_collection_minus_expense": -5822.315093426146
         },
         {
           "month": "Aug 2026",
@@ -12540,11 +12540,11 @@
         }
       ],
       "totals": {
-        "collection": 21376.41,
+        "collection": 14750.52,
         "expense": 25078.979714494202,
         "late_fee": 8000.0,
-        "net_collection_minus_expense": -11702.569714494199,
-        "closing_balance": -14731.244152235002
+        "net_collection_minus_expense": -18328.459714494198,
+        "closing_balance": -21357.134152235
       },
       "expense_breakdown": [
         {
@@ -16943,10 +16943,10 @@
         },
         {
           "month": "Jul 2026",
-          "collection": 7550.02,
+          "collection": 0.0,
           "expense": 6277.4722464113,
           "late_fee": 0.0,
-          "net_collection_minus_expense": 1272.5477535887003
+          "net_collection_minus_expense": -6277.4722464113
         },
         {
           "month": "Aug 2026",
@@ -17006,11 +17006,11 @@
         }
       ],
       "totals": {
-        "collection": 40433.350000000006,
+        "collection": 32883.33,
         "expense": 26145.680985458916,
         "late_fee": 7000.0,
-        "net_collection_minus_expense": 7287.66901454109,
-        "closing_balance": -12711.70453629777
+        "net_collection_minus_expense": -262.3509854589138,
+        "closing_balance": -20261.724536297774
       },
       "expense_breakdown": [
         {
@@ -17900,10 +17900,10 @@
         },
         {
           "month": "Jul 2026",
-          "collection": 11079.74,
+          "collection": 5455.63,
           "expense": 5975.861386237132,
           "late_fee": 1000.0,
-          "net_collection_minus_expense": 4103.878613762868
+          "net_collection_minus_expense": -1520.231386237132
         },
         {
           "month": "Aug 2026",
@@ -17963,11 +17963,11 @@
         }
       ],
       "totals": {
-        "collection": 20631.29,
+        "collection": 15007.18,
         "expense": 21785.32257732632,
         "late_fee": 8000.0,
-        "net_collection_minus_expense": -9154.032577326318,
-        "closing_balance": -9436.417287188757
+        "net_collection_minus_expense": -14778.142577326318,
+        "closing_balance": -15060.527287188757
       },
       "expense_breakdown": [
         {
