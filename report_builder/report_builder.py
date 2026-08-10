@@ -1,3 +1,57 @@
+"""
+Main Society Financial Report Builder Engine
+
+Overview:
+---------
+This script is the core report processing engine of the Mana Pristine financial management system.
+It reads society financial workbooks configured in 'db/workbooks.json', processes flat-wise
+income and expenditure records across monthly collection and expense sub-sheets, and generates
+static JSON report datasets in the 'docs/' directory for web dashboard consumption.
+
+Pre-conditions:
+---------------
+1. Configuration File:
+   'db/workbooks.json' MUST exist and specify financial year mappings to workbook relative paths
+   (e.g., "2026-27": {"workbook": "db/accounts/2026-2027-INCOME-EXPENDITURE-ACCOUNT-8.10.26-gold.xlsx"}).
+
+2. Mapping Files:
+   - 'db/members.csv' MUST exist with headers 'flat', 'name', and 'email' (owner mappings).
+   - 'db/occupants.csv' MUST exist with headers 'flat' and 'name' (resident/occupant mappings).
+
+3. Workbook Sub-sheet Structure:
+   - Each financial workbook MUST contain an 'INCOME-EXPENSE-CYCLES' sheet or monthly collection
+     sheets ('<month>-COLLECTION') and expense sheets ('<month>-EXPENSE').
+   - Expense sheets MUST contain columns 'LATE PAYMENT FINE' (for flat-wise late fees) and
+     'TOTAL EXPENSE TO BE PAID' (for total monthly expenses).
+   - An optional 'ANNUAL-EXPENSE-DETAILS' sheet can be present for line-item expense category breakdowns.
+
+4. Output Directory Access:
+   The 'docs/' directory MUST be writable to generate 'report-data-<FY>.json' and 'report-manifest.json'.
+
+Workflow & Output:
+------------------
+1. Parses flat owner and occupant mappings from 'db/members.csv' and 'db/occupants.csv'.
+2. Reads financial year workbooks from 'db/workbooks.json'.
+3. Extracts monthly collection totals, expense totals, and late payment fines directly from the
+   'LATE PAYMENT FINE' column of each respective '<month>-EXPENSE' sheet.
+4. Hashes the community portal password (if present in workbooks.json) and injects SHA-256 hash into 'docs/index.html'.
+5. Writes processed flat-wise financial statements to 'docs/report-data-<FY>.json'.
+6. Writes 'docs/report-manifest.json' listing all available report datasets.
+
+CLI Usage:
+----------
+1. Standard Execution (processes all configured workbooks):
+   python report_builder/report_builder.py
+
+2. Help Menu:
+   python report_builder/report_builder.py --help
+
+Exit Codes:
+-----------
+  0: Success (report datasets and manifest successfully generated)
+  1: Failure (missing required files or invalid workbook configuration)
+"""
+
 import csv
 import hashlib
 import json
@@ -8,6 +62,7 @@ from pathlib import Path
 from typing import Any
 
 from openpyxl import load_workbook
+
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -239,22 +294,60 @@ def load_collection_totals(workbook_path: Path, sheet_name: str) -> dict[str, fl
 
 
 def load_expense_totals(workbook_path: Path, sheet_name: str) -> dict[str, float]:
-    """Read total expense per flat directly from cached cell values (col 17)."""
+    """Read total expense per flat directly from cached cell values ('TOTAL EXPENSE TO BE PAID')."""
     workbook = load_workbook(workbook_path, data_only=True, read_only=True)
     try:
         if sheet_name not in workbook.sheetnames:
             return {}
         ws = workbook[sheet_name]
+        headers = [str(cell.value).upper() if cell.value else "" for cell in ws[2]]
+        total_col_idx = -1
+        for idx, h in enumerate(headers):
+            if "TOTAL EXPENSE TO BE PAID" in h:
+                total_col_idx = idx
+                break
+        if total_col_idx == -1:
+            total_col_idx = 17
+
         result: dict[str, float] = {}
         for row in ws.iter_rows(min_row=3, values_only=True):
             flat = normalize_flat(row[0] if row else "")
             if not flat or flat in ("CH", "GYM", "BSMT", "MPFOWA", "TOTAL"):
                 continue
-            total_expense = row[17] if len(row) > 17 else 0
+            total_expense = row[total_col_idx] if len(row) > total_col_idx else 0
             result[flat] = float(total_expense) if isinstance(total_expense, (int, float)) else 0.0
         return result
     finally:
         workbook.close()
+
+
+def load_late_fee_totals(workbook_path: Path, sheet_name: str) -> dict[str, float]:
+    """Read late payment fine per flat directly from the 'LATE PAYMENT FINE' column in an EXPENSE sheet."""
+    workbook = load_workbook(workbook_path, data_only=True, read_only=True)
+    try:
+        if sheet_name not in workbook.sheetnames:
+            return {}
+        ws = workbook[sheet_name]
+        headers = [str(cell.value).upper() if cell.value else "" for cell in ws[2]]
+        fine_col_idx = -1
+        for i, h in enumerate(headers):
+            if any(kw in h for kw in ["LATE PAYMENT FINE", "LATE PAYMENT FEE", "LATE FINE"]):
+                fine_col_idx = i
+                break
+        if fine_col_idx == -1:
+            return {}
+
+        result: dict[str, float] = {}
+        for row in ws.iter_rows(min_row=3, values_only=True):
+            flat = normalize_flat(row[0] if row else "")
+            if not flat or flat in ("CH", "GYM", "BSMT", "MPFOWA", "TOTAL"):
+                continue
+            fine_val = row[fine_col_idx] if len(row) > fine_col_idx else 0
+            result[flat] = float(fine_val) if isinstance(fine_val, (int, float)) else 0.0
+        return result
+    finally:
+        workbook.close()
+
 
 
 def get_aed_column_map(ws) -> tuple[dict[str, int], list[tuple[int, str]]]:
@@ -363,8 +456,10 @@ def fill_from_source_sheets(
         monthly_collections[month_label] = load_collection_totals(workbook_path, coll_sheet)
 
     monthly_expenses: dict[str, dict[str, float]] = {}
+    monthly_late_fees: dict[str, dict[str, float]] = {}
     for month_label, exp_sheet in expense_sheet_map.items():
         monthly_expenses[month_label] = load_expense_totals(workbook_path, exp_sheet)
+        monthly_late_fees[month_label] = load_late_fee_totals(workbook_path, exp_sheet)
 
     new_lookup: dict[str, tuple[Any, ...]] = {}
     for flat, original_row in row_lookup.items():
@@ -378,10 +473,11 @@ def fill_from_source_sheets(
         for block in monthly_blocks:
             coll = monthly_collections.get(block.month_label, {}).get(flat, 0)
             exp = monthly_expenses.get(block.month_label, {}).get(flat, 0)
-            late_fee = safe_number(row_list[block.late_fee_idx] if len(row_list) > block.late_fee_idx else 0)
+            late_fee = monthly_late_fees.get(block.month_label, {}).get(flat, 0)
             row_list[block.collection_idx] = coll
             row_list[block.expense_idx] = exp
-            row_list[block.net_idx] = coll - (exp + late_fee)
+            row_list[block.late_fee_idx] = late_fee
+            row_list[block.net_idx] = coll - exp
 
         total_coll = sum(safe_number(row_list[b.collection_idx]) for b in monthly_blocks)
         total_exp = sum(safe_number(row_list[b.expense_idx]) for b in monthly_blocks)
@@ -415,17 +511,22 @@ def load_expense_details(workbook_path: Path, expense_sheet_map: dict[str, str])
                 continue
             ws = workbook[sheet_name]
 
-            # Find ANNUAL MEMBERSHIP FEE column
             headers = [str(cell.value).upper() if cell.value else "" for cell in ws[2]]
             mem_fee_idx = -1
+            late_fee_idx = -1
+            total_exp_idx = -1
             for i, h in enumerate(headers):
                 if "ANNUAL MEMBERSHIP" in h:
                     mem_fee_idx = i
-                    break
-            
-            # Default to 16 if not found (legacy April format)
+                if any(kw in h for kw in ["LATE PAYMENT FINE", "LATE PAYMENT FEE", "LATE FINE"]):
+                    late_fee_idx = i
+                if "TOTAL EXPENSE TO BE PAID" in h:
+                    total_exp_idx = i
+
             if mem_fee_idx == -1:
                 mem_fee_idx = 16
+            if total_exp_idx == -1:
+                total_exp_idx = 17
 
             for row in ws.iter_rows(min_row=3, values_only=True):
                 flat = normalize_flat(row[0] if row else "")
@@ -433,6 +534,8 @@ def load_expense_details(workbook_path: Path, expense_sheet_map: dict[str, str])
                     continue
 
                 def _num(idx: int) -> float:
+                    if idx < 0:
+                        return 0.0
                     v = row[idx] if len(row) > idx else 0
                     return float(v) if isinstance(v, (int, float)) else 0.0
 
@@ -450,7 +553,8 @@ def load_expense_details(workbook_path: Path, expense_sheet_map: dict[str, str])
                     "shifting_fee": _num(13),
                     "gym_usage_fee": _num(14),
                     "annual_mem_fee": _num(mem_fee_idx),
-                    "total_expense": _num(17),
+                    "late_fee": _num(late_fee_idx),
+                    "total_expense": _num(total_exp_idx),
                 }
         return result
     finally:
@@ -492,12 +596,16 @@ def build_report(
 
     expense_breakdown: list[dict[str, Any]] = []
     for block in monthly_blocks:
+        exp_detail_late = expense_details.get(block.month_label, {}).get("late_fee") if (expense_details and block.month_label in expense_details) else None
+        row_late = safe_number(sheet_row[block.late_fee_idx] if len(sheet_row) > block.late_fee_idx else 0)
+        late_fee_val = exp_detail_late if exp_detail_late is not None else row_late
+
         report["monthly"].append(
             {
                 "month": block.month_label,
                 "collection": safe_number(sheet_row[block.collection_idx] if len(sheet_row) > block.collection_idx else 0),
                 "expense": safe_number(sheet_row[block.expense_idx] if len(sheet_row) > block.expense_idx else 0),
-                "late_fee": safe_number(sheet_row[block.late_fee_idx] if len(sheet_row) > block.late_fee_idx else 0),
+                "late_fee": late_fee_val,
                 "net_collection_minus_expense": safe_number(sheet_row[block.net_idx] if len(sheet_row) > block.net_idx else 0),
             }
         )
@@ -506,6 +614,8 @@ def build_report(
         else:
             expense_breakdown.append({"month": block.month_label})
 
+    calc_total_late = sum(m["late_fee"] for m in report["monthly"])
+    report["totals"]["late_fee"] = calc_total_late if calc_total_late > 0 else total_late_fee
     report["expense_breakdown"] = expense_breakdown
     return report
 
