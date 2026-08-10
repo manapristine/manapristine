@@ -10,6 +10,29 @@ column in the average water usage workbook ('db/wateron/avg-water-usage.xlsx'),
 calculates the variance percentage from the overall flat average in the last column (Column M),
 and highlights any flats with a variance higher than the configurable threshold (default: 50%) in red.
 
+Pre-conditions:
+---------------
+1. WaterOn Report Filename Convention:
+   The input WaterOn consumption report filename MUST follow the pattern
+   'Consumption Report <Month>-<YYYY>*.xlsx' (e.g. 'Consumption Report July-2026-ver1-8-10-26.xlsx',
+   'Consumption Report Jul-2026.xlsx', or 'Consumption Report 07-2026.xlsx').
+
+2. Average Water Usage File Existence:
+   The target average workbook MUST exist at 'db/wateron/avg-water-usage.xlsx' relative to the repository
+   root (or passed explicitly as the second CLI argument).
+
+3. Average Workbook Column & Header Layout:
+   - Row 1 MUST contain column headers: Column A ('flat#'), Column L ('average water usage (L)'),
+     and Column M ('Variance %').
+   - Row 1 MUST contain a column header matching the target month and year (e.g. July 2026 in Column F).
+
+4. WaterOn Report Structure:
+   The first row of the WaterOn consumption Excel report MUST contain 'Apartment' and 'Total' columns.
+
+5. File Lock / Write Access:
+   The target average workbook Excel file ('avg-water-usage.xlsx') MUST NOT be open in Microsoft Excel
+   or locked by another application.
+
 Key Configurations & Parameters:
 --------------------------------
 - PROJECT_ROOT: Resolved dynamically relative to script location.

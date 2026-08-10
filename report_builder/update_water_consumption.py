@@ -1,3 +1,64 @@
+"""
+Water Consumption Update Script
+
+Overview:
+---------
+This script automates updating flat-wise water consumption readings in the main
+society financial workbook for a given month using raw WaterOn consumption reports.
+
+Pre-conditions:
+---------------
+1. Filename Convention:
+   The input WaterOn consumption report filename MUST follow the pattern
+   'Consumption Report <Month>-<YYYY>*.xlsx' (e.g. 'Consumption Report July-2026-ver1-8-10-26.xlsx').
+
+2. Configuration Entry in workbooks.json:
+   'db/workbooks.json' MUST exist and contain a mapping entry for the target Financial Year
+   (e.g., "2026-27": {"workbook": "db/accounts/2026-2027.xlsx"}).
+
+3. Target Workbook & Sheet Existence:
+   - The target FY workbook Excel file MUST exist at the path configured in 'db/workbooks.json'.
+   - The workbook MUST contain an expense sheet named '{MonthAbbr}{Year}-EXPENSE' or
+     '{MonthFull}{Year}-EXPENSE' (e.g. 'Jul2026-EXPENSE' or 'July2026-EXPENSE').
+
+4. Sheet Column Header Structure:
+   Row 2 of the target expense sheet MUST contain a column header named 'WATER USED IN LTRS'.
+
+5. WaterOn Report Structure:
+   The first row of the WaterOn consumption Excel file MUST contain 'Apartment' and 'Total' columns.
+
+6. File Lock / Write Access:
+   The target financial workbook Excel file MUST NOT be open in Microsoft Excel or locked
+   by another application.
+
+Workflow:
+---------
+1. Parses the Month and Year from the input WaterOn consumption report filename
+   (e.g., 'Consumption Report July-2026-ver1-8-10-26.xlsx').
+2. Determines the Financial Year (April 1 to March 31, e.g. July 2026 -> FY '2026-27').
+3. Resolves the target Excel workbook path via 'db/workbooks.json'.
+4. Locates the monthly expense sheet (e.g., 'Jul2026-EXPENSE' or 'July2026-EXPENSE').
+5. Dynamically finds the 'WATER USED IN LTRS' column header in row 2.
+6. Reads total consumption per flat, normalizes flat identifiers, and populates cell values.
+
+Usage:
+------
+python report_builder/update_water_consumption.py <path_to_wateron_report_excel>
+
+Examples:
+---------
+1. Update July 2026 water consumption in FY 2026-27 workbook:
+   python report_builder/update_water_consumption.py db/wateron/26-27/Consumption Report July-2026-ver1-8-10-26.xlsx
+
+2. Run from anywhere within the repository:
+   python report_builder/update_water_consumption.py "C:\github\manapristine\db\wateron\26-27\Consumption Report July-2026-ver1-8-10-26.xlsx"
+
+Dependencies:
+-------------
+- openpyxl
+- db/workbooks.json
+"""
+
 import os
 import re
 import json
