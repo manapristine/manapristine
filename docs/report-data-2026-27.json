@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T14:15:07",
+  "generated_at": "2026-08-10T14:27:20",
   "financial_year": "2026-27",
   "cutoff_date": "2026-07-31",
   "sheet": "INCOME-EXPENSE-CYCLES",
@@ -139,7 +139,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 5565.822818640111
@@ -177,7 +177,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 5340.270278507891
@@ -470,7 +470,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 1000.0,
           "total_expense": 7140.43469170497
@@ -508,7 +508,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 5564.929639830275
@@ -801,7 +801,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 6838.874042141997
@@ -839,7 +839,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 6968.493134792356
@@ -1132,7 +1132,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 5784.252751681514
@@ -1170,8 +1170,8 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 1000.0,
-          "annual_mem_fee": 1000.0,
+          "accounts_fee": 330.9375,
+          "annual_mem_fee": 0.0,
           "late_fee": 1000.0,
           "total_expense": 6377.594688061095
         },
@@ -1463,7 +1463,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 1000.0,
           "total_expense": 6582.563815707334
@@ -1501,7 +1501,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 5037.828015848643
@@ -1794,7 +1794,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 5835.502851299271
@@ -1832,7 +1832,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 5594.209307876056
@@ -2125,7 +2125,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 6017.970890189861
@@ -2163,7 +2163,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 5609.982827114675
@@ -2456,7 +2456,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 5339.51534496867
@@ -2494,7 +2494,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 4857.873990884628
@@ -2787,7 +2787,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 1000.0,
           "total_expense": 6551.946082935137
@@ -2825,7 +2825,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 5172.686101041523
@@ -3118,7 +3118,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 6229.504041355944
@@ -3156,8 +3156,8 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 1000.0,
-          "annual_mem_fee": 1000.0,
+          "accounts_fee": 330.9375,
+          "annual_mem_fee": 0.0,
           "late_fee": 1000.0,
           "total_expense": 6643.0640138721465
         },
@@ -3449,7 +3449,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 5342.67708291357
@@ -3487,7 +3487,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 4967.006265789563
@@ -3780,7 +3780,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 5850.419768782898
@@ -3818,8 +3818,8 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 1000.0,
-          "annual_mem_fee": 1000.0,
+          "accounts_fee": 330.9375,
+          "annual_mem_fee": 0.0,
           "late_fee": 1000.0,
           "total_expense": 6216.376149992627
         },
@@ -4111,7 +4111,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 5536.0157879050685
@@ -4149,8 +4149,8 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 1000.0,
-          "annual_mem_fee": 1000.0,
+          "accounts_fee": 330.9375,
+          "annual_mem_fee": 0.0,
           "late_fee": 1000.0,
           "total_expense": 6129.279221973055
         },
@@ -4442,7 +4442,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 5810.195216870431
@@ -4480,7 +4480,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 5955.240078741483
@@ -4773,7 +4773,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 6546.251141831389
@@ -4811,8 +4811,8 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 1000.0,
-          "annual_mem_fee": 1000.0,
+          "accounts_fee": 330.9375,
+          "annual_mem_fee": 0.0,
           "late_fee": 1000.0,
           "total_expense": 6964.159880232449
         },
@@ -5104,7 +5104,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 6491.522939764001
@@ -5142,8 +5142,8 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 1000.0,
-          "annual_mem_fee": 1000.0,
+          "accounts_fee": 330.9375,
+          "annual_mem_fee": 0.0,
           "late_fee": 1000.0,
           "total_expense": 6945.682012883897
         },
@@ -5435,7 +5435,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 1000.0,
           "total_expense": 6814.992089759285
@@ -5473,7 +5473,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 6001.741909332648
@@ -5766,7 +5766,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 6733.787512697723
@@ -5804,7 +5804,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 6549.05321385223
@@ -6097,7 +6097,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 6370.06604372874
@@ -6135,7 +6135,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 5541.205232242245
@@ -6428,7 +6428,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 7101.80570246362
@@ -6466,7 +6466,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 5991.7932400622985
@@ -6759,7 +6759,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 1000.0,
           "total_expense": 7157.919051475277
@@ -6797,8 +6797,8 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 1000.0,
-          "annual_mem_fee": 1000.0,
+          "accounts_fee": 330.9375,
+          "annual_mem_fee": 0.0,
           "late_fee": 1000.0,
           "total_expense": 6468.030606778241
         },
@@ -7090,7 +7090,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 5675.510804267
@@ -7128,8 +7128,8 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 1000.0,
-          "annual_mem_fee": 1000.0,
+          "accounts_fee": 330.9375,
+          "annual_mem_fee": 0.0,
           "late_fee": 1000.0,
           "total_expense": 5852.250427604503
         },
@@ -7421,7 +7421,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 5826.706734196155
@@ -7459,7 +7459,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 5086.506985492229
@@ -7752,7 +7752,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 5994.603126090675
@@ -7790,8 +7790,8 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 1000.0,
-          "annual_mem_fee": 1000.0,
+          "accounts_fee": 330.9375,
+          "annual_mem_fee": 0.0,
           "late_fee": 1000.0,
           "total_expense": 6624.435960506731
         },
@@ -8083,7 +8083,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 6335.435335872632
@@ -8121,7 +8121,7 @@
           "club_house_fee": 500.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 6760.913898568174
@@ -8414,7 +8414,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 1000.0,
           "total_expense": 6472.146198247007
@@ -8452,7 +8452,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 5447.820926240291
@@ -8745,7 +8745,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 5401.3719104034935
@@ -8783,7 +8783,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 4914.285360038387
@@ -9076,7 +9076,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 6171.9036616161775
@@ -9114,7 +9114,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 6429.484191327192
@@ -9407,7 +9407,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 5983.8881283306
@@ -9445,7 +9445,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 5645.768361982078
@@ -9738,7 +9738,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 6229.774056199301
@@ -9776,8 +9776,8 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 1000.0,
-          "annual_mem_fee": 1000.0,
+          "accounts_fee": 330.9375,
+          "annual_mem_fee": 0.0,
           "late_fee": 1000.0,
           "total_expense": 7569.262894390182
         },
@@ -10069,7 +10069,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 1000.0,
           "total_expense": 6981.131741404278
@@ -10107,8 +10107,8 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 1000.0,
-          "annual_mem_fee": 1000.0,
+          "accounts_fee": 330.9375,
+          "annual_mem_fee": 0.0,
           "late_fee": 1000.0,
           "total_expense": 6114.517368362725
         },
@@ -10400,7 +10400,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 5569.187232094298
@@ -10438,7 +10438,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 5510.031595026679
@@ -10731,7 +10731,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 5470.930145191277
@@ -10769,7 +10769,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 4852.074691251999
@@ -11062,7 +11062,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 7993.94275924935
@@ -11100,7 +11100,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 4970.237822957007
@@ -11393,7 +11393,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 6866.702111689063
@@ -11431,8 +11431,8 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 1000.0,
-          "annual_mem_fee": 1000.0,
+          "accounts_fee": 330.9375,
+          "annual_mem_fee": 0.0,
           "late_fee": 1000.0,
           "total_expense": 7000.755794039998
         },
@@ -11724,7 +11724,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 1000.0,
           "total_expense": 6644.096100327296
@@ -11762,8 +11762,8 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 1000.0,
-          "annual_mem_fee": 1000.0,
+          "accounts_fee": 330.9375,
+          "annual_mem_fee": 0.0,
           "late_fee": 1000.0,
           "total_expense": 7301.19665399933
         },
@@ -12055,7 +12055,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 5333.313474384446
@@ -12093,7 +12093,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 5221.121031510233
@@ -12386,7 +12386,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 5509.114211141214
@@ -12424,8 +12424,8 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 1000.0,
-          "annual_mem_fee": 1000.0,
+          "accounts_fee": 330.9375,
+          "annual_mem_fee": 0.0,
           "late_fee": 1000.0,
           "total_expense": 5879.841034947618
         },
@@ -12717,7 +12717,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 5627.841524482365
@@ -12755,7 +12755,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 5225.338703970327
@@ -13048,7 +13048,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 6153.419655169074
@@ -13086,7 +13086,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 5822.315093426146
@@ -13379,7 +13379,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 1000.0,
           "total_expense": 6485.103699971819
@@ -13417,7 +13417,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 4978.497431524691
@@ -13710,7 +13710,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 1000.0,
           "total_expense": 6368.457407695056
@@ -13748,8 +13748,8 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 1000.0,
-          "annual_mem_fee": 1000.0,
+          "accounts_fee": 330.9375,
+          "annual_mem_fee": 0.0,
           "late_fee": 1000.0,
           "total_expense": 5856.116627359589
         },
@@ -14041,7 +14041,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 5828.692954187181
@@ -14079,7 +14079,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 5359.601277283322
@@ -14372,7 +14372,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 1000.0,
           "total_expense": 6957.999929113188
@@ -14410,7 +14410,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 5865.897708847118
@@ -14703,7 +14703,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 5391.548684884288
@@ -14741,8 +14741,8 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 1000.0,
-          "annual_mem_fee": 1000.0,
+          "accounts_fee": 330.9375,
+          "annual_mem_fee": 0.0,
           "late_fee": 1000.0,
           "total_expense": 6133.848367138157
         },
@@ -15034,7 +15034,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 1000.0,
           "total_expense": 7098.440326180411
@@ -15072,8 +15072,8 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 1000.0,
-          "annual_mem_fee": 1000.0,
+          "accounts_fee": 330.9375,
+          "annual_mem_fee": 0.0,
           "late_fee": 1000.0,
           "total_expense": 6589.005520123312
         },
@@ -15365,7 +15365,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 6686.401978626092
@@ -15403,7 +15403,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 5375.3101154785445
@@ -15696,7 +15696,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 5505.547122177737
@@ -15734,7 +15734,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 5005.668263340425
@@ -16027,7 +16027,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 6445.39399384996
@@ -16065,7 +16065,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 6411.207610666784
@@ -16358,7 +16358,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 6568.323226914664
@@ -16396,8 +16396,8 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 1000.0,
-          "annual_mem_fee": 1000.0,
+          "accounts_fee": 330.9375,
+          "annual_mem_fee": 0.0,
           "late_fee": 1000.0,
           "total_expense": 7485.78812695082
         },
@@ -16689,7 +16689,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 6028.274064864762
@@ -16727,7 +16727,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 5893.205146307599
@@ -17020,7 +17020,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 5392.1161763102955
@@ -17058,7 +17058,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 4969.886350251999
@@ -17351,7 +17351,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 5656.743052106893
@@ -17389,7 +17389,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 4933.967831518826
@@ -17682,7 +17682,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 6497.4410646352235
@@ -17720,7 +17720,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 6277.4722464113
@@ -18013,7 +18013,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 6248.555539229054
@@ -18051,8 +18051,8 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 1000.0,
-          "annual_mem_fee": 1000.0,
+          "accounts_fee": 330.9375,
+          "annual_mem_fee": 0.0,
           "late_fee": 1000.0,
           "total_expense": 6383.67715757636
         },
@@ -18344,7 +18344,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 5843.6504067726655
@@ -18382,7 +18382,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 4853.1291093670225
@@ -18675,7 +18675,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 5461.796016403652
@@ -18713,8 +18713,8 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 1000.0,
-          "annual_mem_fee": 1000.0,
+          "accounts_fee": 330.9375,
+          "annual_mem_fee": 0.0,
           "late_fee": 1000.0,
           "total_expense": 5975.861386237132
         },
@@ -19006,7 +19006,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 8371.7226497599
@@ -19044,8 +19044,8 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 1000.0,
-          "annual_mem_fee": 1000.0,
+          "accounts_fee": 330.9375,
+          "annual_mem_fee": 0.0,
           "late_fee": 1000.0,
           "total_expense": 7537.9135208221105
         },
@@ -19337,7 +19337,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 5804.57456858186
@@ -19375,7 +19375,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 5141.336727473453
@@ -19668,7 +19668,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 5638.664396678367
@@ -19706,7 +19706,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 5180.525934081827
@@ -19999,7 +19999,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 7163.419057287298
@@ -20037,8 +20037,8 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 1000.0,
-          "annual_mem_fee": 1000.0,
+          "accounts_fee": 330.9375,
+          "annual_mem_fee": 0.0,
           "late_fee": 1000.0,
           "total_expense": 8070.9901807888755
         },
@@ -20330,7 +20330,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 6212.99252403022
@@ -20368,7 +20368,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 5866.668957079506
@@ -20661,7 +20661,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 5890.981674872792
@@ -20699,7 +20699,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 0.0,
+          "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "total_expense": 6030.279501260657
@@ -20992,7 +20992,7 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 500.0,
+          "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
           "late_fee": 0.0,
           "total_expense": 6263.067105694105
@@ -21030,8 +21030,8 @@
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
-          "accounts_fee": 1000.0,
-          "annual_mem_fee": 1000.0,
+          "accounts_fee": 330.9375,
+          "annual_mem_fee": 0.0,
           "late_fee": 1000.0,
           "total_expense": 7161.486253758712
         },

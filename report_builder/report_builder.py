@@ -585,8 +585,45 @@ def fill_from_source_sheets(
     return new_lookup
 
 
+def load_monthly_accounting_fees(workbook_path: Path) -> dict[str, float]:
+    """Read month_label -> per_flat_accounting_fee (accounting / 64.0) from ANNUAL-EXPENSE-DETAILS."""
+    workbook = load_workbook(workbook_path, data_only=True, read_only=True)
+    res: dict[str, float] = {}
+    try:
+        if "ANNUAL-EXPENSE-DETAILS" not in workbook.sheetnames:
+            return res
+        ws = workbook["ANNUAL-EXPENSE-DETAILS"]
+        row2 = [str(cell.value).strip().lower() if cell.value else "" for cell in ws[2]]
+        acct_idx = -1
+        for i, h in enumerate(row2):
+            if "accounting" in h:
+                acct_idx = i
+                break
+        if acct_idx == -1:
+            return res
+
+        for row in ws.iter_rows(min_row=3, values_only=True):
+            if not row or not row[0]:
+                continue
+            month_raw = str(row[0]).strip()
+            parts = month_raw.split()
+            if len(parts) != 2:
+                continue
+            m_label = f"{parts[0].capitalize()[:3]} {parts[1]}"
+            
+            acct_val = row[acct_idx] if len(row) > acct_idx else 0
+            if isinstance(acct_val, (int, float)) and acct_val > 0:
+                res[m_label] = float(acct_val) / 64.0
+            else:
+                res[m_label] = 0.0
+        return res
+    finally:
+        workbook.close()
+
+
 def load_expense_details(workbook_path: Path, expense_sheet_map: dict[str, str]) -> dict[str, dict[str, dict[str, float]]]:
     """Read per-flat, per-month expense breakdown directly from cached cell values in the spreadsheet."""
+    monthly_acct_fees = load_monthly_accounting_fees(workbook_path)
     workbook = load_workbook(workbook_path, data_only=True, read_only=True)
     result: dict[str, dict[str, dict[str, float]]] = {}
     non_flat_ids = {"CH", "GYM", "BSMT", "MPFOWA", "TOTAL"}
@@ -595,21 +632,20 @@ def load_expense_details(workbook_path: Path, expense_sheet_map: dict[str, str])
             if sheet_name not in workbook.sheetnames:
                 continue
             ws = workbook[sheet_name]
+            accounts_fee_per_flat = monthly_acct_fees.get(month_label, 0.0)
 
             headers = [str(cell.value).upper() if cell.value else "" for cell in ws[2]]
             mem_fee_idx = -1
             late_fee_idx = -1
             total_exp_idx = -1
             for i, h in enumerate(headers):
-                if "ANNUAL MEMBERSHIP" in h:
+                if "ANNUAL MEMBERSHIP" in h or "ANNUAL MEM" in h:
                     mem_fee_idx = i
-                if any(kw in h for kw in ["LATE PAYMENT FINE", "LATE PAYMENT FEE", "LATE FINE"]):
+                elif any(kw in h for kw in ["LATE PAYMENT FINE", "LATE PAYMENT FEE", "LATE FINE"]):
                     late_fee_idx = i
-                if "TOTAL EXPENSE TO BE PAID" in h:
+                elif "TOTAL EXPENSE TO BE PAID" in h:
                     total_exp_idx = i
 
-            if mem_fee_idx == -1:
-                mem_fee_idx = 15
             if total_exp_idx == -1:
                 total_exp_idx = 17
 
@@ -645,7 +681,7 @@ def load_expense_details(workbook_path: Path, expense_sheet_map: dict[str, str])
                 club_house_fee = _opt_num(12)
                 shifting_fee = _opt_num(13)
                 gym_usage_fee = _opt_num(14)
-                accounts_fee = _opt_num(15)
+                accounts_fee = accounts_fee_per_flat
                 annual_mem_fee = _opt_num(mem_fee_idx)
                 late_fee = _opt_num(late_fee_idx)
                 total_expense = _req_num(total_exp_idx, "TOTAL EXPENSE TO BE PAID")
