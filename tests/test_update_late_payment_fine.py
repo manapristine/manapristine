@@ -110,5 +110,41 @@ class TestUpdateLatePaymentFine(unittest.TestCase):
             if test_wb_copy.exists():
                 test_wb_copy.unlink()
 
+    def test_future_months_skipped_or_zero(self):
+        active_wb_path = get_active_workbook_path()
+        if not active_wb_path or not active_wb_path.exists():
+            self.skipTest("Active accounts workbook not found for testing")
+
+        test_wb_copy = Path("db/accounts/test_future_fine_copy.xlsx")
+        shutil.copy(active_wb_path, test_wb_copy)
+
+        try:
+            success = update_late_payment_fines(test_wb_copy, fine_per_month=1000, as_of_date="2026-08")
+            self.assertTrue(success)
+
+            wb = openpyxl.load_workbook(test_wb_copy, data_only=True)
+            
+            def get_flat_fine(sheet_name, flat_str):
+                ws = wb[sheet_name]
+                headers = [ws.cell(2, col).value for col in range(1, ws.max_column + 1)]
+                fine_col = headers.index("LATE PAYMENT FINE") + 1
+                for r in range(3, ws.max_row + 1):
+                    if normalize_flat(ws.cell(r, 1).value) == flat_str:
+                        val = ws.cell(r, fine_col).value
+                        return float(val) if val is not None else 0.0
+                return 0.0
+
+            # Current month (Aug2026-EXPENSE) and future months MUST have 0 fine for all flats
+            self.assertEqual(get_flat_fine("Aug2026-EXPENSE", "F2"), 0.0)
+            self.assertEqual(get_flat_fine("Sep2026-EXPENSE", "F1"), 0.0)
+            self.assertEqual(get_flat_fine("Sep2026-EXPENSE", "F2"), 0.0)
+            self.assertEqual(get_flat_fine("Jan2027-EXPENSE", "F2"), 0.0)
+
+            wb.close()
+        finally:
+            if test_wb_copy.exists():
+                test_wb_copy.unlink()
+
 if __name__ == "__main__":
     unittest.main()
+

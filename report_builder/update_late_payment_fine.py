@@ -199,13 +199,16 @@ def ensure_total_expense_formulas(wb):
 
     return formula_updates
 
-def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MONTH):
+def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MONTH, as_of_date=None):
     """
     Inspect immediately preceding month collection sheet and update LATE PAYMENT FINE in expense sheets.
+    Does NOT update late payment fines for the current month or future months beyond as_of_date,
+    as collection amounts received in current month are for the previous month.
     Also ensures formulas in TOTAL EXPENSE TO BE PAID include LATE PAYMENT FINE across all expense sub-sheets.
 
     :param workbook_path: Path to Excel financial workbook.
     :param fine_per_month: Late fee for missed payment in previous month (default: Rs 1000).
+    :param as_of_date: Reference cutoff date string in 'YYYY-MM' format (default: current month).
     :return: bool success
     """
     wb_path = Path(workbook_path)
@@ -218,7 +221,20 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
         print(f"Error: Workbook file not found: {wb_path}")
         return False
 
+    if as_of_date:
+        try:
+            dt = datetime.strptime(as_of_date, "%Y-%m")
+            as_of_yr, as_of_m = dt.year, dt.month
+        except ValueError:
+            print(f"Error: Invalid --as-of date format '{as_of_date}'. Expected YYYY-MM.")
+            return False
+    else:
+        now = datetime.now()
+        as_of_yr, as_of_m = now.year, now.month
+
     print(f"Opening workbook: {wb_path.name}")
+    print(f"Late fine calculation cutoff month: {as_of_yr}-{as_of_m:02d} (Current & future months skipped)")
+
     try:
         wb = openpyxl.load_workbook(wb_path)
     except PermissionError:
@@ -231,7 +247,7 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
     non_flat_ids = {"TOTAL", "CH", "GYM", "BSMT", "MPFOWA"}
 
     try:
-        # 1. Update Late Payment Fines
+        # 1. Update Late Payment Fines (Past months strictly before cutoff month)
         for idx in range(1, len(month_seq)):
             prev_m, prev_yr = month_seq[idx - 1]
             curr_m, curr_yr = month_seq[idx]
@@ -247,9 +263,15 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
             if not expense_sheet_name:
                 continue
 
+            is_current = (curr_yr, curr_m) == (as_of_yr, as_of_m)
+            is_future = (curr_yr, curr_m) > (as_of_yr, as_of_m)
+            skip_late_fee = is_current or is_future
+
             # Read previous month collection status (1-month look back)
             prev_month_missed = {}
-            if collection_sheet_name:
+            has_collection_data = False
+
+            if collection_sheet_name and not skip_late_fee:
                 ws_c = wb[collection_sheet_name]
                 total_col_idx = 11  # Column K is default Total column
                 header_c = [str(ws_c.cell(1, col).value).strip().upper() if ws_c.cell(1, col).value else "" for col in range(1, ws_c.max_column + 1)]
@@ -264,6 +286,8 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
 
                     paid = is_flat_paid_in_collection_row(ws_c, r, total_col_idx)
                     prev_month_missed[flat_id] = not paid
+                    if paid:
+                        has_collection_data = True
 
             # Update current month expense sheet
             ws_e = wb[expense_sheet_name]
@@ -283,8 +307,12 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
                 if not flat_id or flat_id in non_flat_ids:
                     continue
 
-                missed = prev_month_missed.get(flat_id, False)
-                fine_amount = fine_per_month if missed else 0
+                if skip_late_fee or not has_collection_data:
+                    fine_amount = 0
+                else:
+                    missed = prev_month_missed.get(flat_id, False)
+                    fine_amount = fine_per_month if missed else 0
+
                 fine_cell = ws_e.cell(row=r, column=fine_col_idx)
                 
                 existing_val = fine_cell.value
@@ -302,7 +330,7 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
                 if fine_amount > 0:
                     flagged_in_sheet.append((flat_id, fine_amount))
 
-            sheet_summaries.append((expense_sheet_name, collection_sheet_name, sheet_updates, flagged_in_sheet))
+            sheet_summaries.append((expense_sheet_name, collection_sheet_name, sheet_updates, flagged_in_sheet, is_current, is_future, has_collection_data))
 
         # 2. Ensure all TOTAL EXPENSE TO BE PAID formulas include LATE PAYMENT FINE
         formula_updates = ensure_total_expense_formulas(wb)
@@ -314,9 +342,15 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
                 print(f"Total Late Payment Fine updates applied: {updates_total}")
                 print(f"Total EXPENSE formula updates applied: {formula_updates}\n")
 
-                for sheet_name, col_name, count, flagged in sheet_summaries:
+                for sheet_name, col_name, count, flagged, is_curr, is_fut, has_data in sheet_summaries:
                     print(f"--- Sheet: {sheet_name} (Based on {col_name or 'N/A'}) ---")
-                    if flagged:
+                    if is_curr:
+                        print("  Skipped: Current month (collections still underway for previous month).")
+                    elif is_fut:
+                        print("  Skipped: Future month beyond cutoff date.")
+                    elif not has_data:
+                        print("  Skipped: Previous month has no recorded collection data.")
+                    elif flagged:
                         print(f"  {'Flat':<8} | {'Previous Month Payment Status':<30} | {'Late Payment Fine (Rs)':<22}")
                         print("  " + "-" * 65)
                         for fid, fine in flagged:
@@ -348,6 +382,11 @@ def main():
         default=DEFAULT_FINE_PER_MONTH,
         help=f"Late payment fine amount for missed payment in previous month in Rupees (default: Rs {DEFAULT_FINE_PER_MONTH})."
     )
+    parser.add_argument(
+        "--as-of", "-a",
+        default=None,
+        help="Reference cutoff month in YYYY-MM format (e.g. 2026-08). Defaults to current month."
+    )
     args = parser.parse_args()
 
     wb_path = args.accounts_file
@@ -357,7 +396,7 @@ def main():
             print("Error: Could not resolve default workbook path from db/workbooks.json")
             sys.exit(1)
 
-    success = update_late_payment_fines(wb_path, fine_per_month=args.fine)
+    success = update_late_payment_fines(wb_path, fine_per_month=args.fine, as_of_date=args.as_of)
     sys.exit(0 if success else 1)
 
 if __name__ == "__main__":
