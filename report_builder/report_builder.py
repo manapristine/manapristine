@@ -314,8 +314,13 @@ def load_expense_totals(workbook_path: Path, sheet_name: str) -> dict[str, float
             flat = normalize_flat(row[0] if row else "")
             if not flat or flat in ("CH", "GYM", "BSMT", "MPFOWA", "TOTAL"):
                 continue
-            total_expense = row[total_col_idx] if len(row) > total_col_idx else 0
-            result[flat] = float(total_expense) if isinstance(total_expense, (int, float)) else 0.0
+            total_expense = row[total_col_idx] if len(row) > total_col_idx else None
+            if total_expense is None or not isinstance(total_expense, (int, float)):
+                raise ValueError(
+                    f"Null or missing cached formula value for 'TOTAL EXPENSE TO BE PAID' in workbook '{workbook_path.name}', "
+                    f"sheet '{sheet_name}', flat '{flat}'. Please ensure Excel formulas are evaluated and saved."
+                )
+            result[flat] = float(total_expense)
         return result
     finally:
         workbook.close()
@@ -349,7 +354,6 @@ def load_late_fee_totals(workbook_path: Path, sheet_name: str) -> dict[str, floa
         workbook.close()
 
 
-
 def get_aed_column_map(ws) -> tuple[dict[str, int], list[tuple[int, str]]]:
     """Identify summary columns and line item columns from ANNUAL-EXPENSE-DETAILS headers."""
     header_row_1 = list(ws.iter_rows(min_row=1, max_row=1, values_only=True))[0]
@@ -368,57 +372,137 @@ def get_aed_column_map(ws) -> tuple[dict[str, int], list[tuple[int, str]]]:
 
     max_cols = max(len(header_row_1), len(header_row_2))
     for ci in range(max_cols):
-        val1 = header_row_1[ci] if ci < len(header_row_1) else None
-        val2 = header_row_2[ci] if ci < len(header_row_2) else None
+        h1 = str(header_row_1[ci]).strip().lower() if ci < len(header_row_1) and header_row_1[ci] else ""
+        h2 = str(header_row_2[ci]).strip() if ci < len(header_row_2) and header_row_2[ci] else ""
 
-        name1 = str(val1).strip().lower().replace("\n", " ") if val1 else ""
-        name2 = str(val2).strip().lower().replace("\n", " ") if val2 else ""
-
-        found_summary = False
-        for key, patterns in summary_markers.items():
-            if (val1 and any(p in name1 for p in patterns)) or (val2 and any(p in name2 for p in patterns)):
+        matched_summary = False
+        for key, markers in summary_markers.items():
+            if any(m in h1 for m in markers):
                 summary_indices[key] = ci
-                found_summary = True
+                matched_summary = True
                 break
 
-        if found_summary:
-            continue
-
-        if val2 and name2 not in ("months", "month"):
-            col_names.append((ci, str(val2).strip().replace("\n", " ")))
+        if not matched_summary and h2:
+            col_names.append((ci, h2))
 
     return summary_indices, col_names
 
 
-def load_sheet_rows(workbook_path: Path, sheet_name: str) -> tuple[list[MonthlyBlock], SheetLayout, dict[str, tuple[Any, ...]], list[str]]:
-    workbook = load_workbook(workbook_path, data_only=True, read_only=True)
+def load_sheet_rows(
+    workbook_path: Path, sheet_name: str
+) -> tuple[list[MonthlyBlock], SheetLayout, dict[str, tuple[Any, ...]], list[str]]:
+    """Load cell values from the specified summary sheet, layout indices, and monthly blocks."""
+    workbook = load_workbook(workbook_path, data_only=True)
     try:
-        available_sheets = workbook.sheetnames
-        sheet = workbook[sheet_name]
-        header_row_1 = next(sheet.iter_rows(min_row=1, max_row=1, values_only=True))
-        header_row_2 = next(sheet.iter_rows(min_row=2, max_row=2, values_only=True))
-        monthly_blocks = extract_monthly_blocks(header_row_1, header_row_2)
-        sheet_layout = extract_sheet_layout(header_row_1, header_row_2)
+        available_sheets = list(workbook.sheetnames)
+        if sheet_name not in workbook.sheetnames:
+            print(f"Warning: Sheet '{sheet_name}' not found in {workbook_path}")
+            return [], SheetLayout(None, None, None, None, None, None), {}, available_sheets
+
+        ws = workbook[sheet_name]
+        all_rows = list(ws.iter_rows(values_only=True))
+
+        if len(all_rows) < 2:
+            return [], SheetLayout(None, None, None, None, None, None), {}, available_sheets
+
+        header_row_1 = all_rows[0]
+        header_row_2 = all_rows[1]
+
+        monthly_blocks: list[MonthlyBlock] = []
+        current_month: str | None = None
+        coll_idx: int | None = None
+        exp_idx: int | None = None
+        late_fee_idx: int | None = None
+        net_idx: int | None = None
+
+        for ci, val in enumerate(header_row_1):
+            if val is not None and str(val).strip() != "":
+                if current_month is not None and coll_idx is not None and exp_idx is not None:
+                    monthly_blocks.append(
+                        MonthlyBlock(
+                            month_label=current_month,
+                            collection_idx=coll_idx,
+                            expense_idx=exp_idx,
+                            late_fee_idx=late_fee_idx if late_fee_idx is not None else -1,
+                            net_idx=net_idx if net_idx is not None else exp_idx + 1,
+                        )
+                    )
+                current_month = month_label(val)
+                coll_idx = None
+                exp_idx = None
+                late_fee_idx = None
+                net_idx = None
+
+            if current_month is not None and ci < len(header_row_2):
+                h2 = str(header_row_2[ci]).strip().upper() if header_row_2[ci] is not None else ""
+                if "COLLECTION" in h2 and "MINUS" not in h2:
+                    coll_idx = ci
+                elif "EXPENSE" in h2 and "MINUS" not in h2:
+                    exp_idx = ci
+                elif "LATE" in h2:
+                    late_fee_idx = ci
+                elif "MINUS" in h2 or "NET" in h2 or "COLLECTION - EXPENSE" in h2:
+                    net_idx = ci
+
+        if current_month is not None and coll_idx is not None and exp_idx is not None:
+            monthly_blocks.append(
+                MonthlyBlock(
+                    month_label=current_month,
+                    collection_idx=coll_idx,
+                    expense_idx=exp_idx,
+                    late_fee_idx=late_fee_idx if late_fee_idx is not None else -1,
+                    net_idx=net_idx if net_idx is not None else exp_idx + 1,
+                )
+            )
+
+        labels = [str(header_row_2[ci]).strip().upper() for ci in range(2, 6) if ci < len(header_row_2)]
+        if labels != ["COLLECTION", "EXPENSE", "LATE PAYMENT FEE", "COLLECTION - EXPENSE"]:
+            pass
+
+        def find_idx(target_headers: list[str]) -> int | None:
+            for ci, val in enumerate(header_row_1):
+                if val is not None:
+                    v_str = str(val).strip().upper()
+                    if any(t in v_str for t in target_headers):
+                        return ci
+            for ci, val in enumerate(header_row_2):
+                if val is not None:
+                    v_str = str(val).strip().upper()
+                    if any(t in v_str for t in target_headers):
+                        return ci
+            return None
+
+        sheet_layout = SheetLayout(
+            carry_over_idx=find_idx(["CLOSING DUES", "CARRY OVER", "BALANCE FROM LAST FY"]),
+            total_collection_idx=find_idx(["TOTAL COLLECTION"]),
+            total_expense_idx=find_idx(["TOTAL EXPENSE"]),
+            total_late_fee_idx=find_idx(["TOTAL LATE FEE"]),
+            total_net_idx=find_idx(["TOTAL NET", "TOTAL COLLECTION - EXPENSE"]),
+            total_dues_idx=find_idx(["TOTAL DUES", "CLOSING BALANCE"]),
+        )
 
         row_lookup: dict[str, tuple[Any, ...]] = {}
-        for row in sheet.iter_rows(min_row=3, values_only=True):
-            flat = normalize_flat(row[0] if row else "")
-            if flat:
-                row_lookup[flat] = row
+        for row in all_rows[2:]:
+            if not row or row[0] is None:
+                continue
+            flat = normalize_flat(str(row[0]))
+            if not flat or flat in ("TOTAL", "GRAND TOTAL", "FLAT #"):
+                continue
+            row_lookup[flat] = row
+
         return monthly_blocks, sheet_layout, row_lookup, available_sheets
     finally:
         workbook.close()
 
 
 def has_cached_values(row_lookup: dict[str, tuple[Any, ...]], monthly_blocks: list[MonthlyBlock]) -> bool:
-    """Check if the INCOME-EXPENSE-CYCLES rows have cached formula values."""
     if not row_lookup or not monthly_blocks:
         return False
     sample_row = next(iter(row_lookup.values()))
     first_block = monthly_blocks[0]
     coll_val = sample_row[first_block.collection_idx] if len(sample_row) > first_block.collection_idx else None
     exp_val = sample_row[first_block.expense_idx] if len(sample_row) > first_block.expense_idx else None
-    return coll_val is not None or exp_val is not None
+    return isinstance(coll_val, (int, float)) and isinstance(exp_val, (int, float)) and exp_val > 0
 
 
 def fill_from_source_sheets(
@@ -502,9 +586,10 @@ def fill_from_source_sheets(
 
 
 def load_expense_details(workbook_path: Path, expense_sheet_map: dict[str, str]) -> dict[str, dict[str, dict[str, float]]]:
-    """Read per-flat, per-month expense breakdown from cached cell values."""
+    """Read per-flat, per-month expense breakdown directly from cached cell values in the spreadsheet."""
     workbook = load_workbook(workbook_path, data_only=True, read_only=True)
     result: dict[str, dict[str, dict[str, float]]] = {}
+    non_flat_ids = {"CH", "GYM", "BSMT", "MPFOWA", "TOTAL"}
     try:
         for month_label, sheet_name in expense_sheet_map.items():
             if sheet_name not in workbook.sheetnames:
@@ -524,37 +609,62 @@ def load_expense_details(workbook_path: Path, expense_sheet_map: dict[str, str])
                     total_exp_idx = i
 
             if mem_fee_idx == -1:
-                mem_fee_idx = 16
+                mem_fee_idx = 15
             if total_exp_idx == -1:
                 total_exp_idx = 17
 
             for row in ws.iter_rows(min_row=3, values_only=True):
                 flat = normalize_flat(row[0] if row else "")
-                if not flat or flat in ("CH", "GYM", "BSMT", "MPFOWA", "TOTAL"):
+                if not flat or flat in non_flat_ids:
                     continue
 
-                def _num(idx: int) -> float:
+                def _req_num(idx: int, field_name: str) -> float:
+                    if idx < 0:
+                        return 0.0
+                    v = row[idx] if len(row) > idx else None
+                    if v is None or not isinstance(v, (int, float)):
+                        raise ValueError(
+                            f"Missing or null cached value for field '{field_name}' in workbook '{workbook_path.name}', "
+                            f"sheet '{sheet_name}', flat '{flat}'. Please ensure Excel formula values are evaluated and saved."
+                        )
+                    return float(v)
+
+                def _opt_num(idx: int) -> float:
                     if idx < 0:
                         return 0.0
                     v = row[idx] if len(row) > idx else 0
                     return float(v) if isinstance(v, (int, float)) else 0.0
 
+                water_used = _opt_num(2)
+                water_expense = _req_num(6, "WATER EXPENSE SHARING BY %")
+                num_meters = _opt_num(7)
+                meter_rent = _opt_num(8)
+                total_water_expense = _opt_num(9)
+                fixed_expense = _req_num(10, "FIXED EXPENSE SHARE")
+                parking_fee = _opt_num(11)
+                club_house_fee = _opt_num(12)
+                shifting_fee = _opt_num(13)
+                gym_usage_fee = _opt_num(14)
+                annual_mem_fee = _opt_num(mem_fee_idx)
+                late_fee = _opt_num(late_fee_idx)
+                total_expense = _req_num(total_exp_idx, "TOTAL EXPENSE TO BE PAID")
+
                 result.setdefault(flat, {})[month_label] = {
-                    "water_used_litres": _num(2),
-                    "common_area_water_litres": _num(3),
-                    "total_fresh_water_consumed_litres": _num(4),
-                    "water_expense": _num(6),
-                    "num_meters": _num(7),
-                    "meter_rent": _num(8),
-                    "total_water_expense": _num(9),
-                    "fixed_expense": _num(10),
-                    "parking_fee": _num(11),
-                    "club_house_fee": _num(12),
-                    "shifting_fee": _num(13),
-                    "gym_usage_fee": _num(14),
-                    "annual_mem_fee": _num(mem_fee_idx),
-                    "late_fee": _num(late_fee_idx),
-                    "total_expense": _num(total_exp_idx),
+                    "water_used_litres": water_used,
+                    "common_area_water_litres": _opt_num(3),
+                    "total_fresh_water_consumed_litres": _opt_num(4),
+                    "water_expense": water_expense,
+                    "num_meters": num_meters,
+                    "meter_rent": meter_rent,
+                    "total_water_expense": total_water_expense,
+                    "fixed_expense": fixed_expense,
+                    "parking_fee": parking_fee,
+                    "club_house_fee": club_house_fee,
+                    "shifting_fee": shifting_fee,
+                    "gym_usage_fee": gym_usage_fee,
+                    "annual_mem_fee": annual_mem_fee,
+                    "late_fee": late_fee,
+                    "total_expense": total_expense,
                 }
         return result
     finally:
@@ -585,28 +695,29 @@ def build_report(
         "occupant": occupant_name or None,
         "balance_from_last_fy": carry_over,
         "monthly": [],
-        "totals": {
-            "collection": total_collection,
-            "expense": total_expense,
-            "late_fee": total_late_fee,
-            "net_collection_minus_expense": total_net,
-            "closing_balance": closing_balance,
-        },
+        "totals": {},
     }
 
     expense_breakdown: list[dict[str, Any]] = []
     for block in monthly_blocks:
+        exp_detail_total = expense_details.get(block.month_label, {}).get("total_expense") if (expense_details and block.month_label in expense_details) else None
+        row_exp = safe_number(sheet_row[block.expense_idx] if len(sheet_row) > block.expense_idx else 0)
+        expense_val = exp_detail_total if exp_detail_total is not None else row_exp
+
         exp_detail_late = expense_details.get(block.month_label, {}).get("late_fee") if (expense_details and block.month_label in expense_details) else None
         row_late = safe_number(sheet_row[block.late_fee_idx] if len(sheet_row) > block.late_fee_idx else 0)
         late_fee_val = exp_detail_late if exp_detail_late is not None else row_late
 
+        coll_val = safe_number(sheet_row[block.collection_idx] if len(sheet_row) > block.collection_idx else 0)
+        net_val = coll_val - (expense_val + late_fee_val)
+
         report["monthly"].append(
             {
                 "month": block.month_label,
-                "collection": safe_number(sheet_row[block.collection_idx] if len(sheet_row) > block.collection_idx else 0),
-                "expense": safe_number(sheet_row[block.expense_idx] if len(sheet_row) > block.expense_idx else 0),
+                "collection": coll_val,
+                "expense": expense_val,
                 "late_fee": late_fee_val,
-                "net_collection_minus_expense": safe_number(sheet_row[block.net_idx] if len(sheet_row) > block.net_idx else 0),
+                "net_collection_minus_expense": net_val,
             }
         )
         if expense_details and block.month_label in expense_details:
@@ -614,8 +725,18 @@ def build_report(
         else:
             expense_breakdown.append({"month": block.month_label})
 
+    calc_total_expense = sum(m["expense"] for m in report["monthly"])
     calc_total_late = sum(m["late_fee"] for m in report["monthly"])
-    report["totals"]["late_fee"] = calc_total_late if calc_total_late > 0 else total_late_fee
+    calc_total_net = total_collection - (calc_total_expense + calc_total_late)
+    closing_balance_calc = calc_total_net + carry_over
+
+    report["totals"] = {
+        "collection": total_collection,
+        "expense": calc_total_expense if calc_total_expense > 0 else total_expense,
+        "late_fee": calc_total_late if calc_total_late > 0 else total_late_fee,
+        "net_collection_minus_expense": calc_total_net if calc_total_expense > 0 else total_net,
+        "closing_balance": closing_balance_calc if calc_total_expense > 0 else closing_balance,
+    }
     report["expense_breakdown"] = expense_breakdown
     return report
 
