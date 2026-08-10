@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T14:27:20",
+  "generated_at": "2026-08-10T22:01:31",
   "financial_year": "2026-27",
   "cutoff_date": "2026-07-31",
   "sheet": "INCOME-EXPENSE-CYCLES",
@@ -18904,9 +18904,9 @@
         {
           "month": "Jul 2026",
           "collection": 2664.0,
-          "expense": 7537.9135208221105,
-          "late_fee": 1000.0,
-          "net_collection_minus_expense": -5873.9135208221105
+          "expense": 7287.9135208221105,
+          "late_fee": 0.0,
+          "net_collection_minus_expense": -4623.9135208221105
         },
         {
           "month": "Aug 2026",
@@ -18967,10 +18967,10 @@
       ],
       "totals": {
         "collection": 23584.0,
-        "expense": 28758.45397270444,
-        "late_fee": 1000.0,
-        "net_collection_minus_expense": -6174.453972704439,
-        "closing_balance": -9869.68056038567
+        "expense": 28508.45397270444,
+        "late_fee": -4924.453972704439,
+        "net_collection_minus_expense": -4924.453972704439,
+        "closing_balance": -8619.68056038567
       },
       "expense_breakdown": [
         {
@@ -19040,14 +19040,14 @@
           "meter_rent": 353.434977,
           "total_water_expense": 2045.101020822111,
           "fixed_expense": 4492.8125,
-          "parking_fee": 0.0,
+          "parking_fee": 750.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "total_expense": 7537.9135208221105
+          "late_fee": 0.0,
+          "total_expense": 7287.9135208221105
         },
         {
           "month": "Aug 2026",
