@@ -873,13 +873,14 @@
                 <th>Total Water (L)</th>
                 <th>Meters</th>
                 <th>Meter Rent</th>
-                <th>Total Water Exp</th>
+                <th>Water</th>
                 <th>Fixed Expense</th>
                 <th>Parking</th>
-                <th>Club House</th>
+                <th>Club</th>
                 <th>Shifting</th>
                 <th>Gym</th>
-                <th>annual mem fee</th>
+                <th>Accounts</th>
+                <th>Annual</th>
                 <th>Late Fee</th>
                 <th>Total Expense</th>
               </tr>
@@ -1437,7 +1438,7 @@
       breakdownBody.innerHTML = "";
       const breakdown = report.expense_breakdown || [];
       let tWater = 0, tCommon = 0, tFresh = 0, tMeterRent = 0, tWaterExp = 0;
-      let tFixed = 0, tParking = 0, tClub = 0, tShift = 0, tGym = 0, tAnnual = 0, tLateFee = 0, tTotal = 0;
+      let tFixed = 0, tParking = 0, tClub = 0, tShift = 0, tGym = 0, tAccounts = 0, tAnnual = 0, tLateFee = 0, tTotal = 0;
       for (const b of breakdown) {
         if (b.total_expense === undefined || b.total_expense === null) continue;
         tWater += Number(b.water_used_litres || 0);
@@ -1450,6 +1451,7 @@
         tClub += Number(b.club_house_fee || 0);
         tShift += Number(b.shifting_fee || 0);
         tGym += Number(b.gym_usage_fee || 0);
+        tAccounts += Number(b.accounts_fee || 0);
         tAnnual += Number(b.annual_mem_fee || 0);
         tLateFee += Number(b.late_fee || 0);
         tTotal += Number(b.total_expense || 0);
@@ -1467,6 +1469,7 @@
           <td>${formatAmount(b.club_house_fee)}</td>
           <td>${formatAmount(b.shifting_fee)}</td>
           <td>${formatAmount(b.gym_usage_fee)}</td>
+          <td>${formatAmount(b.accounts_fee)}</td>
           <td>${formatAmount(b.annual_mem_fee)}</td>
           <td>${formatAmount(b.late_fee)}</td>
           <td><strong>${formatAmount(b.total_expense)}</strong></td>
@@ -1488,6 +1491,7 @@
         <td>${formatAmount(tClub)}</td>
         <td>${formatAmount(tShift)}</td>
         <td>${formatAmount(tGym)}</td>
+        <td>${formatAmount(tAccounts)}</td>
         <td>${formatAmount(tAnnual)}</td>
         <td>${formatAmount(tLateFee)}</td>
         <td><strong>${formatAmount(tTotal)}</strong></td>

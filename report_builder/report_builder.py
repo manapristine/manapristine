@@ -645,6 +645,7 @@ def load_expense_details(workbook_path: Path, expense_sheet_map: dict[str, str])
                 club_house_fee = _opt_num(12)
                 shifting_fee = _opt_num(13)
                 gym_usage_fee = _opt_num(14)
+                accounts_fee = _opt_num(15)
                 annual_mem_fee = _opt_num(mem_fee_idx)
                 late_fee = _opt_num(late_fee_idx)
                 total_expense = _req_num(total_exp_idx, "TOTAL EXPENSE TO BE PAID")
@@ -662,6 +663,7 @@ def load_expense_details(workbook_path: Path, expense_sheet_map: dict[str, str])
                     "club_house_fee": club_house_fee,
                     "shifting_fee": shifting_fee,
                     "gym_usage_fee": gym_usage_fee,
+                    "accounts_fee": accounts_fee,
                     "annual_mem_fee": annual_mem_fee,
                     "late_fee": late_fee,
                     "total_expense": total_expense,
