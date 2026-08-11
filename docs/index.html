@@ -853,10 +853,10 @@
               <tr>
                 <th>Month</th>
                 <th>Collection</th>
+                <th>Total Expense</th>
                 <th>Late Fee</th>
                 <th>Late Fee Reason</th>
-                <th>Total Expense</th>
-                <th>Collection - Total Expense</th>
+                <th>Net Due</th>
               </tr>
             </thead>
             <tbody id="monthly-body"></tbody>
@@ -1416,9 +1416,9 @@
         tr.innerHTML = `
           <td>${esc(month.month)}</td>
           <td class="${Number(month.collection) < 0 ? "negative-text" : ""}">${formatAmount(month.collection)}</td>
-          <td class="${Number(month.late_fee) < 0 ? "negative-text" : ""}">${formatAmount(month.late_fee)}</td>
-          <td style="font-size:0.85em; color:var(--text-muted, #718096);">${esc(reasonText)}</td>
           <td class="${Number(month.expense) < 0 ? "negative-text" : ""}">${formatAmount(month.expense)}</td>
+          <td class="${Number(month.late_fee) < 0 ? "negative-text" : ""}">${formatAmount(month.late_fee)}</td>
+          <td style="font-size:0.8em; white-space:nowrap; color:var(--text-muted, #718096);">${esc(reasonText)}</td>
           <td class="${netValue < 0 ? "negative-text" : netValue > 0 ? "positive-text" : ""}">${formatAmount(month.net_collection_minus_expense)}</td>
         `;
         body.appendChild(tr);
@@ -1431,9 +1431,9 @@
       totalRow1.innerHTML = `
         <td>Total</td>
         <td class="${sumColl < 0 ? "negative-text" : ""}">${formatAmount(sumColl)}</td>
+        <td class="${sumExp < 0 ? "negative-text" : ""}">${formatAmount(sumExp)}</td>
         <td class="${sumLate < 0 ? "negative-text" : ""}">${formatAmount(sumLate)}</td>
         <td></td>
-        <td class="${sumExp < 0 ? "negative-text" : ""}">${formatAmount(sumExp)}</td>
         <td class="${totalOutstanding < 0 ? "negative-text" : totalOutstanding > 0 ? "positive-text" : ""}">${formatAmount(totalOutstanding)}</td>
       `;
       body.appendChild(totalRow1);

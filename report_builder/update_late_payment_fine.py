@@ -85,8 +85,9 @@ from enum import Enum
 
 class LateFineReason(str, Enum):
     NONE = ""
-    MISSED_PAYMENT = "Missed Payment"
-    CUMULATIVE_DEFICIT = "Outstanding Dues"
+    MISSED_PAYMENT = "Missed"
+    CUMULATIVE_DEFICIT = "Past Dues"
+
 
 
 def normalize_flat(flat):
@@ -342,38 +343,41 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
             collection_sheet_name = find_sheet(wb_data, [f"{curr_abbr}{curr_yr}-COLLECTION", f"{curr_full}{curr_yr}-COLLECTION"])
             expense_sheet_name = find_sheet(wb_data, [f"{curr_abbr}{curr_yr}-EXPENSE", f"{curr_full}{curr_yr}-EXPENSE"])
 
-            # 1. Process late fee application for current month's EXPENSE sheet (looks back at prev_m)
-            if idx > 0 and expense_sheet_name and expense_sheet_name in wb.sheetnames:
-                prev_m, prev_yr = month_seq[idx - 1]
-                dt_prev = datetime(prev_yr, prev_m, 1)
-                prev_abbr = dt_prev.strftime('%b')
-                prev_full = dt_prev.strftime('%B')
-                prev_collection_sheet_name = find_sheet(wb_data, [f"{prev_abbr}{prev_yr}-COLLECTION", f"{prev_full}{prev_yr}-COLLECTION"])
-
+            # 1. Process late fee application for current month's EXPENSE sheet (looks back at prev_m or opening carryover)
+            if expense_sheet_name and expense_sheet_name in wb.sheetnames:
                 is_current = (curr_yr, curr_m) == (as_of_yr, as_of_m)
                 is_future = (curr_yr, curr_m) > (as_of_yr, as_of_m)
                 skip_late_fee = is_current or is_future
 
                 prev_month_missed = {}
-                has_collection_data = False
+                has_collection_data = (idx == 0)
+                prev_collection_sheet_name = None
 
-                if prev_collection_sheet_name and not skip_late_fee:
-                    ws_pc = wb_data[prev_collection_sheet_name]
-                    total_col_idx = 11
-                    header_c = [str(ws_pc.cell(1, col).value).strip().upper() if ws_pc.cell(1, col).value else "" for col in range(1, ws_pc.max_column + 1)]
-                    if "TOTAL" in header_c:
-                        total_col_idx = header_c.index("TOTAL") + 1
+                if idx > 0:
+                    prev_m, prev_yr = month_seq[idx - 1]
+                    dt_prev = datetime(prev_yr, prev_m, 1)
+                    prev_abbr = dt_prev.strftime('%b')
+                    prev_full = dt_prev.strftime('%B')
+                    prev_collection_sheet_name = find_sheet(wb_data, [f"{prev_abbr}{prev_yr}-COLLECTION", f"{prev_full}{prev_yr}-COLLECTION"])
 
-                    for r in range(2, ws_pc.max_row + 1):
-                        flat_val = ws_pc.cell(row=r, column=1).value
-                        flat_id = normalize_flat(flat_val)
-                        if not flat_id or flat_id in non_flat_ids:
-                            continue
+                    if prev_collection_sheet_name and not skip_late_fee:
+                        ws_pc = wb_data[prev_collection_sheet_name]
+                        total_col_idx = 11
+                        header_c = [str(ws_pc.cell(1, col).value).strip().upper() if ws_pc.cell(1, col).value else "" for col in range(1, ws_pc.max_column + 1)]
+                        if "TOTAL" in header_c:
+                            total_col_idx = header_c.index("TOTAL") + 1
 
-                        paid = is_flat_paid_in_collection_row(ws_pc, r, total_col_idx)
-                        prev_month_missed[flat_id] = not paid
-                        if paid:
-                            has_collection_data = True
+                        for r in range(2, ws_pc.max_row + 1):
+                            flat_val = ws_pc.cell(row=r, column=1).value
+                            flat_id = normalize_flat(flat_val)
+                            if not flat_id or flat_id in non_flat_ids:
+                                continue
+
+                            paid = is_flat_paid_in_collection_row(ws_pc, r, total_col_idx)
+                            prev_month_missed[flat_id] = not paid
+                            if paid:
+                                has_collection_data = True
+
 
                 ws_e = wb[expense_sheet_name]
                 header_e = [str(ws_e.cell(2, col).value).strip().upper() if ws_e.cell(2, col).value else "" for col in range(1, ws_e.max_column + 1)]
