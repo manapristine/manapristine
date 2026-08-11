@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-11T09:47:05",
+  "generated_at": "2026-08-11T12:22:35",
   "financial_year": "2026-27",
   "cutoff_date": "2026-07-31",
   "sheet": "INCOME-EXPENSE-CYCLES",
@@ -5364,11 +5364,11 @@
         },
         {
           "month": "Jul 2026",
-          "collection": 0,
+          "collection": 7247,
           "expense": 7555.808723743273,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -8555.808723743274
+          "net_collection_minus_expense": -1308.8087237432737
         },
         {
           "month": "Aug 2026",
@@ -5436,11 +5436,11 @@
         }
       ],
       "totals": {
-        "collection": 31790.36,
+        "collection": 39037.36,
         "expense": 30368.84203695395,
         "late_fee": 4000.0,
-        "net_collection_minus_expense": -2578.482036953952,
-        "closing_balance": -58684.259707709505
+        "net_collection_minus_expense": 4668.517963046048,
+        "closing_balance": -51437.259707709505
       },
       "expense_breakdown": [
         {
