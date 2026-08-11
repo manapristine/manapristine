@@ -281,7 +281,7 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
 
     cum_collections = defaultdict(float)
     cum_expenses = defaultdict(float)
-
+    monthly_missed_status = defaultdict(dict)
 
     # Pre-read all monthly collection and expense totals from wb_data
     monthly_colls = defaultdict(lambda: defaultdict(float))
@@ -348,8 +348,8 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
             if expense_sheet_name and expense_sheet_name in wb.sheetnames:
                 is_current = (curr_yr, curr_m) == (as_of_yr, as_of_m)
                 is_future = (curr_yr, curr_m) > (as_of_yr, as_of_m)
-                is_first_month_of_fy = (idx == 0)
-                skip_late_fee = is_current or is_future or is_first_month_of_fy
+                is_first_two_months = (idx < 2)  # April and May get 0 fine under 2-month grace rule
+                skip_late_fee = is_current or is_future or is_first_two_months
 
                 prev_month_missed = {}
                 has_collection_data = False
@@ -362,7 +362,7 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
                     prev_full = dt_prev.strftime('%B')
                     prev_collection_sheet_name = find_sheet(wb_data, [f"{prev_abbr}{prev_yr}-COLLECTION", f"{prev_full}{prev_yr}-COLLECTION"])
 
-                    if prev_collection_sheet_name and not skip_late_fee:
+                    if prev_collection_sheet_name:
                         ws_pc = wb_data[prev_collection_sheet_name]
                         total_col_idx = 11
                         header_c = [str(ws_pc.cell(1, col).value).strip().upper() if ws_pc.cell(1, col).value else "" for col in range(1, ws_pc.max_column + 1)]
@@ -377,11 +377,9 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
 
                             paid = is_flat_paid_in_collection_row(ws_pc, r, total_col_idx)
                             prev_month_missed[flat_id] = not paid
+                            monthly_missed_status[flat_id][idx - 1] = not paid
                             if paid:
                                 has_collection_data = True
-
-
-
 
                 ws_e = wb[expense_sheet_name]
                 header_e = [str(ws_e.cell(2, col).value).strip().upper() if ws_e.cell(2, col).value else "" for col in range(1, ws_e.max_column + 1)]
@@ -411,7 +409,9 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
                         else:
                             paid_prev = not prev_month_missed.get(flat_id, True)
                             net_pos = cum_collections[flat_id] - cum_expenses[flat_id]
-                            if net_pos < 0:
+                            unpaid_months_count = sum(1 for prev_i in range(idx) if monthly_missed_status[flat_id].get(prev_i, False))
+                            
+                            if net_pos < 0 and unpaid_months_count >= 2:
                                 fine_amount = fine_per_month
                                 reason_str = LateFineReason.MISSED_PAYMENT.value if not paid_prev else LateFineReason.CUMULATIVE_DEFICIT.value
                                 flagged_in_sheet.append((flat_id, fine_amount, net_pos, paid_prev, reason_str))
@@ -419,6 +419,7 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
                                 fine_amount = 0
                                 reason_str = LateFineReason.NONE.value
                                 waived_in_sheet.append((flat_id, net_pos, paid_prev))
+
 
                         fine_cell = ws_e.cell(row=r, column=fine_col_idx)
                         reason_cell = ws_e.cell(row=r, column=reason_col_idx)

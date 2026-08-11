@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-11T14:03:02",
+  "generated_at": "2026-08-11T14:30:46",
   "financial_year": "2026-27",
   "cutoff_date": "2026-07-31",
   "sheet": "INCOME-EXPENSE-CYCLES",
@@ -32,10 +32,10 @@
         {
           "month": "Jun 2026",
           "collection": 10856.0,
-          "expense": 6902.649403290912,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 2953.3505967090878
+          "expense": 5902.649403290912,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 4953.350596709088
         },
         {
           "month": "Jul 2026",
@@ -112,10 +112,10 @@
       ],
       "totals": {
         "collection": 26091.0,
-        "expense": 23522.366446404067,
-        "late_fee": 1000.0,
-        "net_collection_minus_expense": 1568.6335535959333,
-        "closing_balance": -7874.072683811177
+        "expense": 22522.366446404067,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": 3568.6335535959333,
+        "closing_balance": -5874.072683811177
       },
       "expense_breakdown": [
         {
@@ -174,9 +174,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 6902.649403290912
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5902.649403290912
         },
         {
           "month": "Jul 2026",
@@ -379,10 +379,10 @@
         {
           "month": "May 2026",
           "collection": 0.0,
-          "expense": 7140.43469170497,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -8140.43469170497
+          "expense": 6140.43469170497,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -6140.43469170497
         },
         {
           "month": "Jun 2026",
@@ -467,10 +467,10 @@
       ],
       "totals": {
         "collection": 16500.0,
-        "expense": 27776.544342055568,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -14276.544342055568,
-        "closing_balance": -11671.0263717848
+        "expense": 26776.544342055568,
+        "late_fee": 2000.0,
+        "net_collection_minus_expense": -12276.544342055568,
+        "closing_balance": -9671.0263717848
       },
       "expense_breakdown": [
         {
@@ -509,9 +509,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 7140.43469170497
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6140.43469170497
         },
         {
           "month": "Jun 2026",
@@ -734,26 +734,26 @@
         {
           "month": "May 2026",
           "collection": 6000.0,
-          "expense": 7838.874042141997,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2838.874042141997
+          "expense": 6838.874042141997,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -838.874042141997
         },
         {
           "month": "Jun 2026",
           "collection": 6000.0,
-          "expense": 8450.176149378462,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -3450.1761493784616
+          "expense": 7450.176149378462,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -1450.1761493784616
         },
         {
           "month": "Jul 2026",
           "collection": 6000.0,
-          "expense": 8584.50758665173,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -3584.507586651731
+          "expense": 7584.507586651731,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -1584.507586651731
         },
         {
           "month": "Aug 2026",
@@ -822,10 +822,10 @@
       ],
       "totals": {
         "collection": 24000.0,
-        "expense": 31636.54836362492,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -10636.54836362492,
-        "closing_balance": -17273.807184640427
+        "expense": 28636.54836362492,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -4636.548363624919,
+        "closing_balance": -11273.807184640427
       },
       "expense_breakdown": [
         {
@@ -864,9 +864,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7838.874042141997
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6838.874042141997
         },
         {
           "month": "Jun 2026",
@@ -884,9 +884,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 8450.176149378462
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 7450.176149378462
         },
         {
           "month": "Jul 2026",
@@ -904,9 +904,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 8584.50758665173
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 7584.507586651731
         },
         {
           "month": "Aug 2026",
@@ -1089,18 +1089,18 @@
         {
           "month": "May 2026",
           "collection": 0.0,
-          "expense": 6784.252751681514,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -7784.252751681514
+          "expense": 5784.252751681514,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -5784.252751681514
         },
         {
           "month": "Jun 2026",
           "collection": 0.0,
-          "expense": 7034.837041924086,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -8034.837041924086
+          "expense": 6034.837041924086,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -6034.837041924086
         },
         {
           "month": "Jul 2026",
@@ -1177,10 +1177,10 @@
       ],
       "totals": {
         "collection": 28478.0,
-        "expense": 26067.492965073176,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -589.4929650731756,
-        "closing_balance": -6224.714846979503
+        "expense": 24067.492965073176,
+        "late_fee": 1000.0,
+        "net_collection_minus_expense": 3410.5070349268244,
+        "closing_balance": -2224.714846979503
       },
       "expense_breakdown": [
         {
@@ -1219,9 +1219,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6784.252751681514
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5784.252751681514
         },
         {
           "month": "Jun 2026",
@@ -1239,9 +1239,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 7034.837041924086
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6034.837041924086
         },
         {
           "month": "Jul 2026",
@@ -1444,26 +1444,26 @@
         {
           "month": "May 2026",
           "collection": 5237.0,
-          "expense": 6582.563815707334,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -2345.5638157073336
+          "expense": 5582.563815707334,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -345.56381570733356
         },
         {
           "month": "Jun 2026",
           "collection": 5554.98,
-          "expense": 7135.301881047967,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2580.3218810479675
+          "expense": 6135.301881047967,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -580.3218810479675
         },
         {
           "month": "Jul 2026",
           "collection": 11259.05,
-          "expense": 6647.954726708018,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": 3611.0952732919814
+          "expense": 5647.954726708018,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 5611.095273291981
         },
         {
           "month": "Aug 2026",
@@ -1532,10 +1532,10 @@
       ],
       "totals": {
         "collection": 22051.03,
-        "expense": 25398.153169580357,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -6347.123169580358,
-        "closing_balance": -11702.007327289648
+        "expense": 22398.153169580357,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -347.1231695803581,
+        "closing_balance": -5702.007327289648
       },
       "expense_breakdown": [
         {
@@ -1574,9 +1574,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 6582.563815707334
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5582.563815707334
         },
         {
           "month": "Jun 2026",
@@ -1594,9 +1594,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7135.301881047967
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6135.301881047967
         },
         {
           "month": "Jul 2026",
@@ -1614,9 +1614,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6647.954726708018
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5647.954726708018
         },
         {
           "month": "Aug 2026",
@@ -1799,10 +1799,10 @@
         {
           "month": "May 2026",
           "collection": 9442.71,
-          "expense": 6835.502851299271,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": 1607.2071487007279
+          "expense": 5835.502851299271,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 3607.207148700728
         },
         {
           "month": "Jun 2026",
@@ -1887,10 +1887,10 @@
       ],
       "totals": {
         "collection": 28118.84,
-        "expense": 24787.09633759399,
-        "late_fee": 1000.0,
-        "net_collection_minus_expense": 2331.74366240601,
-        "closing_balance": -8262.27308130661
+        "expense": 23787.09633759399,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": 4331.74366240601,
+        "closing_balance": -6262.27308130661
       },
       "expense_breakdown": [
         {
@@ -1929,9 +1929,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6835.502851299271
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5835.502851299271
         },
         {
           "month": "Jun 2026",
@@ -2154,26 +2154,26 @@
         {
           "month": "May 2026",
           "collection": 7174.0,
-          "expense": 7017.970890189861,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -843.9708901898612
+          "expense": 6017.970890189861,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 1156.0291098101388
         },
         {
           "month": "Jun 2026",
           "collection": 5964.86,
-          "expense": 7175.546329928178,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2210.6863299281786
+          "expense": 6175.546329928178,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -210.68632992817857
         },
         {
           "month": "Jul 2026",
           "collection": 6179.33,
-          "expense": 7220.109537974051,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2040.779537974051
+          "expense": 6220.109537974051,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -40.77953797405098
         },
         {
           "month": "Aug 2026",
@@ -2242,10 +2242,10 @@
       ],
       "totals": {
         "collection": 24702.190000000002,
-        "expense": 26744.785152157565,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -5042.595152157563,
-        "closing_balance": -12216.3502457445
+        "expense": 23744.785152157565,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": 957.4048478424374,
+        "closing_balance": -6216.350245744499
       },
       "expense_breakdown": [
         {
@@ -2284,9 +2284,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7017.970890189861
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6017.970890189861
         },
         {
           "month": "Jun 2026",
@@ -2304,9 +2304,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7175.546329928178
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6175.546329928178
         },
         {
           "month": "Jul 2026",
@@ -2324,9 +2324,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7220.109537974051
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6220.109537974051
         },
         {
           "month": "Aug 2026",
@@ -2517,18 +2517,18 @@
         {
           "month": "Jun 2026",
           "collection": 5333.0,
-          "expense": 6519.664346973999,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2186.6643469739993
+          "expense": 5519.664346973999,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -186.66434697399927
         },
         {
           "month": "Jul 2026",
           "collection": 5903.0,
-          "expense": 6468.000701744003,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -1565.000701744003
+          "expense": 5468.000701744003,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 434.999298255997
         },
         {
           "month": "Aug 2026",
@@ -2597,10 +2597,10 @@
       ],
       "totals": {
         "collection": 18227.0,
-        "expense": 23352.585085367577,
-        "late_fee": 2000.0,
-        "net_collection_minus_expense": -7125.5850853675765,
-        "closing_balance": -9091.084372467823
+        "expense": 21352.585085367577,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -3125.5850853675765,
+        "closing_balance": -5091.084372467823
       },
       "expense_breakdown": [
         {
@@ -2659,9 +2659,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6519.664346973999
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5519.664346973999
         },
         {
           "month": "Jul 2026",
@@ -2679,9 +2679,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6468.000701744003
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5468.000701744003
         },
         {
           "month": "Aug 2026",
@@ -2864,26 +2864,26 @@
         {
           "month": "May 2026",
           "collection": 10233.0,
-          "expense": 6551.946082935137,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 2681.0539170648626
+          "expense": 5551.946082935137,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 4681.053917064863
         },
         {
           "month": "Jun 2026",
           "collection": 5538.0,
-          "expense": 6732.997411534369,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2194.9974115343693
+          "expense": 5732.997411534369,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -194.99741153436935
         },
         {
           "month": "Jul 2026",
           "collection": 0.0,
-          "expense": 6788.700552900898,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -7788.700552900898
+          "expense": 5788.700552900898,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -5788.700552900898
         },
         {
           "month": "Aug 2026",
@@ -2952,10 +2952,10 @@
       ],
       "totals": {
         "collection": 15771.0,
-        "expense": 25014.73091225666,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -12243.730912256658,
-        "closing_balance": -12840.988504881083
+        "expense": 22014.73091225666,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -6243.7309122566585,
+        "closing_balance": -6840.988504881083
       },
       "expense_breakdown": [
         {
@@ -2994,9 +2994,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 6551.946082935137
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5551.946082935137
         },
         {
           "month": "Jun 2026",
@@ -3014,9 +3014,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6732.997411534369
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5732.997411534369
         },
         {
           "month": "Jul 2026",
@@ -3034,9 +3034,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6788.700552900898
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5788.700552900898
         },
         {
           "month": "Aug 2026",
@@ -3574,26 +3574,26 @@
         {
           "month": "May 2026",
           "collection": 0.0,
-          "expense": 6342.67708291357,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -7342.67708291357
+          "expense": 5342.67708291357,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -5342.67708291357
         },
         {
           "month": "Jun 2026",
           "collection": 4901.0,
-          "expense": 6549.987111399425,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -2648.987111399425
+          "expense": 5549.987111399425,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -648.987111399425
         },
         {
           "month": "Jul 2026",
           "collection": 0.0,
-          "expense": 6577.132976648938,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -7577.132976648938
+          "expense": 5577.132976648938,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -5577.132976648938
         },
         {
           "month": "Aug 2026",
@@ -3662,10 +3662,10 @@
       ],
       "totals": {
         "collection": 10450.0,
-        "expense": 24150.014588982696,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -16700.014588982696,
-        "closing_balance": -17259.982048941172
+        "expense": 21150.014588982696,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -10700.014588982696,
+        "closing_balance": -11259.982048941172
       },
       "expense_breakdown": [
         {
@@ -3704,9 +3704,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6342.67708291357
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5342.67708291357
         },
         {
           "month": "Jun 2026",
@@ -3724,9 +3724,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 6549.987111399425
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5549.987111399425
         },
         {
           "month": "Jul 2026",
@@ -3744,9 +3744,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6577.132976648938
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5577.132976648938
         },
         {
           "month": "Aug 2026",
@@ -3945,10 +3945,10 @@
         {
           "month": "Jul 2026",
           "collection": 4714.75,
-          "expense": 6826.5028608520015,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -3111.7528608520015
+          "expense": 5826.5028608520015,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -1111.7528608520015
         },
         {
           "month": "Aug 2026",
@@ -4017,10 +4017,10 @@
       ],
       "totals": {
         "collection": 17210.16,
-        "expense": 23452.05919054294,
-        "late_fee": 1000.0,
-        "net_collection_minus_expense": -7241.899190542939,
-        "closing_balance": -8598.29096346955
+        "expense": 22452.05919054294,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -5241.899190542939,
+        "closing_balance": -6598.29096346955
       },
       "expense_breakdown": [
         {
@@ -4099,9 +4099,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 6826.5028608520015
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5826.5028608520015
         },
         {
           "month": "Aug 2026",
@@ -4284,18 +4284,18 @@
         {
           "month": "May 2026",
           "collection": 0.0,
-          "expense": 6536.0157879050685,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -7536.0157879050685
+          "expense": 5536.0157879050685,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -5536.0157879050685
         },
         {
           "month": "Jun 2026",
           "collection": 0.0,
-          "expense": 6694.560104516224,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -7694.560104516224
+          "expense": 5694.560104516224,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -5694.560104516224
         },
         {
           "month": "Jul 2026",
@@ -4372,10 +4372,10 @@
       ],
       "totals": {
         "collection": 16318.07,
-        "expense": 24967.27598441296,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -11649.205984412962,
-        "closing_balance": -12495.486841555416
+        "expense": 22967.275984412965,
+        "late_fee": 1000.0,
+        "net_collection_minus_expense": -7649.205984412965,
+        "closing_balance": -8495.48684155542
       },
       "expense_breakdown": [
         {
@@ -4414,9 +4414,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6536.0157879050685
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5536.0157879050685
         },
         {
           "month": "Jun 2026",
@@ -4434,9 +4434,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 6694.560104516224
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5694.560104516224
         },
         {
           "month": "Jul 2026",
@@ -4647,18 +4647,18 @@
         {
           "month": "Jun 2026",
           "collection": 5770.0,
-          "expense": 7498.113361790015,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -2728.113361790016
+          "expense": 6498.113361790015,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -728.113361790015
         },
         {
           "month": "Jul 2026",
           "collection": 5600.0,
-          "expense": 7571.254530600858,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2971.254530600858
+          "expense": 6571.254530600858,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -971.2545306008578
         },
         {
           "month": "Aug 2026",
@@ -4727,10 +4727,10 @@
       ],
       "totals": {
         "collection": 18370.0,
-        "expense": 25631.22238048582,
-        "late_fee": 2000.0,
-        "net_collection_minus_expense": -9261.222380485819,
-        "closing_balance": -22135.48085084217
+        "expense": 23631.22238048582,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -5261.222380485819,
+        "closing_balance": -18135.48085084217
       },
       "expense_breakdown": [
         {
@@ -4789,9 +4789,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 7498.113361790015
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6498.113361790015
         },
         {
           "month": "Jul 2026",
@@ -4809,9 +4809,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7571.254530600858
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6571.254530600858
         },
         {
           "month": "Aug 2026",
@@ -4994,26 +4994,26 @@
         {
           "month": "May 2026",
           "collection": 5907.0,
-          "expense": 7546.251141831389,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2639.251141831388
+          "expense": 6546.251141831389,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -639.2511418313888
         },
         {
           "month": "Jun 2026",
           "collection": 0.0,
-          "expense": 7788.307076585446,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8788.307076585446
+          "expense": 6788.307076585446,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -6788.307076585446
         },
         {
           "month": "Jul 2026",
           "collection": 6511.0,
-          "expense": 7580.174332091824,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -2069.174332091825
+          "expense": 6580.174332091824,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -69.174332091824
         },
         {
           "month": "Aug 2026",
@@ -5082,10 +5082,10 @@
       ],
       "totals": {
         "collection": 18182.0,
-        "expense": 28821.68300624717,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -13639.68300624717,
-        "closing_balance": -14062.083998560163
+        "expense": 25821.68300624717,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -7639.683006247171,
+        "closing_balance": -8062.083998560163
       },
       "expense_breakdown": [
         {
@@ -5124,9 +5124,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7546.251141831389
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6546.251141831389
         },
         {
           "month": "Jun 2026",
@@ -5144,9 +5144,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7788.307076585446
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6788.307076585446
         },
         {
           "month": "Jul 2026",
@@ -5164,9 +5164,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 7580.174332091824
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6580.174332091824
         },
         {
           "month": "Aug 2026",
@@ -5704,10 +5704,10 @@
         {
           "month": "May 2026",
           "collection": 0.0,
-          "expense": 6814.992089759285,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -7814.992089759285
+          "expense": 5814.992089759285,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -5814.992089759285
         },
         {
           "month": "Jun 2026",
@@ -5792,10 +5792,10 @@
       ],
       "totals": {
         "collection": 6016.0,
-        "expense": 30766.069796243413,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -27750.069796243413,
-        "closing_balance": -29523.2960850506
+        "expense": 29766.069796243413,
+        "late_fee": 2000.0,
+        "net_collection_minus_expense": -25750.069796243413,
+        "closing_balance": -27523.2960850506
       },
       "expense_breakdown": [
         {
@@ -5834,9 +5834,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 6814.992089759285
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5814.992089759285
         },
         {
           "month": "Jun 2026",
@@ -6059,26 +6059,26 @@
         {
           "month": "May 2026",
           "collection": 0.0,
-          "expense": 7733.787512697723,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8733.787512697723
+          "expense": 6733.787512697723,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -6733.787512697723
         },
         {
           "month": "Jun 2026",
           "collection": 7164.78,
-          "expense": 7960.0016677914,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -1795.2216677913993
+          "expense": 6960.0016677914,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 204.77833220859975
         },
         {
           "month": "Jul 2026",
           "collection": 0.0,
-          "expense": 8165.0676657116055,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -9165.067665711606
+          "expense": 7165.0676657116055,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -7165.0676657116055
         },
         {
           "month": "Aug 2026",
@@ -6147,10 +6147,10 @@
       ],
       "totals": {
         "collection": 13285.779999999999,
-        "expense": 30516.70344588018,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -20230.92344588018,
-        "closing_balance": -20242.640847222196
+        "expense": 27516.70344588018,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -14230.92344588018,
+        "closing_balance": -14242.640847222196
       },
       "expense_breakdown": [
         {
@@ -6189,9 +6189,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7733.787512697723
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6733.787512697723
         },
         {
           "month": "Jun 2026",
@@ -6209,9 +6209,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 7960.0016677914
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6960.0016677914
         },
         {
           "month": "Jul 2026",
@@ -6229,9 +6229,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 8165.0676657116055
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 7165.0676657116055
         },
         {
           "month": "Aug 2026",
@@ -6414,26 +6414,26 @@
         {
           "month": "May 2026",
           "collection": 2100.0,
-          "expense": 7370.06604372874,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -6270.066043728741
+          "expense": 6370.06604372874,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -4270.06604372874
         },
         {
           "month": "Jun 2026",
           "collection": 6263.0,
-          "expense": 7674.71143347894,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2411.7114334789403
+          "expense": 6674.71143347894,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -411.7114334789403
         },
         {
           "month": "Jul 2026",
           "collection": 7044.0,
-          "expense": 7157.21968410162,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -1113.2196841016203
+          "expense": 6157.21968410162,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 886.7803158983797
         },
         {
           "month": "Aug 2026",
@@ -6502,10 +6502,10 @@
       ],
       "totals": {
         "collection": 21203.0,
-        "expense": 28236.44040655112,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -10033.440406551119,
-        "closing_balance": -11872.882483622307
+        "expense": 25236.44040655112,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -4033.440406551119,
+        "closing_balance": -5872.882483622307
       },
       "expense_breakdown": [
         {
@@ -6544,9 +6544,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7370.06604372874
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6370.06604372874
         },
         {
           "month": "Jun 2026",
@@ -6564,9 +6564,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7674.71143347894
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6674.71143347894
         },
         {
           "month": "Jul 2026",
@@ -6584,9 +6584,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7157.21968410162
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6157.21968410162
         },
         {
           "month": "Aug 2026",
@@ -6769,10 +6769,10 @@
         {
           "month": "May 2026",
           "collection": 11592.0,
-          "expense": 8101.80570246362,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": 2490.19429753638
+          "expense": 7101.80570246362,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 4490.19429753638
         },
         {
           "month": "Jun 2026",
@@ -6857,10 +6857,10 @@
       ],
       "totals": {
         "collection": 31607.0,
-        "expense": 28116.172293020863,
-        "late_fee": 1000.0,
-        "net_collection_minus_expense": 2490.8277069791366,
-        "closing_balance": -7017.364323614005
+        "expense": 27116.172293020863,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": 4490.827706979137,
+        "closing_balance": -5017.364323614005
       },
       "expense_breakdown": [
         {
@@ -6899,9 +6899,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 8101.80570246362
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 7101.80570246362
         },
         {
           "month": "Jun 2026",
@@ -7124,10 +7124,10 @@
         {
           "month": "May 2026",
           "collection": 0.0,
-          "expense": 7157.919051475277,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -8157.919051475277
+          "expense": 6157.919051475277,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -6157.919051475277
         },
         {
           "month": "Jun 2026",
@@ -7212,10 +7212,10 @@
       ],
       "totals": {
         "collection": 29212.36,
-        "expense": 27186.682584189606,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -974.3225841896055,
-        "closing_balance": -11610.197399089835
+        "expense": 26186.682584189606,
+        "late_fee": 2000.0,
+        "net_collection_minus_expense": 1025.6774158103945,
+        "closing_balance": -9610.197399089835
       },
       "expense_breakdown": [
         {
@@ -7254,9 +7254,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 7157.919051475277
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6157.919051475277
         },
         {
           "month": "Jun 2026",
@@ -7479,18 +7479,18 @@
         {
           "month": "May 2026",
           "collection": 0.0,
-          "expense": 6675.510804267,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -7675.510804267
+          "expense": 5675.510804267,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -5675.510804267
         },
         {
           "month": "Jun 2026",
           "collection": 0.0,
-          "expense": 6510.055020219463,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -7510.055020219463
+          "expense": 5510.055020219463,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -5510.055020219463
         },
         {
           "month": "Jul 2026",
@@ -7567,10 +7567,10 @@
       ],
       "totals": {
         "collection": 9003.0,
-        "expense": 25012.883094409277,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -19009.883094409277,
-        "closing_balance": -30177.841443664656
+        "expense": 23012.883094409277,
+        "late_fee": 1000.0,
+        "net_collection_minus_expense": -15009.883094409277,
+        "closing_balance": -26177.841443664656
       },
       "expense_breakdown": [
         {
@@ -7609,9 +7609,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6675.510804267
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5675.510804267
         },
         {
           "month": "Jun 2026",
@@ -7629,9 +7629,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 6510.055020219463
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5510.055020219463
         },
         {
           "month": "Jul 2026",
@@ -7842,10 +7842,10 @@
         {
           "month": "Jun 2026",
           "collection": 10563.0,
-          "expense": 7193.75861880473,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 2369.24138119527
+          "expense": 6193.75861880473,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 4369.24138119527
         },
         {
           "month": "Jul 2026",
@@ -7922,10 +7922,10 @@
       ],
       "totals": {
         "collection": 26877.0,
-        "expense": 23501.78423558131,
-        "late_fee": 1000.0,
-        "net_collection_minus_expense": 2375.215764418688,
-        "closing_balance": -8246.491408535932
+        "expense": 22501.78423558131,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": 4375.215764418688,
+        "closing_balance": -6246.491408535932
       },
       "expense_breakdown": [
         {
@@ -7984,9 +7984,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 7193.75861880473
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6193.75861880473
         },
         {
           "month": "Jul 2026",
@@ -8189,26 +8189,26 @@
         {
           "month": "May 2026",
           "collection": 8946.31,
-          "expense": 6994.603126090675,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": 951.7068739093247
+          "expense": 5994.603126090675,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 2951.7068739093247
         },
         {
           "month": "Jun 2026",
           "collection": 0.0,
-          "expense": 6533.918181659895,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -7533.918181659895
+          "expense": 5533.918181659895,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -5533.918181659895
         },
         {
           "month": "Jul 2026",
           "collection": 0.0,
-          "expense": 7234.562671366106,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -8234.562671366106
+          "expense": 6234.562671366106,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -6234.562671366106
         },
         {
           "month": "Aug 2026",
@@ -8277,10 +8277,10 @@
       ],
       "totals": {
         "collection": 9442.25,
-        "expense": 25758.16323953765,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -19315.91323953765,
-        "closing_balance": -19134.744904860912
+        "expense": 22758.16323953765,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -13315.913239537651,
+        "closing_balance": -13134.744904860912
       },
       "expense_breakdown": [
         {
@@ -8319,9 +8319,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6994.603126090675
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5994.603126090675
         },
         {
           "month": "Jun 2026",
@@ -8339,9 +8339,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6533.918181659895
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5533.918181659895
         },
         {
           "month": "Jul 2026",
@@ -8359,9 +8359,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 7234.562671366106
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6234.562671366106
         },
         {
           "month": "Aug 2026",
@@ -8544,26 +8544,26 @@
         {
           "month": "May 2026",
           "collection": 0.0,
-          "expense": 7335.435335872632,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8335.435335872633
+          "expense": 6335.435335872632,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -6335.435335872632
         },
         {
           "month": "Jun 2026",
           "collection": 6465.0,
-          "expense": 7679.575492614506,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -2214.5754926145055
+          "expense": 6679.575492614506,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -214.5754926145064
         },
         {
           "month": "Jul 2026",
           "collection": 6702.0,
-          "expense": 8382.816091427549,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2680.8160914275486
+          "expense": 7382.816091427549,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -680.8160914275486
         },
         {
           "month": "Aug 2026",
@@ -8632,10 +8632,10 @@
       ],
       "totals": {
         "collection": 18757.0,
-        "expense": 29188.971720774716,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -13431.971720774716,
-        "closing_balance": -14644.070467878322
+        "expense": 26188.971720774716,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -7431.971720774716,
+        "closing_balance": -8644.070467878322
       },
       "expense_breakdown": [
         {
@@ -8674,9 +8674,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7335.435335872632
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6335.435335872632
         },
         {
           "month": "Jun 2026",
@@ -8694,9 +8694,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 7679.575492614506
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6679.575492614506
         },
         {
           "month": "Jul 2026",
@@ -8714,9 +8714,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 8382.816091427549
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 7382.816091427549
         },
         {
           "month": "Aug 2026",
@@ -8899,26 +8899,26 @@
         {
           "month": "May 2026",
           "collection": 4440.0,
-          "expense": 6472.146198247007,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -3032.1461982470073
+          "expense": 5472.146198247007,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -1032.1461982470073
         },
         {
           "month": "Jun 2026",
           "collection": 5452.43,
-          "expense": 6757.975650486503,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2305.5456504865024
+          "expense": 5757.975650486503,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -305.5456504865024
         },
         {
           "month": "Jul 2026",
           "collection": 5775.0,
-          "expense": 7057.947637099665,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2282.9476370996654
+          "expense": 6057.947637099665,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -282.94763709966537
         },
         {
           "month": "Aug 2026",
@@ -8987,10 +8987,10 @@
       ],
       "totals": {
         "collection": 15667.43,
-        "expense": 25180.321833044123,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -12512.891833044123,
-        "closing_balance": -12058.830609152981
+        "expense": 22180.321833044123,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -6512.891833044123,
+        "closing_balance": -6058.830609152981
       },
       "expense_breakdown": [
         {
@@ -9029,9 +9029,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 6472.146198247007
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5472.146198247007
         },
         {
           "month": "Jun 2026",
@@ -9049,9 +9049,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6757.975650486503
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5757.975650486503
         },
         {
           "month": "Jul 2026",
@@ -9069,9 +9069,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7057.947637099665
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6057.947637099665
         },
         {
           "month": "Aug 2026",
@@ -9609,26 +9609,26 @@
         {
           "month": "May 2026",
           "collection": 6335.0,
-          "expense": 7171.9036616161775,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -1836.9036616161775
+          "expense": 6171.9036616161775,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 163.0963383838225
         },
         {
           "month": "Jun 2026",
           "collection": 5689.0,
-          "expense": 7836.3022677914,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -3147.3022677913996
+          "expense": 6836.3022677914,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -1147.3022677913996
         },
         {
           "month": "Jul 2026",
           "collection": 6929.0,
-          "expense": 8039.610902186567,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2110.610902186567
+          "expense": 7039.610902186567,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -110.61090218656682
         },
         {
           "month": "Aug 2026",
@@ -9697,10 +9697,10 @@
       ],
       "totals": {
         "collection": 23440.0,
-        "expense": 28979.459661447592,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -8539.459661447592,
-        "closing_balance": -13025.763302761818
+        "expense": 25979.459661447592,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -2539.459661447592,
+        "closing_balance": -7025.763302761818
       },
       "expense_breakdown": [
         {
@@ -9739,9 +9739,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7171.9036616161775
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6171.9036616161775
         },
         {
           "month": "Jun 2026",
@@ -9759,9 +9759,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7836.3022677914
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6836.3022677914
         },
         {
           "month": "Jul 2026",
@@ -9779,9 +9779,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 8039.610902186567
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 7039.610902186567
         },
         {
           "month": "Aug 2026",
@@ -9972,10 +9972,10 @@
         {
           "month": "Jun 2026",
           "collection": 16049.79,
-          "expense": 7282.971212785671,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 7766.81878721433
+          "expense": 6282.971212785671,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 9766.81878721433
         },
         {
           "month": "Jul 2026",
@@ -10052,10 +10052,10 @@
       ],
       "totals": {
         "collection": 27788.79,
-        "expense": 24710.32698048139,
-        "late_fee": 1000.0,
-        "net_collection_minus_expense": 2078.463019518611,
-        "closing_balance": -13534.65560314488
+        "expense": 23710.32698048139,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": 4078.463019518611,
+        "closing_balance": -11534.65560314488
       },
       "expense_breakdown": [
         {
@@ -10114,9 +10114,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 7282.971212785671
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6282.971212785671
         },
         {
           "month": "Jul 2026",
@@ -10319,26 +10319,26 @@
         {
           "month": "May 2026",
           "collection": 6116.55,
-          "expense": 7229.774056199301,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2113.2240561993012
+          "expense": 6229.774056199301,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -113.22405619930123
         },
         {
           "month": "Jun 2026",
           "collection": 0.0,
-          "expense": 7769.630227754305,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8769.630227754305
+          "expense": 6769.630227754305,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -6769.630227754305
         },
         {
           "month": "Jul 2026",
           "collection": 7044.65,
-          "expense": 8185.277346249557,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -2140.6273462495574
+          "expense": 7185.277346249557,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -140.62734624955738
         },
         {
           "month": "Aug 2026",
@@ -10407,10 +10407,10 @@
       ],
       "totals": {
         "collection": 19131.199999999997,
-        "expense": 29301.228397753937,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -13170.02839775394,
-        "closing_balance": -15577.657804023434
+        "expense": 26301.228397753937,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -7170.02839775394,
+        "closing_balance": -9577.657804023434
       },
       "expense_breakdown": [
         {
@@ -10449,9 +10449,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7229.774056199301
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6229.774056199301
         },
         {
           "month": "Jun 2026",
@@ -10469,9 +10469,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7769.630227754305
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6769.630227754305
         },
         {
           "month": "Jul 2026",
@@ -10489,9 +10489,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 8185.277346249557
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 7185.277346249557
         },
         {
           "month": "Aug 2026",
@@ -10674,10 +10674,10 @@
         {
           "month": "May 2026",
           "collection": 0.0,
-          "expense": 6981.131741404278,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -7981.131741404278
+          "expense": 5981.131741404278,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -5981.131741404278
         },
         {
           "month": "Jun 2026",
@@ -10762,10 +10762,10 @@
       ],
       "totals": {
         "collection": 0.0,
-        "expense": 25848.28527471311,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -28848.28527471311,
-        "closing_balance": -48131.81146793415
+        "expense": 24848.28527471311,
+        "late_fee": 2000.0,
+        "net_collection_minus_expense": -26848.28527471311,
+        "closing_balance": -46131.81146793415
       },
       "expense_breakdown": [
         {
@@ -10804,9 +10804,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 6981.131741404278
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5981.131741404278
         },
         {
           "month": "Jun 2026",
@@ -11029,26 +11029,26 @@
         {
           "month": "May 2026",
           "collection": 0.0,
-          "expense": 6569.187232094298,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -7569.187232094298
+          "expense": 5569.187232094298,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -5569.187232094298
         },
         {
           "month": "Jun 2026",
           "collection": 5003.65,
-          "expense": 6901.047848831823,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -2897.3978488318235
+          "expense": 5901.047848831823,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -897.3978488318235
         },
         {
           "month": "Jul 2026",
           "collection": 11443.06,
-          "expense": 7120.158305886053,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": 3322.901694113946
+          "expense": 6120.158305886053,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 5322.901694113946
         },
         {
           "month": "Aug 2026",
@@ -11117,10 +11117,10 @@
       ],
       "totals": {
         "collection": 21265.71,
-        "expense": 25594.041556667315,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -7328.331556667315,
-        "closing_balance": -12318.717040088826
+        "expense": 22594.041556667315,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -1328.3315566673155,
+        "closing_balance": -6318.717040088826
       },
       "expense_breakdown": [
         {
@@ -11159,9 +11159,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6569.187232094298
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5569.187232094298
         },
         {
           "month": "Jun 2026",
@@ -11179,9 +11179,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 6901.047848831823
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5901.047848831823
         },
         {
           "month": "Jul 2026",
@@ -11199,9 +11199,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7120.158305886053
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6120.158305886053
         },
         {
           "month": "Aug 2026",
@@ -11384,26 +11384,26 @@
         {
           "month": "May 2026",
           "collection": 4556.92,
-          "expense": 6470.930145191277,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2914.010145191277
+          "expense": 5470.930145191277,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -914.0101451912769
         },
         {
           "month": "Jun 2026",
           "collection": 5454.0,
-          "expense": 6626.861725435717,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2172.861725435717
+          "expense": 5626.861725435717,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -172.86172543571683
         },
         {
           "month": "Jul 2026",
           "collection": 5470.93,
-          "expense": 6462.201402111374,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -1991.2714021113734
+          "expense": 5462.201402111374,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 8.72859788862661
         },
         {
           "month": "Aug 2026",
@@ -11472,10 +11472,10 @@
       ],
       "totals": {
         "collection": 20371.85,
-        "expense": 24133.98052273837,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -6762.130522738371,
-        "closing_balance": -7747.106092897986
+        "expense": 21133.98052273837,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -762.1305227383709,
+        "closing_balance": -1747.106092897986
       },
       "expense_breakdown": [
         {
@@ -11514,9 +11514,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6470.930145191277
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5470.930145191277
         },
         {
           "month": "Jun 2026",
@@ -11534,9 +11534,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6626.861725435717
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5626.861725435717
         },
         {
           "month": "Jul 2026",
@@ -11554,9 +11554,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6462.201402111374
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5462.201402111374
         },
         {
           "month": "Aug 2026",
@@ -11739,26 +11739,26 @@
         {
           "month": "May 2026",
           "collection": 6948.0,
-          "expense": 8993.94275924935,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -3045.9427592493503
+          "expense": 7993.94275924935,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -1045.9427592493503
         },
         {
           "month": "Jun 2026",
           "collection": 7522.88,
-          "expense": 8101.739237420812,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -1578.859237420812
+          "expense": 7101.739237420812,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 421.14076257918805
         },
         {
           "month": "Jul 2026",
           "collection": 0.0,
-          "expense": 6586.252274816382,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -7586.252274816382
+          "expense": 5586.252274816382,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -5586.252274816382
         },
         {
           "month": "Aug 2026",
@@ -11827,10 +11827,10 @@
       ],
       "totals": {
         "collection": 20105.88,
-        "expense": 31204.815317165725,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -14098.935317165724,
-        "closing_balance": -20854.567604955108
+        "expense": 28204.815317165725,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -8098.935317165724,
+        "closing_balance": -14854.567604955108
       },
       "expense_breakdown": [
         {
@@ -11869,9 +11869,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 8993.94275924935
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 7993.94275924935
         },
         {
           "month": "Jun 2026",
@@ -11889,9 +11889,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 8101.739237420812
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 7101.739237420812
         },
         {
           "month": "Jul 2026",
@@ -11909,9 +11909,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6586.252274816382
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5586.252274816382
         },
         {
           "month": "Aug 2026",
@@ -12094,18 +12094,18 @@
         {
           "month": "May 2026",
           "collection": 0.0,
-          "expense": 7866.702111689063,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8866.702111689063
+          "expense": 6866.702111689063,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -6866.702111689063
         },
         {
           "month": "Jun 2026",
           "collection": 0.0,
-          "expense": 7471.314017174585,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -8471.314017174585
+          "expense": 6471.314017174585,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -6471.314017174585
         },
         {
           "month": "Jul 2026",
@@ -12182,10 +12182,10 @@
       ],
       "totals": {
         "collection": 18592.0,
-        "expense": 28202.287717429987,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -12610.287717429987,
-        "closing_balance": -13019.187979720875
+        "expense": 26202.287717429987,
+        "late_fee": 1000.0,
+        "net_collection_minus_expense": -8610.287717429987,
+        "closing_balance": -9019.187979720875
       },
       "expense_breakdown": [
         {
@@ -12224,9 +12224,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7866.702111689063
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6866.702111689063
         },
         {
           "month": "Jun 2026",
@@ -12244,9 +12244,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 7471.314017174585
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6471.314017174585
         },
         {
           "month": "Jul 2026",
@@ -12449,18 +12449,18 @@
         {
           "month": "May 2026",
           "collection": 11000.0,
-          "expense": 6644.096100327296,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 3355.903899672704
+          "expense": 5644.096100327296,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 5355.903899672704
         },
         {
           "month": "Jun 2026",
           "collection": 0.0,
-          "expense": 7223.814457486975,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8223.814457486975
+          "expense": 6223.814457486975,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -6223.814457486975
         },
         {
           "month": "Jul 2026",
@@ -12537,10 +12537,10 @@
       ],
       "totals": {
         "collection": 47000.0,
-        "expense": 27811.51585907241,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": 16188.48414092759,
-        "closing_balance": -7407.2640206691685
+        "expense": 25811.51585907241,
+        "late_fee": 1000.0,
+        "net_collection_minus_expense": 20188.48414092759,
+        "closing_balance": -3407.2640206691685
       },
       "expense_breakdown": [
         {
@@ -12579,9 +12579,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 6644.096100327296
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5644.096100327296
         },
         {
           "month": "Jun 2026",
@@ -12599,9 +12599,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7223.814457486975
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6223.814457486975
         },
         {
           "month": "Jul 2026",
@@ -13514,26 +13514,26 @@
         {
           "month": "May 2026",
           "collection": 5067.7,
-          "expense": 6627.841524482365,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2560.1415244823647
+          "expense": 5627.841524482365,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -560.1415244823647
         },
         {
           "month": "Jun 2026",
           "collection": 5596.3,
-          "expense": 6613.141742236184,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2016.8417422361836
+          "expense": 5613.141742236184,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -16.841742236183563
         },
         {
           "month": "Jul 2026",
           "collection": 5941.27,
-          "expense": 6835.465414829701,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -1894.195414829701
+          "expense": 5835.465414829701,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 105.8045851702991
         },
         {
           "month": "Aug 2026",
@@ -13602,10 +13602,10 @@
       ],
       "totals": {
         "collection": 21541.27,
-        "expense": 25144.15096873399,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -6602.880968733989,
-        "closing_balance": -7256.254390435963
+        "expense": 22144.15096873399,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -602.880968733989,
+        "closing_balance": -1256.2543904359627
       },
       "expense_breakdown": [
         {
@@ -13644,9 +13644,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6627.841524482365
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5627.841524482365
         },
         {
           "month": "Jun 2026",
@@ -13664,9 +13664,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6613.141742236184
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5613.141742236184
         },
         {
           "month": "Jul 2026",
@@ -13684,9 +13684,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6835.465414829701
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5835.465414829701
         },
         {
           "month": "Aug 2026",
@@ -13869,26 +13869,26 @@
         {
           "month": "May 2026",
           "collection": 0.0,
-          "expense": 7153.419655169074,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8153.419655169074
+          "expense": 6153.419655169074,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -6153.419655169074
         },
         {
           "month": "Jun 2026",
           "collection": 12721.85,
-          "expense": 7457.961719405846,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 4263.888280594154
+          "expense": 6457.961719405846,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 6263.888280594154
         },
         {
           "month": "Jul 2026",
           "collection": 0.0,
-          "expense": 7432.44180428552,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8432.441804285521
+          "expense": 6432.44180428552,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -6432.44180428552
         },
         {
           "month": "Aug 2026",
@@ -13957,10 +13957,10 @@
       ],
       "totals": {
         "collection": 14750.52,
-        "expense": 27689.106425353577,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -15938.586425353576,
-        "closing_balance": -18967.26086309438
+        "expense": 24689.106425353577,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -9938.586425353576,
+        "closing_balance": -12967.26086309438
       },
       "expense_breakdown": [
         {
@@ -13999,9 +13999,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7153.419655169074
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6153.419655169074
         },
         {
           "month": "Jun 2026",
@@ -14019,9 +14019,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 7457.961719405846
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6457.961719405846
         },
         {
           "month": "Jul 2026",
@@ -14039,9 +14039,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7432.44180428552
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6432.44180428552
         },
         {
           "month": "Aug 2026",
@@ -14224,10 +14224,10 @@
         {
           "month": "May 2026",
           "collection": 0.0,
-          "expense": 6485.103699971819,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -7485.103699971819
+          "expense": 5485.103699971819,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -5485.103699971819
         },
         {
           "month": "Jun 2026",
@@ -14312,10 +14312,10 @@
       ],
       "totals": {
         "collection": 13150.53,
-        "expense": 25950.51594001893,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -15799.985940018929,
-        "closing_balance": -9887.771116674672
+        "expense": 24950.51594001893,
+        "late_fee": 2000.0,
+        "net_collection_minus_expense": -13799.985940018929,
+        "closing_balance": -7887.771116674672
       },
       "expense_breakdown": [
         {
@@ -14354,9 +14354,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 6485.103699971819
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5485.103699971819
         },
         {
           "month": "Jun 2026",
@@ -14579,18 +14579,18 @@
         {
           "month": "May 2026",
           "collection": 8000.0,
-          "expense": 6368.457407695056,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 631.5425923049443
+          "expense": 5368.457407695056,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 2631.5425923049443
         },
         {
           "month": "Jun 2026",
           "collection": 0.0,
-          "expense": 6469.428922107228,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -7469.428922107228
+          "expense": 5469.428922107228,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -5469.428922107228
         },
         {
           "month": "Jul 2026",
@@ -14667,10 +14667,10 @@
       ],
       "totals": {
         "collection": 8000.0,
-        "expense": 23928.07183685023,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -18928.07183685023,
-        "closing_balance": -80790.5761247629
+        "expense": 21928.07183685023,
+        "late_fee": 1000.0,
+        "net_collection_minus_expense": -14928.071836850231,
+        "closing_balance": -76790.5761247629
       },
       "expense_breakdown": [
         {
@@ -14709,9 +14709,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 6368.457407695056
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5368.457407695056
         },
         {
           "month": "Jun 2026",
@@ -14729,9 +14729,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6469.428922107228
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5469.428922107228
         },
         {
           "month": "Jul 2026",
@@ -14934,26 +14934,26 @@
         {
           "month": "May 2026",
           "collection": 4992.0,
-          "expense": 6828.692954187181,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2836.6929541871814
+          "expense": 5828.692954187181,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -836.6929541871814
         },
         {
           "month": "Jun 2026",
           "collection": 5779.0,
-          "expense": 6955.98116677859,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2176.98116677859
+          "expense": 5955.98116677859,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -176.9811667785898
         },
         {
           "month": "Jul 2026",
           "collection": 5734.0,
-          "expense": 6969.7279881426975,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2235.7279881426975
+          "expense": 5969.7279881426975,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -235.72798814269754
         },
         {
           "month": "Aug 2026",
@@ -15022,10 +15022,10 @@
       ],
       "totals": {
         "collection": 21655.0,
-        "expense": 25577.617001587387,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -6922.617001587387,
-        "closing_balance": -12240.786624772903
+        "expense": 22577.617001587387,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -922.6170015873868,
+        "closing_balance": -6240.786624772903
       },
       "expense_breakdown": [
         {
@@ -15064,9 +15064,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6828.692954187181
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5828.692954187181
         },
         {
           "month": "Jun 2026",
@@ -15084,9 +15084,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6955.98116677859
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5955.98116677859
         },
         {
           "month": "Jul 2026",
@@ -15104,9 +15104,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6969.7279881426975
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5969.7279881426975
         },
         {
           "month": "Aug 2026",
@@ -15289,10 +15289,10 @@
         {
           "month": "May 2026",
           "collection": 16123.22,
-          "expense": 6957.999929113188,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 8165.220070886811
+          "expense": 5957.999929113188,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 10165.220070886811
         },
         {
           "month": "Jun 2026",
@@ -15377,10 +15377,10 @@
       ],
       "totals": {
         "collection": 21526.47,
-        "expense": 24782.944846326853,
-        "late_fee": 1000.0,
-        "net_collection_minus_expense": -4256.474846326852,
-        "closing_balance": -15558.032895614602
+        "expense": 23782.944846326853,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -2256.4748463268515,
+        "closing_balance": -13558.032895614602
       },
       "expense_breakdown": [
         {
@@ -15419,9 +15419,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 6957.999929113188
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5957.999929113188
         },
         {
           "month": "Jun 2026",
@@ -15644,18 +15644,18 @@
         {
           "month": "May 2026",
           "collection": 0.0,
-          "expense": 6391.548684884288,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -7391.548684884288
+          "expense": 5391.548684884288,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -5391.548684884288
         },
         {
           "month": "Jun 2026",
           "collection": 0.0,
-          "expense": 6545.562154672272,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -7545.562154672272
+          "expense": 5545.562154672272,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -5545.562154672272
         },
         {
           "month": "Jul 2026",
@@ -15732,10 +15732,10 @@
       ],
       "totals": {
         "collection": 15678.29,
-        "expense": 24380.959915218136,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -11702.669915218135,
-        "closing_balance": -12418.15351317183
+        "expense": 22380.959915218136,
+        "late_fee": 1000.0,
+        "net_collection_minus_expense": -7702.669915218135,
+        "closing_balance": -8418.15351317183
       },
       "expense_breakdown": [
         {
@@ -15774,9 +15774,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6391.548684884288
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5391.548684884288
         },
         {
           "month": "Jun 2026",
@@ -15794,9 +15794,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 6545.562154672272
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5545.562154672272
         },
         {
           "month": "Jul 2026",
@@ -15999,10 +15999,10 @@
         {
           "month": "May 2026",
           "collection": 0.0,
-          "expense": 7098.440326180411,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -8098.440326180411
+          "expense": 6098.440326180411,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -6098.440326180411
         },
         {
           "month": "Jun 2026",
@@ -16087,10 +16087,10 @@
       ],
       "totals": {
         "collection": 0.0,
-        "expense": 27015.075275560142,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -30015.075275560142,
-        "closing_balance": -32915.56159080194
+        "expense": 26015.075275560142,
+        "late_fee": 2000.0,
+        "net_collection_minus_expense": -28015.075275560142,
+        "closing_balance": -30915.56159080194
       },
       "expense_breakdown": [
         {
@@ -16129,9 +16129,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 7098.440326180411
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6098.440326180411
         },
         {
           "month": "Jun 2026",
@@ -16709,26 +16709,26 @@
         {
           "month": "May 2026",
           "collection": 4839.0,
-          "expense": 6505.547122177737,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2666.547122177737
+          "expense": 5505.547122177737,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -666.547122177737
         },
         {
           "month": "Jun 2026",
           "collection": 4442.0,
-          "expense": 6883.110438890022,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -3441.110438890022
+          "expense": 5883.110438890022,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -1441.1104388900221
         },
         {
           "month": "Jul 2026",
           "collection": 3062.0,
-          "expense": 6615.794974199801,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -4553.794974199801
+          "expense": 5615.794974199801,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -2553.794974199801
         },
         {
           "month": "Aug 2026",
@@ -16797,10 +16797,10 @@
       ],
       "totals": {
         "collection": 17182.0,
-        "expense": 24938.820160761337,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -10756.820160761337,
-        "closing_balance": -5574.039489276176
+        "expense": 21938.820160761337,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -4756.820160761337,
+        "closing_balance": 425.960510723824
       },
       "expense_breakdown": [
         {
@@ -16839,9 +16839,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6505.547122177737
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5505.547122177737
         },
         {
           "month": "Jun 2026",
@@ -16859,9 +16859,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6883.110438890022
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5883.110438890022
         },
         {
           "month": "Jul 2026",
@@ -16879,9 +16879,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6615.794974199801
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5615.794974199801
         },
         {
           "month": "Aug 2026",
@@ -17064,26 +17064,26 @@
         {
           "month": "May 2026",
           "collection": 0.0,
-          "expense": 7445.39399384996,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8445.39399384996
+          "expense": 6445.39399384996,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -6445.39399384996
         },
         {
           "month": "Jun 2026",
           "collection": 9000.0,
-          "expense": 7813.773735066876,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 186.22626493312418
+          "expense": 6813.773735066876,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 2186.226264933124
         },
         {
           "month": "Jul 2026",
           "collection": 7640.0,
-          "expense": 8021.334321526159,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -1381.3343215261593
+          "expense": 7021.334321526159,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 618.6656784738407
         },
         {
           "month": "Aug 2026",
@@ -17152,10 +17152,10 @@
       ],
       "totals": {
         "collection": 22519.0,
-        "expense": 29872.801720430143,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -10353.801720430143,
-        "closing_balance": -12288.079450365796
+        "expense": 26872.801720430143,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -4353.801720430143,
+        "closing_balance": -6288.079450365796
       },
       "expense_breakdown": [
         {
@@ -17194,9 +17194,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7445.39399384996
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6445.39399384996
         },
         {
           "month": "Jun 2026",
@@ -17214,9 +17214,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 7813.773735066876
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6813.773735066876
         },
         {
           "month": "Jul 2026",
@@ -17234,9 +17234,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 8021.334321526159
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 7021.334321526159
         },
         {
           "month": "Aug 2026",
@@ -17774,26 +17774,26 @@
         {
           "month": "May 2026",
           "collection": 1511.0,
-          "expense": 7028.274064864762,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -6517.274064864762
+          "expense": 6028.274064864762,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -4517.274064864762
         },
         {
           "month": "Jun 2026",
           "collection": 5972.0,
-          "expense": 7404.902892271011,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2432.9028922710113
+          "expense": 6404.902892271011,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -432.9028922710113
         },
         {
           "month": "Jul 2026",
           "collection": 6472.0,
-          "expense": 7509.219598166974,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2037.2195981669738
+          "expense": 6509.219598166974,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -37.21959816697381
         },
         {
           "month": "Aug 2026",
@@ -17862,10 +17862,10 @@
       ],
       "totals": {
         "collection": 19386.0,
-        "expense": 27515.091049616793,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -11129.091049616793,
-        "closing_balance": -7067.20687875626
+        "expense": 24515.091049616793,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -5129.091049616793,
+        "closing_balance": -1067.2068787562607
       },
       "expense_breakdown": [
         {
@@ -17904,9 +17904,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7028.274064864762
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6028.274064864762
         },
         {
           "month": "Jun 2026",
@@ -17924,9 +17924,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7404.902892271011
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6404.902892271011
         },
         {
           "month": "Jul 2026",
@@ -17944,9 +17944,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7509.219598166974
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6509.219598166974
         },
         {
           "month": "Aug 2026",
@@ -19194,10 +19194,10 @@
         {
           "month": "May 2026",
           "collection": 20028.72,
-          "expense": 7248.555539229054,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": 11780.164460770946
+          "expense": 6248.555539229054,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 13780.164460770946
         },
         {
           "month": "Jun 2026",
@@ -19282,10 +19282,10 @@
       ],
       "totals": {
         "collection": 24740.72,
-        "expense": 25905.523228427995,
-        "late_fee": 1000.0,
-        "net_collection_minus_expense": -2164.8032284279943,
-        "closing_balance": -20651.846450763453
+        "expense": 24905.523228427995,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -164.80322842799433,
+        "closing_balance": -18651.846450763453
       },
       "expense_breakdown": [
         {
@@ -19324,9 +19324,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7248.555539229054
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6248.555539229054
         },
         {
           "month": "Jun 2026",
@@ -19549,26 +19549,26 @@
         {
           "month": "May 2026",
           "collection": 5287.24,
-          "expense": 6843.6504067726655,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2556.4104067726657
+          "expense": 5843.6504067726655,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -556.4104067726657
         },
         {
           "month": "Jun 2026",
           "collection": 5793.0,
-          "expense": 6515.340149934457,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -1722.3401499344573
+          "expense": 5515.340149934457,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 277.65985006554274
         },
         {
           "month": "Jul 2026",
           "collection": 0.0,
-          "expense": 6463.255820226397,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -7463.255820226397
+          "expense": 5463.255820226397,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -5463.255820226397
         },
         {
           "month": "Aug 2026",
@@ -19637,10 +19637,10 @@
       ],
       "totals": {
         "collection": 12616.97,
-        "expense": 25009.791851382957,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -15392.821851382958,
-        "closing_balance": -16929.553536803473
+        "expense": 22009.791851382957,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -9392.821851382958,
+        "closing_balance": -10929.55353680347
       },
       "expense_breakdown": [
         {
@@ -19679,9 +19679,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6843.6504067726655
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5843.6504067726655
         },
         {
           "month": "Jun 2026",
@@ -19699,9 +19699,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6515.340149934457
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5515.340149934457
         },
         {
           "month": "Jul 2026",
@@ -19719,9 +19719,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6463.255820226397
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5463.255820226397
         },
         {
           "month": "Aug 2026",
@@ -19904,26 +19904,26 @@
         {
           "month": "May 2026",
           "collection": 4766.55,
-          "expense": 6461.796016403652,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2695.246016403652
+          "expense": 5461.796016403652,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -695.246016403652
         },
         {
           "month": "Jun 2026",
           "collection": 0.0,
-          "expense": 6581.116663664057,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -7581.116663664057
+          "expense": 5581.116663664057,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -5581.116663664057
         },
         {
           "month": "Jul 2026",
           "collection": 5455.63,
-          "expense": 6591.875838096507,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -2136.245838096507
+          "expense": 5591.875838096507,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -136.2458380965072
         },
         {
           "month": "Aug 2026",
@@ -19992,10 +19992,10 @@
       ],
       "totals": {
         "collection": 15007.18,
-        "expense": 24401.33702918569,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -12394.157029185691,
-        "closing_balance": -12676.54173904813
+        "expense": 21401.33702918569,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -6394.1570291856915,
+        "closing_balance": -6676.541739048131
       },
       "expense_breakdown": [
         {
@@ -20034,9 +20034,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6461.796016403652
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5461.796016403652
         },
         {
           "month": "Jun 2026",
@@ -20054,9 +20054,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6581.116663664057
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5581.116663664057
         },
         {
           "month": "Jul 2026",
@@ -20074,9 +20074,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 6591.875838096507
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5591.875838096507
         },
         {
           "month": "Aug 2026",
@@ -20259,10 +20259,10 @@
         {
           "month": "May 2026",
           "collection": 15000.0,
-          "expense": 9371.7226497599,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": 4628.2773502401
+          "expense": 8371.7226497599,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 6628.2773502401
         },
         {
           "month": "Jun 2026",
@@ -20275,10 +20275,10 @@
         {
           "month": "Jul 2026",
           "collection": 2664.0,
-          "expense": 8898.040231681485,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -7234.040231681485
+          "expense": 7898.040231681485,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -5234.040231681485
         },
         {
           "month": "Aug 2026",
@@ -20347,10 +20347,10 @@
       ],
       "totals": {
         "collection": 23584.0,
-        "expense": 31118.580683563814,
-        "late_fee": 2000.0,
-        "net_collection_minus_expense": -9534.580683563814,
-        "closing_balance": -13229.807271245045
+        "expense": 29118.580683563814,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -5534.580683563814,
+        "closing_balance": -9229.807271245045
       },
       "expense_breakdown": [
         {
@@ -20389,9 +20389,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 9371.7226497599
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 8371.7226497599
         },
         {
           "month": "Jun 2026",
@@ -20429,9 +20429,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 8898.040231681485
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 7898.040231681485
         },
         {
           "month": "Aug 2026",
@@ -20969,26 +20969,26 @@
         {
           "month": "May 2026",
           "collection": 84.49,
-          "expense": 6638.664396678367,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -7554.174396678367
+          "expense": 5638.664396678367,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -5554.174396678367
         },
         {
           "month": "Jun 2026",
           "collection": 5606.17,
-          "expense": 8735.842022313283,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -4129.672022313283
+          "expense": 7735.842022313283,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -2129.6720223132834
         },
         {
           "month": "Jul 2026",
           "collection": 5659.39,
-          "expense": 6790.652644941202,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2131.262644941202
+          "expense": 5790.652644941202,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -131.26264494120187
         },
         {
           "month": "Aug 2026",
@@ -21057,10 +21057,10 @@
       ],
       "totals": {
         "collection": 16156.05,
-        "expense": 26964.976579587976,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -13808.926579587976,
-        "closing_balance": -13899.59763876407
+        "expense": 23964.976579587976,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -7808.926579587976,
+        "closing_balance": -7899.597638764069
       },
       "expense_breakdown": [
         {
@@ -21099,9 +21099,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6638.664396678367
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5638.664396678367
         },
         {
           "month": "Jun 2026",
@@ -21119,9 +21119,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 8735.842022313283
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 7735.842022313283
         },
         {
           "month": "Jul 2026",
@@ -21139,9 +21139,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6790.652644941202
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5790.652644941202
         },
         {
           "month": "Aug 2026",
@@ -21679,26 +21679,26 @@
         {
           "month": "May 2026",
           "collection": 5350.0,
-          "expense": 7212.99252403022,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2862.99252403022
+          "expense": 6212.99252403022,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -862.99252403022
         },
         {
           "month": "Jun 2026",
           "collection": 6142.0,
-          "expense": 6984.9219279491335,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -1842.9219279491335
+          "expense": 5984.9219279491335,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 157.07807205086647
         },
         {
           "month": "Jul 2026",
           "collection": 2530.0,
-          "expense": 7482.683408938881,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -5952.683408938881
+          "expense": 6482.683408938881,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -3952.6834089388813
         },
         {
           "month": "Aug 2026",
@@ -21767,10 +21767,10 @@
       ],
       "totals": {
         "collection": 18499.0,
-        "expense": 27031.290751239234,
-        "late_fee": 3000.0,
-        "net_collection_minus_expense": -11532.290751239234,
-        "closing_balance": -16009.192612061677
+        "expense": 24031.290751239234,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -5532.290751239234,
+        "closing_balance": -10009.192612061677
       },
       "expense_breakdown": [
         {
@@ -21809,9 +21809,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7212.99252403022
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6212.99252403022
         },
         {
           "month": "Jun 2026",
@@ -21829,9 +21829,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6984.9219279491335
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5984.9219279491335
         },
         {
           "month": "Jul 2026",
@@ -21849,9 +21849,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7482.683408938881
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6482.683408938881
         },
         {
           "month": "Aug 2026",
@@ -22034,18 +22034,18 @@
         {
           "month": "May 2026",
           "collection": 5420.0,
-          "expense": 6890.981674872792,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -2470.9816748727917
+          "expense": 5890.981674872792,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -470.9816748727917
         },
         {
           "month": "Jun 2026",
           "collection": 32894.0,
-          "expense": 7503.238336059101,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": 24390.7616639409
+          "expense": 6503.238336059101,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 26390.7616639409
         },
         {
           "month": "Jul 2026",
@@ -22122,10 +22122,10 @@
       ],
       "totals": {
         "collection": 43734.0,
-        "expense": 26609.258251889223,
-        "late_fee": 2000.0,
-        "net_collection_minus_expense": 15124.741748110777,
-        "closing_balance": -17194.084538804014
+        "expense": 24609.258251889223,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": 19124.741748110777,
+        "closing_balance": -13194.084538804014
       },
       "expense_breakdown": [
         {
@@ -22164,9 +22164,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 6890.981674872792
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 5890.981674872792
         },
         {
           "month": "Jun 2026",
@@ -22184,9 +22184,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7503.238336059101
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6503.238336059101
         },
         {
           "month": "Jul 2026",
@@ -22389,10 +22389,10 @@
         {
           "month": "May 2026",
           "collection": 10000.0,
-          "expense": 7263.067105694105,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": 1736.9328943058954
+          "expense": 6263.067105694105,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": 3736.9328943058954
         },
         {
           "month": "Jun 2026",
@@ -22405,10 +22405,10 @@
         {
           "month": "Jul 2026",
           "collection": 0.0,
-          "expense": 7771.612964618087,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -8771.612964618087
+          "expense": 6771.612964618087,
+          "late_fee": 0.0,
+          "late_fee_reason": "-",
+          "net_collection_minus_expense": -6771.612964618087
         },
         {
           "month": "Aug 2026",
@@ -22477,10 +22477,10 @@
       ],
       "totals": {
         "collection": 15231.0,
-        "expense": 27375.808027982457,
-        "late_fee": 2000.0,
-        "net_collection_minus_expense": -14144.808027982457,
-        "closing_balance": -23495.015167375757
+        "expense": 25375.808027982457,
+        "late_fee": 0.0,
+        "net_collection_minus_expense": -10144.808027982457,
+        "closing_balance": -19495.015167375757
       },
       "expense_breakdown": [
         {
@@ -22519,9 +22519,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 0.0,
           "annual_mem_fee": 500.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Past Dues",
-          "total_expense": 7263.067105694105
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6263.067105694105
         },
         {
           "month": "Jun 2026",
@@ -22559,9 +22559,9 @@
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
-          "late_fee": 1000.0,
-          "late_fee_reason": "Missed",
-          "total_expense": 7771.612964618087
+          "late_fee": 0.0,
+          "late_fee_reason": "",
+          "total_expense": 6771.612964618087
         },
         {
           "month": "Aug 2026",
