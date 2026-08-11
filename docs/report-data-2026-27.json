@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-11T09:42:28",
+  "generated_at": "2026-08-11T09:47:05",
   "financial_year": "2026-27",
   "cutoff_date": "2026-07-31",
   "sheet": "INCOME-EXPENSE-CYCLES",
@@ -15,35 +15,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 8230,
+          "collection": 9230,
           "expense": 6103.497235105779,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 1126.5027648942214
+          "net_collection_minus_expense": 2126.5027648942214
         },
         {
           "month": "May 2026",
-          "collection": -6565.822818640111,
+          "collection": 0,
           "expense": 6565.822818640111,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -14131.645637280222
+          "net_collection_minus_expense": -7565.822818640111
         },
         {
           "month": "Jun 2026",
-          "collection": 3953.3505967090878,
+          "collection": 10856,
           "expense": 6902.649403290912,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -3949.2988065818245
+          "net_collection_minus_expense": 2953.3505967090878
         },
         {
           "month": "Jul 2026",
-          "collection": -945.3969893672656,
+          "collection": 6005,
           "expense": 6950.396989367266,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8895.793978734531
+          "net_collection_minus_expense": -1945.3969893672656
         },
         {
           "month": "Aug 2026",
@@ -378,27 +378,27 @@
         },
         {
           "month": "May 2026",
-          "collection": -7140.43469170497,
+          "collection": 0,
           "expense": 7140.43469170497,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -15280.86938340994
+          "net_collection_minus_expense": -8140.43469170497
         },
         {
           "month": "Jun 2026",
-          "collection": 9010.908728329521,
+          "collection": 16500,
           "expense": 7489.091271670479,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 521.8174566590424
+          "net_collection_minus_expense": 8010.908728329521
         },
         {
           "month": "Jul 2026",
-          "collection": -7180.944091689649,
+          "collection": 0,
           "expense": 7180.944091689649,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -15361.888183379298
+          "net_collection_minus_expense": -8180.944091689649
         },
         {
           "month": "Aug 2026",
@@ -725,35 +725,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 5000,
+          "collection": 6000,
           "expense": 7762.99058545273,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -3762.9905854527296
+          "net_collection_minus_expense": -2762.9905854527296
         },
         {
           "month": "May 2026",
-          "collection": -1838.874042141997,
+          "collection": 6000,
           "expense": 7838.874042141997,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -10677.748084283994
+          "net_collection_minus_expense": -2838.874042141997
         },
         {
           "month": "Jun 2026",
-          "collection": -2450.1761493784616,
+          "collection": 6000,
           "expense": 8450.176149378462,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -11900.352298756923
+          "net_collection_minus_expense": -3450.1761493784616
         },
         {
           "month": "Jul 2026",
-          "collection": -2584.507586651731,
+          "collection": 6000,
           "expense": 8584.50758665173,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -12169.015173303462
+          "net_collection_minus_expense": -3584.507586651731
         },
         {
           "month": "Aug 2026",
@@ -1080,35 +1080,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 4989,
+          "collection": 5989,
           "expense": 6254.794031547106,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -2265.794031547106
+          "net_collection_minus_expense": -1265.794031547106
         },
         {
           "month": "May 2026",
-          "collection": -6784.252751681514,
+          "collection": 0,
           "expense": 6784.252751681514,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -14568.505503363029
+          "net_collection_minus_expense": -7784.252751681514
         },
         {
           "month": "Jun 2026",
-          "collection": -7034.837041924086,
+          "collection": 0,
           "expense": 7034.837041924086,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -15069.674083848173
+          "net_collection_minus_expense": -8034.837041924086
         },
         {
           "month": "Jul 2026",
-          "collection": 15495.39086007953,
+          "collection": 22489,
           "expense": 6993.609139920471,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 7501.781720159059
+          "net_collection_minus_expense": 14495.39086007953
         },
         {
           "month": "Aug 2026",
@@ -1435,35 +1435,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": -1000,
+          "collection": 0,
           "expense": 6032.332746117042,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -8032.332746117042
+          "net_collection_minus_expense": -7032.332746117042
         },
         {
           "month": "May 2026",
-          "collection": -1345.5638157073336,
+          "collection": 5237,
           "expense": 6582.563815707334,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -8928.127631414667
+          "net_collection_minus_expense": -2345.5638157073336
         },
         {
           "month": "Jun 2026",
-          "collection": -1580.3218810479675,
+          "collection": 5554.98,
           "expense": 7135.301881047967,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -9715.623762095935
+          "net_collection_minus_expense": -2580.3218810479675
         },
         {
           "month": "Jul 2026",
-          "collection": 4611.095273291981,
+          "collection": 11259.05,
           "expense": 6647.954726708018,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -3036.8594534160366
+          "net_collection_minus_expense": 3611.0952732919814
         },
         {
           "month": "Aug 2026",
@@ -1790,35 +1790,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 3867.34,
+          "collection": 4867.34,
           "expense": 6399.215769195613,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -3531.8757691956125
+          "net_collection_minus_expense": -2531.8757691956125
         },
         {
           "month": "May 2026",
-          "collection": 2607.207148700728,
+          "collection": 9442.71,
           "expense": 6835.502851299271,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -5228.295702598543
+          "net_collection_minus_expense": 1607.2071487007279
         },
         {
           "month": "Jun 2026",
-          "collection": 120.958301636324,
+          "collection": 7469,
           "expense": 7348.041698363676,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8227.08339672735
+          "net_collection_minus_expense": -879.0416983636751
         },
         {
           "month": "Jul 2026",
-          "collection": -864.546018735432,
+          "collection": 6339.79,
           "expense": 7204.336018735432,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -9068.882037470863
+          "net_collection_minus_expense": -1864.546018735432
         },
         {
           "month": "Aug 2026",
@@ -2145,35 +2145,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 4384,
+          "collection": 5384,
           "expense": 6331.158394065475,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -2947.1583940654746
+          "net_collection_minus_expense": -1947.1583940654746
         },
         {
           "month": "May 2026",
-          "collection": 156.02910981013883,
+          "collection": 7174,
           "expense": 7017.970890189861,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -7861.941780379722
+          "net_collection_minus_expense": -843.9708901898612
         },
         {
           "month": "Jun 2026",
-          "collection": -1210.6863299281786,
+          "collection": 5964.86,
           "expense": 7175.546329928178,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -9386.232659856356
+          "net_collection_minus_expense": -2210.6863299281786
         },
         {
           "month": "Jul 2026",
-          "collection": -1040.779537974051,
+          "collection": 6179.33,
           "expense": 7220.109537974051,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -9260.889075948102
+          "net_collection_minus_expense": -2040.779537974051
         },
         {
           "month": "Aug 2026",
@@ -2500,35 +2500,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 5070,
+          "collection": 6070,
           "expense": 6025.404691680905,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -1955.4046916809048
+          "net_collection_minus_expense": -955.4046916809048
         },
         {
           "month": "May 2026",
-          "collection": -5418.51534496867,
+          "collection": 921,
           "expense": 6339.51534496867,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -12758.03068993734
+          "net_collection_minus_expense": -6418.51534496867
         },
         {
           "month": "Jun 2026",
-          "collection": -1186.6643469739993,
+          "collection": 5333,
           "expense": 6519.664346973999,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8706.328693947999
+          "net_collection_minus_expense": -2186.6643469739993
         },
         {
           "month": "Jul 2026",
-          "collection": -565.000701744003,
+          "collection": 5903,
           "expense": 6468.000701744003,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8033.001403488006
+          "net_collection_minus_expense": -1565.000701744003
         },
         {
           "month": "Aug 2026",
@@ -2855,35 +2855,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": -1000,
+          "collection": 0,
           "expense": 5941.086864886251,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -7941.086864886251
+          "net_collection_minus_expense": -6941.086864886251
         },
         {
           "month": "May 2026",
-          "collection": 3681.0539170648626,
+          "collection": 10233,
           "expense": 6551.946082935137,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -3870.8921658702748
+          "net_collection_minus_expense": 2681.0539170648626
         },
         {
           "month": "Jun 2026",
-          "collection": -1194.9974115343693,
+          "collection": 5538,
           "expense": 6732.997411534369,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8927.994823068739
+          "net_collection_minus_expense": -2194.9974115343693
         },
         {
           "month": "Jul 2026",
-          "collection": -6788.700552900898,
+          "collection": 0,
           "expense": 6788.700552900898,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -14577.401105801797
+          "net_collection_minus_expense": -7788.700552900898
         },
         {
           "month": "Aug 2026",
@@ -3210,35 +3210,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 26822,
+          "collection": 27822,
           "expense": 6732.917057869528,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 19089.082942130473
+          "net_collection_minus_expense": 20089.082942130473
         },
         {
           "month": "May 2026",
-          "collection": -7229.504041355944,
+          "collection": 0,
           "expense": 7229.504041355944,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -15459.008082711887
+          "net_collection_minus_expense": -8229.504041355944
         },
         {
           "month": "Jun 2026",
-          "collection": -7156.335629610674,
+          "collection": 0,
           "expense": 7156.335629610674,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -15312.671259221348
+          "net_collection_minus_expense": -8156.335629610674
         },
         {
           "month": "Jul 2026",
-          "collection": 11350.809275268479,
+          "collection": 18604,
           "expense": 7253.190724731521,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 3097.6185505369576
+          "net_collection_minus_expense": 10350.809275268479
         },
         {
           "month": "Aug 2026",
@@ -3565,35 +3565,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 4549,
+          "collection": 5549,
           "expense": 5680.217418020762,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -2131.217418020762
+          "net_collection_minus_expense": -1131.2174180207621
         },
         {
           "month": "May 2026",
-          "collection": -6342.67708291357,
+          "collection": 0,
           "expense": 6342.67708291357,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -13685.35416582714
+          "net_collection_minus_expense": -7342.67708291357
         },
         {
           "month": "Jun 2026",
-          "collection": -1648.987111399425,
+          "collection": 4901,
           "expense": 6549.987111399425,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -9198.97422279885
+          "net_collection_minus_expense": -2648.987111399425
         },
         {
           "month": "Jul 2026",
-          "collection": -6577.132976648938,
+          "collection": 0,
           "expense": 6577.132976648938,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -14154.265953297876
+          "net_collection_minus_expense": -7577.132976648938
         },
         {
           "month": "Aug 2026",
@@ -3920,35 +3920,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 4959,
+          "collection": 5959,
           "expense": 5577.694366847407,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -1618.6943668474069
+          "net_collection_minus_expense": -618.6943668474069
         },
         {
           "month": "May 2026",
-          "collection": -314.0097687828984,
+          "collection": 6536.41,
           "expense": 6850.419768782898,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8164.429537565797
+          "net_collection_minus_expense": -1314.0097687828984
         },
         {
           "month": "Jun 2026",
-          "collection": -7197.442194060635,
+          "collection": 0,
           "expense": 7197.442194060635,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -15394.88438812127
+          "net_collection_minus_expense": -8197.442194060635
         },
         {
           "month": "Jul 2026",
-          "collection": -2111.7528608520015,
+          "collection": 4714.75,
           "expense": 6826.5028608520015,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -9938.255721704003
+          "net_collection_minus_expense": -3111.7528608520015
         },
         {
           "month": "Aug 2026",
@@ -4275,35 +4275,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 3934,
+          "collection": 4934,
           "expense": 5991.406418159244,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -3057.406418159244
+          "net_collection_minus_expense": -2057.406418159244
         },
         {
           "month": "May 2026",
-          "collection": -6536.0157879050685,
+          "collection": 0,
           "expense": 6536.0157879050685,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -14072.031575810137
+          "net_collection_minus_expense": -7536.0157879050685
         },
         {
           "month": "Jun 2026",
-          "collection": -6694.560104516224,
+          "collection": 0,
           "expense": 6694.560104516224,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -14389.120209032448
+          "net_collection_minus_expense": -7694.560104516224
         },
         {
           "month": "Jul 2026",
-          "collection": 4638.77632616757,
+          "collection": 11384.07,
           "expense": 6745.29367383243,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -3106.5173476648597
+          "net_collection_minus_expense": 3638.77632616757
         },
         {
           "month": "Aug 2026",
@@ -4630,35 +4630,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 6000,
+          "collection": 7000,
           "expense": 5751.659271224515,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -751.6592712245147
+          "net_collection_minus_expense": 248.34072877548533
         },
         {
           "month": "May 2026",
-          "collection": -6810.195216870431,
+          "collection": 0,
           "expense": 6810.195216870431,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -14620.390433740862
+          "net_collection_minus_expense": -7810.195216870431
         },
         {
           "month": "Jun 2026",
-          "collection": -1728.113361790015,
+          "collection": 5770,
           "expense": 7498.113361790015,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -10226.226723580032
+          "net_collection_minus_expense": -2728.113361790016
         },
         {
           "month": "Jul 2026",
-          "collection": -1971.2545306008578,
+          "collection": 5600,
           "expense": 7571.254530600858,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -10542.509061201716
+          "net_collection_minus_expense": -2971.254530600858
         },
         {
           "month": "Aug 2026",
@@ -4985,35 +4985,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 4764,
+          "collection": 5764,
           "expense": 6906.95045573851,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -3142.95045573851
+          "net_collection_minus_expense": -2142.95045573851
         },
         {
           "month": "May 2026",
-          "collection": -1639.2511418313888,
+          "collection": 5907,
           "expense": 7546.251141831389,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -10185.502283662776
+          "net_collection_minus_expense": -2639.251141831388
         },
         {
           "month": "Jun 2026",
-          "collection": -7788.307076585446,
+          "collection": 0,
           "expense": 7788.307076585446,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -16576.614153170893
+          "net_collection_minus_expense": -8788.307076585446
         },
         {
           "month": "Jul 2026",
-          "collection": -1069.174332091824,
+          "collection": 6511,
           "expense": 7580.174332091824,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -9649.34866418365
+          "net_collection_minus_expense": -2069.174332091825
         },
         {
           "month": "Aug 2026",
@@ -5340,35 +5340,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 24903.12,
+          "collection": 25903.12,
           "expense": 7307.7024864395335,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 16595.417513560467
+          "net_collection_minus_expense": 17595.417513560467
         },
         {
           "month": "May 2026",
-          "collection": -1604.2829397640016,
+          "collection": 5887.24,
           "expense": 7491.522939764001,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -10095.805879528003
+          "net_collection_minus_expense": -2604.2829397640016
         },
         {
           "month": "Jun 2026",
-          "collection": -8013.807887007142,
+          "collection": 0,
           "expense": 8013.807887007142,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -17027.615774014284
+          "net_collection_minus_expense": -9013.807887007142
         },
         {
           "month": "Jul 2026",
-          "collection": -7555.808723743273,
+          "collection": 0,
           "expense": 7555.808723743273,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -16111.617447486547
+          "net_collection_minus_expense": -8555.808723743274
         },
         {
           "month": "Aug 2026",
@@ -5695,35 +5695,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": -1000,
+          "collection": 0,
           "expense": 7015.265662345765,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -9015.265662345766
+          "net_collection_minus_expense": -8015.265662345765
         },
         {
           "month": "May 2026",
-          "collection": -6814.992089759285,
+          "collection": 0,
           "expense": 6814.992089759285,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -14629.98417951857
+          "net_collection_minus_expense": -7814.992089759285
         },
         {
           "month": "Jun 2026",
-          "collection": -4307.943423946339,
+          "collection": 6016,
           "expense": 10323.943423946339,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -15631.886847892678
+          "net_collection_minus_expense": -5307.943423946339
         },
         {
           "month": "Jul 2026",
-          "collection": -7611.868620192024,
+          "collection": 0,
           "expense": 7611.868620192024,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -16223.737240384049
+          "net_collection_minus_expense": -8611.868620192025
         },
         {
           "month": "Aug 2026",
@@ -6050,35 +6050,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 5121,
+          "collection": 6121,
           "expense": 7657.846599679451,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -3536.846599679451
+          "net_collection_minus_expense": -2536.846599679451
         },
         {
           "month": "May 2026",
-          "collection": -7733.787512697723,
+          "collection": 0,
           "expense": 7733.787512697723,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -16467.575025395447
+          "net_collection_minus_expense": -8733.787512697723
         },
         {
           "month": "Jun 2026",
-          "collection": -795.2216677914003,
+          "collection": 7164.78,
           "expense": 7960.0016677914,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -9755.2233355828
+          "net_collection_minus_expense": -1795.2216677913993
         },
         {
           "month": "Jul 2026",
-          "collection": -8165.0676657116055,
+          "collection": 0,
           "expense": 8165.0676657116055,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -17330.13533142321
+          "net_collection_minus_expense": -9165.067665711606
         },
         {
           "month": "Aug 2026",
@@ -6405,35 +6405,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 4796,
+          "collection": 5796,
           "expense": 7034.44324524182,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -3238.4432452418196
+          "net_collection_minus_expense": -2238.4432452418196
         },
         {
           "month": "May 2026",
-          "collection": -5270.06604372874,
+          "collection": 2100,
           "expense": 7370.06604372874,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -13640.132087457481
+          "net_collection_minus_expense": -6270.066043728741
         },
         {
           "month": "Jun 2026",
-          "collection": -1411.7114334789403,
+          "collection": 6263,
           "expense": 7674.71143347894,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -10086.42286695788
+          "net_collection_minus_expense": -2411.7114334789403
         },
         {
           "month": "Jul 2026",
-          "collection": -113.21968410162026,
+          "collection": 7044,
           "expense": 7157.21968410162,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8270.43936820324
+          "net_collection_minus_expense": -1113.2196841016203
         },
         {
           "month": "Aug 2026",
@@ -6760,35 +6760,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 4604,
+          "collection": 5604,
           "expense": 8010.144244997733,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -4406.144244997733
+          "net_collection_minus_expense": -3406.144244997733
         },
         {
           "month": "May 2026",
-          "collection": 3490.19429753638,
+          "collection": 11592,
           "expense": 8101.80570246362,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -5611.61140492724
+          "net_collection_minus_expense": 2490.19429753638
         },
         {
           "month": "Jun 2026",
-          "collection": -385.41465363783755,
+          "collection": 7011,
           "expense": 7396.414653637838,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8781.829307275675
+          "net_collection_minus_expense": -1385.4146536378375
         },
         {
           "month": "Jul 2026",
-          "collection": -207.8076919216728,
+          "collection": 7400,
           "expense": 7607.807691921673,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8815.615383843346
+          "net_collection_minus_expense": -1207.8076919216728
         },
         {
           "month": "Aug 2026",
@@ -7115,35 +7115,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": -1000,
+          "collection": 0,
           "expense": 6754.552034880622,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -8754.552034880622
+          "net_collection_minus_expense": -7754.552034880622
         },
         {
           "month": "May 2026",
-          "collection": -7157.919051475277,
+          "collection": 0,
           "expense": 7157.919051475277,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -15315.838102950554
+          "net_collection_minus_expense": -8157.919051475277
         },
         {
           "month": "Jun 2026",
-          "collection": -7196.054180196092,
+          "collection": 0,
           "expense": 7196.054180196092,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -15392.108360392183
+          "net_collection_minus_expense": -8196.054180196092
         },
         {
           "month": "Jul 2026",
-          "collection": 22134.202682362386,
+          "collection": 29212.36,
           "expense": 7078.157317637616,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 14056.04536472477
+          "net_collection_minus_expense": 21134.202682362386
         },
         {
           "month": "Aug 2026",
@@ -7470,35 +7470,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 4260,
+          "collection": 5260,
           "expense": 6364.940131458936,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -3104.940131458936
+          "net_collection_minus_expense": -2104.940131458936
         },
         {
           "month": "May 2026",
-          "collection": -6675.510804267,
+          "collection": 0,
           "expense": 6675.510804267,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -14351.021608534
+          "net_collection_minus_expense": -7675.510804267
         },
         {
           "month": "Jun 2026",
-          "collection": -6510.055020219463,
+          "collection": 0,
           "expense": 6510.055020219463,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -14020.110040438925
+          "net_collection_minus_expense": -7510.055020219463
         },
         {
           "month": "Jul 2026",
-          "collection": -2719.3771384638776,
+          "collection": 3743,
           "expense": 6462.377138463878,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -10181.754276927755
+          "net_collection_minus_expense": -3719.3771384638776
         },
         {
           "month": "Aug 2026",
@@ -7825,35 +7825,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 9621,
+          "collection": 10621,
           "expense": 5784.685186228823,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 2836.314813771177
+          "net_collection_minus_expense": 3836.314813771177
         },
         {
           "month": "May 2026",
-          "collection": -6826.706734196155,
+          "collection": 0,
           "expense": 6826.706734196155,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -14653.41346839231
+          "net_collection_minus_expense": -7826.706734196155
         },
         {
           "month": "Jun 2026",
-          "collection": 3369.24138119527,
+          "collection": 10563,
           "expense": 7193.75861880473,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -4824.51723760946
+          "net_collection_minus_expense": 2369.24138119527
         },
         {
           "month": "Jul 2026",
-          "collection": -1003.6336963516042,
+          "collection": 5693,
           "expense": 6696.633696351604,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8700.267392703208
+          "net_collection_minus_expense": -2003.6336963516042
         },
         {
           "month": "Aug 2026",
@@ -8188,27 +8188,27 @@
         },
         {
           "month": "May 2026",
-          "collection": 1951.7068739093247,
+          "collection": 8946.31,
           "expense": 6994.603126090675,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -6042.89625218135
+          "net_collection_minus_expense": 951.7068739093247
         },
         {
           "month": "Jun 2026",
-          "collection": -6533.918181659895,
+          "collection": 0,
           "expense": 6533.918181659895,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -14067.83636331979
+          "net_collection_minus_expense": -7533.918181659895
         },
         {
           "month": "Jul 2026",
-          "collection": -7234.562671366106,
+          "collection": 0,
           "expense": 7234.562671366106,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -15469.125342732212
+          "net_collection_minus_expense": -8234.562671366106
         },
         {
           "month": "Aug 2026",
@@ -8535,35 +8535,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 4590,
+          "collection": 5590,
           "expense": 6791.144800860029,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -3201.144800860029
+          "net_collection_minus_expense": -2201.144800860029
         },
         {
           "month": "May 2026",
-          "collection": -7335.435335872632,
+          "collection": 0,
           "expense": 7335.435335872632,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -15670.870671745266
+          "net_collection_minus_expense": -8335.435335872633
         },
         {
           "month": "Jun 2026",
-          "collection": -1214.5754926145064,
+          "collection": 6465,
           "expense": 7679.575492614506,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -9894.150985229011
+          "net_collection_minus_expense": -2214.5754926145055
         },
         {
           "month": "Jul 2026",
-          "collection": -1680.8160914275486,
+          "collection": 6702,
           "expense": 8382.816091427549,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -11063.632182855097
+          "net_collection_minus_expense": -2680.8160914275486
         },
         {
           "month": "Aug 2026",
@@ -8898,27 +8898,27 @@
         },
         {
           "month": "May 2026",
-          "collection": -2032.1461982470073,
+          "collection": 4440,
           "expense": 6472.146198247007,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -9504.292396494015
+          "net_collection_minus_expense": -3032.1461982470073
         },
         {
           "month": "Jun 2026",
-          "collection": -1305.5456504865024,
+          "collection": 5452.43,
           "expense": 6757.975650486503,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -9063.521300973005
+          "net_collection_minus_expense": -2305.5456504865024
         },
         {
           "month": "Jul 2026",
-          "collection": -1282.9476370996654,
+          "collection": 5775,
           "expense": 7057.947637099665,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -9340.89527419933
+          "net_collection_minus_expense": -2282.9476370996654
         },
         {
           "month": "Aug 2026",
@@ -9245,35 +9245,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 20576,
+          "collection": 21576,
           "expense": 5716.741634828816,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 13859.258365171183
+          "net_collection_minus_expense": 14859.258365171183
         },
         {
           "month": "May 2026",
-          "collection": -6401.3719104034935,
+          "collection": 0,
           "expense": 6401.3719104034935,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -13802.743820806987
+          "net_collection_minus_expense": -7401.3719104034935
         },
         {
           "month": "Jun 2026",
-          "collection": 3545.068933130131,
+          "collection": 10106,
           "expense": 6560.931066869869,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -4015.862133739738
+          "net_collection_minus_expense": 2545.068933130131
         },
         {
           "month": "Jul 2026",
-          "collection": -940.4120708977616,
+          "collection": 5584,
           "expense": 6524.412070897762,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8464.824141795523
+          "net_collection_minus_expense": -1940.4120708977616
         },
         {
           "month": "Aug 2026",
@@ -9600,35 +9600,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 3487,
+          "collection": 4487,
           "expense": 6931.642829853448,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -4444.642829853448
+          "net_collection_minus_expense": -3444.6428298534483
         },
         {
           "month": "May 2026",
-          "collection": -836.9036616161775,
+          "collection": 6335,
           "expense": 7171.9036616161775,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -9008.807323232355
+          "net_collection_minus_expense": -1836.9036616161775
         },
         {
           "month": "Jun 2026",
-          "collection": -2147.3022677913996,
+          "collection": 5689,
           "expense": 7836.3022677914,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -10983.6045355828
+          "net_collection_minus_expense": -3147.3022677913996
         },
         {
           "month": "Jul 2026",
-          "collection": -1110.6109021865668,
+          "collection": 6929,
           "expense": 8039.610902186567,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -10150.221804373134
+          "net_collection_minus_expense": -2110.610902186567
         },
         {
           "month": "Aug 2026",
@@ -9955,35 +9955,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 9677,
+          "collection": 10677,
           "expense": 6181.684825523664,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 2495.3151744763363
+          "net_collection_minus_expense": 3495.3151744763363
         },
         {
           "month": "May 2026",
-          "collection": -6983.8881283306,
+          "collection": 0,
           "expense": 6983.8881283306,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -14967.7762566612
+          "net_collection_minus_expense": -7983.8881283306
         },
         {
           "month": "Jun 2026",
-          "collection": 8766.81878721433,
+          "collection": 16049.79,
           "expense": 7282.971212785671,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 483.84757442865885
+          "net_collection_minus_expense": 7766.81878721433
         },
         {
           "month": "Jul 2026",
-          "collection": -6199.782813841453,
+          "collection": 1062,
           "expense": 7261.782813841453,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -14461.565627682907
+          "net_collection_minus_expense": -7199.782813841453
         },
         {
           "month": "Aug 2026",
@@ -10310,35 +10310,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 4970,
+          "collection": 5970,
           "expense": 7116.5467675507725,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -3146.5467675507725
+          "net_collection_minus_expense": -2146.5467675507725
         },
         {
           "month": "May 2026",
-          "collection": -1113.2240561993012,
+          "collection": 6116.55,
           "expense": 7229.774056199301,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -9342.998112398604
+          "net_collection_minus_expense": -2113.2240561993012
         },
         {
           "month": "Jun 2026",
-          "collection": -7769.630227754305,
+          "collection": 0,
           "expense": 7769.630227754305,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -16539.26045550861
+          "net_collection_minus_expense": -8769.630227754305
         },
         {
           "month": "Jul 2026",
-          "collection": -1140.6273462495574,
+          "collection": 7044.65,
           "expense": 8185.277346249557,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -10325.904692499114
+          "net_collection_minus_expense": -2140.6273462495574
         },
         {
           "month": "Aug 2026",
@@ -10665,35 +10665,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": -1000,
+          "collection": 0,
           "expense": 5694.776297959392,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -7694.776297959392
+          "net_collection_minus_expense": -6694.776297959392
         },
         {
           "month": "May 2026",
-          "collection": -6981.131741404278,
+          "collection": 0,
           "expense": 6981.131741404278,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -14962.263482808556
+          "net_collection_minus_expense": -7981.131741404278
         },
         {
           "month": "Jun 2026",
-          "collection": -7441.845415127341,
+          "collection": 0,
           "expense": 7441.845415127341,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -15883.69083025468
+          "net_collection_minus_expense": -8441.84541512734
         },
         {
           "month": "Jul 2026",
-          "collection": -6730.531820222101,
+          "collection": 0,
           "expense": 6730.531820222101,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -14461.063640444201
+          "net_collection_minus_expense": -7730.531820222101
         },
         {
           "month": "Aug 2026",
@@ -11020,35 +11020,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 3819,
+          "collection": 4819,
           "expense": 6003.648169855142,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -3184.6481698551424
+          "net_collection_minus_expense": -2184.6481698551424
         },
         {
           "month": "May 2026",
-          "collection": -6569.187232094298,
+          "collection": 0,
           "expense": 6569.187232094298,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -14138.374464188597
+          "net_collection_minus_expense": -7569.187232094298
         },
         {
           "month": "Jun 2026",
-          "collection": -1897.3978488318235,
+          "collection": 5003.65,
           "expense": 6901.047848831823,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -9798.445697663647
+          "net_collection_minus_expense": -2897.3978488318235
         },
         {
           "month": "Jul 2026",
-          "collection": 4322.901694113946,
+          "collection": 11443.06,
           "expense": 7120.158305886053,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -3797.256611772107
+          "net_collection_minus_expense": 3322.901694113946
         },
         {
           "month": "Aug 2026",
@@ -11375,35 +11375,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 3890,
+          "collection": 4890,
           "expense": 5573.98725,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -2683.98725
+          "net_collection_minus_expense": -1683.9872500000001
         },
         {
           "month": "May 2026",
-          "collection": -1914.010145191277,
+          "collection": 4556.92,
           "expense": 6470.930145191277,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -9384.940290382554
+          "net_collection_minus_expense": -2914.010145191277
         },
         {
           "month": "Jun 2026",
-          "collection": -1172.8617254357168,
+          "collection": 5454,
           "expense": 6626.861725435717,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8799.723450871434
+          "net_collection_minus_expense": -2172.861725435717
         },
         {
           "month": "Jul 2026",
-          "collection": -991.2714021113734,
+          "collection": 5470.93,
           "expense": 6462.201402111374,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8453.472804222747
+          "net_collection_minus_expense": -1991.2714021113734
         },
         {
           "month": "Aug 2026",
@@ -11730,35 +11730,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 4635,
+          "collection": 5635,
           "expense": 8522.881045679182,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -4887.881045679182
+          "net_collection_minus_expense": -3887.8810456791816
         },
         {
           "month": "May 2026",
-          "collection": -2045.9427592493503,
+          "collection": 6948,
           "expense": 8993.94275924935,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -12039.8855184987
+          "net_collection_minus_expense": -3045.9427592493503
         },
         {
           "month": "Jun 2026",
-          "collection": -578.859237420812,
+          "collection": 7522.88,
           "expense": 8101.739237420812,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -9680.598474841623
+          "net_collection_minus_expense": -1578.859237420812
         },
         {
           "month": "Jul 2026",
-          "collection": -6586.252274816382,
+          "collection": 0,
           "expense": 6586.252274816382,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -14172.504549632764
+          "net_collection_minus_expense": -7586.252274816382
         },
         {
           "month": "Aug 2026",
@@ -12085,35 +12085,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 4092,
+          "collection": 5092,
           "expense": 6247.501342666962,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -3155.501342666962
+          "net_collection_minus_expense": -2155.501342666962
         },
         {
           "month": "May 2026",
-          "collection": -7866.702111689063,
+          "collection": 0,
           "expense": 7866.702111689063,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -16733.404223378126
+          "net_collection_minus_expense": -8866.702111689063
         },
         {
           "month": "Jun 2026",
-          "collection": -7471.314017174585,
+          "collection": 0,
           "expense": 7471.314017174585,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -15942.62803434917
+          "net_collection_minus_expense": -8471.314017174585
         },
         {
           "month": "Jul 2026",
-          "collection": 5883.229754100626,
+          "collection": 13500,
           "expense": 7616.770245899374,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -2733.540491798747
+          "net_collection_minus_expense": 4883.229754100626
         },
         {
           "month": "Aug 2026",
@@ -12440,35 +12440,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": -1000,
+          "collection": 0,
           "expense": 7032.281936399434,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -9032.281936399435
+          "net_collection_minus_expense": -8032.281936399434
         },
         {
           "month": "May 2026",
-          "collection": 4355.903899672704,
+          "collection": 11000,
           "expense": 6644.096100327296,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -3288.192200654592
+          "net_collection_minus_expense": 3355.903899672704
         },
         {
           "month": "Jun 2026",
-          "collection": -7223.814457486975,
+          "collection": 0,
           "expense": 7223.814457486975,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -15447.62891497395
+          "net_collection_minus_expense": -8223.814457486975
         },
         {
           "month": "Jul 2026",
-          "collection": 28088.676635141295,
+          "collection": 36000,
           "expense": 7911.323364858705,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 19177.35327028259
+          "net_collection_minus_expense": 27088.676635141295
         },
         {
           "month": "Aug 2026",
@@ -12795,35 +12795,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 33349.740000000005,
+          "collection": 34349.740000000005,
           "expense": 5848.0708070787405,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 26501.669192921265
+          "net_collection_minus_expense": 27501.669192921265
         },
         {
           "month": "May 2026",
-          "collection": -1969.5234743844458,
+          "collection": 4363.79,
           "expense": 6333.313474384446,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -9302.83694876889
+          "net_collection_minus_expense": -2969.5234743844458
         },
         {
           "month": "Jun 2026",
-          "collection": -1749.4980170028384,
+          "collection": 5522.63,
           "expense": 7272.1280170028385,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -10021.626034005676
+          "net_collection_minus_expense": -2749.4980170028384
         },
         {
           "month": "Jul 2026",
-          "collection": -6831.247742369607,
+          "collection": 0,
           "expense": 6831.247742369607,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -14662.495484739215
+          "net_collection_minus_expense": -7831.247742369607
         },
         {
           "month": "Aug 2026",
@@ -13150,35 +13150,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 39781,
+          "collection": 40781,
           "expense": 5574.169567222004,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 33206.830432778
+          "net_collection_minus_expense": 34206.830432778
         },
         {
           "month": "May 2026",
-          "collection": -6509.114211141214,
+          "collection": 0,
           "expense": 6509.114211141214,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -14018.228422282427
+          "net_collection_minus_expense": -7509.114211141214
         },
         {
           "month": "Jun 2026",
-          "collection": -7313.021040858255,
+          "collection": 0,
           "expense": 7313.021040858255,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -15626.04208171651
+          "net_collection_minus_expense": -8313.021040858255
         },
         {
           "month": "Jul 2026",
-          "collection": 9016.032254193007,
+          "collection": 15506,
           "expense": 6489.967745806994,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 1526.0645083860136
+          "net_collection_minus_expense": 8016.032254193006
         },
         {
           "month": "Aug 2026",
@@ -13505,35 +13505,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 3936,
+          "collection": 4936,
           "expense": 6067.70228718574,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -3131.70228718574
+          "net_collection_minus_expense": -2131.70228718574
         },
         {
           "month": "May 2026",
-          "collection": -1560.1415244823647,
+          "collection": 5067.7,
           "expense": 6627.841524482365,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -9187.983048964728
+          "net_collection_minus_expense": -2560.1415244823647
         },
         {
           "month": "Jun 2026",
-          "collection": -1016.8417422361836,
+          "collection": 5596.3,
           "expense": 6613.141742236184,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8629.983484472366
+          "net_collection_minus_expense": -2016.8417422361836
         },
         {
           "month": "Jul 2026",
-          "collection": -894.1954148297009,
+          "collection": 5941.27,
           "expense": 6835.465414829701,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8729.660829659402
+          "net_collection_minus_expense": -1894.195414829701
         },
         {
           "month": "Aug 2026",
@@ -13860,35 +13860,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 1028.67,
+          "collection": 2028.67,
           "expense": 6645.283246493133,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -6616.613246493133
+          "net_collection_minus_expense": -5616.613246493133
         },
         {
           "month": "May 2026",
-          "collection": -7153.419655169074,
+          "collection": 0,
           "expense": 7153.419655169074,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -15306.839310338148
+          "net_collection_minus_expense": -8153.419655169074
         },
         {
           "month": "Jun 2026",
-          "collection": 5263.888280594154,
+          "collection": 12721.85,
           "expense": 7457.961719405846,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -3194.0734388116925
+          "net_collection_minus_expense": 4263.888280594154
         },
         {
           "month": "Jul 2026",
-          "collection": -7432.44180428552,
+          "collection": 0,
           "expense": 7432.44180428552,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -15864.883608571043
+          "net_collection_minus_expense": -8432.441804285521
         },
         {
           "month": "Aug 2026",
@@ -14223,27 +14223,27 @@
         },
         {
           "month": "May 2026",
-          "collection": -6485.103699971819,
+          "collection": 0,
           "expense": 6485.103699971819,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -13970.207399943638
+          "net_collection_minus_expense": -7485.103699971819
         },
         {
           "month": "Jun 2026",
-          "collection": -1064.544521022267,
+          "collection": 5486.89,
           "expense": 6551.434521022267,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -8615.979042044535
+          "net_collection_minus_expense": -2064.544521022267
         },
         {
           "month": "Jul 2026",
-          "collection": 1069.1281166159342,
+          "collection": 7663.64,
           "expense": 6594.511883384066,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -6525.383766768132
+          "net_collection_minus_expense": 69.12811661593423
         },
         {
           "month": "Aug 2026",
@@ -14570,35 +14570,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": -2000,
+          "collection": 0,
           "expense": 5623.942168828986,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -8623.942168828986
+          "net_collection_minus_expense": -6623.942168828986
         },
         {
           "month": "May 2026",
-          "collection": 1631.5425923049443,
+          "collection": 8000,
           "expense": 6368.457407695056,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -5736.9148153901115
+          "net_collection_minus_expense": 631.5425923049443
         },
         {
           "month": "Jun 2026",
-          "collection": -6469.428922107228,
+          "collection": 0,
           "expense": 6469.428922107228,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -13938.857844214455
+          "net_collection_minus_expense": -7469.428922107228
         },
         {
           "month": "Jul 2026",
-          "collection": -6466.243338218964,
+          "collection": 0,
           "expense": 6466.243338218964,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -13932.486676437928
+          "net_collection_minus_expense": -7466.243338218964
         },
         {
           "month": "Aug 2026",
@@ -14925,35 +14925,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 4150,
+          "collection": 5150,
           "expense": 5823.214892478916,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -2673.214892478916
+          "net_collection_minus_expense": -1673.2148924789162
         },
         {
           "month": "May 2026",
-          "collection": -1836.6929541871814,
+          "collection": 4992,
           "expense": 6828.692954187181,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -9665.385908374363
+          "net_collection_minus_expense": -2836.6929541871814
         },
         {
           "month": "Jun 2026",
-          "collection": -1176.9811667785898,
+          "collection": 5779,
           "expense": 6955.98116677859,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -9132.96233355718
+          "net_collection_minus_expense": -2176.98116677859
         },
         {
           "month": "Jul 2026",
-          "collection": -1235.7279881426975,
+          "collection": 5734,
           "expense": 6969.7279881426975,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -9205.455976285395
+          "net_collection_minus_expense": -2235.7279881426975
         },
         {
           "month": "Aug 2026",
@@ -15280,35 +15280,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": -1000,
+          "collection": 0,
           "expense": 5837.253318573194,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -7837.253318573194
+          "net_collection_minus_expense": -6837.253318573194
         },
         {
           "month": "May 2026",
-          "collection": 9165.220070886811,
+          "collection": 16123.22,
           "expense": 6957.999929113188,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 1207.2201417736233
+          "net_collection_minus_expense": 8165.220070886811
         },
         {
           "month": "Jun 2026",
-          "collection": -2108.417178933977,
+          "collection": 5403.25,
           "expense": 7511.667178933977,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -10620.084357867956
+          "net_collection_minus_expense": -3108.417178933978
         },
         {
           "month": "Jul 2026",
-          "collection": -7476.024419706493,
+          "collection": 0,
           "expense": 7476.024419706493,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -15952.048839412986
+          "net_collection_minus_expense": -8476.024419706493
         },
         {
           "month": "Aug 2026",
@@ -15635,35 +15635,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 3739,
+          "collection": 4739,
           "expense": 5693.986256664043,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -2954.986256664043
+          "net_collection_minus_expense": -1954.9862566640431
         },
         {
           "month": "May 2026",
-          "collection": -6391.548684884288,
+          "collection": 0,
           "expense": 6391.548684884288,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -13783.097369768577
+          "net_collection_minus_expense": -7391.548684884288
         },
         {
           "month": "Jun 2026",
-          "collection": -6545.562154672272,
+          "collection": 0,
           "expense": 6545.562154672272,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -14091.124309344545
+          "net_collection_minus_expense": -7545.562154672272
         },
         {
           "month": "Jul 2026",
-          "collection": 4189.427181002469,
+          "collection": 10939.29,
           "expense": 6749.862818997532,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -3560.4356379950623
+          "net_collection_minus_expense": 3189.4271810024693
         },
         {
           "month": "Aug 2026",
@@ -15990,35 +15990,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": -1000,
+          "collection": 0,
           "expense": 6302.014192046037,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -8302.014192046037
+          "net_collection_minus_expense": -7302.014192046037
         },
         {
           "month": "May 2026",
-          "collection": -7098.440326180411,
+          "collection": 0,
           "expense": 7098.440326180411,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -15196.880652360822
+          "net_collection_minus_expense": -8098.440326180411
         },
         {
           "month": "Jun 2026",
-          "collection": -7409.600785351007,
+          "collection": 0,
           "expense": 7409.600785351007,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -15819.201570702015
+          "net_collection_minus_expense": -8409.600785351007
         },
         {
           "month": "Jul 2026",
-          "collection": -7205.019971982687,
+          "collection": 0,
           "expense": 7205.019971982687,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -15410.039943965374
+          "net_collection_minus_expense": -8205.019971982687
         },
         {
           "month": "Aug 2026",
@@ -16345,35 +16345,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 15641,
+          "collection": 16641,
           "expense": 7465.198068428983,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 7175.801931571017
+          "net_collection_minus_expense": 8175.801931571017
         },
         {
           "month": "May 2026",
-          "collection": -7686.401978626092,
+          "collection": 0,
           "expense": 7686.401978626092,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -16372.803957252185
+          "net_collection_minus_expense": -8686.401978626092
         },
         {
           "month": "Jun 2026",
-          "collection": 10982.826114941961,
+          "collection": 19134,
           "expense": 8151.173885058039,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 1831.6522298839227
+          "net_collection_minus_expense": 9982.826114941961
         },
         {
           "month": "Jul 2026",
-          "collection": 534.6754326620812,
+          "collection": 7526,
           "expense": 6991.324567337919,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -7456.649134675838
+          "net_collection_minus_expense": -465.3245673379188
         },
         {
           "month": "Aug 2026",
@@ -16708,27 +16708,27 @@
         },
         {
           "month": "May 2026",
-          "collection": -666.547122177737,
+          "collection": 4839,
           "expense": 5505.547122177737,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": -6172.094244355474
+          "net_collection_minus_expense": -666.547122177737
         },
         {
           "month": "Jun 2026",
-          "collection": -1441.1104388900221,
+          "collection": 4442,
           "expense": 5883.110438890022,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": -7324.220877780044
+          "net_collection_minus_expense": -1441.1104388900221
         },
         {
           "month": "Jul 2026",
-          "collection": -2553.794974199801,
+          "collection": 3062,
           "expense": 5615.794974199801,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": -8169.589948399602
+          "net_collection_minus_expense": -2553.794974199801
         },
         {
           "month": "Aug 2026",
@@ -17055,35 +17055,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 4879,
+          "collection": 5879,
           "expense": 7592.299669987148,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -3713.2996699871474
+          "net_collection_minus_expense": -2713.2996699871474
         },
         {
           "month": "May 2026",
-          "collection": -7445.39399384996,
+          "collection": 0,
           "expense": 7445.39399384996,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -15890.787987699921
+          "net_collection_minus_expense": -8445.39399384996
         },
         {
           "month": "Jun 2026",
-          "collection": 1186.2262649331242,
+          "collection": 9000,
           "expense": 7813.773735066876,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -7627.547470133752
+          "net_collection_minus_expense": 186.22626493312418
         },
         {
           "month": "Jul 2026",
-          "collection": -381.33432152615933,
+          "collection": 7640,
           "expense": 8021.334321526159,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -9402.668643052319
+          "net_collection_minus_expense": -1381.3343215261593
         },
         {
           "month": "Aug 2026",
@@ -17410,35 +17410,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 38847.34,
+          "collection": 39847.34,
           "expense": 7223.4454320522145,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 30623.894567947784
+          "net_collection_minus_expense": 31623.894567947784
         },
         {
           "month": "May 2026",
-          "collection": -7568.323226914664,
+          "collection": 0,
           "expense": 7568.323226914664,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -16136.64645382933
+          "net_collection_minus_expense": -8568.323226914665
         },
         {
           "month": "Jun 2026",
-          "collection": -7879.603633945111,
+          "collection": 0,
           "expense": 7879.603633945111,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -16759.207267890222
+          "net_collection_minus_expense": -8879.603633945111
         },
         {
           "month": "Jul 2026",
-          "collection": 11796.627421189805,
+          "collection": 19898.43,
           "expense": 8101.802578810195,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 2694.8248423796103
+          "net_collection_minus_expense": 10796.627421189805
         },
         {
           "month": "Aug 2026",
@@ -17773,27 +17773,27 @@
         },
         {
           "month": "May 2026",
-          "collection": -4517.274064864762,
+          "collection": 1511,
           "expense": 6028.274064864762,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": -10545.548129729525
+          "net_collection_minus_expense": -4517.274064864762
         },
         {
           "month": "Jun 2026",
-          "collection": -1432.9028922710113,
+          "collection": 5972,
           "expense": 7404.902892271011,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -9837.805784542023
+          "net_collection_minus_expense": -2432.9028922710113
         },
         {
           "month": "Jul 2026",
-          "collection": -1037.2195981669738,
+          "collection": 6472,
           "expense": 7509.219598166974,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -9546.439196333948
+          "net_collection_minus_expense": -2037.2195981669738
         },
         {
           "month": "Aug 2026",
@@ -18120,35 +18120,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 29484.97,
+          "collection": 30484.97,
           "expense": 5733.609866246158,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 22751.360133753842
+          "net_collection_minus_expense": 23751.360133753842
         },
         {
           "month": "May 2026",
-          "collection": 3907.8838236897045,
+          "collection": 10300,
           "expense": 6392.1161763102955,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -3484.232352620591
+          "net_collection_minus_expense": 2907.8838236897045
         },
         {
           "month": "Jun 2026",
-          "collection": -1154.376161604545,
+          "collection": 5391.88,
           "expense": 6546.256161604545,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8700.63232320909
+          "net_collection_minus_expense": -2154.376161604545
         },
         {
           "month": "Jul 2026",
-          "collection": -996.3808021113737,
+          "collection": 5589.52,
           "expense": 6585.900802111374,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8582.281604222748
+          "net_collection_minus_expense": -1996.3808021113737
         },
         {
           "month": "Aug 2026",
@@ -18475,35 +18475,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 24990,
+          "collection": 25990,
           "expense": 6007.172969480545,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 17982.827030519453
+          "net_collection_minus_expense": 18982.827030519453
         },
         {
           "month": "May 2026",
-          "collection": -1313.7430521068927,
+          "collection": 5343,
           "expense": 6656.743052106893,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8970.486104213785
+          "net_collection_minus_expense": -2313.7430521068927
         },
         {
           "month": "Jun 2026",
-          "collection": -1012.8694977311634,
+          "collection": 5622,
           "expense": 6634.869497731163,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8647.738995462327
+          "net_collection_minus_expense": -2012.8694977311634
         },
         {
           "month": "Jul 2026",
-          "collection": -6544.094542378201,
+          "collection": 0,
           "expense": 6544.094542378201,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -14088.189084756403
+          "net_collection_minus_expense": -7544.094542378201
         },
         {
           "month": "Aug 2026",
@@ -18830,35 +18830,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 18999.45,
+          "collection": 19999.45,
           "expense": 7494.213004549213,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 10505.236995450789
+          "net_collection_minus_expense": 11505.236995450789
         },
         {
           "month": "May 2026",
-          "collection": -1003.3010646352232,
+          "collection": 6494.14,
           "expense": 7497.4410646352235,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -9500.742129270446
+          "net_collection_minus_expense": -2003.3010646352222
         },
         {
           "month": "Jun 2026",
-          "collection": -1486.8146698631808,
+          "collection": 6389.74,
           "expense": 7876.554669863181,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -10363.369339726361
+          "net_collection_minus_expense": -2486.814669863181
         },
         {
           "month": "Jul 2026",
-          "collection": -7887.598957270675,
+          "collection": 0,
           "expense": 7887.598957270675,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -16775.19791454135
+          "net_collection_minus_expense": -8887.598957270675
         },
         {
           "month": "Aug 2026",
@@ -19185,35 +19185,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 3712,
+          "collection": 4712,
           "expense": 7253.675816319135,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -4541.675816319135
+          "net_collection_minus_expense": -3541.6758163191353
         },
         {
           "month": "May 2026",
-          "collection": 12780.164460770946,
+          "collection": 20028.72,
           "expense": 7248.555539229054,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": 4531.608921541891
+          "net_collection_minus_expense": 11780.164460770946
         },
         {
           "month": "Jun 2026",
-          "collection": -7409.488004444073,
+          "collection": 0,
           "expense": 7409.488004444073,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -15818.976008888145
+          "net_collection_minus_expense": -8409.488004444072
         },
         {
           "month": "Jul 2026",
-          "collection": -6993.803868435734,
+          "collection": 0,
           "expense": 6993.803868435734,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -14987.607736871469
+          "net_collection_minus_expense": -7993.803868435734
         },
         {
           "month": "Aug 2026",
@@ -19540,35 +19540,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 536.73,
+          "collection": 1536.73,
           "expense": 6187.545474449436,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -6650.815474449437
+          "net_collection_minus_expense": -5650.815474449437
         },
         {
           "month": "May 2026",
-          "collection": -1556.4104067726657,
+          "collection": 5287.24,
           "expense": 6843.6504067726655,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -9400.060813545331
+          "net_collection_minus_expense": -2556.4104067726657
         },
         {
           "month": "Jun 2026",
-          "collection": -722.3401499344573,
+          "collection": 5793,
           "expense": 6515.340149934457,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8237.680299868915
+          "net_collection_minus_expense": -1722.3401499344573
         },
         {
           "month": "Jul 2026",
-          "collection": -6463.255820226397,
+          "collection": 0,
           "expense": 6463.255820226397,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -13926.511640452794
+          "net_collection_minus_expense": -7463.255820226397
         },
         {
           "month": "Aug 2026",
@@ -19895,35 +19895,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 3785,
+          "collection": 4785,
           "expense": 5766.548511021475,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -2981.548511021475
+          "net_collection_minus_expense": -1981.548511021475
         },
         {
           "month": "May 2026",
-          "collection": -1695.246016403652,
+          "collection": 4766.55,
           "expense": 6461.796016403652,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -9157.042032807305
+          "net_collection_minus_expense": -2695.246016403652
         },
         {
           "month": "Jun 2026",
-          "collection": -6581.116663664057,
+          "collection": 0,
           "expense": 6581.116663664057,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -14162.233327328115
+          "net_collection_minus_expense": -7581.116663664057
         },
         {
           "month": "Jul 2026",
-          "collection": -1136.2458380965072,
+          "collection": 5455.63,
           "expense": 6591.875838096507,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -8728.121676193015
+          "net_collection_minus_expense": -2136.245838096507
         },
         {
           "month": "Aug 2026",
@@ -20250,35 +20250,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 4920,
+          "collection": 5920,
           "expense": 6334.318559246871,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -2414.318559246871
+          "net_collection_minus_expense": -1414.3185592468708
         },
         {
           "month": "May 2026",
-          "collection": 5628.2773502401,
+          "collection": 15000,
           "expense": 9371.7226497599,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -4743.445299519801
+          "net_collection_minus_expense": 4628.2773502401
         },
         {
           "month": "Jun 2026",
-          "collection": -7514.499242875558,
+          "collection": 0,
           "expense": 7514.499242875558,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": -15028.998485751115
+          "net_collection_minus_expense": -7514.499242875558
         },
         {
           "month": "Jul 2026",
-          "collection": -6234.040231681485,
+          "collection": 2664,
           "expense": 8898.040231681485,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -16132.08046336297
+          "net_collection_minus_expense": -7234.040231681485
         },
         {
           "month": "Aug 2026",
@@ -20605,35 +20605,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 10287,
+          "collection": 11287,
           "expense": 6185.904619451405,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": 3101.095380548595
+          "net_collection_minus_expense": 4101.095380548595
         },
         {
           "month": "May 2026",
-          "collection": -1617.5745685818601,
+          "collection": 5187,
           "expense": 6804.57456858186,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -9422.14913716372
+          "net_collection_minus_expense": -2617.57456858186
         },
         {
           "month": "Jun 2026",
-          "collection": -1305.6590115780346,
+          "collection": 5758,
           "expense": 7063.659011578035,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -9369.31802315607
+          "net_collection_minus_expense": -2305.6590115780346
         },
         {
           "month": "Jul 2026",
-          "collection": -639.4634383328275,
+          "collection": 6112,
           "expense": 6751.4634383328275,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8390.926876665655
+          "net_collection_minus_expense": -1639.4634383328275
         },
         {
           "month": "Aug 2026",
@@ -20960,35 +20960,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 3806,
+          "collection": 4806,
           "expense": 5799.8175156551215,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -2993.8175156551215
+          "net_collection_minus_expense": -1993.8175156551215
         },
         {
           "month": "May 2026",
-          "collection": -6554.174396678367,
+          "collection": 84.49,
           "expense": 6638.664396678367,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -14192.838793356734
+          "net_collection_minus_expense": -7554.174396678367
         },
         {
           "month": "Jun 2026",
-          "collection": -3129.6720223132834,
+          "collection": 5606.17,
           "expense": 8735.842022313283,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -12865.514044626567
+          "net_collection_minus_expense": -4129.672022313283
         },
         {
           "month": "Jul 2026",
-          "collection": -1131.2626449412019,
+          "collection": 5659.39,
           "expense": 6790.652644941202,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8921.915289882403
+          "net_collection_minus_expense": -2131.262644941202
         },
         {
           "month": "Aug 2026",
@@ -21323,27 +21323,27 @@
         },
         {
           "month": "May 2026",
-          "collection": -7163.419057287298,
+          "collection": 0,
           "expense": 7163.419057287298,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": -14326.838114574595
+          "net_collection_minus_expense": -7163.419057287298
         },
         {
           "month": "Jun 2026",
-          "collection": -7585.88915040354,
+          "collection": 0,
           "expense": 7585.88915040354,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": -15171.77830080708
+          "net_collection_minus_expense": -7585.88915040354
         },
         {
           "month": "Jul 2026",
-          "collection": 4312.995367351749,
+          "collection": 12000,
           "expense": 7687.004632648251,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": -3374.0092652965013
+          "net_collection_minus_expense": 4312.995367351749
         },
         {
           "month": "Aug 2026",
@@ -21670,35 +21670,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 3477,
+          "collection": 4477,
           "expense": 6350.692890320997,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -3873.6928903209973
+          "net_collection_minus_expense": -2873.6928903209973
         },
         {
           "month": "May 2026",
-          "collection": -1862.99252403022,
+          "collection": 5350,
           "expense": 7212.99252403022,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -10075.98504806044
+          "net_collection_minus_expense": -2862.99252403022
         },
         {
           "month": "Jun 2026",
-          "collection": -842.9219279491335,
+          "collection": 6142,
           "expense": 6984.9219279491335,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -8827.843855898267
+          "net_collection_minus_expense": -1842.9219279491335
         },
         {
           "month": "Jul 2026",
-          "collection": -4952.683408938881,
+          "collection": 2530,
           "expense": 7482.683408938881,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -13435.366817877763
+          "net_collection_minus_expense": -5952.683408938881
         },
         {
           "month": "Aug 2026",
@@ -22025,35 +22025,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 4420,
+          "collection": 5420,
           "expense": 6568.744287837299,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -3148.7442878372995
+          "net_collection_minus_expense": -2148.7442878372995
         },
         {
           "month": "May 2026",
-          "collection": -1470.9816748727917,
+          "collection": 5420,
           "expense": 6890.981674872792,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -9361.963349745583
+          "net_collection_minus_expense": -2470.9816748727917
         },
         {
           "month": "Jun 2026",
-          "collection": 25390.7616639409,
+          "collection": 32894,
           "expense": 7503.238336059101,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": 16887.523327881798
+          "net_collection_minus_expense": 24390.7616639409
         },
         {
           "month": "Jul 2026",
-          "collection": -7646.293953120032,
+          "collection": 0,
           "expense": 7646.293953120032,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -16292.587906240064
+          "net_collection_minus_expense": -8646.293953120032
         },
         {
           "month": "Aug 2026",
@@ -22380,35 +22380,35 @@
       "monthly": [
         {
           "month": "Apr 2026",
-          "collection": 4231,
+          "collection": 5231,
           "expense": 6849.05312828582,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -3618.05312828582
+          "net_collection_minus_expense": -2618.05312828582
         },
         {
           "month": "May 2026",
-          "collection": 2736.9328943058954,
+          "collection": 10000,
           "expense": 7263.067105694105,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -5526.134211388209
+          "net_collection_minus_expense": 1736.9328943058954
         },
         {
           "month": "Jun 2026",
-          "collection": -7492.07482938445,
+          "collection": 0,
           "expense": 7492.07482938445,
           "late_fee": 1000.0,
           "late_fee_reason": "Past Dues",
-          "net_collection_minus_expense": -15984.1496587689
+          "net_collection_minus_expense": -8492.07482938445
         },
         {
           "month": "Jul 2026",
-          "collection": -7771.612964618087,
+          "collection": 0,
           "expense": 7771.612964618087,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -16543.225929236174
+          "net_collection_minus_expense": -8771.612964618087
         },
         {
           "month": "Aug 2026",

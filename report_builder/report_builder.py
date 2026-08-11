@@ -435,13 +435,13 @@ def load_sheet_rows(
 
             if current_month is not None and ci < len(header_row_2):
                 h2 = str(header_row_2[ci]).strip().upper() if header_row_2[ci] is not None else ""
-                if "COLLECTION" in h2 and "MINUS" not in h2:
+                if h2 == "COLLECTION":
                     coll_idx = ci
-                elif "EXPENSE" in h2 and "MINUS" not in h2:
+                elif h2 == "EXPENSE":
                     exp_idx = ci
                 elif "LATE" in h2:
                     late_fee_idx = ci
-                elif "MINUS" in h2 or "NET" in h2 or "COLLECTION - EXPENSE" in h2:
+                elif "-" in h2 or "MINUS" in h2 or "NET" in h2:
                     net_idx = ci
 
         if current_month is not None and coll_idx is not None and exp_idx is not None:
