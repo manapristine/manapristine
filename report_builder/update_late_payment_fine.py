@@ -81,6 +81,14 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 WORKBOOKS_JSON = PROJECT_ROOT / "db" / "workbooks.json"
 DEFAULT_FINE_PER_MONTH = 1000  # Rs 1,000 flat fine for missed payment in previous month
 
+from enum import Enum
+
+class LateFineReason(str, Enum):
+    NONE = ""
+    MISSED_PAYMENT = "Missed Payment"
+    CUMULATIVE_DEFICIT = "Outstanding Dues"
+
+
 def normalize_flat(flat):
     """Normalize flat identifiers to consistent uppercase standard (e.g. F1, G16, CH)."""
     if flat is None:
@@ -372,6 +380,13 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
 
                 if "LATE PAYMENT FINE" in header_e:
                     fine_col_idx = header_e.index("LATE PAYMENT FINE") + 1
+                    
+                    if "LATE PAYMENT FINE REASON" in header_e:
+                        reason_col_idx = header_e.index("LATE PAYMENT FINE REASON") + 1
+                    else:
+                        reason_col_idx = len(header_e) + 1
+                        ws_e.cell(row=2, column=reason_col_idx).value = "LATE PAYMENT FINE REASON"
+
                     sheet_updates = 0
                     flagged_in_sheet = []
                     waived_in_sheet = []
@@ -384,17 +399,22 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
 
                         if skip_late_fee or not has_collection_data:
                             fine_amount = 0
+                            reason_str = LateFineReason.NONE.value
                         else:
                             paid_prev = not prev_month_missed.get(flat_id, True)
                             net_pos = cum_collections[flat_id] - cum_expenses[flat_id]
                             if net_pos < 0:
                                 fine_amount = fine_per_month
-                                flagged_in_sheet.append((flat_id, fine_amount, net_pos, paid_prev))
+                                reason_str = LateFineReason.MISSED_PAYMENT.value if not paid_prev else LateFineReason.CUMULATIVE_DEFICIT.value
+                                flagged_in_sheet.append((flat_id, fine_amount, net_pos, paid_prev, reason_str))
                             else:
                                 fine_amount = 0
+                                reason_str = LateFineReason.NONE.value
                                 waived_in_sheet.append((flat_id, net_pos, paid_prev))
 
                         fine_cell = ws_e.cell(row=r, column=fine_col_idx)
+                        reason_cell = ws_e.cell(row=r, column=reason_col_idx)
+
                         existing_val = fine_cell.value
                         try:
                             clean_str = re.sub(r'[^0-9.]', '', str(existing_val)) if existing_val is not None else ""
@@ -402,12 +422,17 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
                         except (ValueError, TypeError):
                             existing_num = -1.0
 
-                        if existing_num != float(fine_amount):
+                        fine_changed = (existing_num != float(fine_amount))
+                        reason_changed = (str(reason_cell.value or "") != reason_str)
+
+                        if fine_changed or reason_changed:
                             fine_cell.value = fine_amount
+                            reason_cell.value = reason_str
                             sheet_updates += 1
                             updates_total += 1
 
                     sheet_summaries.append((expense_sheet_name, prev_collection_sheet_name, sheet_updates, flagged_in_sheet, waived_in_sheet, is_current, is_future, has_collection_data))
+
 
             # 2. Accumulate current month collections & expenses into running cumulative totals for subsequent months
             all_flats = set(list(monthly_colls[(curr_m, curr_yr)].keys()) + list(monthly_exps[(curr_m, curr_yr)].keys()))
@@ -452,11 +477,11 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
                         print("  Skipped: Previous month has no recorded collection data.")
                     else:
                         if flagged:
-                            print(f"  {'Flat':<8} | {'Prev Payment':<15} | {'Net Position (Rs)':<20} | {'Late Fine (Rs)':<15}")
-                            print("  " + "-" * 70)
-                            for fid, fine, net, paid_prev in flagged:
+                            print(f"  {'Flat':<8} | {'Prev Payment':<15} | {'Net Position (Rs)':<20} | {'Late Fine (Rs)':<15} | {'Enum Reason':<20}")
+                            print("  " + "-" * 92)
+                            for fid, fine, net, paid_prev, reason_str in flagged:
                                 pmt_str = "PAID" if paid_prev else "MISSED"
-                                print(f"  {fid:<8} | {pmt_str:<15} | Rs {net:<17,.2f} | Rs {fine:<13,d}")
+                                print(f"  {fid:<8} | {pmt_str:<15} | Rs {net:<17,.2f} | Rs {fine:<13,d} | {reason_str:<20}")
                         if waived:
                             print(f"\n  [WAIVED - No Net Dues / Excess Credit]")
                             print(f"  {'Flat':<8} | {'Prev Payment':<15} | {'Net Position (Rs)':<20} | {'Late Fine (Rs)':<15}")

@@ -637,10 +637,13 @@ def load_expense_details(workbook_path: Path, expense_sheet_map: dict[str, str])
             headers = [str(cell.value).upper() if cell.value else "" for cell in ws[2]]
             mem_fee_idx = -1
             late_fee_idx = -1
+            reason_idx = -1
             total_exp_idx = -1
             for i, h in enumerate(headers):
                 if "ANNUAL MEMBERSHIP" in h or "ANNUAL MEM" in h:
                     mem_fee_idx = i
+                elif any(kw in h for kw in ["LATE PAYMENT FINE REASON", "LATE FINE REASON"]):
+                    reason_idx = i
                 elif any(kw in h for kw in ["LATE PAYMENT FINE", "LATE PAYMENT FEE", "LATE FINE"]):
                     late_fee_idx = i
                 elif "TOTAL EXPENSE TO BE PAID" in h:
@@ -686,6 +689,11 @@ def load_expense_details(workbook_path: Path, expense_sheet_map: dict[str, str])
                 late_fee = _opt_num(late_fee_idx)
                 total_expense = _req_num(total_exp_idx, "TOTAL EXPENSE TO BE PAID")
 
+                reason_val = ""
+                if reason_idx >= 0 and len(row) > reason_idx:
+                    r_raw = row[reason_idx]
+                    reason_val = str(r_raw).strip() if r_raw is not None else ""
+
                 result.setdefault(flat, {})[month_label] = {
                     "water_used_litres": water_used,
                     "common_area_water_litres": _opt_num(3),
@@ -702,8 +710,10 @@ def load_expense_details(workbook_path: Path, expense_sheet_map: dict[str, str])
                     "accounts_fee": accounts_fee,
                     "annual_mem_fee": annual_mem_fee,
                     "late_fee": late_fee,
+                    "late_fee_reason": reason_val,
                     "total_expense": total_expense,
                 }
+
         return result
     finally:
         workbook.close()
@@ -746,6 +756,9 @@ def build_report(
         row_late = safe_number(sheet_row[block.late_fee_idx] if len(sheet_row) > block.late_fee_idx else 0)
         late_fee_val = exp_detail_late if exp_detail_late is not None else row_late
 
+        exp_detail_reason = expense_details.get(block.month_label, {}).get("late_fee_reason") if (expense_details and block.month_label in expense_details) else None
+        late_fee_reason = exp_detail_reason if (exp_detail_reason and str(exp_detail_reason).strip()) else "-"
+
         coll_val = safe_number(sheet_row[block.collection_idx] if len(sheet_row) > block.collection_idx else 0)
         net_val = coll_val - (expense_val + late_fee_val)
 
@@ -755,9 +768,12 @@ def build_report(
                 "collection": coll_val,
                 "expense": expense_val,
                 "late_fee": late_fee_val,
+                "late_fee_reason": late_fee_reason,
                 "net_collection_minus_expense": net_val,
             }
         )
+
+
         if expense_details and block.month_label in expense_details:
             expense_breakdown.append({"month": block.month_label, **expense_details[block.month_label]})
         else:
