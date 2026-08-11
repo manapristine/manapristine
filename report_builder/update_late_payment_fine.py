@@ -385,17 +385,14 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
                         if skip_late_fee or not has_collection_data:
                             fine_amount = 0
                         else:
-                            missed = prev_month_missed.get(flat_id, False)
-                            if missed:
-                                net_pos = cum_collections[flat_id] - cum_expenses[flat_id]
-                                if net_pos >= 0:
-                                    fine_amount = 0
-                                    waived_in_sheet.append((flat_id, net_pos))
-                                else:
-                                    fine_amount = fine_per_month
-                                    flagged_in_sheet.append((flat_id, fine_amount, net_pos))
+                            paid_prev = not prev_month_missed.get(flat_id, True)
+                            net_pos = cum_collections[flat_id] - cum_expenses[flat_id]
+                            if net_pos < 0:
+                                fine_amount = fine_per_month
+                                flagged_in_sheet.append((flat_id, fine_amount, net_pos, paid_prev))
                             else:
                                 fine_amount = 0
+                                waived_in_sheet.append((flat_id, net_pos, paid_prev))
 
                         fine_cell = ws_e.cell(row=r, column=fine_col_idx)
                         existing_val = fine_cell.value
@@ -430,6 +427,21 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
                 print(f"Total Late Payment Fine updates applied: {updates_total}")
                 print(f"Total EXPENSE formula updates applied: {formula_updates}\n")
 
+                # On Windows, automatically refresh formula cache via Excel COM so data_only reads work cleanly
+                if sys.platform == "win32":
+                    try:
+                        import win32com.client
+                        excel = win32com.client.Dispatch("Excel.Application")
+                        excel.Visible = False
+                        excel.DisplayAlerts = False
+                        wb_com = excel.Workbooks.Open(str(wb_path.resolve()))
+                        wb_com.Save()
+                        wb_com.Close()
+                        excel.Quit()
+                        print(f"Successfully evaluated and refreshed formula cache via Excel COM for '{wb_path.name}'.\n")
+                    except Exception:
+                        pass
+
                 for sheet_name, col_name, count, flagged, waived, is_curr, is_fut, has_data in sheet_summaries:
                     print(f"--- Sheet: {sheet_name} (Based on {col_name or 'N/A'}) ---")
                     if is_curr:
@@ -440,18 +452,20 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
                         print("  Skipped: Previous month has no recorded collection data.")
                     else:
                         if flagged:
-                            print(f"  {'Flat':<8} | {'Payment Status':<20} | {'Net Position (Rs)':<20} | {'Late Fine (Rs)':<15}")
+                            print(f"  {'Flat':<8} | {'Prev Payment':<15} | {'Net Position (Rs)':<20} | {'Late Fine (Rs)':<15}")
                             print("  " + "-" * 70)
-                            for fid, fine, net in flagged:
-                                print(f"  {fid:<8} | {'MISSED':<20} | Rs {net:<17,f} | Rs {fine:<13,d}")
+                            for fid, fine, net, paid_prev in flagged:
+                                pmt_str = "PAID" if paid_prev else "MISSED"
+                                print(f"  {fid:<8} | {pmt_str:<15} | Rs {net:<17,.2f} | Rs {fine:<13,d}")
                         if waived:
-                            print(f"\n  [WAIVED - Excess Payment Credit Available]")
-                            print(f"  {'Flat':<8} | {'Payment Status':<20} | {'Net Position (Rs)':<20} | {'Late Fine (Rs)':<15}")
+                            print(f"\n  [WAIVED - No Net Dues / Excess Credit]")
+                            print(f"  {'Flat':<8} | {'Prev Payment':<15} | {'Net Position (Rs)':<20} | {'Late Fine (Rs)':<15}")
                             print("  " + "-" * 70)
-                            for fid, net in waived:
-                                print(f"  {fid:<8} | {'MISSED':<20} | +Rs {net:<16,f} | Rs 0 (WAIVED)")
+                            for fid, net, paid_prev in waived:
+                                pmt_str = "PAID" if paid_prev else "MISSED"
+                                print(f"  {fid:<8} | {pmt_str:<15} | +Rs {net:<16,.2f} | Rs 0 (WAIVED)")
                         if not flagged and not waived:
-                            print("  No late payment fines applicable (All flats paid on time in previous month).")
+                            print("  No late payment fines applicable (All flats have positive credit balance).")
                     print()
                 return True
             except PermissionError:
@@ -462,6 +476,7 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
             return True
     finally:
         wb.close()
+
 
 
 def main():
