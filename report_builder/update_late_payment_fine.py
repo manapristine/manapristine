@@ -409,9 +409,16 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
                         else:
                             paid_prev = not prev_month_missed.get(flat_id, True)
                             net_pos = cum_collections[flat_id] - cum_expenses[flat_id]
-                            unpaid_months_count = sum(1 for prev_i in range(idx) if monthly_missed_status[flat_id].get(prev_i, False))
                             
-                            if net_pos < 0 and unpaid_months_count >= 2:
+                            # Count trailing streak of consecutive missed months in current FY
+                            consecutive_missed_count = 0
+                            for prev_i in range(idx - 1, -1, -1):
+                                if monthly_missed_status[flat_id].get(prev_i, False):
+                                    consecutive_missed_count += 1
+                                else:
+                                    break
+                            
+                            if net_pos < 0 and consecutive_missed_count >= 2:
                                 fine_amount = fine_per_month
                                 reason_str = LateFineReason.MISSED_PAYMENT.value if not paid_prev else LateFineReason.CUMULATIVE_DEFICIT.value
                                 flagged_in_sheet.append((flat_id, fine_amount, net_pos, paid_prev, reason_str))
@@ -419,6 +426,7 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
                                 fine_amount = 0
                                 reason_str = LateFineReason.NONE.value
                                 waived_in_sheet.append((flat_id, net_pos, paid_prev))
+
 
 
                         fine_cell = ws_e.cell(row=r, column=fine_col_idx)
