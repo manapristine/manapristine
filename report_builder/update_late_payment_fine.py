@@ -13,11 +13,14 @@ all expense sub-sheets so that 'LATE PAYMENT FINE' is fully included alongside a
 
 Rule & Policy:
 --------------
-- 1-Month Look Back Only: The late payment fee for a given month is NOT cumulative across
-  multiple past months. It considers ONLY the immediately preceding month.
-- Fixed Fine: If payment was missed (Total is null / 0) in the previous month's COLLECTION sheet,
-  a fine of Rs 1,000 (or configured fine amount) is applied in the current month's EXPENSE sheet.
-- On-Time Payment: If payment was received in the previous month, the fine in the current month is Rs 0.
+- 1-Month Look Back: Evaluates payment status in the immediately preceding month.
+- Fixed Fine: If payment was missed in the previous month's COLLECTION sheet AND the flat has net
+  outstanding dues (cumulative collections < cumulative expenses up to that month), a fine of
+  Rs 1,000 (or configured fine amount) is applied in the current month's EXPENSE sheet.
+- Excess Payment Fine Waiver: If payment was missed in the previous month BUT the flat has an excess
+  amount paid (cumulative collections >= cumulative expenses up to that month, including opening
+  balance from last FY), the late payment fine is WAIVED (Rs 0).
+- On-Time Payment: If payment was received in the previous month, the fine is Rs 0.
 
 Pre-conditions:
 ---------------
@@ -191,9 +194,9 @@ def ensure_total_expense_formulas(wb):
 
                     # Build Excel sum formula: =SUM(J{r}:{last_head_col_letter}{r})*$B$2
                     target_formula = f"=SUM(J{r}:{last_head_col_letter}{r})*$B$2"
-                    curr_formula = ws.cell(r, total_col_idx).value
+                    curr_formula = str(ws.cell(r, total_col_idx).value or "").strip().upper()
 
-                    if curr_formula != target_formula:
+                    if curr_formula != target_formula.upper():
                         ws.cell(r, total_col_idx).value = target_formula
                         formula_updates += 1
 
@@ -204,6 +207,7 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
     Inspect immediately preceding month collection sheet and update LATE PAYMENT FINE in expense sheets.
     Does NOT update late payment fines for the current month or future months beyond as_of_date,
     as collection amounts received in current month are for the previous month.
+    Waives late payment fine if flat has excess amount paid (cumulative collections >= cumulative expenses).
     Also ensures formulas in TOTAL EXPENSE TO BE PAID include LATE PAYMENT FINE across all expense sub-sheets.
 
     :param workbook_path: Path to Excel financial workbook.
@@ -237,6 +241,7 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
 
     try:
         wb = openpyxl.load_workbook(wb_path)
+        wb_data = openpyxl.load_workbook(wb_path, data_only=True)
     except PermissionError:
         print(f"Error: Permission denied opening '{wb_path.name}'. Ensure file is closed in Excel.")
         return False
@@ -246,93 +251,176 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
     sheet_summaries = []
     non_flat_ids = {"TOTAL", "CH", "GYM", "BSMT", "MPFOWA"}
 
-    try:
-        # 1. Update Late Payment Fines (Past months strictly before cutoff month)
-        for idx in range(1, len(month_seq)):
-            prev_m, prev_yr = month_seq[idx - 1]
-            curr_m, curr_yr = month_seq[idx]
-
-            prev_abbr = datetime(prev_yr, prev_m, 1).strftime('%b')
-            prev_full = datetime(prev_yr, prev_m, 1).strftime('%B')
-            curr_abbr = datetime(curr_yr, curr_m, 1).strftime('%b')
-            curr_full = datetime(curr_yr, curr_m, 1).strftime('%B')
-
-            collection_sheet_name = find_sheet(wb, [f"{prev_abbr}{prev_yr}-COLLECTION", f"{prev_full}{prev_yr}-COLLECTION"])
-            expense_sheet_name = find_sheet(wb, [f"{curr_abbr}{curr_yr}-EXPENSE", f"{curr_full}{curr_yr}-EXPENSE"])
-
-            if not expense_sheet_name:
+    # Load carryover balance from INCOME-EXPENSE-CYCLES ('Balance from last FY year')
+    carryover_balances = {}
+    if 'INCOME-EXPENSE-CYCLES' in wb_data.sheetnames:
+        ws_iec = wb_data['INCOME-EXPENSE-CYCLES']
+        row1 = [ws_iec.cell(1, col).value for col in range(1, ws_iec.max_column + 1)]
+        bal_col_idx = 4
+        for idx_c, val in enumerate(row1, start=1):
+            if val and 'BALANCE FROM LAST FY YEAR' in str(val).upper():
+                bal_col_idx = idx_c
+                break
+        for r in range(3, ws_iec.max_row + 1):
+            flat_val = ws_iec.cell(row=r, column=1).value
+            flat_id = normalize_flat(flat_val)
+            if not flat_id or flat_id in non_flat_ids:
                 continue
+            bal_val = ws_iec.cell(row=r, column=bal_col_idx).value
+            if isinstance(bal_val, (int, float)):
+                carryover_balances[flat_id] = float(bal_val)
 
-            is_current = (curr_yr, curr_m) == (as_of_yr, as_of_m)
-            is_future = (curr_yr, curr_m) > (as_of_yr, as_of_m)
-            skip_late_fee = is_current or is_future
+    cum_collections = defaultdict(float, {f: carryover_balances.get(f, 0.0) for f in carryover_balances})
+    cum_expenses = defaultdict(float)
 
-            # Read previous month collection status (1-month look back)
-            prev_month_missed = {}
-            has_collection_data = False
+    # Pre-read all monthly collection and expense totals from wb_data
+    monthly_colls = defaultdict(lambda: defaultdict(float))
+    monthly_exps = defaultdict(lambda: defaultdict(float))
 
-            if collection_sheet_name and not skip_late_fee:
-                ws_c = wb[collection_sheet_name]
-                total_col_idx = 11  # Column K is default Total column
-                header_c = [str(ws_c.cell(1, col).value).strip().upper() if ws_c.cell(1, col).value else "" for col in range(1, ws_c.max_column + 1)]
-                if "TOTAL" in header_c:
-                    total_col_idx = header_c.index("TOTAL") + 1
+    for m, yr in month_seq:
+        dt_m = datetime(yr, m, 1)
+        m_abbr, m_full = dt_m.strftime('%b'), dt_m.strftime('%B')
+        coll_sname = find_sheet(wb_data, [f"{m_abbr}{yr}-COLLECTION", f"{m_full}{yr}-COLLECTION"])
+        exp_sname = find_sheet(wb_data, [f"{m_abbr}{yr}-EXPENSE", f"{m_full}{yr}-EXPENSE"])
 
-                for r in range(2, ws_c.max_row + 1):
-                    flat_val = ws_c.cell(row=r, column=1).value
-                    flat_id = normalize_flat(flat_val)
-                    if not flat_id or flat_id in non_flat_ids:
-                        continue
+        if coll_sname:
+            ws_c = wb_data[coll_sname]
+            t_col = 11
+            header_c = [str(ws_c.cell(1, c).value).strip().upper() if ws_c.cell(1, c).value else "" for c in range(1, ws_c.max_column + 1)]
+            if "TOTAL" in header_c:
+                t_col = header_c.index("TOTAL") + 1
+            for r in range(2, ws_c.max_row + 1):
+                fid = normalize_flat(ws_c.cell(r, 1).value)
+                if fid and fid not in non_flat_ids:
+                    amt = 0.0
+                    t_val = ws_c.cell(r, t_col).value
+                    if isinstance(t_val, (int, float)):
+                        amt = float(t_val)
+                    else:
+                        for c_idx in (3, 5, 7, 9):
+                            v = ws_c.cell(r, c_idx).value
+                            if isinstance(v, (int, float)):
+                                amt += float(v)
+                    monthly_colls[(m, yr)][fid] = amt
 
-                    paid = is_flat_paid_in_collection_row(ws_c, r, total_col_idx)
-                    prev_month_missed[flat_id] = not paid
-                    if paid:
-                        has_collection_data = True
-
-            # Update current month expense sheet
-            ws_e = wb[expense_sheet_name]
-            header_e = [str(ws_e.cell(2, col).value).strip().upper() if ws_e.cell(2, col).value else "" for col in range(1, ws_e.max_column + 1)]
-            
-            if "LATE PAYMENT FINE" not in header_e:
-                print(f"Warning: 'LATE PAYMENT FINE' column not found in '{expense_sheet_name}'. Skipping.")
-                continue
-
-            fine_col_idx = header_e.index("LATE PAYMENT FINE") + 1
-            sheet_updates = 0
-            flagged_in_sheet = []
+        if exp_sname:
+            ws_e = wb_data[exp_sname]
+            tot_exp_col = 19
+            header_e = [str(ws_e.cell(2, c).value).strip().upper() if ws_e.cell(2, c).value else "" for c in range(1, ws_e.max_column + 1)]
+            for c_idx, h in enumerate(header_e, start=1):
+                if "TOTAL EXPENSE TO BE PAID" in h:
+                    tot_exp_col = c_idx
+                    break
 
             for r in range(3, ws_e.max_row + 1):
-                flat_val = ws_e.cell(row=r, column=1).value
-                flat_id = normalize_flat(flat_val)
-                if not flat_id or flat_id in non_flat_ids:
-                    continue
+                fid = normalize_flat(ws_e.cell(r, 1).value)
+                if fid and fid not in non_flat_ids:
+                    e_val = ws_e.cell(r, tot_exp_col).value
+                    if e_val is None or not isinstance(e_val, (int, float)):
+                        raise ValueError(
+                            f"Null or missing cached formula value for 'TOTAL EXPENSE TO BE PAID' in workbook '{wb_path.name}', "
+                            f"sheet '{exp_sname}', flat '{fid}'. Please open the workbook in Excel, save it, close it, and re-run."
+                        )
+                    monthly_exps[(m, yr)][fid] = float(e_val)
 
-                if skip_late_fee or not has_collection_data:
-                    fine_amount = 0
-                else:
-                    missed = prev_month_missed.get(flat_id, False)
-                    fine_amount = fine_per_month if missed else 0
+    try:
+        # Iterate sequentially through FY months
+        for idx in range(len(month_seq)):
+            curr_m, curr_yr = month_seq[idx]
+            dt_curr = datetime(curr_yr, curr_m, 1)
+            curr_abbr = dt_curr.strftime('%b')
+            curr_full = dt_curr.strftime('%B')
 
-                fine_cell = ws_e.cell(row=r, column=fine_col_idx)
-                
-                existing_val = fine_cell.value
-                try:
-                    clean_str = re.sub(r'[^0-9.]', '', str(existing_val)) if existing_val is not None else ""
-                    existing_num = float(clean_str) if clean_str else 0.0
-                except (ValueError, TypeError):
-                    existing_num = -1.0
+            collection_sheet_name = find_sheet(wb_data, [f"{curr_abbr}{curr_yr}-COLLECTION", f"{curr_full}{curr_yr}-COLLECTION"])
+            expense_sheet_name = find_sheet(wb_data, [f"{curr_abbr}{curr_yr}-EXPENSE", f"{curr_full}{curr_yr}-EXPENSE"])
 
-                if existing_num != float(fine_amount):
-                    fine_cell.value = fine_amount
-                    sheet_updates += 1
-                    updates_total += 1
+            # 1. Process late fee application for current month's EXPENSE sheet (looks back at prev_m)
+            if idx > 0 and expense_sheet_name and expense_sheet_name in wb.sheetnames:
+                prev_m, prev_yr = month_seq[idx - 1]
+                dt_prev = datetime(prev_yr, prev_m, 1)
+                prev_abbr = dt_prev.strftime('%b')
+                prev_full = dt_prev.strftime('%B')
+                prev_collection_sheet_name = find_sheet(wb_data, [f"{prev_abbr}{prev_yr}-COLLECTION", f"{prev_full}{prev_yr}-COLLECTION"])
 
-                if fine_amount > 0:
-                    flagged_in_sheet.append((flat_id, fine_amount))
+                is_current = (curr_yr, curr_m) == (as_of_yr, as_of_m)
+                is_future = (curr_yr, curr_m) > (as_of_yr, as_of_m)
+                skip_late_fee = is_current or is_future
 
-            sheet_summaries.append((expense_sheet_name, collection_sheet_name, sheet_updates, flagged_in_sheet, is_current, is_future, has_collection_data))
+                prev_month_missed = {}
+                has_collection_data = False
 
-        # 2. Ensure all TOTAL EXPENSE TO BE PAID formulas include LATE PAYMENT FINE
+                if prev_collection_sheet_name and not skip_late_fee:
+                    ws_pc = wb_data[prev_collection_sheet_name]
+                    total_col_idx = 11
+                    header_c = [str(ws_pc.cell(1, col).value).strip().upper() if ws_pc.cell(1, col).value else "" for col in range(1, ws_pc.max_column + 1)]
+                    if "TOTAL" in header_c:
+                        total_col_idx = header_c.index("TOTAL") + 1
+
+                    for r in range(2, ws_pc.max_row + 1):
+                        flat_val = ws_pc.cell(row=r, column=1).value
+                        flat_id = normalize_flat(flat_val)
+                        if not flat_id or flat_id in non_flat_ids:
+                            continue
+
+                        paid = is_flat_paid_in_collection_row(ws_pc, r, total_col_idx)
+                        prev_month_missed[flat_id] = not paid
+                        if paid:
+                            has_collection_data = True
+
+                ws_e = wb[expense_sheet_name]
+                header_e = [str(ws_e.cell(2, col).value).strip().upper() if ws_e.cell(2, col).value else "" for col in range(1, ws_e.max_column + 1)]
+
+                if "LATE PAYMENT FINE" in header_e:
+                    fine_col_idx = header_e.index("LATE PAYMENT FINE") + 1
+                    sheet_updates = 0
+                    flagged_in_sheet = []
+                    waived_in_sheet = []
+
+                    for r in range(3, ws_e.max_row + 1):
+                        flat_val = ws_e.cell(row=r, column=1).value
+                        flat_id = normalize_flat(flat_val)
+                        if not flat_id or flat_id in non_flat_ids:
+                            continue
+
+                        if skip_late_fee or not has_collection_data:
+                            fine_amount = 0
+                        else:
+                            missed = prev_month_missed.get(flat_id, False)
+                            if missed:
+                                net_pos = cum_collections[flat_id] - cum_expenses[flat_id]
+                                if net_pos >= 0:
+                                    fine_amount = 0
+                                    waived_in_sheet.append((flat_id, net_pos))
+                                else:
+                                    fine_amount = fine_per_month
+                                    flagged_in_sheet.append((flat_id, fine_amount, net_pos))
+                            else:
+                                fine_amount = 0
+
+                        fine_cell = ws_e.cell(row=r, column=fine_col_idx)
+                        existing_val = fine_cell.value
+                        try:
+                            clean_str = re.sub(r'[^0-9.]', '', str(existing_val)) if existing_val is not None else ""
+                            existing_num = float(clean_str) if clean_str else 0.0
+                        except (ValueError, TypeError):
+                            existing_num = -1.0
+
+                        if existing_num != float(fine_amount):
+                            fine_cell.value = fine_amount
+                            sheet_updates += 1
+                            updates_total += 1
+
+                    sheet_summaries.append((expense_sheet_name, prev_collection_sheet_name, sheet_updates, flagged_in_sheet, waived_in_sheet, is_current, is_future, has_collection_data))
+
+            # 2. Accumulate current month collections & expenses into running cumulative totals for subsequent months
+            all_flats = set(list(monthly_colls[(curr_m, curr_yr)].keys()) + list(monthly_exps[(curr_m, curr_yr)].keys()))
+            for fid in all_flats:
+                cum_collections[fid] += monthly_colls[(curr_m, curr_yr)][fid]
+                cum_expenses[fid] += monthly_exps[(curr_m, curr_yr)][fid]
+
+        wb_data.close()
+
+        # 4. Ensure all TOTAL EXPENSE TO BE PAID formulas include LATE PAYMENT FINE
         formula_updates = ensure_total_expense_formulas(wb)
 
         if updates_total > 0 or formula_updates > 0 or sheet_summaries:
@@ -342,7 +430,7 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
                 print(f"Total Late Payment Fine updates applied: {updates_total}")
                 print(f"Total EXPENSE formula updates applied: {formula_updates}\n")
 
-                for sheet_name, col_name, count, flagged, is_curr, is_fut, has_data in sheet_summaries:
+                for sheet_name, col_name, count, flagged, waived, is_curr, is_fut, has_data in sheet_summaries:
                     print(f"--- Sheet: {sheet_name} (Based on {col_name or 'N/A'}) ---")
                     if is_curr:
                         print("  Skipped: Current month (collections still underway for previous month).")
@@ -350,13 +438,20 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
                         print("  Skipped: Future month beyond cutoff date.")
                     elif not has_data:
                         print("  Skipped: Previous month has no recorded collection data.")
-                    elif flagged:
-                        print(f"  {'Flat':<8} | {'Previous Month Payment Status':<30} | {'Late Payment Fine (Rs)':<22}")
-                        print("  " + "-" * 65)
-                        for fid, fine in flagged:
-                            print(f"  {fid:<8} | {'MISSED':<30} | Rs {fine:<20,d}")
                     else:
-                        print("  No late payment fines applicable (All flats paid on time in previous month).")
+                        if flagged:
+                            print(f"  {'Flat':<8} | {'Payment Status':<20} | {'Net Position (Rs)':<20} | {'Late Fine (Rs)':<15}")
+                            print("  " + "-" * 70)
+                            for fid, fine, net in flagged:
+                                print(f"  {fid:<8} | {'MISSED':<20} | Rs {net:<17,f} | Rs {fine:<13,d}")
+                        if waived:
+                            print(f"\n  [WAIVED - Excess Payment Credit Available]")
+                            print(f"  {'Flat':<8} | {'Payment Status':<20} | {'Net Position (Rs)':<20} | {'Late Fine (Rs)':<15}")
+                            print("  " + "-" * 70)
+                            for fid, net in waived:
+                                print(f"  {fid:<8} | {'MISSED':<20} | +Rs {net:<16,f} | Rs 0 (WAIVED)")
+                        if not flagged and not waived:
+                            print("  No late payment fines applicable (All flats paid on time in previous month).")
                     print()
                 return True
             except PermissionError:
@@ -367,6 +462,7 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
             return True
     finally:
         wb.close()
+
 
 def main():
     parser = argparse.ArgumentParser(description="Update LATE PAYMENT FINE column in expense sheets based on 1-month lookback collection status.")

@@ -318,7 +318,7 @@ def load_expense_totals(workbook_path: Path, sheet_name: str) -> dict[str, float
             if total_expense is None or not isinstance(total_expense, (int, float)):
                 raise ValueError(
                     f"Null or missing cached formula value for 'TOTAL EXPENSE TO BE PAID' in workbook '{workbook_path.name}', "
-                    f"sheet '{sheet_name}', flat '{flat}'. Please ensure Excel formulas are evaluated and saved."
+                    f"sheet '{sheet_name}', flat '{flat}'. Please open the workbook in Excel, save it, close it, and re-run."
                 )
             result[flat] = float(total_expense)
         return result
@@ -661,7 +661,7 @@ def load_expense_details(workbook_path: Path, expense_sheet_map: dict[str, str])
                     if v is None or not isinstance(v, (int, float)):
                         raise ValueError(
                             f"Missing or null cached value for field '{field_name}' in workbook '{workbook_path.name}', "
-                            f"sheet '{sheet_name}', flat '{flat}'. Please ensure Excel formula values are evaluated and saved."
+                            f"sheet '{sheet_name}', flat '{flat}'. Please open the workbook in Excel, save it, close it, and re-run."
                         )
                     return float(v)
 

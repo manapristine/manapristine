@@ -70,3 +70,12 @@ pip install -r requirements.txt
 ## Report Builder Internals
 
 **EXPENSE sheet water calculation:** When computing `total_water` (the divisor for water percentage), only sum column C for actual flat rows (F1-F16, G1-G16, S1-S16, T1-T16). Non-flat rows (CH, GYM, BSMT, MPFOWA, TOTAL) must be excluded — the TOTAL row contains a summary value that would double-count if included. This matches the workbook formula which uses a specific cell reference (`$C$70`) pointing to `=SUM(C6:C69)` (flat rows only).
+
+**Excel as Single Source of Truth:**
+- Excel workbooks (`db/accounts/*.xlsx`) are the absolute single source of truth for both raw cell values and computed formula results.
+- Scripts MUST ONLY read cached formula values evaluated and saved by Excel (`openpyxl.load_workbook(..., data_only=True)`).
+- **Pre-Read Upfront**: Always pre-read ALL required formula values with `data_only=True` into memory BEFORE making any cell modifications or saving the workbook. Saving a workbook with `openpyxl` strips cached formula values (`<v>` XML tags), causing subsequent `data_only=True` reads to return `None`.
+- NEVER dynamically calculate or estimate formula values in Python as fallbacks when a cell value is `None` or missing.
+- If a required cached formula value is missing or `None`, raise a `ValueError` instructing the user to open, save, and close the Excel workbook.
+
+
