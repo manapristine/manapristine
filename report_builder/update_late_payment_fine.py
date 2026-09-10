@@ -9,7 +9,8 @@ month collection sheet ('<prev_month>-COLLECTION') and updates the 'LATE PAYMENT
 the current month expense sheet ('<curr_month>-EXPENSE').
 
 It also verifies and updates the Excel formula in the 'TOTAL EXPENSE TO BE PAID' column across
-all expense sub-sheets so that 'LATE PAYMENT FINE' is fully included alongside all other expense heads.
+all expense sub-sheets so that 'LATE PAYMENT FINE' is fully included alongside all other expense heads,
+and updates the 'LATE PAYMENT FEE' column in the 'INCOME-EXPENSE-CYCLES' sheet without touching any calculation formulas.
 
 Rule & Policy:
 --------------
@@ -182,7 +183,7 @@ def ensure_total_expense_formulas(wb):
     non_flat_ids = {"TOTAL", "CH", "GYM", "BSMT", "MPFOWA"}
 
     for s in wb.sheetnames:
-        if 'EXPENSE' in s and s != 'ANNUAL-EXPENSE-DETAILS':
+        if 'EXPENSE' in s and s != 'ANNUAL-EXPENSE-DETAILS' and 'INCOME-EXPENSE' not in s:
             ws = wb[s]
             headers = [ws.cell(2, c).value for c in range(1, ws.max_column + 1)]
             
@@ -211,13 +212,45 @@ def ensure_total_expense_formulas(wb):
 
     return formula_updates
 
+def get_iec_late_fee_column(ws_iec, curr_m, curr_yr, month_idx):
+    """
+    Find the 1-based column index in INCOME-EXPENSE-CYCLES for 'LATE PAYMENT FEE'
+    corresponding to a given month and year.
+    """
+    for c in range(1, ws_iec.max_column + 1):
+        h2 = str(ws_iec.cell(2, c).value or "").strip().upper()
+        if h2 == "LATE PAYMENT FEE":
+            for col_hdr in (c - 2, c - 1, c):
+                v1 = ws_iec.cell(1, col_hdr).value
+                if isinstance(v1, datetime):
+                    if v1.year == curr_yr and v1.month == curr_m:
+                        return c
+                elif isinstance(v1, str):
+                    for fmt in ("%Y-%m-%d", "%Y-%m-%d %H:%M:%S", "%b %Y", "%B %Y"):
+                        try:
+                            dt_parsed = datetime.strptime(v1.strip(), fmt)
+                            if dt_parsed.year == curr_yr and dt_parsed.month == curr_m:
+                                return c
+                        except ValueError:
+                            pass
+
+    # Fallback to standard 4-column layout starting at Col 7 (Apr:7, May:11, Jun:15...)
+    col_candidate = 7 + month_idx * 4
+    if col_candidate <= ws_iec.max_column:
+        h2 = str(ws_iec.cell(2, col_candidate).value or "").strip().upper()
+        if "LATE PAYMENT" in h2:
+            return col_candidate
+
+    return None
+
 def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MONTH, as_of_date=None):
     """
     Inspect immediately preceding month collection sheet and update LATE PAYMENT FINE in expense sheets.
     Does NOT update late payment fines for the current month or future months beyond as_of_date,
     as collection amounts received in current month are for the previous month.
     Waives late payment fine if flat has excess amount paid (cumulative collections >= cumulative expenses).
-    Also ensures formulas in TOTAL EXPENSE TO BE PAID include LATE PAYMENT FINE across all expense sub-sheets.
+    Also ensures formulas in TOTAL EXPENSE TO BE PAID include LATE PAYMENT FINE across all expense sub-sheets,
+    and synchronizes LATE PAYMENT FEE into INCOME-EXPENSE-CYCLES without modifying calculation formulas.
 
     :param workbook_path: Path to Excel financial workbook.
     :param fine_per_month: Late fee for missed payment in previous month (default: Rs 1000).
@@ -257,25 +290,34 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
 
     month_seq = parse_fy_months_from_sheetnames(wb.sheetnames)
     updates_total = 0
+    iec_updates_total = 0
     sheet_summaries = []
     non_flat_ids = {"TOTAL", "CH", "GYM", "BSMT", "MPFOWA"}
+
+    ws_iec = wb['INCOME-EXPENSE-CYCLES'] if 'INCOME-EXPENSE-CYCLES' in wb.sheetnames else None
+    iec_flat_rows = {}
+    if ws_iec:
+        for r in range(3, ws_iec.max_row + 1):
+            fid = normalize_flat(ws_iec.cell(r, 1).value)
+            if fid and fid not in non_flat_ids:
+                iec_flat_rows[fid] = r
 
     # Load carryover balance from INCOME-EXPENSE-CYCLES ('Balance from last FY year')
     carryover_balances = {}
     if 'INCOME-EXPENSE-CYCLES' in wb_data.sheetnames:
-        ws_iec = wb_data['INCOME-EXPENSE-CYCLES']
-        row1 = [ws_iec.cell(1, col).value for col in range(1, ws_iec.max_column + 1)]
+        ws_iec_data = wb_data['INCOME-EXPENSE-CYCLES']
+        row1 = [ws_iec_data.cell(1, col).value for col in range(1, ws_iec_data.max_column + 1)]
         bal_col_idx = 4
         for idx_c, val in enumerate(row1, start=1):
             if val and 'BALANCE FROM LAST FY YEAR' in str(val).upper():
                 bal_col_idx = idx_c
                 break
-        for r in range(3, ws_iec.max_row + 1):
-            flat_val = ws_iec.cell(row=r, column=1).value
+        for r in range(3, ws_iec_data.max_row + 1):
+            flat_val = ws_iec_data.cell(row=r, column=1).value
             flat_id = normalize_flat(flat_val)
             if not flat_id or flat_id in non_flat_ids:
                 continue
-            bal_val = ws_iec.cell(row=r, column=bal_col_idx).value
+            bal_val = ws_iec_data.cell(row=r, column=bal_col_idx).value
             if isinstance(bal_val, (int, float)):
                 carryover_balances[flat_id] = float(bal_val)
 
@@ -387,6 +429,10 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
                 if "LATE PAYMENT FINE" in header_e:
                     fine_col_idx = header_e.index("LATE PAYMENT FINE") + 1
                     
+                    iec_late_col_idx = None
+                    if ws_iec:
+                        iec_late_col_idx = get_iec_late_fee_column(ws_iec, curr_m, curr_yr, idx)
+
                     if "LATE PAYMENT FINE REASON" in header_e:
                         reason_col_idx = header_e.index("LATE PAYMENT FINE REASON") + 1
                     else:
@@ -448,6 +494,30 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
                             sheet_updates += 1
                             updates_total += 1
 
+                        # Update INCOME-EXPENSE-CYCLES 'LATE PAYMENT FEE' column without touching any formulas/macros
+                        if ws_iec and iec_late_col_idx and flat_id in iec_flat_rows:
+                            iec_r = iec_flat_rows[flat_id]
+                            iec_cell = ws_iec.cell(row=iec_r, column=iec_late_col_idx)
+                            existing_iec_val = iec_cell.value
+                            target_iec_val = fine_amount if fine_amount > 0 else None
+
+                            iec_changed = False
+                            if target_iec_val is None:
+                                if existing_iec_val is not None:
+                                    iec_changed = True
+                            else:
+                                try:
+                                    clean_iec_str = re.sub(r'[^0-9.]', '', str(existing_iec_val)) if existing_iec_val is not None else ""
+                                    existing_iec_num = float(clean_iec_str) if clean_iec_str else 0.0
+                                except (ValueError, TypeError):
+                                    existing_iec_num = -1.0
+                                if existing_iec_num != float(target_iec_val):
+                                    iec_changed = True
+
+                            if iec_changed:
+                                iec_cell.value = target_iec_val
+                                iec_updates_total += 1
+
                     sheet_summaries.append((expense_sheet_name, prev_collection_sheet_name, sheet_updates, flagged_in_sheet, waived_in_sheet, is_current, is_future, has_collection_data))
 
 
@@ -462,11 +532,12 @@ def update_late_payment_fines(workbook_path, fine_per_month=DEFAULT_FINE_PER_MON
         # 4. Ensure all TOTAL EXPENSE TO BE PAID formulas include LATE PAYMENT FINE
         formula_updates = ensure_total_expense_formulas(wb)
 
-        if updates_total > 0 or formula_updates > 0 or sheet_summaries:
+        if updates_total > 0 or iec_updates_total > 0 or formula_updates > 0 or sheet_summaries:
             try:
                 wb.save(wb_path)
                 print(f"\nSuccessfully saved updated workbook: '{wb_path.name}'")
-                print(f"Total Late Payment Fine updates applied: {updates_total}")
+                print(f"Total EXPENSE Late Payment Fine updates applied: {updates_total}")
+                print(f"Total INCOME-EXPENSE-CYCLES Late Payment Fee updates applied: {iec_updates_total}")
                 print(f"Total EXPENSE formula updates applied: {formula_updates}\n")
 
                 # On Windows, automatically refresh formula cache via Excel COM so data_only reads work cleanly

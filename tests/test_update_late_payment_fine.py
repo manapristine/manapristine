@@ -96,8 +96,8 @@ class TestUpdateLatePaymentFine(unittest.TestCase):
                         return float(val) if val is not None else 0.0
                 return 0.0
 
-            # 1. F2 missed Apr2026-COLLECTION -> May2026-EXPENSE fine = 1000
-            self.assertEqual(get_flat_fine("May2026-EXPENSE", "F2"), 1000.0)
+            # 1. May2026-EXPENSE is within 2-month grace period -> fine = 0
+            self.assertEqual(get_flat_fine("May2026-EXPENSE", "F2"), 0.0)
 
             # 2. F2 missed May2026-COLLECTION -> June2026-EXPENSE fine = 1000
             self.assertEqual(get_flat_fine("June2026-EXPENSE", "F2"), 1000.0)
@@ -106,6 +106,32 @@ class TestUpdateLatePaymentFine(unittest.TestCase):
             self.assertEqual(get_flat_fine("July2026-EXPENSE", "F2"), 0.0)
 
             wb.close()
+
+            # Verify INCOME-EXPENSE-CYCLES synchronization
+            wb_raw = openpyxl.load_workbook(test_wb_copy, data_only=False)
+            ws_iec = wb_raw["INCOME-EXPENSE-CYCLES"]
+
+            # Row 4 is F2
+            # Col 15 is June 'LATE PAYMENT FEE'
+            f2_june_late_fee = ws_iec.cell(4, 15).value
+            self.assertEqual(f2_june_late_fee, 1000)
+
+            # Row 3 is F1 (waived -> should be None)
+            f1_june_late_fee = ws_iec.cell(3, 15).value
+            self.assertIsNone(f1_june_late_fee)
+
+            # Check formulas in neighboring columns are intact (EXPENSE col 14, NET col 16)
+            f2_june_exp_formula = str(ws_iec.cell(4, 14).value)
+            self.assertTrue(f2_june_exp_formula.startswith("=") or "INDIRECT" in f2_june_exp_formula)
+
+            f2_june_net_formula = str(ws_iec.cell(4, 16).value)
+            self.assertTrue(f2_june_net_formula.startswith("="))
+
+            # Check TOTAL LATE FEE formula (Col 55) is intact
+            tot_late_formula = str(ws_iec.cell(4, 55).value)
+            self.assertTrue(tot_late_formula.startswith("=") and "SUM" in tot_late_formula)
+
+            wb_raw.close()
         finally:
             if test_wb_copy.exists():
                 test_wb_copy.unlink()
