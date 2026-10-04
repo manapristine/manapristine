@@ -449,6 +449,19 @@
     .metrics {
       grid-template-columns: repeat(6, minmax(0, 1fr));
     }
+    .aggregates-metrics {
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+    }
+    @media (max-width: 1200px) {
+      .aggregates-metrics {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 700px) {
+      .aggregates-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
     .card {
       padding: 7px 9px;
     }
@@ -513,6 +526,54 @@
     }
     tbody tr.negative td {
       background: var(--negative-row);
+    }
+    .agg-table {
+      table-layout: auto;
+      width: 100%;
+      min-width: 1100px;
+    }
+    .agg-table th, .agg-table td {
+      text-align: right;
+      padding: 6px 7px;
+    }
+    .agg-table th:first-child, .agg-table td:first-child {
+      text-align: left;
+    }
+    .th-group-vendor {
+      background: rgba(15, 118, 110, 0.08);
+      border-bottom: 2px solid var(--accent) !important;
+      text-align: center !important;
+      font-weight: 700;
+    }
+    .th-group-resident {
+      background: rgba(98, 112, 123, 0.08);
+      border-bottom: 2px solid var(--muted) !important;
+      text-align: center !important;
+      font-weight: 700;
+    }
+    .th-group-total {
+      background: rgba(15, 118, 110, 0.12);
+      border-bottom: 2px solid var(--accent) !important;
+      font-weight: 700;
+    }
+    .vendor-total-cell {
+      background: rgba(15, 118, 110, 0.05);
+      border-left: 1px dashed var(--line);
+      border-right: 1px solid var(--line);
+      font-weight: 700;
+    }
+    .resident-total-cell {
+      background: rgba(98, 112, 123, 0.05);
+      border-left: 1px dashed var(--line);
+      border-right: 1px solid var(--line);
+      font-weight: 600;
+    }
+    .billed-total-cell {
+      background: rgba(15, 118, 110, 0.08);
+      border-left: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+      font-weight: 700;
+      color: var(--accent);
     }
     .empty {
       padding: 24px;
@@ -899,26 +960,30 @@
             <span><strong>Report:</strong> Month-wise Collection &amp; Expense Summary</span>
           </div>
         </div>
-        <section class="metrics">
+        <section class="metrics aggregates-metrics">
           <article class="card" id="agg-collection-card">
-            <span class="label">Total Collection (All Flats)</span>
+            <span class="label">Total Collection</span>
             <span class="value" id="agg-total-collection"></span>
           </article>
           <article class="card" id="agg-fixed-card">
-            <span class="label">Fixed Expense (All Flats)</span>
+            <span class="label">Fixed Expense (Vendors)</span>
             <span class="value" id="agg-total-fixed"></span>
           </article>
           <article class="card" id="agg-variable-card">
-            <span class="label">Water & Meter Rent (All Flats)</span>
+            <span class="label">Water &amp; Meter Rent</span>
             <span class="value" id="agg-total-variable"></span>
           </article>
+          <article class="card" id="agg-expense-card">
+            <span class="label">Vendor Total Expense (Spreadsheet)</span>
+            <span class="value" id="agg-total-expense"></span>
+          </article>
           <article class="card" id="agg-fees-card">
-            <span class="label">Other Fees & Fines (All Flats)</span>
+            <span class="label">Resident Charges &amp; Fines</span>
             <span class="value" id="agg-total-fees"></span>
           </article>
-          <article class="card" id="agg-expense-card">
-            <span class="label">Total Expense (All Flats)</span>
-            <span class="value" id="agg-total-expense"></span>
+          <article class="card" id="agg-billed-card">
+            <span class="label">Total Billed to Residents</span>
+            <span class="value" id="agg-total-billed"></span>
           </article>
           <article class="card" id="agg-net-card">
             <span class="label">Net (Collection - Expense)</span>
@@ -936,28 +1001,36 @@
         <section class="table-wrap print-page-break" style="margin-top:8px">
           <h2 id="agg-monthly-title">Month-wise Aggregate</h2>
           <div style="width:100%;overflow-x:auto">
-            <table>
+            <table class="agg-table">
               <thead>
                 <tr>
-                  <th>Month</th>
-                  <th>Total Collection</th>
-                  <th>Fixed Expense</th>
-                  <th>Water & Meter Rent</th>
-                  <th>Total Expense</th>
-                  <th>Parking Fee</th>
-                  <th>Club Booking</th>
-                  <th>Shifting Fee</th>
-                  <th>Gym Fee</th>
-                  <th>Annual Fee</th>
-                  <th>Late Fine</th>
-                  <th>Other Charges</th>
-                  <th>Total Billed</th>
-                  <th>Net</th>
+                  <th rowspan="2" style="vertical-align:middle;text-align:left">Month</th>
+                  <th rowspan="2" style="vertical-align:middle;text-align:right">Total Collection</th>
+                  <th colspan="3" class="th-group-vendor">Vendor Operating Expenses (Spreadsheet)</th>
+                  <th colspan="8" class="th-group-resident">Resident-Specific Bills &amp; Charges</th>
+                  <th rowspan="2" class="th-group-total" style="vertical-align:middle;text-align:right">Total Billed to Residents</th>
+                  <th rowspan="2" style="vertical-align:middle;text-align:right">Net (Collection − Expense)</th>
+                </tr>
+                <tr>
+                  <th style="text-align:right">Fixed Expense</th>
+                  <th style="text-align:right">Water &amp; Rent</th>
+                  <th class="vendor-total-cell" style="text-align:right">Total Vendor Expense</th>
+                  <th style="text-align:right">Parking</th>
+                  <th style="text-align:right">Club</th>
+                  <th style="text-align:right">Shifting</th>
+                  <th style="text-align:right">Gym</th>
+                  <th style="text-align:right">Annual Fee</th>
+                  <th style="text-align:right">Late Fine</th>
+                  <th style="text-align:right">Other</th>
+                  <th class="resident-total-cell" style="text-align:right">Resident Charges Total</th>
                 </tr>
               </thead>
               <tbody id="agg-monthly-body"></tbody>
             </table>
           </div>
+          <p style="margin:8px 0 0;font-size:0.75rem;color:var(--muted)">
+            <strong>Reconciliation Note:</strong> Total Vendor Expense (Fixed + Water &amp; Rent) matches the society's spreadsheet operating expense (Col 25 in <code>ANNUAL-EXPENSE-DETAILS</code>). Total Billed to Residents equals Total Vendor Expense plus Resident-Specific Bills &amp; Charges (matching the sum of all 64 flat maintenance bills).
+          </p>
         </section>
 
         <section class="table-wrap print-page-break" style="margin-top:8px">
@@ -1705,6 +1778,7 @@
         m.total_billed = m.expense;
         const knownHeads = m.total_expense + m.parking + m.club + m.shift + m.gym + m.annual + m.late;
         m.other = Math.max(0, Math.round((m.total_billed - knownHeads) * 100) / 100);
+        m.resident_charges = m.parking + m.club + m.shift + m.gym + m.annual + m.late + m.other;
 
         grandCollection += m.collection;
         grandFixed += m.fixed;
@@ -1725,17 +1799,21 @@
       document.getElementById("agg-total-collection").textContent = formatAmount(grandCollection);
       document.getElementById("agg-total-fixed").textContent = formatAmount(grandFixed);
       document.getElementById("agg-total-variable").textContent = formatAmount(grandWater);
+      document.getElementById("agg-total-expense").textContent = formatAmount(grandTotalExpense);
       const feesEl = document.getElementById("agg-total-fees");
       if (feesEl) feesEl.textContent = formatAmount(grandFees);
-      document.getElementById("agg-total-expense").textContent = formatAmount(grandTotalExpense);
+      const billedEl = document.getElementById("agg-total-billed");
+      if (billedEl) billedEl.textContent = formatAmount(grandTotalBilled);
       document.getElementById("agg-total-net").textContent = formatAmount(grandNet);
       
       setCardTone(document.getElementById("agg-collection-card"), grandCollection);
       setCardTone(document.getElementById("agg-fixed-card"), grandFixed);
       setCardTone(document.getElementById("agg-variable-card"), grandWater);
+      setCardTone(document.getElementById("agg-expense-card"), grandTotalExpense);
       const feesCard = document.getElementById("agg-fees-card");
       if (feesCard) setCardTone(feesCard, grandFees);
-      setCardTone(document.getElementById("agg-expense-card"), grandTotalExpense);
+      const billedCard = document.getElementById("agg-billed-card");
+      if (billedCard) setCardTone(billedCard, grandTotalBilled);
       setCardTone(document.getElementById("agg-net-card"), grandNet);
 
       const tbody = document.getElementById("agg-monthly-body");
@@ -1746,11 +1824,11 @@
         if (net > 0) tr.classList.add("positive");
         if (net < 0) tr.classList.add("negative");
         tr.innerHTML = `
-          <td>${esc(m.month)}</td>
+          <td style="text-align:left">${esc(m.month)}</td>
           <td class="${m.collection < 0 ? "negative-text" : ""}">${formatAmount(m.collection)}</td>
           <td class="${m.fixed < 0 ? "negative-text" : ""}">${formatAmount(m.fixed)}</td>
           <td class="${m.water < 0 ? "negative-text" : ""}">${formatAmount(m.water)}</td>
-          <td class="${m.total_expense < 0 ? "negative-text" : ""}"><strong>${formatAmount(m.total_expense)}</strong></td>
+          <td class="vendor-total-cell ${m.total_expense < 0 ? "negative-text" : ""}"><strong>${formatAmount(m.total_expense)}</strong></td>
           <td>${formatAmount(m.parking)}</td>
           <td>${formatAmount(m.club)}</td>
           <td>${formatAmount(m.shift)}</td>
@@ -1758,7 +1836,8 @@
           <td>${formatAmount(m.annual)}</td>
           <td>${formatAmount(m.late)}</td>
           <td>${formatAmount(m.other)}</td>
-          <td>${formatAmount(m.total_billed)}</td>
+          <td class="resident-total-cell"><strong>${formatAmount(m.resident_charges)}</strong></td>
+          <td class="billed-total-cell"><strong>${formatAmount(m.total_billed)}</strong></td>
           <td class="${net < 0 ? "negative-text" : net > 0 ? "positive-text" : ""}">${formatAmount(net)}</td>
         `;
         tbody.appendChild(tr);
@@ -1766,11 +1845,11 @@
       const totalRow = document.createElement("tr");
       totalRow.classList.add("total-row");
       totalRow.innerHTML = `
-        <td>Total</td>
+        <td style="text-align:left">Total</td>
         <td class="${grandCollection < 0 ? "negative-text" : ""}">${formatAmount(grandCollection)}</td>
         <td class="${grandFixed < 0 ? "negative-text" : ""}">${formatAmount(grandFixed)}</td>
         <td class="${grandWater < 0 ? "negative-text" : ""}">${formatAmount(grandWater)}</td>
-        <td class="${grandTotalExpense < 0 ? "negative-text" : ""}"><strong>${formatAmount(grandTotalExpense)}</strong></td>
+        <td class="vendor-total-cell ${grandTotalExpense < 0 ? "negative-text" : ""}"><strong>${formatAmount(grandTotalExpense)}</strong></td>
         <td>${formatAmount(grandParking)}</td>
         <td>${formatAmount(grandClub)}</td>
         <td>${formatAmount(grandShift)}</td>
@@ -1778,7 +1857,8 @@
         <td>${formatAmount(grandAnnual)}</td>
         <td>${formatAmount(grandLate)}</td>
         <td>${formatAmount(grandOther)}</td>
-        <td>${formatAmount(grandTotalBilled)}</td>
+        <td class="resident-total-cell"><strong>${formatAmount(grandFees)}</strong></td>
+        <td class="billed-total-cell"><strong>${formatAmount(grandTotalBilled)}</strong></td>
         <td class="${grandNet < 0 ? "negative-text" : grandNet > 0 ? "positive-text" : ""}">${formatAmount(grandNet)}</td>
       `;
       tbody.appendChild(totalRow);
