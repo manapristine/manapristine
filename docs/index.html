@@ -943,6 +943,7 @@
                   <th>Total Collection</th>
                   <th>Fixed Expense</th>
                   <th>Water & Meter Rent</th>
+                  <th>Total Expense</th>
                   <th>Parking Fee</th>
                   <th>Club Booking</th>
                   <th>Shifting Fee</th>
@@ -950,7 +951,7 @@
                   <th>Annual Fee</th>
                   <th>Late Fine</th>
                   <th>Other Charges</th>
-                  <th>Total Expense</th>
+                  <th>Total Billed</th>
                   <th>Net</th>
                 </tr>
               </thead>
@@ -1697,14 +1698,18 @@
       // Show all populated months (skip future months with 0 collection and 0 expense)
       const months = Array.from(monthMap.values()).filter(m => m.collection !== 0 || m.expense !== 0);
       let grandCollection = 0, grandFixed = 0, grandWater = 0, grandParking = 0;
-      let grandClub = 0, grandShift = 0, grandGym = 0, grandAnnual = 0, grandLate = 0, grandOther = 0, grandExpense = 0;
+      let grandClub = 0, grandShift = 0, grandGym = 0, grandAnnual = 0, grandLate = 0, grandOther = 0;
+      let grandTotalExpense = 0, grandTotalBilled = 0;
       for (const m of months) {
-        const knownHeads = m.fixed + m.water + m.parking + m.club + m.shift + m.gym + m.annual + m.late;
-        m.other = Math.max(0, Math.round((m.expense - knownHeads) * 100) / 100);
+        m.total_expense = m.fixed + m.water;
+        m.total_billed = m.expense;
+        const knownHeads = m.total_expense + m.parking + m.club + m.shift + m.gym + m.annual + m.late;
+        m.other = Math.max(0, Math.round((m.total_billed - knownHeads) * 100) / 100);
 
         grandCollection += m.collection;
         grandFixed += m.fixed;
         grandWater += m.water;
+        grandTotalExpense += m.total_expense;
         grandParking += m.parking;
         grandClub += m.club;
         grandShift += m.shift;
@@ -1712,17 +1717,17 @@
         grandAnnual += m.annual;
         grandLate += m.late;
         grandOther += m.other;
-        grandExpense += m.expense;
+        grandTotalBilled += m.total_billed;
       }
       const grandFees = grandParking + grandClub + grandShift + grandGym + grandAnnual + grandLate + grandOther;
-      const grandNet = grandCollection - grandExpense;
+      const grandNet = grandCollection - grandTotalExpense;
 
       document.getElementById("agg-total-collection").textContent = formatAmount(grandCollection);
       document.getElementById("agg-total-fixed").textContent = formatAmount(grandFixed);
       document.getElementById("agg-total-variable").textContent = formatAmount(grandWater);
       const feesEl = document.getElementById("agg-total-fees");
       if (feesEl) feesEl.textContent = formatAmount(grandFees);
-      document.getElementById("agg-total-expense").textContent = formatAmount(grandExpense);
+      document.getElementById("agg-total-expense").textContent = formatAmount(grandTotalExpense);
       document.getElementById("agg-total-net").textContent = formatAmount(grandNet);
       
       setCardTone(document.getElementById("agg-collection-card"), grandCollection);
@@ -1730,13 +1735,13 @@
       setCardTone(document.getElementById("agg-variable-card"), grandWater);
       const feesCard = document.getElementById("agg-fees-card");
       if (feesCard) setCardTone(feesCard, grandFees);
-      setCardTone(document.getElementById("agg-expense-card"), grandExpense);
+      setCardTone(document.getElementById("agg-expense-card"), grandTotalExpense);
       setCardTone(document.getElementById("agg-net-card"), grandNet);
 
       const tbody = document.getElementById("agg-monthly-body");
       tbody.innerHTML = "";
       for (const m of months) {
-        const net = m.collection - m.expense;
+        const net = m.collection - m.total_expense;
         const tr = document.createElement("tr");
         if (net > 0) tr.classList.add("positive");
         if (net < 0) tr.classList.add("negative");
@@ -1745,6 +1750,7 @@
           <td class="${m.collection < 0 ? "negative-text" : ""}">${formatAmount(m.collection)}</td>
           <td class="${m.fixed < 0 ? "negative-text" : ""}">${formatAmount(m.fixed)}</td>
           <td class="${m.water < 0 ? "negative-text" : ""}">${formatAmount(m.water)}</td>
+          <td class="${m.total_expense < 0 ? "negative-text" : ""}"><strong>${formatAmount(m.total_expense)}</strong></td>
           <td>${formatAmount(m.parking)}</td>
           <td>${formatAmount(m.club)}</td>
           <td>${formatAmount(m.shift)}</td>
@@ -1752,7 +1758,7 @@
           <td>${formatAmount(m.annual)}</td>
           <td>${formatAmount(m.late)}</td>
           <td>${formatAmount(m.other)}</td>
-          <td class="${m.expense < 0 ? "negative-text" : ""}"><strong>${formatAmount(m.expense)}</strong></td>
+          <td>${formatAmount(m.total_billed)}</td>
           <td class="${net < 0 ? "negative-text" : net > 0 ? "positive-text" : ""}">${formatAmount(net)}</td>
         `;
         tbody.appendChild(tr);
@@ -1764,6 +1770,7 @@
         <td class="${grandCollection < 0 ? "negative-text" : ""}">${formatAmount(grandCollection)}</td>
         <td class="${grandFixed < 0 ? "negative-text" : ""}">${formatAmount(grandFixed)}</td>
         <td class="${grandWater < 0 ? "negative-text" : ""}">${formatAmount(grandWater)}</td>
+        <td class="${grandTotalExpense < 0 ? "negative-text" : ""}"><strong>${formatAmount(grandTotalExpense)}</strong></td>
         <td>${formatAmount(grandParking)}</td>
         <td>${formatAmount(grandClub)}</td>
         <td>${formatAmount(grandShift)}</td>
@@ -1771,7 +1778,7 @@
         <td>${formatAmount(grandAnnual)}</td>
         <td>${formatAmount(grandLate)}</td>
         <td>${formatAmount(grandOther)}</td>
-        <td class="${grandExpense < 0 ? "negative-text" : ""}"><strong>${formatAmount(grandExpense)}</strong></td>
+        <td>${formatAmount(grandTotalBilled)}</td>
         <td class="${grandNet < 0 ? "negative-text" : grandNet > 0 ? "positive-text" : ""}">${formatAmount(grandNet)}</td>
       `;
       tbody.appendChild(totalRow);
@@ -1847,7 +1854,7 @@
 
       ctx.clearRect(0, 0, W, H);
 
-      const allValues = months.flatMap((m) => [m.collection, m.expense]);
+      const allValues = months.flatMap((m) => [m.collection, m.total_expense]);
       const maxVal = Math.max(...allValues, 1);
 
       const n = months.length;
@@ -1882,7 +1889,7 @@
         const x = pad.left + barGroupW * i + barGroupW * 0.15;
 
         const hC = (m.collection / maxVal) * plotH;
-        const hE = (m.expense / maxVal) * plotH;
+        const hE = (m.total_expense / maxVal) * plotH;
 
         ctx.fillStyle = cAccent;
         ctx.beginPath();
