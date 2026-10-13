@@ -7,11 +7,12 @@ This script parses a bank statement (e.g., TSV/Excel export from SBI), matches c
 transactions against flat owners (members.csv) and occupants/tenants (occupants.csv)
 using fuzzy matching rules copied and enhanced from report_builder/update_collections.py,
 and generates an Excel tracking sheet ('tracking_sheet.xlsx') marking how much amount
-and when each flat has paid.
+and when each flat has paid. If any transactions cannot be matched, a separate report
+('unmatched_transactions.xlsx') is automatically generated to report those unmatched transactions.
 
 Usage:
 ------
-python report_builder/track_payments.py <path_to_bank_statement> [-o tracking_sheet.xlsx]
+python report_builder/track_payments.py <path_to_bank_statement> [-o tracking_sheet.xlsx] [-u unmatched_transactions.xlsx]
 
 Example:
 --------
@@ -708,13 +709,210 @@ def create_tracking_workbook(transactions, mappings, output_path):
     return output_file
 
 
-def track_payments(statement_file, output_path=None, members_path=None, occupants_path=None):
+def create_unmatched_report(unmatched_txns, output_path, statement_name="Bank Statement"):
+    """
+    Generate a separate standalone report for unmatched credit transactions.
+    Creates an Excel report (.xlsx) or CSV (.csv) containing transaction details,
+    reasons for non-matching, and editable fields for manual flat assignment.
+    """
+    output_file = Path(output_path).resolve()
+
+    if output_file.suffix.lower() == ".csv":
+        rows = []
+        for idx, ut in enumerate(unmatched_txns, start=1):
+            rows.append(
+                {
+                    "#": idx,
+                    "Txn Date": ut["date"],
+                    "Value Date": ut.get("value_date", ""),
+                    "Amount": ut["amount"],
+                    "Match Status": ut["match_reason"],
+                    "Ref No": ut.get("ref_no", ""),
+                    "Description": ut["description"],
+                    "Manual Flat #": "",
+                    "Remarks": "",
+                }
+            )
+        pd.DataFrame(rows).to_csv(output_file, index=False)
+        return output_file
+
+    wb = openpyxl.Workbook()
+    ws = wb.active
+    ws.title = "Unmatched Transactions"
+    ws.views.sheetView[0].showGridLines = True
+
+    # Styles
+    font_family = "Segoe UI"
+    title_font = Font(name=font_family, size=14, bold=True, color="1F4E78")
+    subtitle_font = Font(name=font_family, size=10, italic=True, color="595959")
+    note_font = Font(name=font_family, size=9, italic=True, color="7F8C8D")
+    header_font = Font(name=font_family, size=11, bold=True, color="FFFFFF")
+    data_font = Font(name=font_family, size=10)
+    bold_data_font = Font(name=font_family, size=10, bold=True)
+    summary_font = Font(name=font_family, size=11, bold=True, color="1F4E78")
+
+    status_font = Font(name=font_family, size=10, bold=True, color="922B21")
+    header_fill = PatternFill(start_color="1F4E78", end_color="1F4E78", fill_type="solid")
+    subtotal_fill = PatternFill(start_color="D9E1F2", end_color="D9E1F2", fill_type="solid")
+    pending_fill = PatternFill(start_color="FADBD8", end_color="FADBD8", fill_type="solid")
+    manual_fill = PatternFill(start_color="FFF2CC", end_color="FFF2CC", fill_type="solid")
+    zebra_fill = PatternFill(start_color="F9FAFB", end_color="F9FAFB", fill_type="solid")
+
+    thin_border = Border(
+        left=Side(style="thin", color="D9D9D9"),
+        right=Side(style="thin", color="D9D9D9"),
+        top=Side(style="thin", color="D9D9D9"),
+        bottom=Side(style="thin", color="D9D9D9"),
+    )
+    double_bottom_border = Border(
+        left=Side(style="thin", color="D9D9D9"),
+        right=Side(style="thin", color="D9D9D9"),
+        top=Side(style="thin", color="1F4E78"),
+        bottom=Side(style="double", color="1F4E78"),
+    )
+
+    currency_format = "#,##0.00"
+    total_unmatched_amt = sum(t["amount"] for t in unmatched_txns)
+
+    # Title block
+    ws.merge_cells("A1:I1")
+    ws["A1"] = "MANA PRISTINE - UNMATCHED CREDIT TRANSACTIONS REPORT"
+    ws["A1"].font = title_font
+    ws["A1"].alignment = Alignment(horizontal="left", vertical="center")
+
+    ws.merge_cells("A2:I2")
+    ws["A2"] = (
+        f"Generated on {datetime.now().strftime('%d-%b-%Y %I:%M %p')} | "
+        f"Source: {statement_name} | "
+        f"Total Unmatched: {len(unmatched_txns)} | "
+        f"Total Amount: Rs. {total_unmatched_amt:,.2f}"
+    )
+    ws["A2"].font = subtitle_font
+    ws["A2"].alignment = Alignment(horizontal="left", vertical="center")
+
+    ws.merge_cells("A3:I3")
+    ws["A3"] = "Instructions: The following transactions could not be matched automatically. Review description and enter flat number in 'Manual Flat #'."
+    ws["A3"].font = note_font
+    ws["A3"].alignment = Alignment(horizontal="left", vertical="center")
+
+    headers = [
+        "#",
+        "Txn Date",
+        "Value Date",
+        "Amount (Rs.)",
+        "Match Status",
+        "Ref No. / Cheque No.",
+        "Description",
+        "Manual Flat #",
+        "Notes / Remarks",
+    ]
+    header_row_idx = 5
+    for col_idx, h_text in enumerate(headers, start=1):
+        cell = ws.cell(row=header_row_idx, column=col_idx, value=h_text)
+        cell.font = header_font
+        cell.fill = header_fill
+        cell.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
+
+    ws.row_dimensions[header_row_idx].height = 28
+
+    curr_row = header_row_idx + 1
+    for idx, ut in enumerate(unmatched_txns, start=1):
+        row_vals = [
+            idx,
+            ut["date"],
+            ut.get("value_date", ""),
+            ut["amount"],
+            ut["match_reason"],
+            ut.get("ref_no", ""),
+            ut["description"],
+            "",
+            "",
+        ]
+
+        is_zebra = (curr_row % 2 == 0)
+        for col_idx, val in enumerate(row_vals, start=1):
+            cell = ws.cell(row=curr_row, column=col_idx, value=val)
+            cell.font = data_font
+            cell.border = thin_border
+            if is_zebra:
+                cell.fill = zebra_fill
+
+            if col_idx == 1:
+                cell.alignment = Alignment(horizontal="center", vertical="center")
+            elif col_idx in [2, 3]:
+                cell.alignment = Alignment(horizontal="center", vertical="center")
+            elif col_idx == 4:
+                cell.alignment = Alignment(horizontal="right", vertical="center")
+                cell.number_format = currency_format
+                cell.font = bold_data_font
+            elif col_idx == 5:
+                cell.alignment = Alignment(horizontal="center", vertical="center")
+                cell.font = status_font
+                cell.fill = pending_fill
+            elif col_idx == 6:
+                cell.alignment = Alignment(horizontal="center", vertical="center")
+            elif col_idx == 7:
+                cell.alignment = Alignment(horizontal="left", vertical="center")
+            elif col_idx == 8:
+                cell.alignment = Alignment(horizontal="center", vertical="center")
+                cell.font = bold_data_font
+                cell.fill = manual_fill
+            elif col_idx == 9:
+                cell.alignment = Alignment(horizontal="left", vertical="center")
+
+        ws.row_dimensions[curr_row].height = 20
+        curr_row += 1
+
+    # Total Summary Row
+    summary_row = curr_row
+    ws.merge_cells(f"A{summary_row}:C{summary_row}")
+    cell_tot_label = ws.cell(row=summary_row, column=1, value="TOTAL UNMATCHED")
+    cell_tot_label.font = summary_font
+    cell_tot_label.alignment = Alignment(horizontal="center", vertical="center")
+
+    cell_tot_amt = ws.cell(
+        row=summary_row, column=4, value=f"=SUM(D{header_row_idx + 1}:D{summary_row - 1})"
+    )
+    cell_tot_amt.font = summary_font
+    cell_tot_amt.alignment = Alignment(horizontal="right", vertical="center")
+    cell_tot_amt.number_format = currency_format
+
+    for col in range(1, len(headers) + 1):
+        c = ws.cell(row=summary_row, column=col)
+        c.border = double_bottom_border
+        c.fill = subtotal_fill
+
+    ws.row_dimensions[summary_row].height = 24
+
+    # Adjust column widths
+    for col in ws.columns:
+        col_letter = get_column_letter(col[0].column)
+        lengths = [len(str(cell.value or "")) for cell in col[3:]]
+        max_len = max(lengths) if lengths else 10
+        adjusted_width = min(max(max_len + 3, 12), 65)
+        ws.column_dimensions[col_letter].width = adjusted_width
+
+    ws.column_dimensions["H"].width = 18
+    ws.column_dimensions["I"].width = 25
+
+    wb.save(output_file)
+    return output_file
+
+
+def track_payments(
+    statement_file,
+    output_path=None,
+    members_path=None,
+    occupants_path=None,
+    unmatched_output=None,
+):
     """
     Main processing workflow:
     1. Load mappings from db/members.csv and db/occupants.csv
     2. Parse bank statement credit transactions
     3. Match descriptions using rule-based and fuzzy logic
     4. Generate formatted Excel tracking_sheet.xlsx in the statement's directory
+    5. If any transactions are unmatched, generate a separate unmatched_transactions.xlsx report
     """
     statement_path = Path(statement_file).resolve()
     if not statement_path.exists():
@@ -830,6 +1028,26 @@ def track_payments(statement_file, output_path=None, members_path=None, occupant
         print("The file appears to be open in Microsoft Excel. Please close it and rerun.\n")
         raise
 
+    # 5. Generate Separate Unmatched Report (if any transactions did not match)
+    unmatched_txns = [t for t in transactions if not t["flat"]]
+    unmatched_report_path = None
+    if unmatched_txns:
+        if unmatched_output:
+            resolved_unmatched_output = Path(unmatched_output).resolve()
+        else:
+            resolved_unmatched_output = resolved_output.parent / "unmatched_transactions.xlsx"
+
+        try:
+            unmatched_report_path = create_unmatched_report(
+                unmatched_txns,
+                resolved_unmatched_output,
+                statement_name=statement_path.name,
+            )
+        except PermissionError:
+            print(f"\n[ERROR] Permission denied: Unable to write to '{resolved_unmatched_output}'.")
+            print("The file appears to be open in Microsoft Excel. Please close it and rerun.\n")
+            raise
+
     # Compute Statistics
     flats_paid = len({t["flat"] for t in transactions if t["flat"]})
     flats_total = len(mappings["all_flats"])
@@ -845,6 +1063,8 @@ def track_payments(statement_file, output_path=None, members_path=None, occupant
     print(f"Flats Paid                : {flats_paid} / {flats_total}")
     print(f"Flats Pending             : {flats_pending} / {flats_total}")
     print(f"\n--> Output successfully saved to:\n    {saved_path}")
+    if unmatched_report_path:
+        print(f"--> Unmatched Report saved to   :\n    {unmatched_report_path}")
     print(f"=======================================================\n")
 
     return saved_path
@@ -865,6 +1085,12 @@ def main():
         help="Output Excel file path (default: tracking_sheet.xlsx in the statement's folder)",
     )
     parser.add_argument(
+        "-u",
+        "--unmatched-output",
+        default=None,
+        help="Optional output path for unmatched transactions report (default: unmatched_transactions.xlsx in the statement/output folder)",
+    )
+    parser.add_argument(
         "--members",
         default=None,
         help="Optional path to members.csv (default: db/members.csv)",
@@ -882,6 +1108,7 @@ def main():
             output_path=args.output,
             members_path=args.members,
             occupants_path=args.occupants,
+            unmatched_output=args.unmatched_output,
         )
     except PermissionError:
         sys.exit(1)
