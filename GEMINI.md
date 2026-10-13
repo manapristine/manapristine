@@ -94,6 +94,7 @@ pip install -r requirements.txt
 - **Workbook Naming:** Sheets follow specific patterns: `{Month}{Year}-EXPENSE`, `{Month}{Year}-COLLECTION`, `INCOME-EXPENSE-CYCLES`, `ANNUAL-EXPENSE-DETAILS`.
 - **JSON Output:** All generated data must be stored in the `docs/` directory to be accessible by the dashboard.
 - **No Build Step:** The frontend (`docs/index.html`) is designed to be served directly without any transpilation or bundling.
+- **Payment Tracking & Reconciliation:** When processing bank statements for payment tracking, credit transactions that cannot be automatically mapped to a flat must trigger the generation of a separate unmatched report (`unmatched_transactions.xlsx`) formatted with columns for manual flat attribution (`Manual Flat #`) and remarks, facilitating committee review without altering source data.
 
 ## Security
 - **Portal Password:** Access to the dashboard is protected by a community password.
