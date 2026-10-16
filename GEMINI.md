@@ -21,7 +21,7 @@ Mana Pristine is a financial management system for a housing society (apartment 
     - `update_water_consumption.py`: Updates EXPENSE sheets with water usage from WaterOn reports.
     - `validate_water_meter_reading.py`: Parses WaterOn reports, maps flat consumption, updates `db/wateron/avg-water-usage.xlsx`, and highlights high-variance flats (>50%).
     - `update_late_payment_fine.py`: Evaluates payment status from prior month, checks net dues, applies late fines in the current EXPENSE sheet, and updates summary formulas.
-    - `track_payments.py`: Parses bank statements, matches payments against members/occupants, and generates a formatted Excel tracking sheet (`tracking_sheet.xlsx`) and an unmatched transactions report (`unmatched_transactions.xlsx`) when unmatched credits are detected.
+    - `track_payments.py`: Parses bank statements, matches payments against members/occupants, and generates a formatted Excel tracking sheet (`tracking_sheet_<timestamp>.xlsx`) with complete bank transaction details, as well as an unmatched transactions report (`unmatched_transactions_<timestamp>.xlsx`) when unmatched credits are detected.
     - `new_fy.py`: Creates a new FY workbook from an existing one (copies, renames sheets, updates refs, clears data, preserves all formulas).
     - `refresh_fy.py`: In-place refresh of a workbook for the next FY (shifts dates +1 year, zeroes data).
     - `compare_workbooks.py`: Validates formula integrity between baseline and candidate workbooks after FY transitions.

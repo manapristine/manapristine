@@ -6,13 +6,14 @@ Overview:
 This script parses a bank statement (e.g., TSV/Excel export from SBI), matches credit
 transactions against flat owners (members.csv) and occupants/tenants (occupants.csv)
 using fuzzy matching rules copied and enhanced from report_builder/update_collections.py,
-and generates an Excel tracking sheet ('tracking_sheet.xlsx') marking how much amount
-and when each flat has paid. If any transactions cannot be matched, a separate report
-('unmatched_transactions.xlsx') is automatically generated to report those unmatched transactions.
+and generates an Excel tracking sheet ('tracking_sheet_<timestamp>.xlsx') marking how much amount,
+when each flat has paid, along with complete bank transaction details (Ref No / Cheque No and Narration).
+If any transactions cannot be matched, a separate report ('unmatched_transactions_<timestamp>.xlsx')
+is automatically generated to report those unmatched transactions.
 
 Usage:
 ------
-python report_builder/track_payments.py <path_to_bank_statement> [-o tracking_sheet.xlsx] [-u unmatched_transactions.xlsx]
+python report_builder/track_payments.py <path_to_bank_statement> [-o tracking_sheet_<timestamp>.xlsx] [-u unmatched_transactions_<timestamp>.xlsx]
 
 Example:
 --------
@@ -296,7 +297,7 @@ def find_flat_in_description(description, mappings):
     return None, "Unmatched"
 
 
-def create_tracking_workbook(transactions, mappings, output_path):
+def create_tracking_workbook(transactions, mappings, output_path, statement_name="Bank Statement"):
     """
     Generate Excel workbook with Payment Tracking, All Transactions, and Unmatched sheets.
     """
@@ -343,7 +344,7 @@ def create_tracking_workbook(transactions, mappings, output_path):
         if txn["flat"]:
             flat_payments[txn["flat"].upper()].append(txn)
 
-    # Determine max payments for any flat (at least 3 pairs)
+    # Determine max payments for any flat (at least 3 payment slots)
     max_payments = max([len(v) for v in flat_payments.values()] + [3])
 
     # ----------------------------------------------------
@@ -351,17 +352,6 @@ def create_tracking_workbook(transactions, mappings, output_path):
     # ----------------------------------------------------
     ws_track = wb.create_sheet(title="Payment Tracking")
     ws_track.views.sheetView[0].showGridLines = True
-
-    # Title block
-    ws_track.merge_cells("A1:K1")
-    ws_track["A1"] = "MANA PRISTINE - FLAT-WISE MAINTENANCE PAYMENT TRACKING"
-    ws_track["A1"].font = title_font
-    ws_track["A1"].alignment = Alignment(horizontal="left", vertical="center")
-
-    ws_track.merge_cells("A2:K2")
-    ws_track["A2"] = f"Generated on {datetime.now().strftime('%d-%b-%Y %I:%M %p')} | Source: Bank Statement"
-    ws_track["A2"].font = subtitle_font
-    ws_track["A2"].alignment = Alignment(horizontal="left", vertical="center")
 
     # Table Headers
     base_headers = [
@@ -374,10 +364,28 @@ def create_tracking_workbook(transactions, mappings, output_path):
     ]
     payment_headers = []
     for i in range(1, max_payments + 1):
-        payment_headers.extend([f"Payment {i} Amount (Rs.)", f"Payment {i} Date"])
+        payment_headers.extend([
+            f"Payment {i} Amount (Rs.)",
+            f"Payment {i} Date",
+            f"Payment {i} Ref No. / Cheque No.",
+            f"Payment {i} Bank Transaction Details",
+        ])
 
     all_track_headers = base_headers + payment_headers
     header_row_idx = 4
+
+    # Title block
+    last_track_col_letter = get_column_letter(len(all_track_headers))
+    ws_track.merge_cells(f"A1:{last_track_col_letter}1")
+    ws_track["A1"] = "MANA PRISTINE - FLAT-WISE MAINTENANCE PAYMENT TRACKING"
+    ws_track["A1"].font = title_font
+    ws_track["A1"].alignment = Alignment(horizontal="left", vertical="center")
+
+    stmt_label = statement_name if statement_name else "Bank Statement"
+    ws_track.merge_cells(f"A2:{last_track_col_letter}2")
+    ws_track["A2"] = f"Generated on {datetime.now().strftime('%d-%b-%Y %I:%M %p')} | Source: {stmt_label}"
+    ws_track["A2"].font = subtitle_font
+    ws_track["A2"].alignment = Alignment(horizontal="left", vertical="center")
 
     for col_idx, h_text in enumerate(all_track_headers, start=1):
         cell = ws_track.cell(row=header_row_idx, column=col_idx, value=h_text)
@@ -423,12 +431,17 @@ def create_tracking_workbook(transactions, mappings, output_path):
             p_count,
         ]
 
-        # Populate payments
+        # Populate payments with amount, date, ref_no, and bank transaction description
         for i in range(max_payments):
             if i < len(pmts):
-                row_cells.extend([pmts[i]["amount"], pmts[i]["date"]])
+                row_cells.extend([
+                    pmts[i]["amount"],
+                    pmts[i]["date"],
+                    pmts[i].get("ref_no", ""),
+                    pmts[i].get("description", ""),
+                ])
             else:
-                row_cells.extend(["", ""])
+                row_cells.extend(["", "", "", ""])
 
         is_zebra = (current_row % 2 == 0)
         for col_idx, val in enumerate(row_cells, start=1):
@@ -458,12 +471,19 @@ def create_tracking_workbook(transactions, mappings, output_path):
                 cell.font = bold_data_font
             elif col_idx == 6:  # Count
                 cell.alignment = Alignment(horizontal="center", vertical="center")
-            elif (col_idx - 7) % 2 == 0:  # Payment Amount cols
-                cell.alignment = Alignment(horizontal="right", vertical="center")
-                if isinstance(val, (int, float)):
-                    cell.number_format = currency_format
-            elif (col_idx - 7) % 2 == 1:  # Payment Date cols
-                cell.alignment = Alignment(horizontal="center", vertical="center")
+            else:
+                # 4 columns per payment: Amount, Date, Ref No, Bank Transaction Details
+                p_col_type = (col_idx - 7) % 4
+                if p_col_type == 0:  # Payment Amount cols
+                    cell.alignment = Alignment(horizontal="right", vertical="center")
+                    if isinstance(val, (int, float)):
+                        cell.number_format = currency_format
+                elif p_col_type == 1:  # Payment Date cols
+                    cell.alignment = Alignment(horizontal="center", vertical="center")
+                elif p_col_type == 2:  # Payment Ref No. / Cheque No. cols
+                    cell.alignment = Alignment(horizontal="center", vertical="center")
+                elif p_col_type == 3:  # Payment Bank Transaction Details cols
+                    cell.alignment = Alignment(horizontal="left", vertical="center")
 
         ws_track.row_dimensions[current_row].height = 20
         current_row += 1
@@ -507,20 +527,6 @@ def create_tracking_workbook(transactions, mappings, output_path):
     ws_txns = wb.create_sheet(title="All Transactions")
     ws_txns.views.sheetView[0].showGridLines = True
 
-    # Title block
-    ws_txns.merge_cells("A1:J1")
-    ws_txns["A1"] = "BANK STATEMENT CREDIT TRANSACTIONS LOG"
-    ws_txns["A1"].font = title_font
-    ws_txns["A1"].alignment = Alignment(horizontal="left", vertical="center")
-
-    ws_txns.merge_cells("A2:J2")
-    ws_txns["A2"] = (
-        f"Total Credit Transactions: {len(transactions)} | "
-        f"Total Credits: Rs. {sum(t['amount'] for t in transactions):,.2f}"
-    )
-    ws_txns["A2"].font = subtitle_font
-    ws_txns["A2"].alignment = Alignment(horizontal="left", vertical="center")
-
     txn_headers = [
         "#",
         "Txn Date",
@@ -532,8 +538,26 @@ def create_tracking_workbook(transactions, mappings, output_path):
         "Match Method",
         "Status",
         "Ref No. / Cheque No.",
-        "Description",
+        "Bank Transaction Details / Description",
     ]
+
+    # Title block
+    last_txn_col_letter = get_column_letter(len(txn_headers))
+    ws_txns.merge_cells(f"A1:{last_txn_col_letter}1")
+    ws_txns["A1"] = "BANK STATEMENT CREDIT TRANSACTIONS LOG"
+    ws_txns["A1"].font = title_font
+    ws_txns["A1"].alignment = Alignment(horizontal="left", vertical="center")
+
+    ws_txns.merge_cells(f"A2:{last_txn_col_letter}2")
+    ws_txns["A2"] = (
+        f"Generated on {datetime.now().strftime('%d-%b-%Y %I:%M %p')} | "
+        f"Source: {stmt_label} | "
+        f"Total Credit Transactions: {len(transactions)} | "
+        f"Total Credits: Rs. {sum(t['amount'] for t in transactions):,.2f}"
+    )
+    ws_txns["A2"].font = subtitle_font
+    ws_txns["A2"].alignment = Alignment(horizontal="left", vertical="center")
+
     t_header_row = 4
     for col_idx, h_text in enumerate(txn_headers, start=1):
         cell = ws_txns.cell(row=t_header_row, column=col_idx, value=h_text)
@@ -629,28 +653,31 @@ def create_tracking_workbook(transactions, mappings, output_path):
         ws_unm = wb.create_sheet(title="Unmatched Transactions")
         ws_unm.views.sheetView[0].showGridLines = True
 
-        ws_unm.merge_cells("A1:G1")
-        ws_unm["A1"] = "UNMATCHED CREDIT TRANSACTIONS"
-        ws_unm["A1"].font = title_font
-        ws_unm["A1"].alignment = Alignment(horizontal="left", vertical="center")
-
-        ws_unm.merge_cells("A2:G2")
-        ws_unm["A2"] = (
-            f"{len(unmatched_txns)} transactions could not be mapped to any flat automatically. "
-            "Please review descriptions."
-        )
-        ws_unm["A2"].font = subtitle_font
-        ws_unm["A2"].alignment = Alignment(horizontal="left", vertical="center")
-
         unm_headers = [
             "#",
             "Txn Date",
             "Amount (Rs.)",
             "Match Status",
             "Ref No. / Cheque No.",
-            "Description",
+            "Bank Transaction Details / Description",
             "Suggested Manual Flat #",
         ]
+        last_unm_col_letter = get_column_letter(len(unm_headers))
+        ws_unm.merge_cells(f"A1:{last_unm_col_letter}1")
+        ws_unm["A1"] = "UNMATCHED CREDIT TRANSACTIONS"
+        ws_unm["A1"].font = title_font
+        ws_unm["A1"].alignment = Alignment(horizontal="left", vertical="center")
+
+        ws_unm.merge_cells(f"A2:{last_unm_col_letter}2")
+        ws_unm["A2"] = (
+            f"Generated on {datetime.now().strftime('%d-%b-%Y %I:%M %p')} | "
+            f"Source: {stmt_label} | "
+            f"{len(unmatched_txns)} transactions could not be mapped to any flat automatically. "
+            "Please review descriptions."
+        )
+        ws_unm["A2"].font = subtitle_font
+        ws_unm["A2"].alignment = Alignment(horizontal="left", vertical="center")
+
         u_header_row = 4
         for col_idx, h_text in enumerate(unm_headers, start=1):
             cell = ws_unm.cell(row=u_header_row, column=col_idx, value=h_text)
@@ -728,7 +755,7 @@ def create_unmatched_report(unmatched_txns, output_path, statement_name="Bank St
                     "Amount": ut["amount"],
                     "Match Status": ut["match_reason"],
                     "Ref No": ut.get("ref_no", ""),
-                    "Description": ut["description"],
+                    "Bank Transaction Details / Description": ut["description"],
                     "Manual Flat #": "",
                     "Remarks": "",
                 }
@@ -802,7 +829,7 @@ def create_unmatched_report(unmatched_txns, output_path, statement_name="Bank St
         "Amount (Rs.)",
         "Match Status",
         "Ref No. / Cheque No.",
-        "Description",
+        "Bank Transaction Details / Description",
         "Manual Flat #",
         "Notes / Remarks",
     ]
@@ -911,17 +938,27 @@ def track_payments(
     1. Load mappings from db/members.csv and db/occupants.csv
     2. Parse bank statement credit transactions
     3. Match descriptions using rule-based and fuzzy logic
-    4. Generate formatted Excel tracking_sheet.xlsx in the statement's directory
-    5. If any transactions are unmatched, generate a separate unmatched_transactions.xlsx report
+    4. Generate formatted Excel tracking_sheet_<timestamp>.xlsx in the statement's directory
+    5. If any transactions are unmatched, generate a separate unmatched_transactions_<timestamp>.xlsx report
     """
     statement_path = Path(statement_file).resolve()
     if not statement_path.exists():
         raise FileNotFoundError(f"Bank statement file not found: {statement_file}")
 
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
     if not output_path:
-        resolved_output = statement_path.parent / "tracking_sheet.xlsx"
+        resolved_output = statement_path.parent / f"tracking_sheet_{timestamp}.xlsx"
     else:
-        resolved_output = Path(output_path).resolve()
+        out_str = str(output_path)
+        if "{timestamp}" in out_str:
+            resolved_output = Path(out_str.format(timestamp=timestamp)).resolve()
+        else:
+            out_p = Path(output_path)
+            if out_p.is_dir() or str(output_path).endswith(("/", "\\")):
+                resolved_output = (out_p / f"tracking_sheet_{timestamp}.xlsx").resolve()
+            else:
+                resolved_output = out_p.resolve()
 
     print(f"\n=======================================================")
     print(f" Mana Pristine - Bank Statement Payment Tracker")
@@ -1022,7 +1059,12 @@ def track_payments(
 
     # 4. Generate Output Excel
     try:
-        saved_path = create_tracking_workbook(transactions, mappings, resolved_output)
+        saved_path = create_tracking_workbook(
+            transactions,
+            mappings,
+            resolved_output,
+            statement_name=statement_path.name,
+        )
     except PermissionError:
         print(f"\n[ERROR] Permission denied: Unable to write to '{resolved_output}'.")
         print("The file appears to be open in Microsoft Excel. Please close it and rerun.\n")
@@ -1033,9 +1075,17 @@ def track_payments(
     unmatched_report_path = None
     if unmatched_txns:
         if unmatched_output:
-            resolved_unmatched_output = Path(unmatched_output).resolve()
+            unm_str = str(unmatched_output)
+            if "{timestamp}" in unm_str:
+                resolved_unmatched_output = Path(unm_str.format(timestamp=timestamp)).resolve()
+            else:
+                unm_p = Path(unmatched_output)
+                if unm_p.is_dir() or str(unmatched_output).endswith(("/", "\\")):
+                    resolved_unmatched_output = (unm_p / f"unmatched_transactions_{timestamp}.xlsx").resolve()
+                else:
+                    resolved_unmatched_output = unm_p.resolve()
         else:
-            resolved_unmatched_output = resolved_output.parent / "unmatched_transactions.xlsx"
+            resolved_unmatched_output = resolved_output.parent / f"unmatched_transactions_{timestamp}.xlsx"
 
         try:
             unmatched_report_path = create_unmatched_report(
@@ -1072,7 +1122,7 @@ def track_payments(
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Parse bank statement and create flat-wise payment tracking sheet (tracking_sheet.xlsx)."
+        description="Parse bank statement and create flat-wise payment tracking sheet with timestamp and bank transaction details."
     )
     parser.add_argument(
         "statement_file",
@@ -1082,13 +1132,13 @@ def main():
         "-o",
         "--output",
         default=None,
-        help="Output Excel file path (default: tracking_sheet.xlsx in the statement's folder)",
+        help="Output Excel file path (default: tracking_sheet_<timestamp>.xlsx in the statement's folder)",
     )
     parser.add_argument(
         "-u",
         "--unmatched-output",
         default=None,
-        help="Optional output path for unmatched transactions report (default: unmatched_transactions.xlsx in the statement/output folder)",
+        help="Optional output path for unmatched transactions report (default: unmatched_transactions_<timestamp>.xlsx in the statement/output folder)",
     )
     parser.add_argument(
         "--members",
