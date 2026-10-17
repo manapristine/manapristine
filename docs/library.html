@@ -1301,9 +1301,9 @@
     function getGenreCoverClass(genre) {
       const g = (genre || "").toLowerCase();
       if (g.includes("philosophy") || g.includes("spirituality") || g.includes("biblical") || g.includes("yoga")) return "cover-philosophy";
-      if (g.includes("science") || g.includes("physics") || g.includes("chemistry") || g.includes("maths") || g.includes("biology")) return "cover-science";
-      if (g.includes("management") || g.includes("marketing") || g.includes("leadership") || g.includes("economics")) return "cover-management";
-      if (g.includes("self-help") || g.includes("psychology")) return "cover-self-help";
+      if (g.includes("science") || g.includes("physics") || g.includes("chemistry") || g.includes("maths") || g.includes("biology") || g.includes("health") || g.includes("parenthood")) return "cover-science";
+      if (g.includes("management") || g.includes("marketing") || g.includes("leadership") || g.includes("economics") || g.includes("finance") || g.includes("law")) return "cover-management";
+      if (g.includes("self-help") || g.includes("psychology") || g.includes("games")) return "cover-self-help";
       if (g.includes("fiction") || g.includes("literature") || g.includes("poetry")) return "cover-fiction";
       if (g.includes("magazine") || g.includes("encyclopedia")) return "cover-magazine";
       if (g.includes("computer")) return "cover-computer-science";

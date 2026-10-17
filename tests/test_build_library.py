@@ -39,9 +39,9 @@ class TestBuildLibrary(unittest.TestCase):
         self.assertIn("books", data)
 
         summary = data["summary"]
-        self.assertEqual(summary["total_titles"], 94)
-        self.assertEqual(summary["total_copies"], 147)
-        self.assertEqual(summary["excel_total_copies"], 147)
+        self.assertEqual(summary["total_titles"], 129)
+        self.assertEqual(summary["total_copies"], 182)
+        self.assertEqual(summary["excel_total_copies"], 182)
         self.assertGreater(summary["unique_genres"], 20)
         self.assertGreaterEqual(summary["unique_languages"], 3)
 
@@ -56,6 +56,14 @@ class TestBuildLibrary(unittest.TestCase):
         self.assertEqual(b0["language"], "English")
         self.assertEqual(b0["donated_by"], "Samrat Kar")
         self.assertEqual(b0["flat"], "F3")
+
+        # Check newly added book with updated author
+        b_last = data["books"][-1]
+        self.assertEqual(b_last["id"], 129)
+        self.assertEqual(b_last["title"], "Managing the new enterprise")
+        self.assertEqual(b_last["author"], "Harris Kern")
+        self.assertEqual(b_last["donated_by"], "Nisha")
+        self.assertEqual(b_last["flat"], "F16")
 
     def test_custom_workbook_processing_and_conversion(self):
         with tempfile.TemporaryDirectory() as tmpdir:

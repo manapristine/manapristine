@@ -2,26 +2,44 @@
   "metadata": {
     "title": "Mana Pristine Community Library",
     "source_file": "library-books.xlsx",
-    "generated_at": "2026-10-17T18:57:34.683585",
+    "generated_at": "2026-10-17T22:52:18.652394",
     "version": "1.0"
   },
   "summary": {
-    "total_titles": 94,
-    "total_copies": 147,
-    "excel_total_copies": 147,
-    "unique_genres": 32,
+    "total_titles": 129,
+    "total_copies": 182,
+    "excel_total_copies": 182,
+    "unique_genres": 37,
     "unique_languages": 3,
-    "unique_donors": 2,
+    "unique_donors": 3,
     "genre_breakdown": [
+      {
+        "genre": "leadership",
+        "display": "Leadership",
+        "titles": 15,
+        "copies": 15
+      },
       {
         "genre": "spirituality",
         "display": "Spirituality",
+        "titles": 12,
+        "copies": 12
+      },
+      {
+        "genre": "fiction",
+        "display": "Fiction",
         "titles": 11,
         "copies": 11
       },
       {
         "genre": "management",
         "display": "Management",
+        "titles": 8,
+        "copies": 8
+      },
+      {
+        "genre": "self-help",
+        "display": "Self-Help",
         "titles": 8,
         "copies": 8
       },
@@ -44,6 +62,12 @@
         "copies": 6
       },
       {
+        "genre": "biopic",
+        "display": "Biopic",
+        "titles": 5,
+        "copies": 5
+      },
+      {
         "genre": "computer science",
         "display": "Computer Science",
         "titles": 5,
@@ -56,18 +80,6 @@
         "copies": 5
       },
       {
-        "genre": "fiction",
-        "display": "Fiction",
-        "titles": 5,
-        "copies": 5
-      },
-      {
-        "genre": "leadership",
-        "display": "Leadership",
-        "titles": 4,
-        "copies": 4
-      },
-      {
         "genre": "magazine",
         "display": "Magazine",
         "titles": 4,
@@ -76,24 +88,18 @@
       {
         "genre": "philosophy",
         "display": "Philosophy",
-        "titles": 3,
-        "copies": 3
+        "titles": 4,
+        "copies": 4
       },
       {
-        "genre": "self-help",
-        "display": "Self-Help",
+        "genre": "new-age",
+        "display": "New Age",
         "titles": 3,
         "copies": 3
       },
       {
         "genre": "ayurveda",
         "display": "Ayurveda",
-        "titles": 2,
-        "copies": 2
-      },
-      {
-        "genre": "biopic",
-        "display": "Biopic",
         "titles": 2,
         "copies": 2
       },
@@ -106,6 +112,12 @@
       {
         "genre": "marketing",
         "display": "Marketing",
+        "titles": 2,
+        "copies": 2
+      },
+      {
+        "genre": "music",
+        "display": "Music",
         "titles": 2,
         "copies": 2
       },
@@ -152,14 +164,32 @@
         "copies": 1
       },
       {
+        "genre": "finance",
+        "display": "Finance",
+        "titles": 1,
+        "copies": 1
+      },
+      {
         "genre": "gre",
         "display": "GRE",
         "titles": 1,
         "copies": 1
       },
       {
+        "genre": "games",
+        "display": "Games",
+        "titles": 1,
+        "copies": 1
+      },
+      {
         "genre": "general studies",
         "display": "General Studies",
+        "titles": 1,
+        "copies": 1
+      },
+      {
+        "genre": "health",
+        "display": "Health",
         "titles": 1,
         "copies": 1
       },
@@ -176,14 +206,14 @@
         "copies": 1
       },
       {
-        "genre": "music",
-        "display": "Music",
+        "genre": "law",
+        "display": "Law",
         "titles": 1,
         "copies": 1
       },
       {
-        "genre": "new-age",
-        "display": "New Age",
+        "genre": "parenthood",
+        "display": "Parenthood",
         "titles": 1,
         "copies": 1
       },
@@ -209,8 +239,8 @@
     "language_breakdown": [
       {
         "language": "English",
-        "titles": 88,
-        "copies": 123
+        "titles": 123,
+        "copies": 158
       },
       {
         "language": "Bangla",
@@ -229,6 +259,12 @@
         "flat": "F3",
         "titles": 88,
         "copies": 141
+      },
+      {
+        "donor": "Nisha",
+        "flat": "F16",
+        "titles": 35,
+        "copies": 35
       },
       {
         "donor": "Unknown",
@@ -274,7 +310,12 @@
       "yoga",
       "hindi",
       "magazine",
-      "encyclopedia"
+      "encyclopedia",
+      "games",
+      "law",
+      "health",
+      "parenthood",
+      "finance"
     ],
     "languages": [
       "English",
@@ -1320,6 +1361,391 @@
       "language": "Bangla",
       "donated_by": "Samrat Kar",
       "flat": "F3"
+    },
+    {
+      "id": 95,
+      "title": "Midnight's children",
+      "author": "Salman Rushdie",
+      "genre": "fiction",
+      "genre_display": "Fiction",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 96,
+      "title": "I know what you did last summer",
+      "author": "Lois Duncan",
+      "genre": "fiction",
+      "genre_display": "Fiction",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 97,
+      "title": "The executioner",
+      "author": "Don Pendleton",
+      "genre": "fiction",
+      "genre_display": "Fiction",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 98,
+      "title": "Get a life",
+      "author": "Nicholas Bate",
+      "genre": "self-help",
+      "genre_display": "Self-Help",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 99,
+      "title": "Dream on",
+      "author": "Manoj Arora",
+      "genre": "self-help",
+      "genre_display": "Self-Help",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 100,
+      "title": "Lectures from Colombo to Almora",
+      "author": "Swami Vivekananda",
+      "genre": "biopic",
+      "genre_display": "Biopic",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 101,
+      "title": "The 17 essential qualities of a team player",
+      "author": "John C. Maxwell",
+      "genre": "leadership",
+      "genre_display": "Leadership",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 102,
+      "title": "Equal, yet different",
+      "author": "Anita Bhogle",
+      "genre": "leadership",
+      "genre_display": "Leadership",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 103,
+      "title": "Slumdog millionaire",
+      "author": "Vikas Swarup",
+      "genre": "fiction",
+      "genre_display": "Fiction",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 104,
+      "title": "Brave, not perfect",
+      "author": "Reshma Saujani",
+      "genre": "leadership",
+      "genre_display": "Leadership",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 105,
+      "title": "101 games to play",
+      "author": "Joe Rhatigan",
+      "genre": "games",
+      "genre_display": "Games",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 106,
+      "title": "Crucial conversations",
+      "author": "Kerry Patterson",
+      "genre": "leadership",
+      "genre_display": "Leadership",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 107,
+      "title": "Wings of fire - Abdul Kalam",
+      "author": "A. P. J. Abdul Kalam",
+      "genre": "self-help",
+      "genre_display": "Self-Help",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 108,
+      "title": "Dictionary on Indian patent law",
+      "author": "Bindu Sharma & Anita Kalia",
+      "genre": "law",
+      "genre_display": "Law",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 109,
+      "title": "The power",
+      "author": "Rhonda Byrne",
+      "genre": "new-age",
+      "genre_display": "New Age",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 110,
+      "title": "Fit for life not fat for life",
+      "author": "Harvey Diamond",
+      "genre": "health",
+      "genre_display": "Health",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 111,
+      "title": "The industries of the future",
+      "author": "Alec Ross",
+      "genre": "leadership",
+      "genre_display": "Leadership",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 112,
+      "title": "The symphony spanish guitar book",
+      "author": "Rahul Gupta",
+      "genre": "music",
+      "genre_display": "Music",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 113,
+      "title": "Pregnancy to parenthood",
+      "author": "Linda Goldberg",
+      "genre": "parenthood",
+      "genre_display": "Parenthood",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 114,
+      "title": "The Vedas",
+      "author": "Maharshi Ved Vyasa",
+      "genre": "spirituality",
+      "genre_display": "Spirituality",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 115,
+      "title": "Lean in",
+      "author": "Sheryl Sandberg",
+      "genre": "leadership",
+      "genre_display": "Leadership",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 116,
+      "title": "Limitless",
+      "author": "Jim Kwik",
+      "genre": "new-age",
+      "genre_display": "New Age",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 117,
+      "title": "The remains of the day",
+      "author": "Kazuo Ishiguro",
+      "genre": "fiction",
+      "genre_display": "Fiction",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 118,
+      "title": "Lincoln on leadership",
+      "author": "Donald T. Phillips",
+      "genre": "leadership",
+      "genre_display": "Leadership",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 119,
+      "title": "When breath becomes air",
+      "author": "Paul Kalanithi",
+      "genre": "fiction",
+      "genre_display": "Fiction",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 120,
+      "title": "Atomic habits",
+      "author": "James Clear",
+      "genre": "self-help",
+      "genre_display": "Self-Help",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 121,
+      "title": "Tally ERP 9 training guide",
+      "author": "Ashok K. Nadhani",
+      "genre": "finance",
+      "genre_display": "Finance",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 122,
+      "title": "Barack obama the new face of American politics",
+      "author": "Martin Dupuis & Keith Boeckelman",
+      "genre": "biopic",
+      "genre_display": "Biopic",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 123,
+      "title": "My life is full",
+      "author": "Indra Nooyi",
+      "genre": "self-help",
+      "genre_display": "Self-Help",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 124,
+      "title": "The sandler rules",
+      "author": "David Mattson",
+      "genre": "leadership",
+      "genre_display": "Leadership",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 125,
+      "title": "Leadership the barack obama way",
+      "author": "Shelly Leanne",
+      "genre": "leadership",
+      "genre_display": "Leadership",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 126,
+      "title": "Execution",
+      "author": "Larry Bossidy & Ram Charan",
+      "genre": "leadership",
+      "genre_display": "Leadership",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 127,
+      "title": "The difficulty of being good",
+      "author": "Gurcharan Das",
+      "genre": "philosophy",
+      "genre_display": "Philosophy",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 128,
+      "title": "Sachin Tendulkar - autobiography",
+      "author": "Sachin Tendulkar",
+      "genre": "biopic",
+      "genre_display": "Biopic",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
+    },
+    {
+      "id": 129,
+      "title": "Managing the new enterprise",
+      "author": "Harris Kern",
+      "genre": "leadership",
+      "genre_display": "Leadership",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Nisha",
+      "flat": "F16"
     }
   ]
 }
