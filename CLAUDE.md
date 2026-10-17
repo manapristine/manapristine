@@ -17,7 +17,9 @@ Mana Pristine is a housing society (apartment complex) financial management syst
 - `db/collection.csv` — Flat-to-name collection reference
 - `db/bankstatements/` — Raw bank statements (XLS/PDF) organized by FY
 - `db/wateron/` — WaterOn consumption reports organized by FY
+- `db/library/library-books.xlsx` — Source workbook for society community library books catalog
 - `report_builder/report_builder.py` — Main report generator: reads workbooks, produces per-FY JSON datasets and a manifest
+- `report_builder/build_library.py` — Converts `db/library/library-books.xlsx` into `docs/library-data.json` for the community library portal
 - `report_builder/update_collections.py` — Interactive: parses bank statements, matches transactions to flats via name/flat-number heuristics, generates a processing CSV, then updates COLLECTION sheets
 - `report_builder/update_water_consumption.py` — Updates EXPENSE sheets with water usage from WaterOn reports
 - `report_builder/new_fy.py` — Creates a new FY workbook from existing one (copies, renames sheets, updates refs, clears data, preserves all formulas)
@@ -25,6 +27,8 @@ Mana Pristine is a housing society (apartment complex) financial management syst
 - `report_builder/compare_workbooks.py` — Validates formula integrity between baseline and candidate workbooks after FY transitions
 - `report_builder/sync_members.py` — Syncs db/members.csv into the Members sheet of workbooks
 - `docs/index.html` — Single-page dashboard (vanilla HTML/CSS/JS, no build step) that loads JSON data and renders flat statements, defaulters, excess payments, and aggregate views
+- `docs/library.html` — Community library web portal (vanilla HTML/CSS/JS) rendering book cards, live search, genre filters, and borrowing guidelines
+- `docs/library-data.json` — Generated JSON dataset of all community books, genres, and donors
 - `docs/report-manifest.json` — Index of available FY data files, consumed by the dashboard
 - `comm/` — Communication templates (markdown) for society notices
 
@@ -39,6 +43,9 @@ pip install -r requirements.txt
 
 # Generate all report JSON files (run from project root)
 python report_builder/report_builder.py
+
+# Build library portal JSON dataset
+python report_builder/build_library.py
 
 # Process a bank statement (interactive — prompts for option 1=create report, 2=update workbook)
 python report_builder/update_collections.py db/bankstatements/2025-2026/March-2026.xls

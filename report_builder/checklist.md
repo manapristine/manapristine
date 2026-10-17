@@ -127,6 +127,12 @@ This checklist outlines the end-to-end procedure for processing monthly society 
     FY 2026-27: generated 64 report(s) at ...\docs\report-data-2026-27.json
     Manifest written to ...\docs\report-manifest.json
     Portal password hash is already up to date.
+    INFO: Verified formula total: 147 total copies across 94 titles.
+    INFO: Successfully generated ...\docs\library-data.json
+    ```
+  - *(Optional)* To build library portal catalog independently:
+    ```bash
+    python report_builder/build_library.py
     ```
 
 ---
@@ -142,6 +148,9 @@ This checklist outlines the end-to-end procedure for processing monthly society 
   - Cross-check society totals (Total Income, Total Expenses, Society Balance) with the Excel workbook summary.
   - Review Defaulters and Excess Payments tabs to ensure figures match expected balances.
   - Spot-check 2–3 individual flat statements (e.g. `F1`, `G10`, `T16`) for accurate water charges, fixed expense split, late fines, and payments.
+- [ ] **Verify Community Library Portal**:
+  - Click **Community Library** button (or navigate to `http://localhost:8000/library.html`).
+  - Verify 94 titles, 147 copies, live search, genre filters, and modal popup render accurately.
 
 ---
 

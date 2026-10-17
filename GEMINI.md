@@ -11,12 +11,14 @@ Mana Pristine is a financial management system for a housing society (apartment 
     - `accounts/`: Excel workbooks containing financial records (one per FY) with monthly `COLLECTION`/`EXPENSE` sheets, `INCOME-EXPENSE-CYCLES`, and `ANNUAL-EXPENSE-DETAILS`.
     - `bankstatements/`: Raw bank statements (TSV/XLS/PDF) organized by FY used for updating collections and tracking payments.
     - `wateron/`: WaterOn consumption reports and `avg-water-usage.xlsx` for water billing and variance tracking.
+    - `library/`: `library-books.xlsx` containing society community library books and genres catalog.
     - `members.csv`: Flat-to-owner mapping (flat, name, email, phone).
     - `occupants.csv`: Flat-to-occupant mapping (current resident/tenant).
     - `collection.csv`: Flat-to-name collection reference.
     - `workbooks.json`: Configuration mapping financial years to workbook files, cutoff dates, and the portal password.
 - **Processing Logic (`report_builder/`):**
     - `report_builder.py`: Main engine that reads Excel data and produces JSON datasets and manifest for the dashboard.
+    - `build_library.py`: Converts `db/library/library-books.xlsx` into `docs/library-data.json`, validating formula totals and book metadata.
     - `update_collections.py`: Automates updating collection sheets by parsing bank statements.
     - `update_water_consumption.py`: Updates EXPENSE sheets with water usage from WaterOn reports.
     - `validate_water_meter_reading.py`: Parses WaterOn reports, maps flat consumption, updates `db/wateron/avg-water-usage.xlsx`, and highlights high-variance flats (>50%).
@@ -28,6 +30,8 @@ Mana Pristine is a financial management system for a housing society (apartment 
     - `sync_members.py`: Synchronizes `db/members.csv` into the Members sheet of workbooks.
 - **Frontend (`docs/`):**
     - `index.html`: A self-contained dashboard (Vanilla JS/CSS, no build step) that visualizes flat statements, defaulters, excess payments, and society-level financials.
+    - `library.html`: Community library portal rendering book collection, search, genre filtering, and donor analytics from `library-data.json`.
+    - `library-data.json`: Structured JSON catalog of library books, genres, and donors.
     - `report-manifest.json`: Index of generated report files.
 - **Communications (`comm/`):**
     - Society notices and communication templates in Markdown.
@@ -54,6 +58,10 @@ pip install -r requirements.txt
 - **Generate Reports:** Processes all configured workbooks and updates JSON files in `docs/`.
   ```bash
   python report_builder/report_builder.py
+  ```
+- **Build Library Portal Catalog:** Converts `db/library/library-books.xlsx` to `docs/library-data.json`.
+  ```bash
+  python report_builder/build_library.py
   ```
 - **Update Collections:** Parses a bank statement and updates the corresponding workbook.
   ```bash

@@ -909,7 +909,20 @@ def main() -> int:
     
     if portal_password:
         update_portal_password(portal_password)
-        
+
+    # Build library portal dataset if library workbook exists
+    library_excel = PROJECT_ROOT / "db" / "library" / "library-books.xlsx"
+    if library_excel.exists():
+        try:
+            try:
+                from build_library import convert_library_excel_to_json
+            except ImportError:
+                from report_builder.build_library import convert_library_excel_to_json
+            library_output = OUTPUT_DIR / "library-data.json"
+            convert_library_excel_to_json(library_excel, library_output)
+        except Exception as e:
+            print(f"Warning: Failed to build library data: {e}")
+
     return 0
 
 

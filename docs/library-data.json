@@ -1,0 +1,1325 @@
+{
+  "metadata": {
+    "title": "Mana Pristine Community Library",
+    "source_file": "library-books.xlsx",
+    "generated_at": "2026-10-17T18:57:34.683585",
+    "version": "1.0"
+  },
+  "summary": {
+    "total_titles": 94,
+    "total_copies": 147,
+    "excel_total_copies": 147,
+    "unique_genres": 32,
+    "unique_languages": 3,
+    "unique_donors": 2,
+    "genre_breakdown": [
+      {
+        "genre": "spirituality",
+        "display": "Spirituality",
+        "titles": 11,
+        "copies": 11
+      },
+      {
+        "genre": "management",
+        "display": "Management",
+        "titles": 8,
+        "copies": 8
+      },
+      {
+        "genre": "history",
+        "display": "History",
+        "titles": 7,
+        "copies": 7
+      },
+      {
+        "genre": "science",
+        "display": "Science",
+        "titles": 7,
+        "copies": 7
+      },
+      {
+        "genre": "maths",
+        "display": "Maths",
+        "titles": 6,
+        "copies": 6
+      },
+      {
+        "genre": "computer science",
+        "display": "Computer Science",
+        "titles": 5,
+        "copies": 5
+      },
+      {
+        "genre": "english",
+        "display": "English",
+        "titles": 5,
+        "copies": 5
+      },
+      {
+        "genre": "fiction",
+        "display": "Fiction",
+        "titles": 5,
+        "copies": 5
+      },
+      {
+        "genre": "leadership",
+        "display": "Leadership",
+        "titles": 4,
+        "copies": 4
+      },
+      {
+        "genre": "magazine",
+        "display": "Magazine",
+        "titles": 4,
+        "copies": 57
+      },
+      {
+        "genre": "philosophy",
+        "display": "Philosophy",
+        "titles": 3,
+        "copies": 3
+      },
+      {
+        "genre": "self-help",
+        "display": "Self-Help",
+        "titles": 3,
+        "copies": 3
+      },
+      {
+        "genre": "ayurveda",
+        "display": "Ayurveda",
+        "titles": 2,
+        "copies": 2
+      },
+      {
+        "genre": "biopic",
+        "display": "Biopic",
+        "titles": 2,
+        "copies": 2
+      },
+      {
+        "genre": "economics",
+        "display": "Economics",
+        "titles": 2,
+        "copies": 2
+      },
+      {
+        "genre": "marketing",
+        "display": "Marketing",
+        "titles": 2,
+        "copies": 2
+      },
+      {
+        "genre": "political science",
+        "display": "Political Science",
+        "titles": 2,
+        "copies": 2
+      },
+      {
+        "genre": "travel",
+        "display": "Travel",
+        "titles": 2,
+        "copies": 2
+      },
+      {
+        "genre": "biblical",
+        "display": "Biblical",
+        "titles": 1,
+        "copies": 1
+      },
+      {
+        "genre": "biology",
+        "display": "Biology",
+        "titles": 1,
+        "copies": 1
+      },
+      {
+        "genre": "chemistry",
+        "display": "Chemistry",
+        "titles": 1,
+        "copies": 1
+      },
+      {
+        "genre": "cooking",
+        "display": "Cooking",
+        "titles": 1,
+        "copies": 1
+      },
+      {
+        "genre": "encyclopedia",
+        "display": "Encyclopedia",
+        "titles": 1,
+        "copies": 1
+      },
+      {
+        "genre": "gre",
+        "display": "GRE",
+        "titles": 1,
+        "copies": 1
+      },
+      {
+        "genre": "general studies",
+        "display": "General Studies",
+        "titles": 1,
+        "copies": 1
+      },
+      {
+        "genre": "hindi",
+        "display": "Hindi",
+        "titles": 1,
+        "copies": 1
+      },
+      {
+        "genre": "language",
+        "display": "Language",
+        "titles": 1,
+        "copies": 1
+      },
+      {
+        "genre": "music",
+        "display": "Music",
+        "titles": 1,
+        "copies": 1
+      },
+      {
+        "genre": "new-age",
+        "display": "New Age",
+        "titles": 1,
+        "copies": 1
+      },
+      {
+        "genre": "poetry",
+        "display": "Poetry",
+        "titles": 1,
+        "copies": 1
+      },
+      {
+        "genre": "psychology",
+        "display": "Psychology",
+        "titles": 1,
+        "copies": 1
+      },
+      {
+        "genre": "yoga",
+        "display": "Yoga",
+        "titles": 1,
+        "copies": 1
+      }
+    ],
+    "language_breakdown": [
+      {
+        "language": "English",
+        "titles": 88,
+        "copies": 123
+      },
+      {
+        "language": "Bangla",
+        "titles": 2,
+        "copies": 20
+      },
+      {
+        "language": "Hindi",
+        "titles": 4,
+        "copies": 4
+      }
+    ],
+    "donor_breakdown": [
+      {
+        "donor": "Samrat Kar",
+        "flat": "F3",
+        "titles": 88,
+        "copies": 141
+      },
+      {
+        "donor": "Unknown",
+        "flat": "UNKNOWN",
+        "titles": 6,
+        "copies": 6
+      }
+    ]
+  },
+  "reference": {
+    "genres": [
+      "fiction",
+      "philosophy",
+      "psychology",
+      "spirituality",
+      "marketing",
+      "self-help",
+      "sociology",
+      "political science",
+      "language",
+      "literature",
+      "poetry",
+      "biopic",
+      "music",
+      "science",
+      "new-age",
+      "leadership",
+      "travel",
+      "economics",
+      "chemistry",
+      "maths",
+      "physics",
+      "management",
+      "ayurveda",
+      "computer science",
+      "biblical",
+      "history",
+      "english",
+      "GRE",
+      "general studies",
+      "cooking",
+      "biology",
+      "yoga",
+      "hindi",
+      "magazine",
+      "encyclopedia"
+    ],
+    "languages": [
+      "English",
+      "Hindi",
+      "Bangla",
+      "Tamil",
+      "Telugu",
+      "Malayalam",
+      "Kannada"
+    ]
+  },
+  "books": [
+    {
+      "id": 1,
+      "title": "Crossing the Chasm",
+      "author": "Geoffrey Moore",
+      "genre": "marketing",
+      "genre_display": "Marketing",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 2,
+      "title": "The everyday hero manifesto",
+      "author": "Robin Sharma",
+      "genre": "self-help",
+      "genre_display": "Self-Help",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 3,
+      "title": "Atlast Shrugged",
+      "author": "Ayn Rand",
+      "genre": "philosophy",
+      "genre_display": "Philosophy",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 4,
+      "title": "The art of innovation",
+      "author": "Tom Kelley",
+      "genre": "psychology",
+      "genre_display": "Psychology",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 5,
+      "title": "Essays book",
+      "author": "Gagan Jain",
+      "genre": "language",
+      "genre_display": "Language",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 6,
+      "title": "The story of philosophy",
+      "author": "Will Durant",
+      "genre": "philosophy",
+      "genre_display": "Philosophy",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 7,
+      "title": "Sing Dance and Play",
+      "author": "Hindol Sengupta",
+      "genre": "biopic",
+      "genre_display": "Biopic",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 8,
+      "title": "The music instinct",
+      "author": "Philip Ball",
+      "genre": "music",
+      "genre_display": "Music",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 9,
+      "title": "The hidden connections",
+      "author": "Fritjof Capra",
+      "genre": "science",
+      "genre_display": "Science",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 10,
+      "title": "The web of life",
+      "author": "Fritjof Capra",
+      "genre": "science",
+      "genre_display": "Science",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 11,
+      "title": "The turning point",
+      "author": "Fritjof Capra",
+      "genre": "science",
+      "genre_display": "Science",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 12,
+      "title": "Upanishad",
+      "author": "Sri Sri Ravishankar",
+      "genre": "philosophy",
+      "genre_display": "Philosophy",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 13,
+      "title": "Success - one day at a time",
+      "author": "John C Maxwell",
+      "genre": "self-help",
+      "genre_display": "Self-Help",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 14,
+      "title": "Life after death",
+      "author": "Alan Bryson",
+      "genre": "new-age",
+      "genre_display": "New Age",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 15,
+      "title": "The greatness guide",
+      "author": "Robin Sharma",
+      "genre": "self-help",
+      "genre_display": "Self-Help",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 16,
+      "title": "The Goal 2",
+      "author": "Eliyahu M Goldratt",
+      "genre": "leadership",
+      "genre_display": "Leadership",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 17,
+      "title": "Devotion",
+      "author": "Ferdinand Wulliemer",
+      "genre": "spirituality",
+      "genre_display": "Spirituality",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 18,
+      "title": "Living in Bengaluru",
+      "author": "Anonymous",
+      "genre": "travel",
+      "genre_display": "Travel",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 19,
+      "title": "The voyage of the beagle",
+      "author": "Charles Darwin",
+      "genre": "travel",
+      "genre_display": "Travel",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 20,
+      "title": "Hot, flat and crowded",
+      "author": "Thomas L Friedman",
+      "genre": "political science",
+      "genre_display": "Political Science",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 21,
+      "title": "Commodities market",
+      "author": "N Janardhana Rao",
+      "genre": "economics",
+      "genre_display": "Economics",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 22,
+      "title": "IIT Chemsitry",
+      "author": "Tata McGraw Hill",
+      "genre": "chemistry",
+      "genre_display": "Chemistry",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 23,
+      "title": "Good strategy Bad strategy",
+      "author": "Richard Rumelt",
+      "genre": "management",
+      "genre_display": "Management",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 24,
+      "title": "Discovery of new india",
+      "author": "Vaibhav Sharma",
+      "genre": "leadership",
+      "genre_display": "Leadership",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 25,
+      "title": "The people capability maturity model",
+      "author": "Bill Curtis",
+      "genre": "leadership",
+      "genre_display": "Leadership",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 26,
+      "title": "Combined works of Chariji",
+      "author": "Rajagopalachari",
+      "genre": "spirituality",
+      "genre_display": "Spirituality",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 27,
+      "title": "Sahaj marg meanderings",
+      "author": "Rajagopalachari",
+      "genre": "spirituality",
+      "genre_display": "Spirituality",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 28,
+      "title": "Shri Sai Satcharita",
+      "author": "Shri Sai Baba",
+      "genre": "spirituality",
+      "genre_display": "Spirituality",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 29,
+      "title": "Toyota Talent",
+      "author": "Jeffrey Liker",
+      "genre": "leadership",
+      "genre_display": "Leadership",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 30,
+      "title": "Ayurveda - life, health and longevity",
+      "author": "Rober E Svoboda",
+      "genre": "ayurveda",
+      "genre_display": "Ayurveda",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 31,
+      "title": "Ayurveda and mind",
+      "author": "David Frawley",
+      "genre": "ayurveda",
+      "genre_display": "Ayurveda",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 32,
+      "title": "Neuromarketing",
+      "author": "Patrick Renvoise",
+      "genre": "marketing",
+      "genre_display": "Marketing",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 33,
+      "title": "unix network programming",
+      "author": "Richard Stevens",
+      "genre": "computer science",
+      "genre_display": "Computer Science",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 34,
+      "title": "Inside COM",
+      "author": "Dale Rogerson",
+      "genre": "computer science",
+      "genre_display": "Computer Science",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 35,
+      "title": "Managing organizational change",
+      "author": "Nilakant",
+      "genre": "management",
+      "genre_display": "Management",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 36,
+      "title": "The divine romance",
+      "author": "Paramhansa Yogananda",
+      "genre": "spirituality",
+      "genre_display": "Spirituality",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 37,
+      "title": "Prayers of life",
+      "author": "Nancy Parker Brumett",
+      "genre": "biblical",
+      "genre_display": "Biblical",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 38,
+      "title": "Gaban",
+      "author": "Munshi Premchand",
+      "genre": "fiction",
+      "genre_display": "Fiction",
+      "copies": 1,
+      "language": "Hindi",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 39,
+      "title": "PMBOK",
+      "author": "PMI",
+      "genre": "management",
+      "genre_display": "Management",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 40,
+      "title": "Head first PMP",
+      "author": "Jennifer Greene",
+      "genre": "management",
+      "genre_display": "Management",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 41,
+      "title": "SAFE 4.0 Distilled",
+      "author": "Richard Knaster",
+      "genre": "management",
+      "genre_display": "Management",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 42,
+      "title": "Agile estimating and planning",
+      "author": "Jim Higsmith",
+      "genre": "management",
+      "genre_display": "Management",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 43,
+      "title": "The elusive consciousness",
+      "author": "Achinta Yajnik",
+      "genre": "spirituality",
+      "genre_display": "Spirituality",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 44,
+      "title": "Certififed Scrum master",
+      "author": "Scrum alliance",
+      "genre": "management",
+      "genre_display": "Management",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 45,
+      "title": "Nexus",
+      "author": "Yuval Noah Harari",
+      "genre": "history",
+      "genre_display": "History",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 46,
+      "title": "Sapiens",
+      "author": "Yuval Noah Harari",
+      "genre": "history",
+      "genre_display": "History",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 47,
+      "title": "21 lessons",
+      "author": "Yuval Noah Harari",
+      "genre": "history",
+      "genre_display": "History",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 48,
+      "title": "Homo Deus",
+      "author": "Yuval Noah Harari",
+      "genre": "history",
+      "genre_display": "History",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 49,
+      "title": "Sita",
+      "author": "Devdutt Pattanaik",
+      "genre": "spirituality",
+      "genre_display": "Spirituality",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 50,
+      "title": "Shyam",
+      "author": "Devdutt Pattanaik",
+      "genre": "spirituality",
+      "genre_display": "Spirituality",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 51,
+      "title": "Jaya",
+      "author": "Devdutt Pattanaik",
+      "genre": "spirituality",
+      "genre_display": "Spirituality",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 52,
+      "title": "The diagry of a young girl",
+      "author": "Anne Frank",
+      "genre": "fiction",
+      "genre_display": "Fiction",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 53,
+      "title": "Contemporary history",
+      "author": "NCERT",
+      "genre": "history",
+      "genre_display": "History",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 54,
+      "title": "8 STD English Question Bank",
+      "author": "Oswaal",
+      "genre": "english",
+      "genre_display": "English",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 55,
+      "title": "GRE Barrons",
+      "author": "Barrons",
+      "genre": "gre",
+      "genre_display": "GRE",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 56,
+      "title": "Science 7th std",
+      "author": "NCERT",
+      "genre": "science",
+      "genre_display": "Science",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 57,
+      "title": "Magical book on quicker Maths",
+      "author": "Tyra",
+      "genre": "maths",
+      "genre_display": "Maths",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 58,
+      "title": "Std 7 Mathematics",
+      "author": "NCERT",
+      "genre": "maths",
+      "genre_display": "Maths",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 59,
+      "title": "Objective GK",
+      "author": "CSR",
+      "genre": "general studies",
+      "genre_display": "General Studies",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 60,
+      "title": "Std 10th Computers question bank",
+      "author": "NCERT",
+      "genre": "computer science",
+      "genre_display": "Computer Science",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 61,
+      "title": "7th STD mathematics",
+      "author": "RD Sharma",
+      "genre": "maths",
+      "genre_display": "Maths",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 62,
+      "title": "Beehive - 8th std english",
+      "author": "NCERT",
+      "genre": "english",
+      "genre_display": "English",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 63,
+      "title": "9th STD Mathematics",
+      "author": "NCERT",
+      "genre": "maths",
+      "genre_display": "Maths",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 64,
+      "title": "Quantitative Aptitude",
+      "author": "RS Aggarwal",
+      "genre": "maths",
+      "genre_display": "Maths",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 65,
+      "title": "Operating system concepts",
+      "author": "Galvin",
+      "genre": "computer science",
+      "genre_display": "Computer Science",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 66,
+      "title": "Kavya Kalp",
+      "author": "Shivmoti Azad",
+      "genre": "poetry",
+      "genre_display": "Poetry",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 67,
+      "title": "9th STD Mathematics",
+      "author": "NCERT",
+      "genre": "maths",
+      "genre_display": "Maths",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 68,
+      "title": "9th Science workbook 1",
+      "author": "NCERT",
+      "genre": "science",
+      "genre_display": "Science",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 69,
+      "title": "9th Science workbook 2",
+      "author": "NCERT",
+      "genre": "science",
+      "genre_display": "Science",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 70,
+      "title": "Words and Expressions 10th",
+      "author": "NCERT",
+      "genre": "english",
+      "genre_display": "English",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 71,
+      "title": "9th std economics",
+      "author": "NCERT",
+      "genre": "economics",
+      "genre_display": "Economics",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 72,
+      "title": "Democratic Politics 10th std",
+      "author": "NCERT",
+      "genre": "political science",
+      "genre_display": "Political Science",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 73,
+      "title": "10th std India and contemporary world",
+      "author": "NCERT",
+      "genre": "history",
+      "genre_display": "History",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 74,
+      "title": "Employability skills 10th std",
+      "author": "NCERT",
+      "genre": "management",
+      "genre_display": "Management",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 75,
+      "title": "6th new broadway english",
+      "author": "NCERT",
+      "genre": "english",
+      "genre_display": "English",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 76,
+      "title": "Good housekeeping microwave cooking",
+      "author": "Anonymous",
+      "genre": "cooking",
+      "genre_display": "Cooking",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 77,
+      "title": "10th std contemporary india 2",
+      "author": "NCERT",
+      "genre": "history",
+      "genre_display": "History",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 78,
+      "title": "Oracle database 11g",
+      "author": "McGrawHill",
+      "genre": "computer science",
+      "genre_display": "Computer Science",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 79,
+      "title": "Brilliant women in science",
+      "author": "Nancy Dickman",
+      "genre": "biopic",
+      "genre_display": "Biopic",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 80,
+      "title": "Biology",
+      "author": "DK publishers",
+      "genre": "biology",
+      "genre_display": "Biology",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 81,
+      "title": "9th std Beehive english",
+      "author": "NCERT",
+      "genre": "english",
+      "genre_display": "English",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 82,
+      "title": "Little innovators 1 and 2 std",
+      "author": "yuvipep",
+      "genre": "science",
+      "genre_display": "Science",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 83,
+      "title": "surya namaskar",
+      "author": "Anonymous",
+      "genre": "yoga",
+      "genre_display": "Yoga",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 84,
+      "title": "Sanchayan 9th std hindi",
+      "author": "NCERT",
+      "genre": "hindi",
+      "genre_display": "Hindi",
+      "copies": 1,
+      "language": "Hindi",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 85,
+      "title": "Anandamela",
+      "author": "Puja Edition",
+      "genre": "magazine",
+      "genre_display": "Magazine",
+      "copies": 2,
+      "language": "Bangla",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 86,
+      "title": "Competition Success review",
+      "author": "CSR",
+      "genre": "magazine",
+      "genre_display": "Magazine",
+      "copies": 22,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 87,
+      "title": "Magical mythology",
+      "author": "Stuti Gupta",
+      "genre": "fiction",
+      "genre_display": "Fiction",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Unknown",
+      "flat": "UNKNOWN"
+    },
+    {
+      "id": 88,
+      "title": "Readers Digest",
+      "author": "Readers Digest",
+      "genre": "magazine",
+      "genre_display": "Magazine",
+      "copies": 15,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 89,
+      "title": "Children Encyclopedia",
+      "author": "Pegasus",
+      "genre": "encyclopedia",
+      "genre_display": "Encyclopedia",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Unknown",
+      "flat": "UNKNOWN"
+    },
+    {
+      "id": 90,
+      "title": "Crossings",
+      "author": "Danielle Steel",
+      "genre": "fiction",
+      "genre_display": "Fiction",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Unknown",
+      "flat": "UNKNOWN"
+    },
+    {
+      "id": 91,
+      "title": "Prem Ras Siddhanth",
+      "author": "Kripalu Ji Maharaj",
+      "genre": "spirituality",
+      "genre_display": "Spirituality",
+      "copies": 1,
+      "language": "Hindi",
+      "donated_by": "Unknown",
+      "flat": "UNKNOWN"
+    },
+    {
+      "id": 92,
+      "title": "Vyas Pushpanjali",
+      "author": "Anonymous",
+      "genre": "spirituality",
+      "genre_display": "Spirituality",
+      "copies": 1,
+      "language": "Hindi",
+      "donated_by": "Unknown",
+      "flat": "UNKNOWN"
+    },
+    {
+      "id": 93,
+      "title": "Famous Five - On treasure island",
+      "author": "Enid Blyton",
+      "genre": "fiction",
+      "genre_display": "Fiction",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Unknown",
+      "flat": "UNKNOWN"
+    },
+    {
+      "id": 94,
+      "title": "Desh",
+      "author": "Magazine",
+      "genre": "magazine",
+      "genre_display": "Magazine",
+      "copies": 18,
+      "language": "Bangla",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    }
+  ]
+}
