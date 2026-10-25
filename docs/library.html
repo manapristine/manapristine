@@ -448,35 +448,6 @@
       border-color: var(--accent);
     }
 
-    .view-toggle {
-      display: flex;
-      background: var(--pill-bg);
-      border-radius: var(--radius-full);
-      padding: 3px;
-      border: 1px solid var(--line);
-    }
-
-    .view-btn {
-      border: 0;
-      background: transparent;
-      padding: 6px 12px;
-      border-radius: var(--radius-full);
-      cursor: pointer;
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--muted);
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      transition: all 0.2s ease;
-    }
-
-    .view-btn.active {
-      background: var(--card-bg);
-      color: var(--ink-strong);
-      box-shadow: var(--shadow-sm);
-    }
-
     /* Genre & Language Chips */
     .chips-section {
       display: flex;
@@ -585,46 +556,15 @@
       text-decoration: underline;
     }
 
-    /* Book Catalog Grid */
-    .books-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 16px;
+    .table-hint {
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
     }
 
-    .book-card {
-      background: var(--card-bg);
-      border: 1px solid var(--line);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
-      cursor: pointer;
-      position: relative;
-    }
-
-    .book-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-lg);
-      border-color: var(--accent);
-    }
-
-    /* Decorative Book Cover Header */
-    .book-cover {
-      height: 110px;
-      position: relative;
-      padding: 14px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      color: #ffffff;
-      background-size: 200% 200%;
-      overflow: hidden;
-    }
-
-    /* Dynamic cover gradients by genre group */
+    /* Modal Cover Gradients (used in modal hero) */
     .cover-philosophy, .cover-spirituality {
       background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
     }
@@ -650,155 +590,33 @@
       background: linear-gradient(135deg, #134e4a 0%, #14b8a6 100%);
     }
 
-    .book-cover::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.18), transparent 50%);
-      pointer-events: none;
-    }
-
-    .cover-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .book-id-badge {
-      font-size: 0.68rem;
-      font-weight: 700;
-      background: rgba(0, 0, 0, 0.28);
-      backdrop-filter: blur(4px);
-      padding: 3px 8px;
-      border-radius: var(--radius-full);
-      letter-spacing: 0.05em;
-    }
-
-    .book-copies-badge {
-      font-size: 0.68rem;
-      font-weight: 700;
-      background: rgba(255, 255, 255, 0.25);
-      backdrop-filter: blur(4px);
-      padding: 3px 8px;
-      border-radius: var(--radius-full);
-      display: inline-flex;
-      align-items: center;
-      gap: 3px;
-    }
-
-    .cover-book-spine {
-      position: absolute;
-      left: 12px;
-      bottom: -10px;
-      font-size: 3.5rem;
-      opacity: 0.18;
-      user-select: none;
-      pointer-events: none;
-    }
-
-    .cover-lang {
-      align-self: flex-end;
-      font-size: 0.68rem;
-      font-weight: 700;
-      background: rgba(0, 0, 0, 0.35);
-      backdrop-filter: blur(4px);
-      padding: 2px 8px;
-      border-radius: var(--radius-full);
-      position: relative;
-      z-index: 1;
-    }
-
-    /* Book Body */
-    .book-body {
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      gap: 10px;
-    }
-
-    .book-genre-tag {
-      font-size: 0.68rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--accent);
-    }
-
-    .book-title {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--ink-strong);
-      line-height: 1.3;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      min-height: 2.6em;
-    }
-
-    .book-author {
-      font-size: 0.85rem;
-      color: var(--muted);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .book-author span {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .book-divider {
-      height: 1px;
-      background: var(--line-subtle);
-      margin-top: auto;
-    }
-
-    .book-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.76rem;
-      color: var(--muted);
-      padding-top: 2px;
-    }
-
-    .donor-pill {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-weight: 500;
-    }
-
     .donor-flat {
       font-weight: 700;
-      padding: 1px 6px;
+      padding: 2px 7px;
       border-radius: 4px;
       background: var(--accent-soft);
       color: var(--accent);
-      font-size: 0.7rem;
+      font-size: 0.72rem;
+      display: inline-block;
     }
 
-    /* Table View */
+    /* Book Catalog Table */
     .table-container {
       background: var(--card-bg);
       border: 1px solid var(--line);
       border-radius: var(--radius-md);
       overflow-x: auto;
       box-shadow: var(--shadow-sm);
+      position: relative;
     }
 
     .books-table {
       width: 100%;
-      border-collapse: collapse;
+      border-collapse: separate;
+      border-spacing: 0;
       font-size: 0.86rem;
       text-align: left;
-      min-width: 760px;
+      min-width: 860px;
     }
 
     .books-table th {
@@ -808,24 +626,173 @@
       font-size: 0.74rem;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      padding: 12px 16px;
-      border-bottom: 1px solid var(--line);
+      padding: 13px 16px;
+      border-bottom: 2px solid var(--line);
+      white-space: nowrap;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+
+    .books-table th.sortable {
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .books-table th.sortable:hover {
+      background: var(--line-subtle);
+      color: var(--ink-strong);
+    }
+
+    .books-table th.active-sort {
+      color: var(--accent);
+      background: var(--accent-tint);
+      border-bottom-color: var(--accent);
+    }
+
+    .th-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .sort-indicator {
+      font-size: 0.75rem;
+      opacity: 0.45;
+      display: inline-block;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+
+    .active-sort .sort-indicator {
+      opacity: 1;
+      color: var(--accent);
+      font-weight: 800;
     }
 
     .books-table td {
-      padding: 12px 16px;
+      padding: 13px 16px;
       border-bottom: 1px solid var(--line-subtle);
       color: var(--ink);
+      vertical-align: middle;
+      transition: background 0.15s ease;
     }
 
-    .books-table tr:hover td {
-      background: var(--accent-tint);
+    .books-table tbody tr {
       cursor: pointer;
+      transition: background 0.15s ease;
+    }
+
+    .books-table tbody tr:hover td {
+      background: var(--accent-tint);
+    }
+
+    .books-table tbody tr:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: -2px;
+    }
+
+    .books-table tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .books-table .id-col {
+      font-family: "Outfit", monospace, sans-serif;
+      font-weight: 700;
+    }
+
+    .book-id-badge-cell {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+      background: var(--pill-bg);
+      border: 1px solid var(--line-subtle);
+      color: var(--ink-strong);
     }
 
     .books-table .title-col {
-      font-weight: 700;
+      font-weight: 600;
       color: var(--ink-strong);
+      max-width: 320px;
+    }
+
+    .books-table .author-col {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .table-genre-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: var(--radius-full);
+      background: var(--accent-soft);
+      color: var(--accent);
+      white-space: nowrap;
+      letter-spacing: 0.02em;
+    }
+
+    .table-copies-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 26px;
+      height: 24px;
+      padding: 0 6px;
+      border-radius: var(--radius-full);
+      font-weight: 700;
+      font-size: 0.78rem;
+      background: var(--pill-bg);
+      color: var(--ink-strong);
+      border: 1px solid var(--line-subtle);
+    }
+
+    .table-copies-badge.multi {
+      background: var(--gold-soft);
+      color: var(--gold);
+      border-color: rgba(180, 83, 9, 0.2);
+    }
+
+    .table-lang-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+      background: var(--pill-bg);
+      color: var(--muted);
+      border: 1px solid var(--line-subtle);
+    }
+
+    .table-action-cell {
+      text-align: right;
+    }
+
+    .table-view-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent);
+      background: var(--card-bg);
+      border: 1px solid var(--accent);
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .books-table tbody tr:hover .table-view-btn {
+      background: var(--accent);
+      color: #ffffff;
+    }
+
+    [data-theme="dark"] .books-table tbody tr:hover .table-view-btn {
+      color: #0f141d;
     }
 
     /* Modal / Drawer */
@@ -1050,13 +1017,21 @@
         align-items: stretch;
       }
       .filter-actions {
-        justify-content: space-between;
+        width: 100%;
+        display: flex;
+        gap: 8px;
       }
-      .books-grid {
-        grid-template-columns: 1fr;
+      .filter-actions select {
+        flex: 1;
       }
       .detail-grid {
         grid-template-columns: 1fr;
+      }
+      .books-table th, .books-table td {
+        padding: 10px 12px;
+      }
+      .table-hint {
+        display: none;
       }
     }
   </style>
@@ -1134,16 +1109,19 @@
 
           <select id="sort-select" class="select-dropdown" aria-label="Sort Books">
             <option value="id_asc">Sr# (Catalogue Order)</option>
+            <option value="id_desc">Sr# (Reverse Order)</option>
             <option value="title_asc">Title (A → Z)</option>
             <option value="title_desc">Title (Z → A)</option>
             <option value="author_asc">Author (A → Z)</option>
+            <option value="author_desc">Author (Z → A)</option>
+            <option value="genre_asc">Genre (A → Z)</option>
+            <option value="genre_desc">Genre (Z → A)</option>
             <option value="copies_desc">Copies (Most → Least)</option>
+            <option value="copies_asc">Copies (Least → Most)</option>
+            <option value="language_asc">Language (A → Z)</option>
+            <option value="donor_asc">Donated By (A → Z)</option>
+            <option value="flat_asc">Flat Number</option>
           </select>
-
-          <div class="view-toggle">
-            <button id="view-grid-btn" class="view-btn active" title="Grid View">🗂️ Grid</button>
-            <button id="view-table-btn" class="view-btn" title="Table View">📋 Table</button>
-          </div>
         </div>
       </div>
 
@@ -1158,28 +1136,42 @@
       <!-- Filter feedback bar -->
       <div class="results-summary">
         <span class="results-count" id="results-count">Loading library collection...</span>
+        <span class="table-hint">💡 Click any column header to sort &bull; Click row for details</span>
         <button id="reset-filters-btn" class="btn-reset">↺ Reset Filters</button>
       </div>
     </section>
 
-    <!-- Book Catalog Views -->
+    <!-- Book Catalog Table -->
     <main>
-      <!-- Grid View -->
-      <div id="books-grid" class="books-grid"></div>
-
-      <!-- Table View -->
-      <div id="books-table-container" class="table-container" style="display: none;">
-        <table class="books-table">
+      <div id="books-table-container" class="table-container">
+        <table class="books-table" id="books-table">
           <thead>
             <tr>
-              <th style="width: 60px;">Sr#</th>
-              <th>Book Title</th>
-              <th>Author</th>
-              <th>Genre</th>
-              <th style="width: 80px;">Copies</th>
-              <th>Language</th>
-              <th>Donated By</th>
-              <th style="width: 70px;">Flat</th>
+              <th class="sortable active-sort" data-sort-field="id" style="width: 75px;" title="Click to sort by Catalogue Number">
+                <span class="th-wrap">Sr# <span class="sort-indicator" id="sort-ind-id">▲</span></span>
+              </th>
+              <th class="sortable" data-sort-field="title" title="Click to sort by Title">
+                <span class="th-wrap">Book Title <span class="sort-indicator" id="sort-ind-title">⇅</span></span>
+              </th>
+              <th class="sortable" data-sort-field="author" title="Click to sort by Author">
+                <span class="th-wrap">Author <span class="sort-indicator" id="sort-ind-author">⇅</span></span>
+              </th>
+              <th class="sortable" data-sort-field="genre" title="Click to sort by Genre">
+                <span class="th-wrap">Genre <span class="sort-indicator" id="sort-ind-genre">⇅</span></span>
+              </th>
+              <th class="sortable" data-sort-field="copies" style="width: 85px; text-align: center;" title="Click to sort by Available Copies">
+                <span class="th-wrap" style="justify-content: center;">Copies <span class="sort-indicator" id="sort-ind-copies">⇅</span></span>
+              </th>
+              <th class="sortable" data-sort-field="language" style="width: 105px;" title="Click to sort by Language">
+                <span class="th-wrap">Language <span class="sort-indicator" id="sort-ind-language">⇅</span></span>
+              </th>
+              <th class="sortable" data-sort-field="donor" title="Click to sort by Donor">
+                <span class="th-wrap">Donated By <span class="sort-indicator" id="sort-ind-donor">⇅</span></span>
+              </th>
+              <th class="sortable" data-sort-field="flat" style="width: 80px; text-align: center;" title="Click to sort by Flat">
+                <span class="th-wrap" style="justify-content: center;">Flat <span class="sort-indicator" id="sort-ind-flat">⇅</span></span>
+              </th>
+              <th style="width: 85px; text-align: right;">Action</th>
             </tr>
           </thead>
           <tbody id="books-table-body"></tbody>
@@ -1274,7 +1266,6 @@
     let activeLanguage = "all";
     let activeSort = "id_asc";
     let searchQuery = "";
-    let currentView = "grid";
 
     // Theme initialization
     function initTheme() {
@@ -1434,7 +1425,18 @@
         if (activeSort === "title_asc") return a.title.localeCompare(b.title);
         if (activeSort === "title_desc") return b.title.localeCompare(a.title);
         if (activeSort === "author_asc") return a.author.localeCompare(b.author);
+        if (activeSort === "author_desc") return b.author.localeCompare(a.author);
+        if (activeSort === "genre_asc") return a.genre_display.localeCompare(b.genre_display);
+        if (activeSort === "genre_desc") return b.genre_display.localeCompare(a.genre_display);
         if (activeSort === "copies_desc") return b.copies - a.copies || a.id - b.id;
+        if (activeSort === "copies_asc") return a.copies - b.copies || a.id - b.id;
+        if (activeSort === "language_asc") return a.language.localeCompare(b.language);
+        if (activeSort === "language_desc") return b.language.localeCompare(a.language);
+        if (activeSort === "donor_asc") return a.donated_by.localeCompare(b.donated_by);
+        if (activeSort === "donor_desc") return b.donated_by.localeCompare(a.donated_by);
+        if (activeSort === "flat_asc") return a.flat.localeCompare(b.flat, undefined, { numeric: true });
+        if (activeSort === "flat_desc") return b.flat.localeCompare(a.flat, undefined, { numeric: true });
+        if (activeSort === "id_desc") return b.id - a.id;
         return a.id - b.id; // id_asc default
       });
 
@@ -1449,60 +1451,14 @@
       resetBtn.style.display = isFiltered ? "inline-flex" : "none";
 
       const emptyEl = document.getElementById("empty-state");
+      const tableContainer = document.getElementById("books-table-container");
       if (filtered.length === 0) {
         emptyEl.style.display = "block";
-        document.getElementById("books-grid").style.display = "none";
-        document.getElementById("books-table-container").style.display = "none";
+        tableContainer.style.display = "none";
       } else {
         emptyEl.style.display = "none";
-        if (currentView === "grid") {
-          document.getElementById("books-grid").style.display = "grid";
-          document.getElementById("books-table-container").style.display = "none";
-          renderGridView(filtered);
-        } else {
-          document.getElementById("books-grid").style.display = "none";
-          document.getElementById("books-table-container").style.display = "block";
-          renderTableView(filtered);
-        }
-      }
-    }
-
-    function renderGridView(books) {
-      const grid = document.getElementById("books-grid");
-      grid.innerHTML = "";
-
-      for (const b of books) {
-        const card = document.createElement("article");
-        card.className = "book-card";
-        const coverClass = getGenreCoverClass(b.genre);
-
-        card.innerHTML = `
-          <div class="book-cover ${coverClass}">
-            <div class="cover-top">
-              <span class="book-id-badge">#${b.id}</span>
-              <span class="book-copies-badge">📚 ${b.copies} ${b.copies > 1 ? 'copies' : 'copy'}</span>
-            </div>
-            <div class="cover-book-spine">📖</div>
-            <span class="cover-lang">${esc(b.language)}</span>
-          </div>
-          <div class="book-body">
-            <span class="book-genre-tag">${esc(b.genre_display)}</span>
-            <h3 class="book-title" title="${esc(b.title)}">${esc(b.title)}</h3>
-            <div class="book-author">
-              <span>✍️ ${esc(b.author)}</span>
-            </div>
-            <div class="book-divider"></div>
-            <div class="book-footer">
-              <div class="donor-pill">
-                <span>🎁 ${esc(b.donated_by)}</span>
-              </div>
-              <span class="donor-flat">${esc(b.flat)}</span>
-            </div>
-          </div>
-        `;
-
-        card.addEventListener("click", () => openBookModal(b));
-        grid.appendChild(card);
+        tableContainer.style.display = "block";
+        renderTableView(filtered);
       }
     }
 
@@ -1512,20 +1468,67 @@
 
       for (const b of books) {
         const tr = document.createElement("tr");
+        tr.setAttribute("tabindex", "0");
+        tr.setAttribute("role", "button");
+        tr.setAttribute("aria-label", `View details for ${b.title}`);
         tr.innerHTML = `
-          <td><strong>#${b.id}</strong></td>
+          <td class="id-col"><span class="book-id-badge-cell">#${b.id}</span></td>
           <td class="title-col">${esc(b.title)}</td>
-          <td>${esc(b.author)}</td>
-          <td><span style="font-weight:600; color:var(--accent);">${esc(b.genre_display)}</span></td>
-          <td><strong>${b.copies}</strong></td>
-          <td>${esc(b.language)}</td>
+          <td class="author-col">${esc(b.author)}</td>
+          <td><span class="table-genre-badge">${esc(b.genre_display)}</span></td>
+          <td style="text-align: center;"><span class="table-copies-badge ${b.copies > 1 ? 'multi' : ''}">${b.copies}</span></td>
+          <td><span class="table-lang-badge">${esc(b.language)}</span></td>
           <td>${esc(b.donated_by)}</td>
-          <td><span class="donor-flat">${esc(b.flat)}</span></td>
+          <td style="text-align: center;"><span class="donor-flat">${esc(b.flat)}</span></td>
+          <td class="table-action-cell"><span class="table-view-btn">View ↗</span></td>
         `;
         tr.addEventListener("click", () => openBookModal(b));
+        tr.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            openBookModal(b);
+          }
+        });
         tbody.appendChild(tr);
       }
     }
+
+    // Interactive Table Header Sorting
+    function updateHeaderSortIndicators() {
+      const headers = document.querySelectorAll(".books-table th.sortable");
+      headers.forEach(th => {
+        const field = th.dataset.sortField;
+        const ind = document.getElementById(`sort-ind-${field}`);
+        if (!ind) return;
+        if (activeSort === `${field}_asc`) {
+          th.classList.add("active-sort");
+          ind.textContent = "▲";
+        } else if (activeSort === `${field}_desc`) {
+          th.classList.add("active-sort");
+          ind.textContent = "▼";
+        } else {
+          th.classList.remove("active-sort");
+          ind.textContent = "⇅";
+        }
+      });
+    }
+
+    document.querySelectorAll(".books-table th.sortable").forEach(th => {
+      th.addEventListener("click", () => {
+        const field = th.dataset.sortField;
+        if (activeSort === `${field}_asc`) {
+          activeSort = `${field}_desc`;
+        } else {
+          activeSort = `${field}_asc`;
+        }
+        const sortSelect = document.getElementById("sort-select");
+        if (sortSelect.querySelector(`option[value="${activeSort}"]`)) {
+          sortSelect.value = activeSort;
+        }
+        updateHeaderSortIndicators();
+        applyFilters();
+      });
+    });
 
     // Modal popup
     const modal = document.getElementById("book-modal");
@@ -1585,24 +1588,7 @@
 
     document.getElementById("sort-select").addEventListener("change", (e) => {
       activeSort = e.target.value;
-      applyFilters();
-    });
-
-    // View toggles
-    const gridBtn = document.getElementById("view-grid-btn");
-    const tableBtn = document.getElementById("view-table-btn");
-
-    gridBtn.addEventListener("click", () => {
-      gridBtn.classList.add("active");
-      tableBtn.classList.remove("active");
-      currentView = "grid";
-      applyFilters();
-    });
-
-    tableBtn.addEventListener("click", () => {
-      tableBtn.classList.add("active");
-      gridBtn.classList.remove("active");
-      currentView = "table";
+      updateHeaderSortIndicators();
       applyFilters();
     });
 
@@ -1613,9 +1599,12 @@
       searchClear.style.display = "none";
       activeGenre = "all";
       activeLanguage = "all";
+      activeSort = "id_asc";
+      document.getElementById("sort-select").value = "id_asc";
       document.getElementById("lang-select").value = "all";
       document.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
       document.querySelector('[data-genre="all"]').classList.add("active");
+      updateHeaderSortIndicators();
       applyFilters();
     });
 
