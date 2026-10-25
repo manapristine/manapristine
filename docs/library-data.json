@@ -2,17 +2,41 @@
   "metadata": {
     "title": "Mana Pristine Community Library",
     "source_file": "library-books.xlsx",
-    "generated_at": "2026-10-17T22:52:18.652394",
+    "generated_at": "2026-10-25T20:10:40.573839",
     "version": "1.0"
   },
   "summary": {
-    "total_titles": 129,
-    "total_copies": 182,
-    "excel_total_copies": 182,
-    "unique_genres": 37,
+    "total_titles": 239,
+    "total_copies": 307,
+    "excel_total_copies": 307,
+    "unique_genres": 43,
     "unique_languages": 3,
     "unique_donors": 3,
     "genre_breakdown": [
+      {
+        "genre": "maths",
+        "display": "Maths",
+        "titles": 26,
+        "copies": 26
+      },
+      {
+        "genre": "spirituality",
+        "display": "Spirituality",
+        "titles": 25,
+        "copies": 25
+      },
+      {
+        "genre": "physics",
+        "display": "Physics",
+        "titles": 24,
+        "copies": 24
+      },
+      {
+        "genre": "fiction",
+        "display": "Fiction",
+        "titles": 22,
+        "copies": 22
+      },
       {
         "genre": "leadership",
         "display": "Leadership",
@@ -20,28 +44,34 @@
         "copies": 15
       },
       {
-        "genre": "spirituality",
-        "display": "Spirituality",
-        "titles": 12,
-        "copies": 12
+        "genre": "management",
+        "display": "Management",
+        "titles": 14,
+        "copies": 14
       },
       {
-        "genre": "fiction",
-        "display": "Fiction",
+        "genre": "computer science",
+        "display": "Computer Science",
         "titles": 11,
         "copies": 11
       },
       {
-        "genre": "management",
-        "display": "Management",
-        "titles": 8,
-        "copies": 8
+        "genre": "science",
+        "display": "Science",
+        "titles": 11,
+        "copies": 11
+      },
+      {
+        "genre": "biopic",
+        "display": "Biopic",
+        "titles": 10,
+        "copies": 10
       },
       {
         "genre": "self-help",
         "display": "Self-Help",
-        "titles": 8,
-        "copies": 8
+        "titles": 9,
+        "copies": 9
       },
       {
         "genre": "history",
@@ -50,26 +80,20 @@
         "copies": 7
       },
       {
-        "genre": "science",
-        "display": "Science",
+        "genre": "magazine",
+        "display": "Magazine",
         "titles": 7,
-        "copies": 7
+        "copies": 75
       },
       {
-        "genre": "maths",
-        "display": "Maths",
+        "genre": "psychology",
+        "display": "Psychology",
         "titles": 6,
         "copies": 6
       },
       {
-        "genre": "biopic",
-        "display": "Biopic",
-        "titles": 5,
-        "copies": 5
-      },
-      {
-        "genre": "computer science",
-        "display": "Computer Science",
+        "genre": "chemistry",
+        "display": "Chemistry",
         "titles": 5,
         "copies": 5
       },
@@ -80,16 +104,22 @@
         "copies": 5
       },
       {
-        "genre": "magazine",
-        "display": "Magazine",
-        "titles": 4,
-        "copies": 57
-      },
-      {
         "genre": "philosophy",
         "display": "Philosophy",
         "titles": 4,
         "copies": 4
+      },
+      {
+        "genre": "economics",
+        "display": "Economics",
+        "titles": 3,
+        "copies": 3
+      },
+      {
+        "genre": "music",
+        "display": "Music",
+        "titles": 3,
+        "copies": 3
       },
       {
         "genre": "new-age",
@@ -104,20 +134,14 @@
         "copies": 2
       },
       {
-        "genre": "economics",
-        "display": "Economics",
+        "genre": "biology",
+        "display": "Biology",
         "titles": 2,
         "copies": 2
       },
       {
         "genre": "marketing",
         "display": "Marketing",
-        "titles": 2,
-        "copies": 2
-      },
-      {
-        "genre": "music",
-        "display": "Music",
         "titles": 2,
         "copies": 2
       },
@@ -134,20 +158,14 @@
         "copies": 2
       },
       {
+        "genre": "aerospace",
+        "display": "Aerospace",
+        "titles": 1,
+        "copies": 1
+      },
+      {
         "genre": "biblical",
         "display": "Biblical",
-        "titles": 1,
-        "copies": 1
-      },
-      {
-        "genre": "biology",
-        "display": "Biology",
-        "titles": 1,
-        "copies": 1
-      },
-      {
-        "genre": "chemistry",
-        "display": "Chemistry",
         "titles": 1,
         "copies": 1
       },
@@ -212,6 +230,18 @@
         "copies": 1
       },
       {
+        "genre": "meditation",
+        "display": "Meditation",
+        "titles": 1,
+        "copies": 1
+      },
+      {
+        "genre": "new age",
+        "display": "New Age",
+        "titles": 1,
+        "copies": 1
+      },
+      {
         "genre": "parenthood",
         "display": "Parenthood",
         "titles": 1,
@@ -224,8 +254,14 @@
         "copies": 1
       },
       {
-        "genre": "psychology",
-        "display": "Psychology",
+        "genre": "quiz",
+        "display": "Quiz",
+        "titles": 1,
+        "copies": 1
+      },
+      {
+        "genre": "sociology",
+        "display": "Sociology",
         "titles": 1,
         "copies": 1
       },
@@ -239,26 +275,26 @@
     "language_breakdown": [
       {
         "language": "English",
-        "titles": 123,
-        "copies": 158
+        "titles": 229,
+        "copies": 279
       },
       {
         "language": "Bangla",
-        "titles": 2,
-        "copies": 20
+        "titles": 3,
+        "copies": 21
       },
       {
         "language": "Hindi",
-        "titles": 4,
-        "copies": 4
+        "titles": 7,
+        "copies": 7
       }
     ],
     "donor_breakdown": [
       {
         "donor": "Samrat Kar",
         "flat": "F3",
-        "titles": 88,
-        "copies": 141
+        "titles": 198,
+        "copies": 266
       },
       {
         "donor": "Nisha",
@@ -1269,7 +1305,7 @@
       "author": "CSR",
       "genre": "magazine",
       "genre_display": "Magazine",
-      "copies": 22,
+      "copies": 23,
       "language": "English",
       "donated_by": "Samrat Kar",
       "flat": "F3"
@@ -1746,6 +1782,1216 @@
       "language": "English",
       "donated_by": "Nisha",
       "flat": "F16"
+    },
+    {
+      "id": 130,
+      "title": "India Today",
+      "author": "India Today",
+      "genre": "magazine",
+      "genre_display": "Magazine",
+      "copies": 15,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 131,
+      "title": "Denver",
+      "author": "Denver",
+      "genre": "magazine",
+      "genre_display": "Magazine",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 132,
+      "title": "Maths workbook 8th std - thinking room",
+      "author": "CBSE",
+      "genre": "maths",
+      "genre_display": "Maths",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 133,
+      "title": "Foundation Biology Pearson",
+      "author": "CBSE",
+      "genre": "biology",
+      "genre_display": "Biology",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 134,
+      "title": "Physics - DPC - 11th STD",
+      "author": "CBSE",
+      "genre": "physics",
+      "genre_display": "Physics",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 135,
+      "title": "Problems of Physical Chemistry",
+      "author": "IIT JEE",
+      "genre": "physics",
+      "genre_display": "Physics",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 136,
+      "title": "Airbus VS Boeing",
+      "author": "Rajat Narang",
+      "genre": "management",
+      "genre_display": "Management",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 135,
+      "title": "Albert Einstein",
+      "author": "Orange Education",
+      "genre": "biopic",
+      "genre_display": "Biopic",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 136,
+      "title": "Alexandar Graham Bell",
+      "author": "Orange Education",
+      "genre": "biopic",
+      "genre_display": "Biopic",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 137,
+      "title": "William Shakespeare",
+      "author": "Orange Education",
+      "genre": "biopic",
+      "genre_display": "Biopic",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 138,
+      "title": "Abraham Linkcoln",
+      "author": "Orange Education",
+      "genre": "biopic",
+      "genre_display": "Biopic",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 139,
+      "title": "Say it well",
+      "author": "Tery Szuplat",
+      "genre": "psychology",
+      "genre_display": "Psychology",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 140,
+      "title": "Think Without Ink",
+      "author": "K Venkataraman",
+      "genre": "psychology",
+      "genre_display": "Psychology",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 141,
+      "title": "Aircraft performance and design",
+      "author": "John Anderson Jr",
+      "genre": "aerospace",
+      "genre_display": "Aerospace",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 142,
+      "title": "Pearson IIT Foundation Mathematics",
+      "author": "Pearson",
+      "genre": "maths",
+      "genre_display": "Maths",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 143,
+      "title": "Pearson IIIT Foundation Physics",
+      "author": "Pearson",
+      "genre": "physics",
+      "genre_display": "Physics",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 144,
+      "title": "Cengage JEE Mechanics II",
+      "author": "B M Sharma",
+      "genre": "physics",
+      "genre_display": "Physics",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 145,
+      "title": "Cengage JEE Magnetism & Electromagnetic Induction",
+      "author": "B M Sharma",
+      "genre": "physics",
+      "genre_display": "Physics",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 146,
+      "title": "Cengage JEE Electrostatics & Current Electricity",
+      "author": "B M Sharma",
+      "genre": "physics",
+      "genre_display": "Physics",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 147,
+      "title": "Cengage JEE Optics & Modern Physics",
+      "author": "B M Sharma",
+      "genre": "physics",
+      "genre_display": "Physics",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 148,
+      "title": "Cengage JEE Waves & Thermodynamics",
+      "author": "B M Sharma",
+      "genre": "physics",
+      "genre_display": "Physics",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 149,
+      "title": "Irodov Problems in general physics - Solutions 1",
+      "author": "Abhay Kumar Singh",
+      "genre": "physics",
+      "genre_display": "Physics",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 150,
+      "title": "Irodov Problems in general physics - Solutions 2",
+      "author": "Abhay Kumar Singh",
+      "genre": "physics",
+      "genre_display": "Physics",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 151,
+      "title": "Principles of Physics - Resnick Halliday",
+      "author": "Resnick Halliday",
+      "genre": "physics",
+      "genre_display": "Physics",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 152,
+      "title": "High school mathematics - MIR Publishers, Moscow",
+      "author": "Kondratyeva L A",
+      "genre": "maths",
+      "genre_display": "Maths",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 153,
+      "title": "Mathematics Guide",
+      "author": "Shambhu Chatterjee",
+      "genre": "maths",
+      "genre_display": "Maths",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 154,
+      "title": "Fundamentals of Physics - Part1 - MIR Publishers, Moscow",
+      "author": "B M Yavorsky",
+      "genre": "physics",
+      "genre_display": "Physics",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 155,
+      "title": "Fundamentals of Physics - Part2 - MIR Publishers, Moscow",
+      "author": "B M Yavorsky",
+      "genre": "physics",
+      "genre_display": "Physics",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 156,
+      "title": "Numerical Exampls in Physics",
+      "author": "Brij Lal",
+      "genre": "physics",
+      "genre_display": "Physics",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 157,
+      "title": "Modern Approach to Intermediate Calculus",
+      "author": "Das Gupta",
+      "genre": "maths",
+      "genre_display": "Maths",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 158,
+      "title": "Modern C++ Design Patterns",
+      "author": "Andrei Alexandrescu",
+      "genre": "computer science",
+      "genre_display": "Computer Science",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 159,
+      "title": "In spite of the Gods",
+      "author": "Edward Luce",
+      "genre": "sociology",
+      "genre_display": "Sociology",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 160,
+      "title": "University Physics",
+      "author": "Sears & Zemansky",
+      "genre": "physics",
+      "genre_display": "Physics",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 161,
+      "title": "Solomon's Organic Chemistry",
+      "author": "Graham Solomons",
+      "genre": "chemistry",
+      "genre_display": "Chemistry",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 162,
+      "title": "The language of Mathematics",
+      "author": "Keith Devlin",
+      "genre": "maths",
+      "genre_display": "Maths",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 163,
+      "title": "Introduction to Computation and Programming using python",
+      "author": "John V Guttag",
+      "genre": "computer science",
+      "genre_display": "Computer Science",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 164,
+      "title": "Fundamental laws of Mehcanics - MIR Publishers, Moscow",
+      "author": "I E Irodov",
+      "genre": "physics",
+      "genre_display": "Physics",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 165,
+      "title": "Problems of General Physics  - MIR Publishers, Moscow",
+      "author": "I E Irodov",
+      "genre": "physics",
+      "genre_display": "Physics",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 166,
+      "title": "Problems in Mathematics  - MIR Publishers, Moscow",
+      "author": "V Govorov",
+      "genre": "maths",
+      "genre_display": "Maths",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 167,
+      "title": "Mathematical Handbook - MIR Publishers, Moscow",
+      "author": "M Vygodsky",
+      "genre": "maths",
+      "genre_display": "Maths",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 168,
+      "title": "Elements of Physics",
+      "author": "PS Publishers",
+      "genre": "physics",
+      "genre_display": "Physics",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 169,
+      "title": "Chemistry 11th std practice papers",
+      "author": "Chhaya Publishers",
+      "genre": "chemistry",
+      "genre_display": "Chemistry",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 170,
+      "title": "Mathematics Exemplar Problems Std XI",
+      "author": "NCERT",
+      "genre": "maths",
+      "genre_display": "Maths",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 171,
+      "title": "Pearson IIT Foundation Chemistry",
+      "author": "Pearson",
+      "genre": "chemistry",
+      "genre_display": "Chemistry",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 172,
+      "title": "Mother",
+      "author": "Maxim Gorky",
+      "genre": "fiction",
+      "genre_display": "Fiction",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 173,
+      "title": "MCQ Mathematics - Xth Std",
+      "author": "R D Sharma",
+      "genre": "maths",
+      "genre_display": "Maths",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 174,
+      "title": "MCQ Mathematics - 1Xth Std",
+      "author": "R D Sharma",
+      "genre": "maths",
+      "genre_display": "Maths",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 175,
+      "title": "Mathematics - Std X",
+      "author": "R D Sharma",
+      "genre": "maths",
+      "genre_display": "Maths",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 176,
+      "title": "Mathematics - Std IX",
+      "author": "R D Sharma",
+      "genre": "maths",
+      "genre_display": "Maths",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 177,
+      "title": "New Simplified Physics XI Std",
+      "author": "S L Arora",
+      "genre": "physics",
+      "genre_display": "Physics",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 178,
+      "title": "Mathematics Vol 2 - Std XII",
+      "author": "R D Sharma",
+      "genre": "maths",
+      "genre_display": "Maths",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 179,
+      "title": "Ordinary Level Physics",
+      "author": "A F Abbott",
+      "genre": "physics",
+      "genre_display": "Physics",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 180,
+      "title": "Mathematics Exemplar Problems Std X",
+      "author": "NCERT",
+      "genre": "maths",
+      "genre_display": "Maths",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 181,
+      "title": "Hindi - 2nd language - 10th Std",
+      "author": "NCERT",
+      "genre": "maths",
+      "genre_display": "Maths",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 182,
+      "title": "Science Exemplear Problems - Std X",
+      "author": "NCERT",
+      "genre": "science",
+      "genre_display": "Science",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 183,
+      "title": "OCA OCP Java SE 7",
+      "author": "McGrawHill",
+      "genre": "computer science",
+      "genre_display": "Computer Science",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 184,
+      "title": "Algebra & Geometry",
+      "author": "Basher Science",
+      "genre": "science",
+      "genre_display": "Science",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 185,
+      "title": "Rocks & Minerals",
+      "author": "Basher Science",
+      "genre": "science",
+      "genre_display": "Science",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 186,
+      "title": "Sure, You're Joking, Mr. Feynman",
+      "author": "Richard Feynman",
+      "genre": "science",
+      "genre_display": "Science",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 187,
+      "title": "Moby Dick",
+      "author": "Herman Melville",
+      "genre": "fiction",
+      "genre_display": "Fiction",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 188,
+      "title": "The Why of Work",
+      "author": "Dave Ulrich",
+      "genre": "psychology",
+      "genre_display": "Psychology",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 189,
+      "title": "The New digital age",
+      "author": "Eric Schmidt",
+      "genre": "computer science",
+      "genre_display": "Computer Science",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 190,
+      "title": "The Fountainhead",
+      "author": "Ayn Rand",
+      "genre": "fiction",
+      "genre_display": "Fiction",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 192,
+      "title": "Deception Point",
+      "author": "Dan Brown",
+      "genre": "fiction",
+      "genre_display": "Fiction",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 193,
+      "title": "A Prisoner of Birth",
+      "author": "Jeffrey Archer",
+      "genre": "fiction",
+      "genre_display": "Fiction",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 194,
+      "title": "Mathematics Question Bank - 10th Std",
+      "author": "Rachna Sagar",
+      "genre": "maths",
+      "genre_display": "Maths",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 195,
+      "title": "Mathematics Practice Papers - 11th Std",
+      "author": "Chhaya Publishers",
+      "genre": "maths",
+      "genre_display": "Maths",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 196,
+      "title": "Pearson IIT Foundation Mathematics",
+      "author": "Pearson",
+      "genre": "maths",
+      "genre_display": "Maths",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 197,
+      "title": "Daily Inspirations",
+      "author": "Robin Sharma",
+      "genre": "psychology",
+      "genre_display": "Psychology",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 198,
+      "title": "George's secret key to universe",
+      "author": "Stephen Hawking",
+      "genre": "fiction",
+      "genre_display": "Fiction",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 199,
+      "title": "For the love of physics",
+      "author": "Walter Lewin",
+      "genre": "physics",
+      "genre_display": "Physics",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 200,
+      "title": "Twenty thousand leagues under the sea",
+      "author": "Jules Verne",
+      "genre": "fiction",
+      "genre_display": "Fiction",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 201,
+      "title": "The quiz book for spies",
+      "author": "H Becker",
+      "genre": "quiz",
+      "genre_display": "Quiz",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 202,
+      "title": "Nighttime too scared to sleep",
+      "author": "Todd Strasser",
+      "genre": "fiction",
+      "genre_display": "Fiction",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 203,
+      "title": "Katha prize stories volume 3",
+      "author": "Geeta Dharmarajan",
+      "genre": "fiction",
+      "genre_display": "Fiction",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 204,
+      "title": "Managing Business Process Flows",
+      "author": "Ravi Anupnidi",
+      "genre": "management",
+      "genre_display": "Management",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 205,
+      "title": "Indian Economy",
+      "author": "Ramesh Singh",
+      "genre": "economics",
+      "genre_display": "Economics",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 206,
+      "title": "Understanding the theory & design of organization",
+      "author": "Richard L Draft",
+      "genre": "management",
+      "genre_display": "Management",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 207,
+      "title": "Matrishakti",
+      "author": "Dakshnineshwar Kali Temple",
+      "genre": "magazine",
+      "genre_display": "Magazine",
+      "copies": 1,
+      "language": "Bangla",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 208,
+      "title": "Collected works of Ramana Maharshi",
+      "author": "Ramana Maharshi",
+      "genre": "spirituality",
+      "genre_display": "Spirituality",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 209,
+      "title": "God lived with them",
+      "author": "Swami Chetananda",
+      "genre": "spirituality",
+      "genre_display": "Spirituality",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 210,
+      "title": "Programming in C",
+      "author": "E Balagurusamy",
+      "genre": "computer science",
+      "genre_display": "Computer Science",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 211,
+      "title": "Physical Chemistry - 11th Std",
+      "author": "RC Mukherjee",
+      "genre": "chemistry",
+      "genre_display": "Chemistry",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 212,
+      "title": "Fundamentals of Physics - MIR Publishers Moscow",
+      "author": "B N Ivanov",
+      "genre": "physics",
+      "genre_display": "Physics",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 213,
+      "title": "The Blue Sweater",
+      "author": "Jacqueline Novogratz",
+      "genre": "fiction",
+      "genre_display": "Fiction",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 214,
+      "title": "Elements of Hindustanic Classical Music",
+      "author": "K J Yesudas",
+      "genre": "music",
+      "genre_display": "Music",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 215,
+      "title": "Confessions of an economic hitman",
+      "author": "John Perkins",
+      "genre": "fiction",
+      "genre_display": "Fiction",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 216,
+      "title": "The matic of Thinking Big",
+      "author": "David Schwartz",
+      "genre": "psychology",
+      "genre_display": "Psychology",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 217,
+      "title": "Contemporary Strategy Analysis",
+      "author": "Robert M Grant",
+      "genre": "management",
+      "genre_display": "Management",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 218,
+      "title": "Physics for Everyone - Physical Bodies - MIR",
+      "author": "K D Landau",
+      "genre": "physics",
+      "genre_display": "Physics",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 219,
+      "title": "An introduction to management science - Quantitaive approaches to decision making",
+      "author": "Andreson",
+      "genre": "management",
+      "genre_display": "Management",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 220,
+      "title": "Cooridnate Geometry",
+      "author": "S L Loney",
+      "genre": "maths",
+      "genre_display": "Maths",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 221,
+      "title": "Data Structures, Algorithms, and Applications in C++",
+      "author": "Sahni",
+      "genre": "computer science",
+      "genre_display": "Computer Science",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 222,
+      "title": "Electromagnetic waves",
+      "author": "Shevgaonkar",
+      "genre": "physics",
+      "genre_display": "Physics",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 223,
+      "title": "Staying on the path",
+      "author": "Wayne Dyer",
+      "genre": "new age",
+      "genre_display": "New Age",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 224,
+      "title": "Messiah's Handbook",
+      "author": "Richard Bach",
+      "genre": "self-help",
+      "genre_display": "Self-Help",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 225,
+      "title": "Narada Bhakti Sutra",
+      "author": "Srila A C Bhaktivedanta",
+      "genre": "spirituality",
+      "genre_display": "Spirituality",
+      "copies": 1,
+      "language": "Hindi",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 226,
+      "title": "Th elart of living - Vipassana Meditation",
+      "author": "S N Goenka",
+      "genre": "meditation",
+      "genre_display": "Meditation",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 227,
+      "title": "Autobiography of an unknown Indian",
+      "author": "Nirad C Chaudhuri",
+      "genre": "biopic",
+      "genre_display": "Biopic",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 228,
+      "title": "The Hill Shrine of Tirupati",
+      "author": "S K Ramachandra Rao",
+      "genre": "spirituality",
+      "genre_display": "Spirituality",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 229,
+      "title": "Unbundling sixth sense",
+      "author": "Ramnath Narayanswamy",
+      "genre": "management",
+      "genre_display": "Management",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 230,
+      "title": "Nari aur Divya Jivan",
+      "author": "Pathik Ji Maharaj",
+      "genre": "spirituality",
+      "genre_display": "Spirituality",
+      "copies": 1,
+      "language": "Hindi",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 231,
+      "title": "Mendacity in our Midst",
+      "author": "Dilip Ahuja",
+      "genre": "spirituality",
+      "genre_display": "Spirituality",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 232,
+      "title": "Commentary on Ten Maxims of Sahaj Marg",
+      "author": "Ram Chandra",
+      "genre": "spirituality",
+      "genre_display": "Spirituality",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 233,
+      "title": "Aushadhi Sangraha",
+      "author": "Pathik Ji Maharaj",
+      "genre": "spirituality",
+      "genre_display": "Spirituality",
+      "copies": 1,
+      "language": "Hindi",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 234,
+      "title": "At the feet of the master - vol 1",
+      "author": "Prashant Vasu",
+      "genre": "spirituality",
+      "genre_display": "Spirituality",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 235,
+      "title": "Faith",
+      "author": "Ferdinand Wulliemer",
+      "genre": "spirituality",
+      "genre_display": "Spirituality",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 236,
+      "title": "Reality at Dawn",
+      "author": "Ram Chandra",
+      "genre": "spirituality",
+      "genre_display": "Spirituality",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 237,
+      "title": "He Hookah and I",
+      "author": "Parthasarathi Rajagopalachari",
+      "genre": "spirituality",
+      "genre_display": "Spirituality",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 238,
+      "title": "Know your child",
+      "author": "Sri Sri Ravishankar",
+      "genre": "spirituality",
+      "genre_display": "Spirituality",
+      "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
     }
   ]
 }
