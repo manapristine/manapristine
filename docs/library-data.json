@@ -2,13 +2,13 @@
   "metadata": {
     "title": "Mana Pristine Community Library",
     "source_file": "library-books.xlsx",
-    "generated_at": "2026-10-25T20:22:52.861288",
+    "generated_at": "2026-10-25T20:34:48.535436",
     "version": "1.0"
   },
   "summary": {
-    "total_titles": 239,
-    "total_copies": 307,
-    "excel_total_copies": 307,
+    "total_titles": 240,
+    "total_copies": 328,
+    "excel_total_copies": 328,
     "unique_genres": 43,
     "unique_languages": 3,
     "unique_donors": 3,
@@ -74,16 +74,16 @@
         "copies": 9
       },
       {
+        "genre": "magazine",
+        "display": "Magazine",
+        "titles": 8,
+        "copies": 96
+      },
+      {
         "genre": "history",
         "display": "History",
         "titles": 7,
         "copies": 7
-      },
-      {
-        "genre": "magazine",
-        "display": "Magazine",
-        "titles": 7,
-        "copies": 75
       },
       {
         "genre": "psychology",
@@ -275,8 +275,8 @@
     "language_breakdown": [
       {
         "language": "English",
-        "titles": 229,
-        "copies": 279
+        "titles": 230,
+        "copies": 300
       },
       {
         "language": "Bangla",
@@ -293,8 +293,8 @@
       {
         "donor": "Samrat Kar",
         "flat": "F3",
-        "titles": 198,
-        "copies": 266
+        "titles": 199,
+        "copies": 287
       },
       {
         "donor": "Nisha",
@@ -2989,6 +2989,17 @@
       "genre": "spirituality",
       "genre_display": "Spirituality",
       "copies": 1,
+      "language": "English",
+      "donated_by": "Samrat Kar",
+      "flat": "F3"
+    },
+    {
+      "id": 239,
+      "title": "National Geographic",
+      "author": "National Geographic",
+      "genre": "magazine",
+      "genre_display": "Magazine",
+      "copies": 21,
       "language": "English",
       "donated_by": "Samrat Kar",
       "flat": "F3"
