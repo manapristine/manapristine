@@ -15,9 +15,11 @@ Mana Pristine is a financial management system for a housing society (apartment 
     - `members.csv`: Flat-to-owner mapping (flat, name, email, phone).
     - `occupants.csv`: Flat-to-occupant mapping (current resident/tenant).
     - `collection.csv`: Flat-to-name collection reference.
+    - `events.csv`: Chronological log of key society events and Management Committee (MC) decisions (`date,event,details`).
     - `workbooks.json`: Configuration mapping financial years to workbook files, cutoff dates, and the portal password.
 - **Processing Logic (`report_builder/`):**
-    - `report_builder.py`: Main engine that reads Excel data and produces JSON datasets and manifest for the dashboard.
+    - `report_builder.py`: Main engine that reads Excel data and produces JSON datasets and manifest for the dashboard (and automatically invokes `build_library.py` if `db/library/library-books.xlsx` is present).
+    - `checklist.md`: Comprehensive monthly runbook and QA checklist for portal updates.
     - `build_library.py`: Converts `db/library/library-books.xlsx` into `docs/library-data.json`, validating formula totals and book metadata.
     - `update_collections.py`: Automates updating collection sheets by parsing bank statements.
     - `update_water_consumption.py`: Updates EXPENSE sheets with water usage from WaterOn reports.
@@ -35,6 +37,9 @@ Mana Pristine is a financial management system for a housing society (apartment 
     - `report-manifest.json`: Index of generated report files.
 - **Communications (`comm/`):**
     - Society notices and communication templates in Markdown.
+- **Assets (`assets/`):**
+    - `docs/`: Operational reference documents, vendor quotations, warranty cards, and `pipeline-steps.md` (monthly accounting pipeline steps).
+    - `images/`: Dashboard/report screenshots and visual references.
 
 ## Technical Stack
 - **Backend:** Python 3.11+
@@ -96,6 +101,20 @@ pip install -r requirements.txt
   python report_builder/sync_members.py
   ```
 
+### Monthly Accounting Pipeline Order (`assets/docs/pipeline-steps.md` & `report_builder/checklist.md`)
+1. Download the monthly bank statement (`<MMM>-<YYYY>.xls`) into `db/bankstatements/<YYYY-YYYY>/`.
+2. Copy the previous month's account workbook in `db/accounts/` to create a new dated workbook for the current month.
+3. Update `db/workbooks.json` for the current financial year only (`workbook` path and `cutoff-date-for-collection`).
+4. Download WaterOn meter readings (`Consumption Report <MMM>-<YYYY>.xlsx`) into `db/wateron/<YY-YY>/`.
+5. Validate and update WaterOn readings for the `{Month}{Year}-EXPENSE` sheet (`validate_water_meter_reading.py` and `update_water_consumption.py`).
+6. Run `update_collections.py` with the bank statement path (Option 1) to generate the processing report CSV.
+7. Review the processing report in the bank statement folder and remove/attribute unmatched items.
+8. Re-run `update_collections.py` (Option 2) to populate `{Month}{Year}-COLLECTION` in the workbook.
+9. Run `update_late_payment_fine.py` (saving the workbook in Excel before/after as needed so cached formula values are updated).
+10. Verify that late payment fines are accurately updated in the `{Month}{Year}-EXPENSE` sheet.
+11. Enter/update all monthly expenses in the `{Month}{Year}-EXPENSE` and `ANNUAL-EXPENSE-DETAILS` tabs, then save and close Excel to refresh cached formula results.
+12. Run `python report_builder/report_builder.py` to regenerate all JSON datasets in `docs/`.
+
 ## Project Conventions
 - **Financial Year:** April 1st to March 31st (e.g., "2025-26", "2026-27").
 - **Flats:** 64 flats in total (F1-F16, G1-G16, S1-S16, T1-T16). Flat identifiers are always normalized to uppercase.
@@ -120,5 +139,3 @@ pip install -r requirements.txt
 - **Pre-Read Upfront**: Always pre-read ALL required formula values with `data_only=True` into memory BEFORE making any cell modifications or saving the workbook. Saving a workbook with `openpyxl` strips cached formula values (`<v>` XML tags), causing subsequent `data_only=True` reads to return `None`.
 - NEVER dynamically calculate or estimate formula values in Python as fallbacks when a cell value is `None` or missing.
 - If a required cached formula value is missing or `None`, raise a `ValueError` instructing the user to open, save, and close the Excel workbook.
-
-

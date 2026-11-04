@@ -1033,7 +1033,7 @@
             </table>
           </div>
           <p style="margin:8px 0 0;font-size:0.75rem;color:var(--muted)">
-            <strong>Reconciliation Note:</strong> Total Vendor Expense (Fixed + Water &amp; Rent) matches the society's spreadsheet operating expense (Col 25 in <code>ANNUAL-EXPENSE-DETAILS</code>). Total Billed to Residents equals Total Vendor Expense plus Resident-Specific Bills &amp; Charges (matching the sum of all 64 flat maintenance bills).
+            <strong>Reconciliation Note:</strong> Total Vendor Expense (Fixed + Water &amp; Rent) matches the society's spreadsheet operating expense (Col 27 in <code>ANNUAL-EXPENSE-DETAILS</code>). Total Billed to Residents equals Total Vendor Expense plus Resident-Specific Bills &amp; Charges (matching the sum of all 64 flat maintenance bills).
           </p>
         </section>
 
@@ -1879,14 +1879,29 @@
       tbody.innerHTML = "";
       if (data.length === 0) return;
 
-      // Collect all unique line-item keys across all months
+      // Collect all unique line-item keys across all months, preserving spreadsheet column order
       const allKeys = new Set();
       for (const row of data) {
         for (const key of Object.keys(row.line_items || {})) {
           allKeys.add(key);
         }
       }
-      const lineItemKeys = Array.from(allKeys);
+      const canonicalOrder = [
+        "water", "stp sludge", "stp maintenance", "bescom", "security",
+        "garbage", "petty cash", "elevator", "plumbing", "electrical fix",
+        "generator", "gardening", "plumber wage", "electrician wage",
+        "manager wage", "dried leaves", "civil works", "accounting",
+        "water purifier & softner", "house keeping materials", "miscs"
+      ];
+      const orderMap = new Map(canonicalOrder.map((k, idx) => [k.toLowerCase(), idx]));
+      const lineItemKeys = Array.from(allKeys).sort((a, b) => {
+        const ia = orderMap.get(a.toLowerCase());
+        const ib = orderMap.get(b.toLowerCase());
+        if (ia !== undefined && ib !== undefined) return ia - ib;
+        if (ia !== undefined) return -1;
+        if (ib !== undefined) return 1;
+        return 0;
+      });
 
       // Header row
       const headerTr = document.createElement("tr");

@@ -838,6 +838,7 @@ def load_annual_expense_details(workbook_path: Path) -> list[dict[str, Any]]:
         ws = workbook[sheet_name]
         
         summary_indices, col_names = get_aed_column_map(ws)
+        always_include_cols = {"civil works", "miscs"}
 
         rows: list[dict[str, Any]] = []
         for row in ws.iter_rows(min_row=3, values_only=True):
@@ -847,18 +848,25 @@ def load_annual_expense_details(workbook_path: Path) -> list[dict[str, Any]]:
             month_str = str(month_name).strip()
             entry: dict[str, Any] = {"month": month_str}
 
-            # Individual line items (only include non-zero)
+            summary_vals: dict[str, float] = {}
+            for key in ["gross_expense", "gross_variable_expense", "gross_fixed_expense", "water_meter_rent", "total_expense"]:
+                idx = summary_indices.get(key)
+                summary_vals[key] = safe_number(row[idx] if idx is not None and len(row) > idx else 0)
+
+            has_row_data = any(
+                safe_number(row[ci] if len(row) > ci else 0) for ci, _ in col_names
+            ) or any(summary_vals[k] for k in ["gross_expense", "total_expense"])
+
+            # Individual line items (include non-zero items, plus always-included columns on active rows)
             line_items: dict[str, float] = {}
             for ci, name in col_names:
                 val = safe_number(row[ci] if len(row) > ci else 0)
-                if val:
+                if val or (has_row_data and name.strip().lower() in always_include_cols):
                     line_items[name] = val
             entry["line_items"] = line_items
 
             # Summary columns
-            for key in ["gross_expense", "gross_variable_expense", "gross_fixed_expense", "water_meter_rent", "total_expense"]:
-                idx = summary_indices.get(key)
-                entry[key] = safe_number(row[idx] if idx is not None and len(row) > idx else 0)
+            entry.update(summary_vals)
 
             rows.append(entry)
         return rows

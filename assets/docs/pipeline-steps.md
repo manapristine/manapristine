@@ -8,5 +8,6 @@
 8. after removing non matched items, run step 6 again for option 2
 9. run update_late_payment_file.py 
 10. check late payment fine is correctly updated.
-11. run report_builder.py 
+11. update all the expenses in the total monthly expense tab
+12. run report_builder.py 
 
