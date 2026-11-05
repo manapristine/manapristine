@@ -10,4 +10,5 @@
 10. check late payment fine is correctly updated.
 11. update all the expenses in the total monthly expense tab
 12. run report_builder.py 
+13. export red register into excel and pdf.
 

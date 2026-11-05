@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-04T08:21:11",
+  "generated_at": "2026-11-06T00:38:47",
   "financial_year": "2026-27",
-  "cutoff_date": "2026-09-30",
+  "cutoff_date": "2026-10-31",
   "sheet": "INCOME-EXPENSE-CYCLES",
   "report_count": 64,
   "reports": [
@@ -64,10 +64,10 @@
         {
           "month": "Oct 2026",
           "collection": 6456.18,
-          "expense": 5084.752086778745,
+          "expense": 8705.361461778746,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1371.427913221255
+          "net_collection_minus_expense": -2249.181461778746
         },
         {
           "month": "Nov 2026",
@@ -112,10 +112,10 @@
       ],
       "totals": {
         "collection": 44362.18,
-        "expense": 40004.223909636785,
+        "expense": 43624.833284636785,
         "late_fee": 0.0,
-        "net_collection_minus_expense": 4357.9560903632155,
-        "closing_balance": -5084.750147043895
+        "net_collection_minus_expense": 737.3467153632155,
+        "closing_balance": -8705.359522043895
       },
       "expense_breakdown": [
         {
@@ -247,7 +247,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 717.5802117787453,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -256,7 +256,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5084.752086778745
+          "total_expense": 8705.361461778746
         },
         {
           "month": "Nov 2026",
@@ -419,10 +419,10 @@
         {
           "month": "Oct 2026",
           "collection": 0.0,
-          "expense": 6698.31991903018,
+          "expense": 10318.92929403018,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -7698.31991903018
+          "net_collection_minus_expense": -11318.92929403018
         },
         {
           "month": "Nov 2026",
@@ -467,10 +467,10 @@
       ],
       "totals": {
         "collection": 16500.0,
-        "expense": 47251.48117817122,
+        "expense": 50872.09055317122,
         "late_fee": 3000.0,
-        "net_collection_minus_expense": -33751.48117817122,
-        "closing_balance": -31145.96320790045
+        "net_collection_minus_expense": -37372.09055317122,
+        "closing_balance": -34766.57258290045
       },
       "expense_breakdown": [
         {
@@ -602,7 +602,7 @@
           "num_meters": 4.0,
           "meter_rent": 494.7976,
           "total_water_expense": 1331.1480440301798,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -611,7 +611,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "total_expense": 6698.31991903018
+          "total_expense": 10318.92929403018
         },
         {
           "month": "Nov 2026",
@@ -774,10 +774,10 @@
         {
           "month": "Oct 2026",
           "collection": 6000.0,
-          "expense": 6452.05916283027,
+          "expense": 10072.66853783027,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": -452.05916283027
+          "net_collection_minus_expense": -4072.66853783027
         },
         {
           "month": "Nov 2026",
@@ -822,10 +822,10 @@
       ],
       "totals": {
         "collection": 59273.81,
-        "expense": 50386.328797371585,
+        "expense": 54006.938172371585,
         "late_fee": 0.0,
-        "net_collection_minus_expense": 8887.481202628413,
-        "closing_balance": 2250.2223816129044
+        "net_collection_minus_expense": 5266.871827628413,
+        "closing_balance": -1370.3869933870956
       },
       "expense_breakdown": [
         {
@@ -957,7 +957,7 @@
           "num_meters": 4.0,
           "meter_rent": 494.7976,
           "total_water_expense": 1334.88728783027,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 750.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -966,7 +966,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 6452.05916283027
+          "total_expense": 10072.66853783027
         },
         {
           "month": "Nov 2026",
@@ -1129,10 +1129,10 @@
         {
           "month": "Oct 2026",
           "collection": 803.0,
-          "expense": 5255.728175854142,
+          "expense": 8876.337550854141,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": -4452.728175854142
+          "net_collection_minus_expense": -8073.337550854141
         },
         {
           "month": "Nov 2026",
@@ -1177,10 +1177,10 @@
       ],
       "totals": {
         "collection": 43454.0,
-        "expense": 42074.81242632643,
+        "expense": 45695.42180132643,
         "late_fee": 1000.0,
-        "net_collection_minus_expense": 379.1875736735674,
-        "closing_balance": -5256.03430823276
+        "net_collection_minus_expense": -3241.4218013264326,
+        "closing_balance": -8876.64368323276
       },
       "expense_breakdown": [
         {
@@ -1312,7 +1312,7 @@
           "num_meters": 4.0,
           "meter_rent": 494.7976,
           "total_water_expense": 888.5563008541419,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -1321,7 +1321,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5255.728175854142
+          "total_expense": 8876.337550854141
         },
         {
           "month": "Nov 2026",
@@ -1484,10 +1484,10 @@
         {
           "month": "Oct 2026",
           "collection": 6427.0,
-          "expense": 5058.233699681787,
+          "expense": 8678.843074681787,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1368.7663003182133
+          "net_collection_minus_expense": -2251.8430746817867
         },
         {
           "month": "Nov 2026",
@@ -1532,10 +1532,10 @@
       ],
       "totals": {
         "collection": 40104.03,
-        "expense": 39807.6808628063,
+        "expense": 43428.2902378063,
         "late_fee": 0.0,
-        "net_collection_minus_expense": 296.34913719369797,
-        "closing_balance": -5058.535020515592
+        "net_collection_minus_expense": -3324.260237806302,
+        "closing_balance": -8679.144395515592
       },
       "expense_breakdown": [
         {
@@ -1667,7 +1667,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 691.0618246817867,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -1676,7 +1676,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5058.233699681787
+          "total_expense": 8678.843074681787
         },
         {
           "month": "Nov 2026",
@@ -1839,10 +1839,10 @@
         {
           "month": "Oct 2026",
           "collection": 0.0,
-          "expense": 5310.000284074579,
+          "expense": 8930.60965907458,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": -5310.000284074579
+          "net_collection_minus_expense": -8930.60965907458
         },
         {
           "month": "Nov 2026",
@@ -1887,10 +1887,10 @@
       ],
       "totals": {
         "collection": 40610.03,
-        "expense": 42028.73067557633,
+        "expense": 45649.34005057633,
         "late_fee": 0.0,
-        "net_collection_minus_expense": -1418.7006755763286,
-        "closing_balance": -12012.717419288949
+        "net_collection_minus_expense": -5039.310050576329,
+        "closing_balance": -15633.326794288949
       },
       "expense_breakdown": [
         {
@@ -2022,7 +2022,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 942.8284090745796,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -2031,7 +2031,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5310.000284074579
+          "total_expense": 8930.60965907458
         },
         {
           "month": "Nov 2026",
@@ -2194,10 +2194,10 @@
         {
           "month": "Oct 2026",
           "collection": 7838.0,
-          "expense": 5497.422806019198,
+          "expense": 9118.032181019198,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 2340.577193980802
+          "net_collection_minus_expense": -1280.032181019198
         },
         {
           "month": "Nov 2026",
@@ -2242,10 +2242,10 @@
       ],
       "totals": {
         "collection": 45026.54,
-        "expense": 43350.21240742113,
+        "expense": 46970.82178242113,
         "late_fee": 0.0,
-        "net_collection_minus_expense": 1676.3275925788694,
-        "closing_balance": -5497.427501008067
+        "net_collection_minus_expense": -1944.2817824211306,
+        "closing_balance": -9118.036876008067
       },
       "expense_breakdown": [
         {
@@ -2377,7 +2377,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 380.250931019198,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 750.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -2386,7 +2386,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5497.422806019198
+          "total_expense": 9118.032181019198
         },
         {
           "month": "Nov 2026",
@@ -2549,10 +2549,10 @@
         {
           "month": "Oct 2026",
           "collection": 6334.0,
-          "expense": 4972.671003315032,
+          "expense": 8593.280378315032,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1361.328996684968
+          "net_collection_minus_expense": -2259.280378315032
         },
         {
           "month": "Nov 2026",
@@ -2597,10 +2597,10 @@
       ],
       "totals": {
         "collection": 35439.08,
-        "expense": 38446.69651880741,
+        "expense": 42067.30589380741,
         "late_fee": 0.0,
-        "net_collection_minus_expense": -3007.6165188074083,
-        "closing_balance": -4973.115805907655
+        "net_collection_minus_expense": -6628.225893807408,
+        "closing_balance": -8593.725180907655
       },
       "expense_breakdown": [
         {
@@ -2732,7 +2732,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 605.4991283150323,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -2741,7 +2741,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 4972.671003315032
+          "total_expense": 8593.280378315032
         },
         {
           "month": "Nov 2026",
@@ -2904,10 +2904,10 @@
         {
           "month": "Oct 2026",
           "collection": 6389.0,
-          "expense": 5035.016561109886,
+          "expense": 8655.625936109887,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1353.9834388901136
+          "net_collection_minus_expense": -2266.6259361098873
         },
         {
           "month": "Nov 2026",
@@ -2952,10 +2952,10 @@
       ],
       "totals": {
         "collection": 34847.0,
-        "expense": 39285.65684768331,
+        "expense": 42906.26622268331,
         "late_fee": 0.0,
-        "net_collection_minus_expense": -4438.656847683313,
-        "closing_balance": -5035.914440307737
+        "net_collection_minus_expense": -8059.266222683313,
+        "closing_balance": -8656.523815307737
       },
       "expense_breakdown": [
         {
@@ -3087,7 +3087,7 @@
           "num_meters": 4.0,
           "meter_rent": 494.7976,
           "total_water_expense": 667.8446861098868,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -3096,7 +3096,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5035.016561109886
+          "total_expense": 8655.625936109887
         },
         {
           "month": "Nov 2026",
@@ -3259,10 +3259,10 @@
         {
           "month": "Oct 2026",
           "collection": 19330.0,
-          "expense": 5594.595229476981,
+          "expense": 9215.204604476981,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 13735.404770523019
+          "net_collection_minus_expense": 10114.795395523019
         },
         {
           "month": "Nov 2026",
@@ -3307,10 +3307,10 @@
       ],
       "totals": {
         "collection": 65756.0,
-        "expense": 43528.23741882438,
+        "expense": 47148.84679382438,
         "late_fee": 0.0,
-        "net_collection_minus_expense": 22227.762581175622,
-        "closing_balance": -5594.763013633237
+        "net_collection_minus_expense": 18607.153206175622,
+        "closing_balance": -9215.372388633237
       },
       "expense_breakdown": [
         {
@@ -3442,7 +3442,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 1227.4233544769818,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -3451,7 +3451,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5594.595229476981
+          "total_expense": 9215.204604476981
         },
         {
           "month": "Nov 2026",
@@ -3614,10 +3614,10 @@
         {
           "month": "Oct 2026",
           "collection": 6164.0,
-          "expense": 4817.574868930436,
+          "expense": 8438.184243930436,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1346.4251310695636
+          "net_collection_minus_expense": -2274.1842439304364
         },
         {
           "month": "Nov 2026",
@@ -3662,10 +3662,10 @@
       ],
       "totals": {
         "collection": 33484.0,
-        "expense": 37741.212250035656,
+        "expense": 41361.821625035656,
         "late_fee": 0.0,
-        "net_collection_minus_expense": -4257.212250035656,
-        "closing_balance": -4817.179709994132
+        "net_collection_minus_expense": -7877.821625035656,
+        "closing_balance": -8437.789084994132
       },
       "expense_breakdown": [
         {
@@ -3797,7 +3797,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 450.4029939304364,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -3806,7 +3806,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 4817.574868930436
+          "total_expense": 8438.184243930436
         },
         {
           "month": "Nov 2026",
@@ -3969,10 +3969,10 @@
         {
           "month": "Oct 2026",
           "collection": 6301.61,
-          "expense": 4943.389425027566,
+          "expense": 8563.998800027566,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1358.2205749724335
+          "net_collection_minus_expense": -2262.3888000275665
         },
         {
           "month": "Nov 2026",
@@ -4017,10 +4017,10 @@
       ],
       "totals": {
         "collection": 35904.58,
-        "expense": 39491.576609336174,
+        "expense": 43112.185984336174,
         "late_fee": 0.0,
-        "net_collection_minus_expense": -3586.9966093361727,
-        "closing_balance": -4943.388382262783
+        "net_collection_minus_expense": -7207.605984336173,
+        "closing_balance": -8563.997757262783
       },
       "expense_breakdown": [
         {
@@ -4152,7 +4152,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 576.2175500275665,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -4161,7 +4161,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 4943.389425027566
+          "total_expense": 8563.998800027566
         },
         {
           "month": "Nov 2026",
@@ -4324,10 +4324,10 @@
         {
           "month": "Oct 2026",
           "collection": 6409.22,
-          "expense": 4867.767884375,
+          "expense": 8488.377259375,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1541.4521156250003
+          "net_collection_minus_expense": -2079.1572593749997
         },
         {
           "month": "Nov 2026",
@@ -4372,10 +4372,10 @@
       ],
       "totals": {
         "collection": 38086.299999999996,
-        "expense": 41107.78663047851,
+        "expense": 44728.39600547851,
         "late_fee": 1000.0,
-        "net_collection_minus_expense": -4021.4866304785173,
-        "closing_balance": -4867.767487620971
+        "net_collection_minus_expense": -7642.096005478517,
+        "closing_balance": -8488.376862620971
       },
       "expense_breakdown": [
         {
@@ -4507,7 +4507,7 @@
           "num_meters": 4.0,
           "meter_rent": 494.7976,
           "total_water_expense": 500.596009375,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -4516,7 +4516,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 4867.767884375
+          "total_expense": 8488.377259375
         },
         {
           "month": "Nov 2026",
@@ -4679,10 +4679,10 @@
         {
           "month": "Oct 2026",
           "collection": 0.0,
-          "expense": 5036.899930229785,
+          "expense": 8657.509305229785,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": -5036.899930229785
+          "net_collection_minus_expense": -8657.509305229785
         },
         {
           "month": "Nov 2026",
@@ -4727,10 +4727,10 @@
       ],
       "totals": {
         "collection": 24207.0,
-        "expense": 40954.21975643789,
+        "expense": 44574.82913143789,
         "late_fee": 0.0,
-        "net_collection_minus_expense": -16747.219756437888,
-        "closing_balance": -29621.478226794236
+        "net_collection_minus_expense": -20367.829131437888,
+        "closing_balance": -33242.087601794236
       },
       "expense_breakdown": [
         {
@@ -4862,7 +4862,7 @@
           "num_meters": 4.0,
           "meter_rent": 494.7976,
           "total_water_expense": 669.7280552297848,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -4871,7 +4871,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5036.899930229785
+          "total_expense": 8657.509305229785
         },
         {
           "month": "Nov 2026",
@@ -5034,10 +5034,10 @@
         {
           "month": "Oct 2026",
           "collection": 0.0,
-          "expense": 5965.53130500318,
+          "expense": 9586.14068000318,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": -5965.53130500318
+          "net_collection_minus_expense": -9586.14068000318
         },
         {
           "month": "Nov 2026",
@@ -5082,10 +5082,10 @@
       ],
       "totals": {
         "collection": 38340.0,
-        "expense": 45948.39680808493,
+        "expense": 49569.00618308493,
         "late_fee": 0.0,
-        "net_collection_minus_expense": -7608.39680808493,
-        "closing_balance": -8030.797800397922
+        "net_collection_minus_expense": -11229.00618308493,
+        "closing_balance": -11651.407175397922
       },
       "expense_breakdown": [
         {
@@ -5217,7 +5217,7 @@
           "num_meters": 4.0,
           "meter_rent": 494.7976,
           "total_water_expense": 848.3594300031796,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 750.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -5226,7 +5226,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5965.53130500318
+          "total_expense": 9586.14068000318
         },
         {
           "month": "Nov 2026",
@@ -5389,10 +5389,10 @@
         {
           "month": "Oct 2026",
           "collection": 7395.83,
-          "expense": 5943.499669352983,
+          "expense": 9564.109044352983,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1452.330330647017
+          "net_collection_minus_expense": -2168.279044352983
         },
         {
           "month": "Nov 2026",
@@ -5437,10 +5437,10 @@
       ],
       "totals": {
         "collection": 60287.170000000006,
-        "expense": 46712.071373863626,
+        "expense": 50332.680748863626,
         "late_fee": 0.0,
-        "net_collection_minus_expense": 13575.09862613638,
-        "closing_balance": -42530.67904461917
+        "net_collection_minus_expense": 9954.48925113638,
+        "closing_balance": -46151.28841961917
       },
       "expense_breakdown": [
         {
@@ -5572,7 +5572,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 1576.3277943529824,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -5581,7 +5581,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5943.499669352983
+          "total_expense": 9564.109044352983
         },
         {
           "month": "Nov 2026",
@@ -5744,10 +5744,10 @@
         {
           "month": "Oct 2026",
           "collection": 6000.0,
-          "expense": 5511.555147953302,
+          "expense": 9132.164522953302,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 488.44485204669763
+          "net_collection_minus_expense": -3132.1645229533024
         },
         {
           "month": "Nov 2026",
@@ -5792,10 +5792,10 @@
       ],
       "totals": {
         "collection": 37016.0,
-        "expense": 44758.94857499811,
+        "expense": 48379.55794999811,
         "late_fee": 1000.0,
-        "net_collection_minus_expense": -8742.94857499811,
-        "closing_balance": -10516.174863805296
+        "net_collection_minus_expense": -12363.55794999811,
+        "closing_balance": -14136.784238805296
       },
       "expense_breakdown": [
         {
@@ -5927,7 +5927,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 1144.3832729533024,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -5936,7 +5936,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5511.555147953302
+          "total_expense": 9132.164522953302
         },
         {
           "month": "Nov 2026",
@@ -6099,10 +6099,10 @@
         {
           "month": "Oct 2026",
           "collection": 7678.52,
-          "expense": 6212.520930421902,
+          "expense": 9833.130305421902,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1465.999069578098
+          "net_collection_minus_expense": -2154.610305421902
         },
         {
           "month": "Nov 2026",
@@ -6147,10 +6147,10 @@
       ],
       "totals": {
         "collection": 42492.490000000005,
-        "expense": 48693.29823469597,
+        "expense": 52313.90760969597,
         "late_fee": 0.0,
-        "net_collection_minus_expense": -6200.808234695964,
-        "closing_balance": -6212.525636037979
+        "net_collection_minus_expense": -9821.417609695964,
+        "closing_balance": -9833.135011037979
       },
       "expense_breakdown": [
         {
@@ -6282,7 +6282,7 @@
           "num_meters": 4.0,
           "meter_rent": 494.7976,
           "total_water_expense": 1845.349055421903,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -6291,7 +6291,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 6212.520930421902
+          "total_expense": 9833.130305421902
         },
         {
           "month": "Nov 2026",
@@ -6454,10 +6454,10 @@
         {
           "month": "Oct 2026",
           "collection": 7235.0,
-          "expense": 6307.129164168815,
+          "expense": 9927.738539168815,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 927.8708358311851
+          "net_collection_minus_expense": -2692.738539168815
         },
         {
           "month": "Nov 2026",
@@ -6502,10 +6502,10 @@
       ],
       "totals": {
         "collection": 41109.0,
-        "expense": 45576.62460139238,
+        "expense": 49197.23397639238,
         "late_fee": 0.0,
-        "net_collection_minus_expense": -4467.624601392381,
-        "closing_balance": -6307.066678463569
+        "net_collection_minus_expense": -8088.233976392381,
+        "closing_balance": -9927.676053463569
       },
       "expense_breakdown": [
         {
@@ -6637,7 +6637,7 @@
           "num_meters": 4.0,
           "meter_rent": 494.7976,
           "total_water_expense": 1439.9572891688144,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 500.0,
           "shifting_fee": 0.0,
@@ -6646,7 +6646,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 6307.129164168815
+          "total_expense": 9927.738539168815
         },
         {
           "month": "Nov 2026",
@@ -6809,10 +6809,10 @@
         {
           "month": "Oct 2026",
           "collection": 8000.0,
-          "expense": 6496.71720644856,
+          "expense": 10117.32658144856,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1503.2827935514397
+          "net_collection_minus_expense": -2117.3265814485603
         },
         {
           "month": "Nov 2026",
@@ -6857,10 +6857,10 @@
       ],
       "totals": {
         "collection": 52225.0,
-        "expense": 49183.79525673058,
+        "expense": 52804.40463173058,
         "late_fee": 0.0,
-        "net_collection_minus_expense": 3041.2047432694235,
-        "closing_balance": -6466.987287323718
+        "net_collection_minus_expense": -579.4046317305765,
+        "closing_balance": -10087.596662323718
       },
       "expense_breakdown": [
         {
@@ -6992,7 +6992,7 @@
           "num_meters": 4.0,
           "meter_rent": 494.7976,
           "total_water_expense": 2129.5453314485603,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -7001,7 +7001,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 6496.71720644856
+          "total_expense": 10117.32658144856
         },
         {
           "month": "Nov 2026",
@@ -7164,10 +7164,10 @@
         {
           "month": "Oct 2026",
           "collection": 0.0,
-          "expense": 5580.105659751634,
+          "expense": 9200.715034751634,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": -5580.105659751634
+          "net_collection_minus_expense": -9200.715034751634
         },
         {
           "month": "Nov 2026",
@@ -7212,10 +7212,10 @@
       ],
       "totals": {
         "collection": 59212.36,
-        "expense": 45298.20360710232,
+        "expense": 48918.81298210232,
         "late_fee": 2000.0,
-        "net_collection_minus_expense": 11914.156392897683,
-        "closing_balance": 1278.2815779974535
+        "net_collection_minus_expense": 8293.547017897683,
+        "closing_balance": -2342.3277970025465
       },
       "expense_breakdown": [
         {
@@ -7347,7 +7347,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 1212.9337847516347,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -7356,7 +7356,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5580.105659751634
+          "total_expense": 9200.715034751634
         },
         {
           "month": "Nov 2026",
@@ -7519,10 +7519,10 @@
         {
           "month": "Oct 2026",
           "collection": 0.0,
-          "expense": 6240.233143319232,
+          "expense": 9860.842518319232,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -7240.233143319232
+          "net_collection_minus_expense": -10860.842518319232
         },
         {
           "month": "Nov 2026",
@@ -7567,10 +7567,10 @@
       ],
       "totals": {
         "collection": 5260.0,
-        "expense": 43977.153949648804,
+        "expense": 47597.763324648804,
         "late_fee": 4000.0,
-        "net_collection_minus_expense": -42717.153949648804,
-        "closing_balance": -53885.11229890418
+        "net_collection_minus_expense": -46337.763324648804,
+        "closing_balance": -57505.72167390418
       },
       "expense_breakdown": [
         {
@@ -7702,7 +7702,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 873.0612683192326,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -7711,7 +7711,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "total_expense": 6240.233143319232
+          "total_expense": 9860.842518319232
         },
         {
           "month": "Nov 2026",
@@ -7874,10 +7874,10 @@
         {
           "month": "Oct 2026",
           "collection": 0.0,
-          "expense": 5028.993363053881,
+          "expense": 8649.60273805388,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": -5028.993363053881
+          "net_collection_minus_expense": -8649.60273805388
         },
         {
           "month": "Nov 2026",
@@ -7922,10 +7922,10 @@
       ],
       "totals": {
         "collection": 39018.0,
-        "expense": 39819.664229649185,
+        "expense": 43440.273604649185,
         "late_fee": 0.0,
-        "net_collection_minus_expense": -801.6642296491846,
-        "closing_balance": -11423.371402603805
+        "net_collection_minus_expense": -4422.273604649185,
+        "closing_balance": -15043.980777603805
       },
       "expense_breakdown": [
         {
@@ -8057,7 +8057,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 661.8214880538808,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -8066,7 +8066,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5028.993363053881
+          "total_expense": 8649.60273805388
         },
         {
           "month": "Nov 2026",
@@ -8229,10 +8229,10 @@
         {
           "month": "Oct 2026",
           "collection": 6562.0,
-          "expense": 5181.12009795017,
+          "expense": 8801.72947295017,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1380.87990204983
+          "net_collection_minus_expense": -2239.72947295017
         },
         {
           "month": "Nov 2026",
@@ -8277,10 +8277,10 @@
       ],
       "totals": {
         "collection": 28263.25,
-        "expense": 41531.49342604376,
+        "expense": 45152.10280104376,
         "late_fee": 1000.0,
-        "net_collection_minus_expense": -14268.243426043759,
-        "closing_balance": -14087.07509136702
+        "net_collection_minus_expense": -17888.85280104376,
+        "closing_balance": -17707.68446636702
       },
       "expense_breakdown": [
         {
@@ -8412,7 +8412,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 813.9482229501702,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -8421,7 +8421,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5181.12009795017
+          "total_expense": 8801.72947295017
         },
         {
           "month": "Nov 2026",
@@ -8584,10 +8584,10 @@
         {
           "month": "Oct 2026",
           "collection": 7121.0,
-          "expense": 5713.759962685676,
+          "expense": 9334.369337685675,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1407.2400373143237
+          "net_collection_minus_expense": -2213.3693376856754
         },
         {
           "month": "Nov 2026",
@@ -8632,10 +8632,10 @@
       ],
       "totals": {
         "collection": 40362.0,
-        "expense": 46186.70488766218,
+        "expense": 49807.31426266218,
         "late_fee": 0.0,
-        "net_collection_minus_expense": -5824.7048876621775,
-        "closing_balance": -7036.8036347657835
+        "net_collection_minus_expense": -9445.314262662177,
+        "closing_balance": -10657.413009765783
       },
       "expense_breakdown": [
         {
@@ -8767,7 +8767,7 @@
           "num_meters": 5.0,
           "meter_rent": 618.497,
           "total_water_expense": 1346.5880876856763,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -8776,7 +8776,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5713.759962685676
+          "total_expense": 9334.369337685675
         },
         {
           "month": "Nov 2026",
@@ -8939,10 +8939,10 @@
         {
           "month": "Oct 2026",
           "collection": 6317.0,
-          "expense": 4957.411589277903,
+          "expense": 8578.020964277903,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1359.5884107220973
+          "net_collection_minus_expense": -2261.0209642779027
         },
         {
           "month": "Nov 2026",
@@ -8987,10 +8987,10 @@
       ],
       "totals": {
         "collection": 28042.43,
-        "expense": 39239.08374042581,
+        "expense": 42859.69311542581,
         "late_fee": 0.0,
-        "net_collection_minus_expense": -11196.653740425812,
-        "closing_balance": -10742.59251653467
+        "net_collection_minus_expense": -14817.263115425812,
+        "closing_balance": -14363.20189153467
       },
       "expense_breakdown": [
         {
@@ -9122,7 +9122,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 590.2397142779023,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -9131,7 +9131,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 4957.411589277903
+          "total_expense": 8578.020964277903
         },
         {
           "month": "Nov 2026",
@@ -9294,10 +9294,10 @@
         {
           "month": "Oct 2026",
           "collection": 6204.0,
-          "expense": 4854.005001541603,
+          "expense": 8474.614376541604,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1349.9949984583973
+          "net_collection_minus_expense": -2270.6143765416036
         },
         {
           "month": "Nov 2026",
@@ -9342,10 +9342,10 @@
       ],
       "totals": {
         "collection": 54636.0,
-        "expense": 37913.86728695458,
+        "expense": 41534.47666195458,
         "late_fee": 0.0,
-        "net_collection_minus_expense": 16722.132713045423,
-        "closing_balance": -4853.867313983235
+        "net_collection_minus_expense": 13101.523338045423,
+        "closing_balance": -8474.476688983235
       },
       "expense_breakdown": [
         {
@@ -9477,7 +9477,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 486.83312654160284,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -9486,7 +9486,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 4854.005001541603
+          "total_expense": 8474.614376541604
         },
         {
           "month": "Nov 2026",
@@ -9649,10 +9649,10 @@
         {
           "month": "Oct 2026",
           "collection": 7091.0,
-          "expense": 5664.967247905873,
+          "expense": 9285.576622905874,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1426.0327520941273
+          "net_collection_minus_expense": -2194.5766229058736
         },
         {
           "month": "Nov 2026",
@@ -9697,10 +9697,10 @@
       ],
       "totals": {
         "collection": 44227.0,
-        "expense": 45405.59307522014,
+        "expense": 49026.20245022014,
         "late_fee": 0.0,
-        "net_collection_minus_expense": -1178.5930752201384,
-        "closing_balance": -5664.896716534364
+        "net_collection_minus_expense": -4799.202450220138,
+        "closing_balance": -9285.506091534364
       },
       "expense_breakdown": [
         {
@@ -9832,7 +9832,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 1297.795372905873,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -9841,7 +9841,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5664.967247905873
+          "total_expense": 9285.576622905874
         },
         {
           "month": "Nov 2026",
@@ -10004,10 +10004,10 @@
         {
           "month": "Oct 2026",
           "collection": 6669.59,
-          "expense": 5290.35742266453,
+          "expense": 8910.96679766453,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1379.2325773354705
+          "net_collection_minus_expense": -2241.3767976645304
         },
         {
           "month": "Nov 2026",
@@ -10052,10 +10052,10 @@
       ],
       "totals": {
         "collection": 52168.0,
-        "expense": 41845.24108026423,
+        "expense": 45465.85045526423,
         "late_fee": 0.0,
-        "net_collection_minus_expense": 10322.758919735767,
-        "closing_balance": -5290.359702927724
+        "net_collection_minus_expense": 6702.1495447357665,
+        "closing_balance": -8910.969077927724
       },
       "expense_breakdown": [
         {
@@ -10187,7 +10187,7 @@
           "num_meters": 4.0,
           "meter_rent": 494.7976,
           "total_water_expense": 923.1855476645298,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -10196,7 +10196,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5290.35742266453
+          "total_expense": 8910.96679766453
         },
         {
           "month": "Nov 2026",
@@ -10359,10 +10359,10 @@
         {
           "month": "Oct 2026",
           "collection": 7224.0,
-          "expense": 5796.695024300183,
+          "expense": 9417.304399300183,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1427.304975699817
+          "net_collection_minus_expense": -2193.304399300183
         },
         {
           "month": "Nov 2026",
@@ -10407,10 +10407,10 @@
       ],
       "totals": {
         "collection": 40259.35,
-        "expense": 46113.155937945296,
+        "expense": 49733.765312945296,
         "late_fee": 0.0,
-        "net_collection_minus_expense": -5853.805937945297,
-        "closing_balance": -8261.435344214791
+        "net_collection_minus_expense": -9474.415312945297,
+        "closing_balance": -11882.044719214791
       },
       "expense_breakdown": [
         {
@@ -10542,7 +10542,7 @@
           "num_meters": 4.0,
           "meter_rent": 494.7976,
           "total_water_expense": 1429.5231493001825,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -10551,7 +10551,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5796.695024300183
+          "total_expense": 9417.304399300183
         },
         {
           "month": "Nov 2026",
@@ -10714,10 +10714,10 @@
         {
           "month": "Oct 2026",
           "collection": 0.0,
-          "expense": 5069.137160785704,
+          "expense": 8689.746535785704,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": -5069.137160785704
+          "net_collection_minus_expense": -8689.746535785704
         },
         {
           "month": "Nov 2026",
@@ -10762,10 +10762,10 @@
       ],
       "totals": {
         "collection": 55000.0,
-        "expense": 44272.81467067481,
+        "expense": 47893.42404567481,
         "late_fee": 4000.0,
-        "net_collection_minus_expense": 6727.185329325192,
-        "closing_balance": -12556.34086389585
+        "net_collection_minus_expense": 3106.5759543251916,
+        "closing_balance": -16176.95023889585
       },
       "expense_breakdown": [
         {
@@ -10897,7 +10897,7 @@
           "num_meters": 4.0,
           "meter_rent": 494.7976,
           "total_water_expense": 701.9652857857037,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -10906,7 +10906,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5069.137160785704
+          "total_expense": 8689.746535785704
         },
         {
           "month": "Nov 2026",
@@ -11069,10 +11069,10 @@
         {
           "month": "Oct 2026",
           "collection": 6408.1,
-          "expense": 5040.71974158872,
+          "expense": 8661.32911658872,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1367.38025841128
+          "net_collection_minus_expense": -2253.22911658872
         },
         {
           "month": "Nov 2026",
@@ -11117,10 +11117,10 @@
       ],
       "totals": {
         "collection": 39044.7,
-        "expense": 39932.50691818255,
+        "expense": 43553.11629318255,
         "late_fee": 0.0,
-        "net_collection_minus_expense": -887.8069181825558,
-        "closing_balance": -5878.192401604067
+        "net_collection_minus_expense": -4508.416293182556,
+        "closing_balance": -9498.801776604067
       },
       "expense_breakdown": [
         {
@@ -11252,7 +11252,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 673.5478665887204,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -11261,7 +11261,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5040.71974158872
+          "total_expense": 8661.32911658872
         },
         {
           "month": "Nov 2026",
@@ -11424,10 +11424,10 @@
         {
           "month": "Oct 2026",
           "collection": 6158.97,
-          "expense": 4813.01079193915,
+          "expense": 8433.62016693915,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1345.95920806085
+          "net_collection_minus_expense": -2274.65016693915
         },
         {
           "month": "Nov 2026",
@@ -11472,10 +11472,10 @@
       ],
       "totals": {
         "collection": 37796.86,
-        "expense": 37714.94118617175,
+        "expense": 41335.55056117175,
         "late_fee": 0.0,
-        "net_collection_minus_expense": 81.91881382824795,
-        "closing_balance": -903.0567563313671
+        "net_collection_minus_expense": -3538.690561171752,
+        "closing_balance": -4523.666131331367
       },
       "expense_breakdown": [
         {
@@ -11607,7 +11607,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 445.8389169391507,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -11616,7 +11616,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 4813.01079193915
+          "total_expense": 8433.62016693915
         },
         {
           "month": "Nov 2026",
@@ -11779,10 +11779,10 @@
         {
           "month": "Oct 2026",
           "collection": 0.0,
-          "expense": 8031.250356003271,
+          "expense": 11651.859731003271,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -9031.250356003271
+          "net_collection_minus_expense": -12651.859731003271
         },
         {
           "month": "Nov 2026",
@@ -11827,10 +11827,10 @@
       ],
       "totals": {
         "collection": 20105.88,
-        "expense": 54054.33947972366,
+        "expense": 57674.94885472366,
         "late_fee": 2000.0,
-        "net_collection_minus_expense": -35948.459479723664,
-        "closing_balance": -42704.09176751305
+        "net_collection_minus_expense": -39569.068854723664,
+        "closing_balance": -46324.70114251305
       },
       "expense_breakdown": [
         {
@@ -11962,7 +11962,7 @@
           "num_meters": 4.0,
           "meter_rent": 494.7976,
           "total_water_expense": 2664.0784810032706,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -11971,7 +11971,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "total_expense": 8031.250356003271
+          "total_expense": 11651.859731003271
         },
         {
           "month": "Nov 2026",
@@ -12134,10 +12134,10 @@
         {
           "month": "Oct 2026",
           "collection": 7000.0,
-          "expense": 5619.534602051088,
+          "expense": 9240.143977051088,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1380.4653979489121
+          "net_collection_minus_expense": -2240.143977051088
         },
         {
           "month": "Nov 2026",
@@ -12182,10 +12182,10 @@
       ],
       "totals": {
         "collection": 41092.0,
-        "expense": 45419.76340296802,
+        "expense": 49040.37277796802,
         "late_fee": 1000.0,
-        "net_collection_minus_expense": -5327.763402968019,
-        "closing_balance": -5736.663665258908
+        "net_collection_minus_expense": -8948.37277796802,
+        "closing_balance": -9357.273040258908
       },
       "expense_breakdown": [
         {
@@ -12317,7 +12317,7 @@
           "num_meters": 4.0,
           "meter_rent": 494.7976,
           "total_water_expense": 1252.3627270510879,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -12326,7 +12326,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5619.534602051088
+          "total_expense": 9240.143977051088
         },
         {
           "month": "Nov 2026",
@@ -12489,10 +12489,10 @@
         {
           "month": "Oct 2026",
           "collection": 0.0,
-          "expense": 5531.495490350471,
+          "expense": 9152.104865350471,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": -5531.495490350471
+          "net_collection_minus_expense": -9152.104865350471
         },
         {
           "month": "Nov 2026",
@@ -12537,10 +12537,10 @@
       ],
       "totals": {
         "collection": 53431.0,
-        "expense": 43766.51008109219,
+        "expense": 47387.11945609219,
         "late_fee": 0.0,
-        "net_collection_minus_expense": 9664.489918907813,
-        "closing_balance": -13931.258242688946
+        "net_collection_minus_expense": 6043.880543907813,
+        "closing_balance": -17551.867617688946
       },
       "expense_breakdown": [
         {
@@ -12672,7 +12672,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 1164.323615350471,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -12681,7 +12681,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5531.495490350471
+          "total_expense": 9152.104865350471
         },
         {
           "month": "Nov 2026",
@@ -12844,10 +12844,10 @@
         {
           "month": "Oct 2026",
           "collection": 6333.57,
-          "expense": 4890.338903613796,
+          "expense": 8510.948278613796,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1443.2310963862037
+          "net_collection_minus_expense": -2177.3782786137963
         },
         {
           "month": "Nov 2026",
@@ -12892,10 +12892,10 @@
       ],
       "totals": {
         "collection": 68326.31,
-        "expense": 39156.117974765075,
+        "expense": 42776.727349765075,
         "late_fee": 0.0,
-        "net_collection_minus_expense": 29170.192025234923,
-        "closing_balance": -4890.337164355806
+        "net_collection_minus_expense": 25549.582650234923,
+        "closing_balance": -8510.946539355806
       },
       "expense_breakdown": [
         {
@@ -13027,7 +13027,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 523.1670286137962,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -13036,7 +13036,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 4890.338903613796
+          "total_expense": 8510.948278613796
         },
         {
           "month": "Nov 2026",
@@ -13199,10 +13199,10 @@
         {
           "month": "Oct 2026",
           "collection": 6174.0,
-          "expense": 4826.043156360051,
+          "expense": 8446.65253136005,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1347.9568436399486
+          "net_collection_minus_expense": -2272.6525313600505
         },
         {
           "month": "Nov 2026",
@@ -13247,10 +13247,10 @@
       ],
       "totals": {
         "collection": 74507.0,
-        "expense": 38550.84616911101,
+        "expense": 42171.45554411101,
         "late_fee": 0.0,
-        "net_collection_minus_expense": 35956.15383088899,
-        "closing_balance": -4825.901256258607
+        "net_collection_minus_expense": 32335.544455888987,
+        "closing_balance": -8446.510631258607
       },
       "expense_breakdown": [
         {
@@ -13382,7 +13382,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 458.871281360051,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -13391,7 +13391,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 4826.043156360051
+          "total_expense": 8446.65253136005
         },
         {
           "month": "Nov 2026",
@@ -13554,10 +13554,10 @@
         {
           "month": "Oct 2026",
           "collection": 6462.0,
-          "expense": 5089.5911081670965,
+          "expense": 8710.200483167097,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1372.4088918329035
+          "net_collection_minus_expense": -2248.2004831670965
         },
         {
           "month": "Nov 2026",
@@ -13602,10 +13602,10 @@
       ],
       "totals": {
         "collection": 41013.270000000004,
-        "expense": 39624.37237719957,
+        "expense": 43244.98175219957,
         "late_fee": 0.0,
-        "net_collection_minus_expense": 1388.8976228004321,
-        "closing_balance": 735.5242010984584
+        "net_collection_minus_expense": -2231.711752199568,
+        "closing_balance": -2885.0851739015416
       },
       "expense_breakdown": [
         {
@@ -13737,7 +13737,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 722.4192331670963,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -13746,7 +13746,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5089.5911081670965
+          "total_expense": 8710.200483167097
         },
         {
           "month": "Nov 2026",
@@ -13909,10 +13909,10 @@
         {
           "month": "Oct 2026",
           "collection": 6942.49,
-          "expense": 5529.144715755561,
+          "expense": 9149.754090755561,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1413.3452842444385
+          "net_collection_minus_expense": -2207.2640907555615
         },
         {
           "month": "Nov 2026",
@@ -13957,10 +13957,10 @@
       ],
       "totals": {
         "collection": 41150.03999999999,
-        "expense": 43650.51010360933,
+        "expense": 47271.11947860933,
         "late_fee": 0.0,
-        "net_collection_minus_expense": -2500.4701036093393,
-        "closing_balance": -5529.144541350142
+        "net_collection_minus_expense": -6121.079478609339,
+        "closing_balance": -9149.753916350142
       },
       "expense_breakdown": [
         {
@@ -14092,7 +14092,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 1161.9728407555617,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -14101,7 +14101,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5529.144715755561
+          "total_expense": 9149.754090755561
         },
         {
           "month": "Nov 2026",
@@ -14264,10 +14264,10 @@
         {
           "month": "Oct 2026",
           "collection": 6600.0,
-          "expense": 5635.948782555893,
+          "expense": 9256.558157555892,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 964.0512174441074
+          "net_collection_minus_expense": -2656.5581575558917
         },
         {
           "month": "Nov 2026",
@@ -14312,10 +14312,10 @@
       ],
       "totals": {
         "collection": 32637.53,
-        "expense": 43166.173545381964,
+        "expense": 46786.782920381964,
         "late_fee": 1000.0,
-        "net_collection_minus_expense": -11528.643545381965,
-        "closing_balance": -5616.428722037708
+        "net_collection_minus_expense": -15149.252920381965,
+        "closing_balance": -9237.038097037708
       },
       "expense_breakdown": [
         {
@@ -14447,7 +14447,7 @@
           "num_meters": 4.0,
           "meter_rent": 494.7976,
           "total_water_expense": 1268.7769075558924,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -14456,7 +14456,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5635.948782555893
+          "total_expense": 9256.558157555892
         },
         {
           "month": "Nov 2026",
@@ -14619,10 +14619,10 @@
         {
           "month": "Oct 2026",
           "collection": 5466.24,
-          "expense": 4800.8582495888595,
+          "expense": 8421.46762458886,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 665.3817504111403
+          "net_collection_minus_expense": -2955.2276245888606
         },
         {
           "month": "Nov 2026",
@@ -14667,10 +14667,10 @@
       ],
       "totals": {
         "collection": 34394.31,
-        "expense": 38460.03082851793,
+        "expense": 42080.64020351793,
         "late_fee": 1000.0,
-        "net_collection_minus_expense": -5065.7208285179295,
-        "closing_balance": -66928.22511643059
+        "net_collection_minus_expense": -8686.33020351793,
+        "closing_balance": -70548.83449143059
       },
       "expense_breakdown": [
         {
@@ -14802,7 +14802,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 433.68637458885974,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -14811,7 +14811,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 4800.8582495888595
+          "total_expense": 8421.46762458886
         },
         {
           "month": "Nov 2026",
@@ -14974,10 +14974,10 @@
         {
           "month": "Oct 2026",
           "collection": 5938.0,
-          "expense": 5047.098451600637,
+          "expense": 8667.707826600637,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 890.9015483993626
+          "net_collection_minus_expense": -2729.7078266006374
         },
         {
           "month": "Nov 2026",
@@ -15022,10 +15022,10 @@
       ],
       "totals": {
         "collection": 40212.0,
-        "expense": 39940.13935126486,
+        "expense": 43560.74872626486,
         "late_fee": 0.0,
-        "net_collection_minus_expense": 271.8606487351426,
-        "closing_balance": -5046.308974450374
+        "net_collection_minus_expense": -3348.7487262648574,
+        "closing_balance": -8666.918349450374
       },
       "expense_breakdown": [
         {
@@ -15157,7 +15157,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 679.9265766006379,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -15166,7 +15166,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5047.098451600637
+          "total_expense": 8667.707826600637
         },
         {
           "month": "Nov 2026",
@@ -15329,10 +15329,10 @@
         {
           "month": "Oct 2026",
           "collection": 6470.01,
-          "expense": 5097.303298504781,
+          "expense": 8717.912673504781,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1372.706701495219
+          "net_collection_minus_expense": -2247.902673504781
         },
         {
           "month": "Nov 2026",
@@ -15377,10 +15377,10 @@
       ],
       "totals": {
         "collection": 47546.47,
-        "expense": 41342.21736014704,
+        "expense": 44962.82673514704,
         "late_fee": 0.0,
-        "net_collection_minus_expense": 6204.252639852959,
-        "closing_balance": -5097.305409434792
+        "net_collection_minus_expense": 2583.643264852959,
+        "closing_balance": -8717.914784434792
       },
       "expense_breakdown": [
         {
@@ -15512,7 +15512,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 730.1314235047811,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -15521,7 +15521,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5097.303298504781
+          "total_expense": 8717.912673504781
         },
         {
           "month": "Nov 2026",
@@ -15684,10 +15684,10 @@
         {
           "month": "Oct 2026",
           "collection": 6208.39,
-          "expense": 4867.767884375,
+          "expense": 8488.377259375,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1340.6221156250003
+          "net_collection_minus_expense": -2279.9872593749997
         },
         {
           "month": "Nov 2026",
@@ -15732,10 +15732,10 @@
       ],
       "totals": {
         "collection": 36946.450000000004,
-        "expense": 40098.734397463006,
+        "expense": 43719.343772463006,
         "late_fee": 1000.0,
-        "net_collection_minus_expense": -4152.284397463001,
-        "closing_balance": -4867.767995416696
+        "net_collection_minus_expense": -7772.893772463001,
+        "closing_balance": -8488.377370416696
       },
       "expense_breakdown": [
         {
@@ -15867,7 +15867,7 @@
           "num_meters": 4.0,
           "meter_rent": 494.7976,
           "total_water_expense": 500.596009375,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -15876,7 +15876,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 4867.767884375
+          "total_expense": 8488.377259375
         },
         {
           "month": "Nov 2026",
@@ -16039,10 +16039,10 @@
         {
           "month": "Oct 2026",
           "collection": 0.0,
-          "expense": 6383.646056588822,
+          "expense": 10004.255431588823,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "net_collection_minus_expense": -7383.646056588822
+          "net_collection_minus_expense": -11004.255431588823
         },
         {
           "month": "Nov 2026",
@@ -16087,10 +16087,10 @@
       ],
       "totals": {
         "collection": 0.0,
-        "expense": 47461.18532705653,
+        "expense": 51081.79470205653,
         "late_fee": 5000.0,
-        "net_collection_minus_expense": -52461.18532705653,
-        "closing_balance": -55361.67164229833
+        "net_collection_minus_expense": -56081.79470205653,
+        "closing_balance": -58982.28101729833
       },
       "expense_breakdown": [
         {
@@ -16222,7 +16222,7 @@
           "num_meters": 4.0,
           "meter_rent": 494.7976,
           "total_water_expense": 1016.4741815888223,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -16231,7 +16231,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 1000.0,
           "late_fee_reason": "Missed",
-          "total_expense": 6383.646056588822
+          "total_expense": 10004.255431588823
         },
         {
           "month": "Nov 2026",
@@ -16394,10 +16394,10 @@
         {
           "month": "Oct 2026",
           "collection": 0.0,
-          "expense": 6109.293056543696,
+          "expense": 9729.902431543696,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": -6109.293056543696
+          "net_collection_minus_expense": -9729.902431543696
         },
         {
           "month": "Nov 2026",
@@ -16442,10 +16442,10 @@
       ],
       "totals": {
         "collection": 56209.15,
-        "expense": 47146.234535176714,
+        "expense": 50766.843910176714,
         "late_fee": 0.0,
-        "net_collection_minus_expense": 9062.915464823287,
-        "closing_balance": -13675.139092967282
+        "net_collection_minus_expense": 5442.306089823287,
+        "closing_balance": -17295.74846796728
       },
       "expense_breakdown": [
         {
@@ -16577,7 +16577,7 @@
           "num_meters": 4.0,
           "meter_rent": 494.7976,
           "total_water_expense": 1742.121181543696,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -16586,7 +16586,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 6109.293056543696
+          "total_expense": 9729.902431543696
         },
         {
           "month": "Nov 2026",
@@ -16749,10 +16749,10 @@
         {
           "month": "Oct 2026",
           "collection": 0.0,
-          "expense": 4987.792945153629,
+          "expense": 8608.40232015363,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": -4987.792945153629
+          "net_collection_minus_expense": -8608.40232015363
         },
         {
           "month": "Nov 2026",
@@ -16797,10 +16797,10 @@
       ],
       "totals": {
         "collection": 22584.0,
-        "expense": 39103.96700367896,
+        "expense": 42724.57637867896,
         "late_fee": 0.0,
-        "net_collection_minus_expense": -16519.96700367896,
-        "closing_balance": -11337.1863321938
+        "net_collection_minus_expense": -20140.57637867896,
+        "closing_balance": -14957.7957071938
       },
       "expense_breakdown": [
         {
@@ -16932,7 +16932,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 620.6210701536296,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -16941,7 +16941,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 4987.792945153629
+          "total_expense": 8608.40232015363
         },
         {
           "month": "Nov 2026",
@@ -17104,10 +17104,10 @@
         {
           "month": "Oct 2026",
           "collection": 7500.0,
-          "expense": 6056.611794305691,
+          "expense": 9677.22116930569,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1443.3882056943094
+          "net_collection_minus_expense": -2177.2211693056906
         },
         {
           "month": "Nov 2026",
@@ -17152,10 +17152,10 @@
       ],
       "totals": {
         "collection": 43519.0,
-        "expense": 47572.12433367892,
+        "expense": 51192.73370867892,
         "late_fee": 0.0,
-        "net_collection_minus_expense": -4053.1243336789194,
-        "closing_balance": -5987.402063614572
+        "net_collection_minus_expense": -7673.733708678919,
+        "closing_balance": -9608.011438614572
       },
       "expense_breakdown": [
         {
@@ -17287,7 +17287,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 1689.4399193056906,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -17296,7 +17296,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 6056.611794305691
+          "total_expense": 9677.22116930569
         },
         {
           "month": "Nov 2026",
@@ -17459,10 +17459,10 @@
         {
           "month": "Oct 2026",
           "collection": 6390.0,
-          "expense": 5959.8745239585005,
+          "expense": 9580.4838989585,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 430.1254760414995
+          "net_collection_minus_expense": -3190.4838989585005
         },
         {
           "month": "Nov 2026",
@@ -17507,10 +17507,10 @@
       ],
       "totals": {
         "collection": 81010.51,
-        "expense": 47122.74640672603,
+        "expense": 50743.35578172603,
         "late_fee": 0.0,
-        "net_collection_minus_expense": 33887.763593273965,
-        "closing_balance": -5959.574214578432
+        "net_collection_minus_expense": 30267.154218273965,
+        "closing_balance": -9580.183589578432
       },
       "expense_breakdown": [
         {
@@ -17642,7 +17642,7 @@
           "num_meters": 4.0,
           "meter_rent": 494.7976,
           "total_water_expense": 1592.702648958501,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -17651,7 +17651,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5959.8745239585005
+          "total_expense": 9580.4838989585
         },
         {
           "month": "Nov 2026",
@@ -17814,10 +17814,10 @@
         {
           "month": "Oct 2026",
           "collection": 6880.0,
-          "expense": 5482.309853475744,
+          "expense": 9102.919228475743,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1397.6901465242563
+          "net_collection_minus_expense": -2222.919228475743
         },
         {
           "month": "Nov 2026",
@@ -17862,10 +17862,10 @@
       ],
       "totals": {
         "collection": 39129.0,
-        "expense": 43282.003906137696,
+        "expense": 46902.613281137696,
         "late_fee": 0.0,
-        "net_collection_minus_expense": -4153.003906137696,
-        "closing_balance": -91.11973527716373
+        "net_collection_minus_expense": -7773.613281137696,
+        "closing_balance": -3711.7291102771637
       },
       "expense_breakdown": [
         {
@@ -17997,7 +17997,7 @@
           "num_meters": 4.0,
           "meter_rent": 494.7976,
           "total_water_expense": 1115.1379784757435,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -18006,7 +18006,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5482.309853475744
+          "total_expense": 9102.919228475743
         },
         {
           "month": "Nov 2026",
@@ -18169,10 +18169,10 @@
         {
           "month": "Oct 2026",
           "collection": 0.0,
-          "expense": 4886.945256070312,
+          "expense": 8507.554631070312,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": -4886.945256070312
+          "net_collection_minus_expense": -8507.554631070312
         },
         {
           "month": "Nov 2026",
@@ -18217,10 +18217,10 @@
       ],
       "totals": {
         "collection": 57428.99999999999,
-        "expense": 39035.72243049332,
+        "expense": 42656.33180549332,
         "late_fee": 0.0,
-        "net_collection_minus_expense": 18393.277569506674,
-        "closing_balance": -17657.918308300243
+        "net_collection_minus_expense": 14772.668194506674,
+        "closing_balance": -21278.527683300243
       },
       "expense_breakdown": [
         {
@@ -18352,7 +18352,7 @@
           "num_meters": 4.0,
           "meter_rent": 494.7976,
           "total_water_expense": 519.7733810703121,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -18361,7 +18361,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 4886.945256070312
+          "total_expense": 8507.554631070312
         },
         {
           "month": "Nov 2026",
@@ -18524,10 +18524,10 @@
         {
           "month": "Oct 2026",
           "collection": 0.0,
-          "expense": 5072.008413974763,
+          "expense": 8692.617788974763,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": -5072.008413974763
+          "net_collection_minus_expense": -8692.617788974763
         },
         {
           "month": "Nov 2026",
@@ -18572,10 +18572,10 @@
       ],
       "totals": {
         "collection": 48764.0,
-        "expense": 39267.18618991558,
+        "expense": 42887.79556491558,
         "late_fee": 0.0,
-        "net_collection_minus_expense": 9496.813810084423,
-        "closing_balance": -16829.19238908131
+        "net_collection_minus_expense": 5876.204435084423,
+        "closing_balance": -20449.80176408131
       },
       "expense_breakdown": [
         {
@@ -18707,7 +18707,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 704.8365389747637,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -18716,7 +18716,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5072.008413974763
+          "total_expense": 8692.617788974763
         },
         {
           "month": "Nov 2026",
@@ -18879,10 +18879,10 @@
         {
           "month": "Oct 2026",
           "collection": 0.0,
-          "expense": 6029.887198910933,
+          "expense": 9650.496573910932,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": -6029.887198910933
+          "net_collection_minus_expense": -9650.496573910932
         },
         {
           "month": "Nov 2026",
@@ -18927,10 +18927,10 @@
       ],
       "totals": {
         "collection": 53851.07000000001,
-        "expense": 47371.92932302431,
+        "expense": 50992.53869802431,
         "late_fee": 0.0,
-        "net_collection_minus_expense": 6479.140676975694,
-        "closing_balance": -13520.232873863166
+        "net_collection_minus_expense": 2858.531301975694,
+        "closing_balance": -17140.842248863166
       },
       "expense_breakdown": [
         {
@@ -19062,7 +19062,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 1662.715323910933,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -19071,7 +19071,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 6029.887198910933
+          "total_expense": 9650.496573910932
         },
         {
           "month": "Nov 2026",
@@ -19234,10 +19234,10 @@
         {
           "month": "Oct 2026",
           "collection": 12000.0,
-          "expense": 5836.656276653366,
+          "expense": 9457.265651653366,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 6163.343723346634
+          "net_collection_minus_expense": 2542.734348346634
         },
         {
           "month": "Nov 2026",
@@ -19282,10 +19282,10 @@
       ],
       "totals": {
         "collection": 61740.72,
-        "expense": 46864.76140568003,
+        "expense": 50485.37078068003,
         "late_fee": 2000.0,
-        "net_collection_minus_expense": 12875.95859431997,
-        "closing_balance": -5611.084628015487
+        "net_collection_minus_expense": 9255.34921931997,
+        "closing_balance": -9231.694003015487
       },
       "expense_breakdown": [
         {
@@ -19417,7 +19417,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 1469.4844016533657,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -19426,7 +19426,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5836.656276653366
+          "total_expense": 9457.265651653366
         },
         {
           "month": "Nov 2026",
@@ -19589,10 +19589,10 @@
         {
           "month": "Oct 2026",
           "collection": 12000.0,
-          "expense": 5217.000341767206,
+          "expense": 8837.609716767205,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 6782.999658232794
+          "net_collection_minus_expense": 3162.390283232795
         },
         {
           "month": "Nov 2026",
@@ -19637,10 +19637,10 @@
       ],
       "totals": {
         "collection": 36180.97,
-        "expense": 39898.77277521333,
+        "expense": 43519.38215021333,
         "late_fee": 0.0,
-        "net_collection_minus_expense": -3717.8027752133275,
-        "closing_balance": -5254.53446063384
+        "net_collection_minus_expense": -7338.412150213328,
+        "closing_balance": -8875.14383563384
       },
       "expense_breakdown": [
         {
@@ -19772,7 +19772,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 849.8284667672058,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -19781,7 +19781,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5217.000341767206
+          "total_expense": 8837.609716767205
         },
         {
           "month": "Nov 2026",
@@ -19944,10 +19944,10 @@
         {
           "month": "Oct 2026",
           "collection": 1350.0,
-          "expense": 4925.478713319028,
+          "expense": 8546.08808831903,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": -3575.4787133190284
+          "net_collection_minus_expense": -7196.088088319029
         },
         {
           "month": "Nov 2026",
@@ -19992,10 +19992,10 @@
       ],
       "totals": {
         "collection": 33663.630000000005,
-        "expense": 38306.670414550026,
+        "expense": 41927.279789550026,
         "late_fee": 0.0,
-        "net_collection_minus_expense": -4643.0404145500215,
-        "closing_balance": -4925.425124412461
+        "net_collection_minus_expense": -8263.649789550022,
+        "closing_balance": -8546.03449941246
       },
       "expense_breakdown": [
         {
@@ -20127,7 +20127,7 @@
           "num_meters": 4.0,
           "meter_rent": 494.7976,
           "total_water_expense": 558.3068383190288,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -20136,7 +20136,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 4925.478713319028
+          "total_expense": 8546.08808831903
         },
         {
           "month": "Nov 2026",
@@ -20299,10 +20299,10 @@
         {
           "month": "Oct 2026",
           "collection": 6962.0,
-          "expense": 5547.112332103787,
+          "expense": 9167.721707103787,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1414.8876678962133
+          "net_collection_minus_expense": -2205.7217071037867
         },
         {
           "month": "Nov 2026",
@@ -20347,10 +20347,10 @@
       ],
       "totals": {
         "collection": 46305.0,
-        "expense": 48156.863400010996,
+        "expense": 51777.472775010996,
         "late_fee": 0.0,
-        "net_collection_minus_expense": -1851.863400010996,
-        "closing_balance": -5547.089987692227
+        "net_collection_minus_expense": -5472.472775010996,
+        "closing_balance": -9167.699362692227
       },
       "expense_breakdown": [
         {
@@ -20482,7 +20482,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 1179.9404571037862,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -20491,7 +20491,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5547.112332103787
+          "total_expense": 9167.721707103787
         },
         {
           "month": "Nov 2026",
@@ -20654,10 +20654,10 @@
         {
           "month": "Oct 2026",
           "collection": 6585.0,
-          "expense": 5203.005671956576,
+          "expense": 8823.615046956576,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1381.9943280434236
+          "net_collection_minus_expense": -2238.6150469565764
         },
         {
           "month": "Nov 2026",
@@ -20702,10 +20702,10 @@
       ],
       "totals": {
         "collection": 46767.0,
-        "expense": 40681.96372073738,
+        "expense": 44302.57309573738,
         "late_fee": 0.0,
-        "net_collection_minus_expense": 6085.036279262618,
-        "closing_balance": -5202.8281874169825
+        "net_collection_minus_expense": 2464.4269042626183,
+        "closing_balance": -8823.437562416982
       },
       "expense_breakdown": [
         {
@@ -20837,7 +20837,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 835.8337969565766,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -20846,7 +20846,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5203.005671956576
+          "total_expense": 8823.615046956576
         },
         {
           "month": "Nov 2026",
@@ -21009,10 +21009,10 @@
         {
           "month": "Oct 2026",
           "collection": 6332.99,
-          "expense": 4972.066125641489,
+          "expense": 8592.675500641488,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1360.923874358511
+          "net_collection_minus_expense": -2259.685500641488
         },
         {
           "month": "Nov 2026",
@@ -21057,10 +21057,10 @@
       ],
       "totals": {
         "collection": 34060.899999999994,
-        "expense": 41190.192656828105,
+        "expense": 44810.802031828105,
         "late_fee": 0.0,
-        "net_collection_minus_expense": -7129.292656828111,
-        "closing_balance": -7219.963716004204
+        "net_collection_minus_expense": -10749.902031828111,
+        "closing_balance": -10840.573091004204
       },
       "expense_breakdown": [
         {
@@ -21192,7 +21192,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 604.8942506414884,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -21201,7 +21201,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 4972.066125641489
+          "total_expense": 8592.675500641488
         },
         {
           "month": "Nov 2026",
@@ -21364,10 +21364,10 @@
         {
           "month": "Oct 2026",
           "collection": 12000.0,
-          "expense": 5469.002544657778,
+          "expense": 9089.611919657778,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 6530.997455342222
+          "net_collection_minus_expense": 2910.3880803422217
         },
         {
           "month": "Nov 2026",
@@ -21412,10 +21412,10 @@
       ],
       "totals": {
         "collection": 48000.0,
-        "expense": 46923.17845223943,
+        "expense": 50543.78782723943,
         "late_fee": 1000.0,
-        "net_collection_minus_expense": 76.82154776056996,
-        "closing_balance": 16934.88066277668
+        "net_collection_minus_expense": -3543.78782723943,
+        "closing_balance": 13314.271287776679
       },
       "expense_breakdown": [
         {
@@ -21547,7 +21547,7 @@
           "num_meters": 4.0,
           "meter_rent": 494.7976,
           "total_water_expense": 1101.830669657778,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -21556,7 +21556,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5469.002544657778
+          "total_expense": 9089.611919657778
         },
         {
           "month": "Nov 2026",
@@ -21719,10 +21719,10 @@
         {
           "month": "Oct 2026",
           "collection": 0.0,
-          "expense": 5444.518746099104,
+          "expense": 9065.128121099104,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": -5444.518746099104
+          "net_collection_minus_expense": -9065.128121099104
         },
         {
           "month": "Nov 2026",
@@ -21767,10 +21767,10 @@
       ],
       "totals": {
         "collection": 35035.0,
-        "expense": 42650.00046826372,
+        "expense": 46270.60984326372,
         "late_fee": 0.0,
-        "net_collection_minus_expense": -7615.000468263723,
-        "closing_balance": -12091.902329086166
+        "net_collection_minus_expense": -11235.609843263723,
+        "closing_balance": -15712.511704086166
       },
       "expense_breakdown": [
         {
@@ -21902,7 +21902,7 @@
           "num_meters": 4.0,
           "meter_rent": 494.7976,
           "total_water_expense": 1077.3468710991033,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -21911,7 +21911,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5444.518746099104
+          "total_expense": 9065.128121099104
         },
         {
           "month": "Nov 2026",
@@ -22074,10 +22074,10 @@
         {
           "month": "Oct 2026",
           "collection": 6827.0,
-          "expense": 5433.960881251792,
+          "expense": 9054.57025625179,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1393.0391187482082
+          "net_collection_minus_expense": -2227.570256251791
         },
         {
           "month": "Nov 2026",
@@ -22122,10 +22122,10 @@
       ],
       "totals": {
         "collection": 70109.0,
-        "expense": 43224.73210300804,
+        "expense": 46845.34147800804,
         "late_fee": 0.0,
-        "net_collection_minus_expense": 26884.267896991958,
-        "closing_balance": -5434.558389922833
+        "net_collection_minus_expense": 23263.658521991958,
+        "closing_balance": -9055.167764922833
       },
       "expense_breakdown": [
         {
@@ -22257,7 +22257,7 @@
           "num_meters": 4.0,
           "meter_rent": 494.7976,
           "total_water_expense": 1066.7890062517918,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -22266,7 +22266,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5433.960881251792
+          "total_expense": 9054.57025625179
         },
         {
           "month": "Nov 2026",
@@ -22429,10 +22429,10 @@
         {
           "month": "Oct 2026",
           "collection": 7085.0,
-          "expense": 5658.519801794689,
+          "expense": 9279.12917679469,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": 1426.4801982053114
+          "net_collection_minus_expense": -2194.1291767946896
         },
         {
           "month": "Nov 2026",
@@ -22477,10 +22477,10 @@
       ],
       "totals": {
         "collection": 50452.0,
-        "expense": 45760.28974171316,
+        "expense": 49380.89911671316,
         "late_fee": 1000.0,
-        "net_collection_minus_expense": 3691.7102582868392,
-        "closing_balance": -5658.496881106461
+        "net_collection_minus_expense": 71.10088328683923,
+        "closing_balance": -9279.106256106461
       },
       "expense_breakdown": [
         {
@@ -22612,7 +22612,7 @@
           "num_meters": 3.0,
           "meter_rent": 371.0982,
           "total_water_expense": 1291.3479267946889,
-          "fixed_expense": 4367.171875,
+          "fixed_expense": 7987.78125,
           "parking_fee": 0.0,
           "club_house_fee": 0.0,
           "shifting_fee": 0.0,
@@ -22621,7 +22621,7 @@
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 5658.519801794689
+          "total_expense": 9279.12917679469
         },
         {
           "month": "Nov 2026",
@@ -22891,23 +22891,25 @@
         "bescom": 29915,
         "security": 151040,
         "garbage": 12000,
-        "petty cash": 1000,
-        "electrical fix": 1470,
+        "petty cash": 20000,
+        "elevator": 87989,
+        "plumbing": 16670,
+        "electrical fix": 9970,
         "gardening": 3000,
         "plumber wage": 7000,
         "electrician wage": 7000,
         "manager wage": 10000,
         "dried leaves": 3300,
-        "civil works": 0,
+        "civil works": 92560,
         "accounting": 6000,
         "water purifier & softner": 16174,
-        "miscs": 0
+        "miscs": 7000
       },
-      "gross_expense": 315599,
+      "gross_expense": 547318,
       "gross_variable_expense": 36100,
-      "gross_fixed_expense": 279499,
+      "gross_fixed_expense": 511218,
       "water_meter_rent": 27585,
-      "total_expense": 343184
+      "total_expense": 574903
     },
     {
       "month": "NOV 2026",
@@ -22963,22 +22965,23 @@
         "bescom": 199057,
         "security": 1057280,
         "garbage": 57000,
-        "petty cash": 71000,
-        "plumbing": 267900,
-        "electrical fix": 15465,
+        "petty cash": 90000,
+        "elevator": 87989,
+        "plumbing": 284570,
+        "electrical fix": 23965,
         "gardening": 21000,
         "plumber wage": 49000,
         "electrician wage": 49000,
         "manager wage": 70000,
         "dried leaves": 30800,
         "civil works": 0,
-        "miscs": 0
+        "miscs": 7000
       },
-      "gross_expense": 2409752,
+      "gross_expense": 2548911,
       "gross_variable_expense": 301050,
-      "gross_fixed_expense": 2172751,
+      "gross_fixed_expense": 2404470,
       "water_meter_rent": 191781.86380000005,
-      "total_expense": 2665582.8638
+      "total_expense": 2897301.8638
     }
   ]
 }
