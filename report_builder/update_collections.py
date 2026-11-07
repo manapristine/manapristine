@@ -15,7 +15,7 @@ Pre-conditions:
 
 2. Bank Statement File Format:
    The bank statement file MUST be a tab-separated text/CSV export containing header columns
-   'Txn Date', 'Description', and 'Credit'.
+   'Txn Date', 'Description', 'Ref No./Cheque No.' (or reference/tx number), and 'Credit'.
 
 3. Mapping Files Existence:
    - 'db/members.csv' MUST exist with headers 'flat' and 'name' (flat owner mappings).
@@ -253,12 +253,28 @@ def update_collection_sheet(workbook_path, month, year, transactions):
             return False
     return True
 
+def get_ref_column(columns):
+    candidates = [
+        'ref no./cheque no.', 'ref no', 'reference no', 'reference',
+        'cheque no', 'chq no', 'tx number', 'txn no', 'utr'
+    ]
+    for c in columns:
+        cleaned = str(c).lower().strip()
+        if cleaned in candidates:
+            return c
+    for c in columns:
+        cleaned = str(c).lower().strip()
+        if any(cand in cleaned for cand in candidates):
+            return c
+    return None
+
 def create_report(statement_file):
     month, year = parse_filename(statement_file)
     f_names, p_flats, f_parts, f_member, f_occupant = load_mappings()
     known_flats = set(f_names.keys())
     
     df = parse_bank_statement(statement_file)
+    ref_col = get_ref_column(df.columns)
     total_credits, report_data = 0, []
     unmatched = []
 
@@ -270,14 +286,25 @@ def create_report(statement_file):
         if amount <= 0: continue
         
         total_credits += 1
-        desc, tx_dt = str(row.get('Description', '')), str(row.get('Txn Date', ''))
+        raw_desc = row.get('Description', '')
+        raw_dt = row.get('Txn Date', '')
+        raw_ref = row.get(ref_col, '') if ref_col else ''
+        desc = '' if pd.isna(raw_desc) else str(raw_desc).strip()
+        tx_dt = '' if pd.isna(raw_dt) else str(raw_dt).strip()
+        ref_no = '' if pd.isna(raw_ref) else str(raw_ref).strip()
+
         flat = find_flat_in_description(desc, f_names, p_flats, f_parts, known_flats)
+        if not flat and ref_no:
+            flat = find_flat_in_description(ref_no, f_names, p_flats, f_parts, known_flats)
+        if not flat and desc and ref_no:
+            flat = find_flat_in_description(f"{desc} {ref_no}", f_names, p_flats, f_parts, known_flats)
         
         txn = {
             'date': tx_dt, 'amount': amount, 'flat': flat or 'NOT MATCHED', 
             'member_name': f_member.get(flat, '') if flat else '', 
             'occupant_name': f_occupant.get(flat, '') if flat else '',
-            'description': desc
+            'description': desc,
+            'ref_no': ref_no
         }
         report_data.append(txn)
         if not flat: unmatched.append(txn)
@@ -292,7 +319,8 @@ def create_report(statement_file):
     if unmatched:
         print("\nUNMATCHED TRANSACTIONS (Top 10):")
         for ut in unmatched[:10]:
-            print(f"- {ut['date']}: {ut['amount']} | {ut['description'][:60]}...")
+            ref_info = f" | Ref: {ut['ref_no'][:40]}" if ut.get('ref_no') else ""
+            print(f"- {ut['date']}: {ut['amount']} | {ut['description'][:60]}...{ref_info}")
         print("\nPlease review the CSV and fill in the 'flat' column for 'NOT MATCHED' rows before running Option 2.")
 
 def update_from_report(statement_file):
