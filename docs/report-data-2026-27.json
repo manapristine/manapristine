@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T10:26:22",
+  "generated_at": "2026-11-09T16:27:35",
   "financial_year": "2026-27",
   "cutoff_date": "2026-10-31",
   "sheet": "INCOME-EXPENSE-CYCLES",
@@ -8527,8 +8527,8 @@
     },
     {
       "flat": "G9",
-      "owner_name": "Chandramouli",
-      "email": "chandra.gumma@gmail.com",
+      "owner_name": "Ankur Agarwal",
+      "email": "agarwalankur90@gmail.com",
       "sheet_email": "chandra.gumma@gmail.com",
       "occupant": "Ankur Agarwal",
       "balance_from_last_fy": -1212.098747103606,
@@ -8560,10 +8560,10 @@
         {
           "month": "Jul 2026",
           "collection": 6702.0,
-          "expense": 7382.816091427549,
+          "expense": 6882.816091427549,
           "late_fee": 0.0,
           "late_fee_reason": "-",
-          "net_collection_minus_expense": -680.8160914275486
+          "net_collection_minus_expense": -180.8160914275486
         },
         {
           "month": "Aug 2026",
@@ -8632,10 +8632,10 @@
       ],
       "totals": {
         "collection": 40362.0,
-        "expense": 49807.31426266218,
+        "expense": 49307.31426266218,
         "late_fee": 0.0,
-        "net_collection_minus_expense": -9445.314262662177,
-        "closing_balance": -10657.413009765783
+        "net_collection_minus_expense": -8945.314262662177,
+        "closing_balance": -10157.413009765783
       },
       "expense_breakdown": [
         {
@@ -8709,14 +8709,14 @@
           "total_water_expense": 1797.816091427549,
           "fixed_expense": 5085.0,
           "parking_fee": 0.0,
-          "club_house_fee": 500.0,
+          "club_house_fee": 0.0,
           "shifting_fee": 0.0,
           "gym_usage_fee": 0.0,
           "accounts_fee": 330.9375,
           "annual_mem_fee": 0.0,
           "late_fee": 0.0,
           "late_fee_reason": "",
-          "total_expense": 7382.816091427549
+          "total_expense": 6882.816091427549
         },
         {
           "month": "Aug 2026",
